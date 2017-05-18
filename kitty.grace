@@ -1,5 +1,6 @@
 import "mgcollections" as collections
 import "dom" as dom
+// import "math" as math
 import "StandardPrelude" as sp
 inherits sp.methods
 
@@ -11,6 +12,9 @@ var worldSet := false
 var keyDownListener
 var keyUpListener
 var mouseDownListener
+
+// Grace math returns NaNs
+def math = dom.window.Math
 
 // XXX: Control functions are at the bottom
 
@@ -28,7 +32,8 @@ class KittyImage.new(url', height', width') {
         // print "DRAWING IMAGE: {imgTag.src} ({width}, {height})..."
         ctx.save
         ctx.translate(dx, dy)
-        ctx.rotate(rot *  180 / 3.14)
+        // ctx.rotate(rot *  180 / 3.14)
+        ctx.rotate(rot * 3.14159 / 180)
         ctx.drawImage(imgTag, -width / 2, -height / 2, width, height)
         ctx.restore
         // print "IMAGE: {imgTag.src} DRAWN"
@@ -83,20 +88,18 @@ class KittyEntity.new(x', y') {
 
     }
 
-    method moveUp(dy) {
-        posY := posY - dy
+    method move(distance) {
+        posX := posX + distance * math.cos(rotation * 3.14159 / 180)
+        posY := posY + distance * math.sin(rotation * 3.14159 / 180)
     }
 
-    method moveDown(dy) {
-        posY := posY + dy
+    method strafe(distance) {
+        posX := posX + distance * math.cos((90 + rotation) * 3.14159 / 180)
+        posY := posY + distance * math.sin((90 + rotation) * 3.14159 / 180)
     }
 
-    method moveLeft(dx) {
-        posX := posX - dx
-    }
-
-    method moveRight(dx) {
-        posX := posX + dx
+    method turn(angle) {
+        rotation := rotation + angle
     }
 
     method draw(ctx, dx, dy) {
@@ -200,7 +203,7 @@ class KittyWorld.new() {
         // Key Listeners
         keyDownListener := { ev->
             // print "KEYDOWN: {ev.keyCode}"
-            if (ev.keyCode == 81) then {
+            if (ev.keyCode == 75) then {
                 stop
             }
             currentKeyDown := ev.keyCode
