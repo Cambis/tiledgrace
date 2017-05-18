@@ -48,7 +48,7 @@ def entity = Entity(10, 10)
 world.addEntity(entity)
 ```` 
 ### Running the Game
-- You can run the game by using the `Run` button in the editor. Pressing the `Q` key will stop the game.
+- You can run the game by using the `Run` button in the editor. Pressing the `K` key will stop the game.
 
 ## Images
 - Images must currently be uploaded to the root directory of the server. There are default images on both the `KittyWorld` and `KittyEntity` classes. Custom images can be set using `KittyWorld.setBackground(image)` and `KittyEntity.setImage(image)`.
