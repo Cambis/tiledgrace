@@ -83,7 +83,7 @@ class KittyEntity.new(x', y') {
     // Called on creation
     method awake {
         // print "awake"
-        setImage("realyee.png")
+        createImage("realyee.png")
     }
 
     // Called on game start
@@ -122,11 +122,11 @@ class KittyEntity.new(x', y') {
         ctx.restore
     }
 
-    method setImage(image') {
-        image := Image(image', 64, 64)
+    method createImage(url') {
+        image := Image(url', 64, 64)
     }
 
-    method setImageMaster(image') {
+    method setImage(image') {
         image := image'
     }
 

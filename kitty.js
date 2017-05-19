@@ -1511,7 +1511,7 @@ function gracecode_kitty () {
               lineNumber = 86
               var string163 = new GraceString("realyee.png");
               onSelf = true;
-              var call164 = callmethod(this, "setImage", [1], string163);
+              var call164 = callmethod(this, "createImage", [1], string163);
               return call164
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -1813,10 +1813,10 @@ function gracecode_kitty () {
           func248.definitionModule = "kitty";
           var func257 = function(argcv) {
             var curarg = 1;
-            var var_image__39__ = arguments[curarg];
+            var var_url__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func257.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (createImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
@@ -1830,7 +1830,7 @@ function gracecode_kitty () {
               var call259 = callmethod(call258, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call260 = callmethod(call259, "Image", [3], var_image__39__, new GraceNum(64), new GraceNum(64));
+              var call260 = callmethod(call259, "Image", [3], var_url__39__, new GraceNum(64), new GraceNum(64));
               onSelf = true;
               var call261 = callmethod(this, "image:=", [1], call260);
               return call261
@@ -1848,7 +1848,7 @@ function gracecode_kitty () {
           func257.variableArities = [
             false,
           ];
-          obj160.methods["setImage"] = func257;
+          obj160.methods["createImage"] = func257;
           func257.definitionLine = 125;
           func257.definitionModule = "kitty";
           var func262 = function(argcv) {
@@ -1856,7 +1856,7 @@ function gracecode_kitty () {
             var var_image__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func262.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImageMaster)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
@@ -1881,7 +1881,7 @@ function gracecode_kitty () {
           func262.variableArities = [
             false,
           ];
-          obj160.methods["setImageMaster"] = func262;
+          obj160.methods["setImage"] = func262;
           func262.definitionLine = 129;
           func262.definitionModule = "kitty";
           var func264 = function(argcv) {
@@ -2271,7 +2271,7 @@ function gracecode_kitty () {
               lineNumber = 86
               var string288 = new GraceString("realyee.png");
               onSelf = true;
-              var call289 = callmethod(this, "setImage", [1], string288);
+              var call289 = callmethod(this, "createImage", [1], string288);
               return call289
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2573,10 +2573,10 @@ function gracecode_kitty () {
           func373.definitionModule = "kitty";
           var func382 = function(argcv) {
             var curarg = 1;
-            var var_image__39__ = arguments[curarg];
+            var var_url__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func382.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (createImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
@@ -2590,7 +2590,7 @@ function gracecode_kitty () {
               var call384 = callmethod(call383, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call385 = callmethod(call384, "Image", [3], var_image__39__, new GraceNum(64), new GraceNum(64));
+              var call385 = callmethod(call384, "Image", [3], var_url__39__, new GraceNum(64), new GraceNum(64));
               onSelf = true;
               var call386 = callmethod(this, "image:=", [1], call385);
               return call386
@@ -2608,7 +2608,7 @@ function gracecode_kitty () {
           func382.variableArities = [
             false,
           ];
-          obj285.methods["setImage"] = func382;
+          obj285.methods["createImage"] = func382;
           func382.definitionLine = 125;
           func382.definitionModule = "kitty";
           var func387 = function(argcv) {
@@ -2616,7 +2616,7 @@ function gracecode_kitty () {
             var var_image__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func387.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImageMaster)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
@@ -2641,7 +2641,7 @@ function gracecode_kitty () {
           func387.variableArities = [
             false,
           ];
-          obj285.methods["setImageMaster"] = func387;
+          obj285.methods["setImage"] = func387;
           func387.definitionLine = 129;
           func387.definitionModule = "kitty";
           var func389 = function(argcv) {
@@ -4988,7 +4988,7 @@ gracecode_kitty.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['kitty'] = "constructors-of:KittyImage:\n new\nmethods-of:KittyWorld.new:\n stop\n isInit:=\n addEntity\n document:=\n backingContext\n canvasWidth\n document\n backgroundColour:=\n update\n getContext\n start\n canvas:=\n isRunning:=\n background:=\n isRunning\n backingContext:=\n currentKeyDown\n backgroundColour\n setBackground\n isInit\n mctx\n canvasWidth:=\n isKeyDown\n entities:=\n backingCanvas:=\n entities\n backingCanvas\n canvasHeight:=\n init\n canvasHeight\n mctx:=\n currentKeyDown:=\n canvas\n background\nconstructors-of:KittyEntity:\n new\nfresh-methods:\n Image\n Entity\n World\nfresh:World:\n addEntity\n isInit:=\n stop\n document:=\n isRunning:=\n mctx\n document\n backingContext:=\n update\n getContext\n start\n canvas:=\n backgroundColour\n background:=\n isKeyDown\n backgroundColour:=\n currentKeyDown\n backingContext\n setBackground\n isInit\n canvasWidth\n canvasWidth:=\n isRunning\n entities:=\n backingCanvas:=\n entities\n backingCanvas\n canvasHeight:=\n init\n canvasHeight\n mctx:=\n currentKeyDown:=\n canvas\n background\npath:\n kitty\nclasses:\n KittyImage\n KittyEntity\n KittyWorld\nfresh:Entity:\n posY:=\n image\n rotation:=\n awake\n posX\n posY\n draw\n setImage\n rotation\n onDestroy\n move\n turn\n setAction\n update\n strafe\n setImageMaster\n setLocation\n getRotation\n start\n action:=\n getX\n getY\n image:=\n action\n posX:=\nconfidential:\nconstructors-of:KittyWorld:\n new\nfresh:Image:\n height\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n getTag\n elements\n width\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n posY:=\n image\n rotation:=\n awake\n posX\n posY\n draw\n setImage\n rotation\n onDestroy\n move\n turn\n setImageMaster\n update\n strafe\n setAction\n setLocation\n getRotation\n start\n action:=\n getX\n getY\n image:=\n action\n posX:=\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n KittyImage\n Image\n KittyEntity\n Entity\n KittyWorld\n World\n start\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n height\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n getTag\n elements\n width\n";
+  gctCache['kitty'] = "modules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n move\n createImage\n update\n strafe\n onDestroy\n start\n awake\n setAction\n action:=\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n setLocation\n getRotation\n rotation:=\n turn\n posX\n posY\n draw\n setImage\n rotation\nconstructors-of:KittyImage:\n new\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n KittyImage\n Image\n KittyEntity\n Entity\n KittyWorld\n World\n start\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n width:=\n height\n getTag\n elements\n width\n draw\n height:=\n drawImage\n elements:=\n imgTag\nfresh:World:\n document:=\n backingContext:=\n backgroundColour:=\n mctx\n document\n update\n getContext\n isRunning:=\n canvasWidth\n start\n canvas:=\n backingContext\n background:=\n isRunning\n currentKeyDown\n setBackground\n canvasWidth:=\n isInit\n mctx:=\n entities:=\n backingCanvas:=\n entities\n stop\n backingCanvas\n canvasHeight:=\n backgroundColour\n init\n canvasHeight\n currentKeyDown:=\n canvas\n background\n addEntity\n isInit:=\n isKeyDown\nmethods-of:KittyWorld.new:\n document:=\n backingCanvas\n backgroundColour:=\n canvasWidth\n document\n update\n getContext\n backgroundColour\n mctx\n start\n canvas:=\n isRunning:=\n background:=\n isRunning\n currentKeyDown\n setBackground\n canvasWidth:=\n isInit\n mctx:=\n entities:=\n backingCanvas:=\n entities\n stop\n backingContext:=\n canvasHeight:=\n backingContext\n init\n canvasHeight\n currentKeyDown:=\n canvas\n background\n addEntity\n isInit:=\n isKeyDown\nconstructors-of:KittyEntity:\n new\npath:\n kitty\nclasses:\n KittyImage\n KittyEntity\n KittyWorld\nfresh:Entity:\n move\n createImage\n update\n setLocation\n rotation:=\n start\n turn\n posX\n action:=\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n strafe\n rotation\n onDestroy\n awake\n setAction\n posY\n draw\n setImage\n getRotation\nconfidential:\nconstructors-of:KittyWorld:\n new\nfresh:Image:\n width:=\n height\n getTag\n elements\n width\n draw\n height:=\n drawImage\n elements:=\n imgTag\nfresh-methods:\n Image\n Entity\n World\n";
 if (originalSourceLines) {
   originalSourceLines["kitty"] = [
     "import \"mgcollections\" as collections",
@@ -5076,7 +5076,7 @@ if (originalSourceLines) {
     "    // Called on creation",
     "    method awake {",
     "        // print \"awake\"",
-    "        setImage(\"realyee.png\")",
+    "        createImage(\"realyee.png\")",
     "    }",
     "",
     "    // Called on game start",
@@ -5115,11 +5115,11 @@ if (originalSourceLines) {
     "        ctx.restore",
     "    }",
     "",
-    "    method setImage(image') {",
-    "        image := Image(image', 64, 64)",
+    "    method createImage(url') {",
+    "        image := Image(url', 64, 64)",
     "    }",
     "",
-    "    method setImageMaster(image') {",
+    "    method setImage(image') {",
     "        image := image'",
     "    }",
     "",
