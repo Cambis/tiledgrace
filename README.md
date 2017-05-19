@@ -109,7 +109,7 @@ def bar = Entity(10, 10)
 def action = object {
     method update {
         if (foo.isKeyDown(87)) then {
-            bar.moveUp(1)
+            bar.move(1)
         }
     }
 }
