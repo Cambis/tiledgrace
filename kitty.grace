@@ -25,6 +25,9 @@ class KittyImage.new(url', height', width') {
     def imgTag = dom.document.createElement("img")
     imgTag.src := url'
 
+    var elements := collections.list.new
+    elements.push(imgTag)
+
     var height := height'
     var width := width'
 
@@ -34,9 +37,19 @@ class KittyImage.new(url', height', width') {
         ctx.translate(dx, dy)
         // ctx.rotate(rot *  180 / 3.14)
         ctx.rotate(rot * 3.14159 / 180)
-        ctx.drawImage(imgTag, -width / 2, -height / 2, width, height)
+        for (elements) do {element->
+            ctx.drawImage(element, -width / 2, -height / 2, width, height)
+        }
         ctx.restore
         // print "IMAGE: {imgTag.src} DRAWN"
+    }
+
+    method getTag {
+        return imgTag
+    }
+
+    method drawImage(imgTag') {
+        elements.push(imgTag')
     }
 
     // print "CREATED NEW IMAGE: {url'}"
@@ -70,7 +83,7 @@ class KittyEntity.new(x', y') {
     // Called on creation
     method awake {
         // print "awake"
-        setImage("realyee.png")
+        createImage("realyee.png")
     }
 
     // Called on game start
@@ -109,8 +122,12 @@ class KittyEntity.new(x', y') {
         ctx.restore
     }
 
+    method createImage(url') {
+        image := Image(url', 64, 64)
+    }
+
     method setImage(image') {
-        image := Image(image', 64, 64)
+        image := image'
     }
 
     method setAction(action') {
@@ -283,6 +300,9 @@ class KittyWorld.new() {
         return entities.push(e)
     }
 
+    method getContext {
+        return mctx
+    }
     // print "WORLD CREATED"
 }
 
