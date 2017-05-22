@@ -19,7 +19,7 @@ def math = dom.window.Math
 // XXX: Control functions are at the bottom
 
 // Represents an image in the game world
-class KittyImage.new(url')width(width')height(height') {
+class KittyImage.new(url', width', height') {
     
     // print "CREATING NEW IMAGE: {url'}..."
     def imgTag = dom.document.createElement("img")
@@ -57,12 +57,12 @@ class KittyImage.new(url')width(width')height(height') {
 
 method Image(url)width(width')height(height') {
     object {
-        inherits KittyImage.new(url)width(width')height(height')
+        inherits KittyImage.new(url, width', height')
     }
 }
 
 // Represents an object in the game world
-class KittyEntity.new(tag')x(x')y(y') {
+class KittyEntity.new(tag', x', y') {
     
     print "CREATING ENTITY AT ({x'}, {y'})..."
 
@@ -159,8 +159,9 @@ class KittyEntity.new(tag')x(x')y(y') {
 method Entity(tag)x(x')y(y') {
     print "HERE"
     object {
-        inherits KittyEntity.new(tag)x(x')y(y')
+        inherits KittyEntity.new(tag, x', y')
     }
+    print "GUMMON"
 }
 
 // Represents the game world itself
@@ -347,3 +348,4 @@ method atModuleEnd(module) {
 // def foo = World.new(100, 100)
 // def bar = Entity.new(10, 10)
 // foo.addEntity(bar)
+// print "IS THIS WORKING???"
