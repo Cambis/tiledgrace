@@ -28,7 +28,7 @@ def world = World
 ### KittyEntity
 - Entities reprent objects in the game world, they are assigned to a world. The constructor is fed the coordinates of the entity.
 ````grace
-def entity = Entity(10, 10)
+def entity = Entity("foo")x(10)y(10)
 ````
 
 ## World Setup
@@ -44,7 +44,7 @@ setWorld(world)
 ````grace
 def world = World
 
-def entity = Entity(10, 10)
+def entity = Entity("foo")x(10)y(10)
 world.addEntity(entity)
 ```` 
 ### Running the Game
@@ -54,13 +54,13 @@ world.addEntity(entity)
 - Images must currently be uploaded to the root directory of the server. There are default images on both the `KittyWorld` and `KittyEntity` classes. 
 - Images are created by giving them a filepath and dimensions, for now it is best if you stick to 64 x 64.
 ````grace
-def image = Image("rocket.png", 64, 64)
+def image = Image("rocket.png")width(64)height(64)
 ````
 ### Compound Images
 - You can draw an image on top of another like so:
 ````grace
-def image = Image("rocket.png", 64, 64)
-def imageB = Image("thrust.png", 64, 64)
+def image = Image("rocket.png")width(64)height(64)
+def imageB = Image("thrust")width(64)height(64)
 imageB.drawImage(image.getTag)
 ````
 
@@ -74,10 +74,10 @@ world.setBackground("doggo.jpg")
 ### Entity Images
 - Entities can be given images, or image filepaths.
 ````grace
-def entity = Entity(10, 10)
+def entity = Entity("foo")x(10)y(10)
 
 // Manually set an image
-def image = Image("realyee.png", 64, 64)
+def image = Image("realyee.png")width(64)height(64)
 entity.setImage(image)
 
 // Is the same as
@@ -87,7 +87,7 @@ entity.createImage("realyee.png")
 ## Actions
 - In order for an entity to complete a task, it must first be supplied with an action. Actions are created as objects which are parsed into an entity. *The action object must contain the method `update` for the action to be executed*. This is because the `KittyWorld` class will execute this method.
 ````grace
-def entity = Entity(10, 10)
+def entity = Entity("foo")x(10)y(10)
 
 // Create an action
 def action = object {
@@ -102,8 +102,9 @@ entity.setAction(action)
 ## Movement
 - There are two functions that move entities, `KittyEntity.move(distance)` and `KittyEntity.strafe(distance)`. The first moves the entity that distance in the direction that it is currently facing. The second is the same as the first, but it moves the entity 90 degrees to the direction it is facing.
 - To rotate the entity use `KittyEntity.turn(angle)`.
+- *Negative values do not work properly in tiled mode*.
 ````grace
-def entity = Entity(10, 10)
+def entity = Entity("foo")x(10)y(10)
 
 // Rotate forward
 entity.turn(5)
@@ -129,7 +130,7 @@ entity.strafe(-5)
 - *Do not use the `spacebar` or `K` keys, as they are already used.*
 ````grace
 def foo = World
-def bar = Entity(10, 10)
+def bar = Entity("foo")x(10)y(10)
 
 def action = object {
     method update {
@@ -143,49 +144,29 @@ foo.addEntity(bar)
 ````
 
 ## Examples
-- [Simple Movement](sample/yee.grace)
+- [Simple Movement](https://cambis.github.io/#JTdCJTIyY2h1bmtzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmNodW5rJTIyJTJDJTIyeCUyMiUzQSUyMjEwcHglMjIlMkMlMjJ5JTIyJTNBJTIyMTBweCUyMiUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIyZGVmZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMmZvbyUyMiUyQyUyMnZhbHVlJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMldvcmxkJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlNUQlNUQlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIyc2V0V29ybGQlMjIlMkMlMjJwYXJ0cyUyMiUzQSU1QiU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmZvbyUyMiU3RCU1RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkZWZkZWMlMjIlMkMlMjJuYW1lJTIyJTNBJTIyYmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIyRW50aXR5KCl4KCl5JTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyc3RyaW5nJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJwbGF5ZXIlMjIlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjIxMCUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjEwJTIyJTdEJTVEJTVEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmRlZmRlYyUyMiUyQyUyMm5hbWUlMjIlM0ElMjJhY3Rpb24lMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJvYmplY3QlMjIlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMm1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJ1cGRhdGUlMjIlMkMlMjJhcmclMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMmlmKCl0aGVuJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZm9vJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmlzS2V5RG93biUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjI2OSUyMiU3RCU1RCU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJibG9jayUyMiUyQyUyMnBhcmFtcyUyMiUzQSU1QiU1RCUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnR1cm4lMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyNSUyMiU3RCU1RCU3RCU1RCU3RCU1RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkaWFsZWN0LW1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJpZigpdGhlbiUyMiUyQyUyMnBhcnRzJTIyJTNBJTVCJTVCJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmZvbyUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJpc0tleURvd24lMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyODMlMjIlN0QlNUQlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYmxvY2slMjIlMkMlMjJwYXJhbXMlMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmJhciUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJzdHJhZmUlMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyNSUyMiU3RCU1RCU3RCU1RCU3RCU1RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkaWFsZWN0LW1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJpZigpdGhlbiUyMiUyQyUyMnBhcnRzJTIyJTNBJTVCJTVCJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmZvbyUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJpc0tleURvd24lMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyNjglMjIlN0QlNUQlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYmxvY2slMjIlMkMlMjJwYXJhbXMlMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmJhciUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJtb3ZlJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjUlMjIlN0QlNUQlN0QlNUQlN0QlNUQlNUQlN0QlNUQlN0QlNUQlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnNldEFjdGlvbiUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJhY3Rpb24lMjIlN0QlNUQlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZm9vJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmFkZEVudGl0eSUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJiYXIlMjIlN0QlNUQlN0QlNUQlN0QlNUQlMkMlMjJkaWFsZWN0JTIyJTNBJTIya2l0dHklMjIlN0Q=)
 ````grace
 dialect "kitty"
-
-// Press 'Run' button to start the game.
-// Press the 'K' key to stop the game
-
 def foo = World
-setWorld(foo)
-
-def bar = Entity(10, 10)
+setWorld (foo)
+def bar = Entity ("player") x (10) y (10)
 def action = object {
- method update {
-  // Q
-  if (foo.isKeyDown(81)) then {
-   bar.turn(-5)   
-  } 
-  // E
-  elseif {foo.isKeyDown(69)} then {
-   bar.turn(5)
-  } 
-  // W
-  elseif {foo.isKeyDown(87)} then {
-   bar.strafe(-5)
-  } 
-  // S
-  elseif {foo.isKeyDown(83)} then {
-   bar.strafe(5)
-  } 
-  // D
-  elseif {foo.isKeyDown(68)} then {
-   bar.move(5)   
-  } 
-  // A
-  elseif {foo.isKeyDown(65)} then {
-   bar.move(-5)   
-  }
- }
+    method update {
+        if (foo.isKeyDown(69)) then {
+            bar.turn(5)
+        }
+        if (foo.isKeyDown(83)) then {
+            bar.strafe(5)
+        }
+        if (foo.isKeyDown(68)) then {
+            bar.move(5)
+        }
+    }
 }
 bar.setAction(action)
 foo.addEntity(bar)
 ````
-- [Moon Lander](sample/moonLander.grace)
+- [Moon Lander](https://cambis.github.io/tiledgrace/#JTdCJTIyY2h1bmtzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmNodW5rJTIyJTJDJTIyeCUyMiUzQSUyMjIwcHglMjIlMkMlMjJ5JTIyJTNBJTIyMjBweCUyMiUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIyZGVmZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMmZvbyUyMiUyQyUyMnZhbHVlJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMldvcmxkJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlNUQlNUQlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZm9vJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnNldEJhY2tncm91bmQlMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMnN0cmluZyUyMiUyQyUyMnZhbHVlJTIyJTNBJTIybW9vbi5qcGclMjIlN0QlNUQlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIyc2V0V29ybGQlMjIlMkMlMjJwYXJ0cyUyMiUzQSU1QiU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmZvbyUyMiU3RCU1RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkZWZkZWMlMjIlMkMlMjJuYW1lJTIyJTNBJTIyYmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIyRW50aXR5KCl4KCl5JTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyc3RyaW5nJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJwbGF5ZXIlMjIlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjIyMCUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjAlMjIlN0QlNUQlNUQlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIyZGVmZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMmFjdGlvbiUyMiUyQyUyMnZhbHVlJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMm9iamVjdCUyMiUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIyZGVmZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMlRIUlVTVCUyMiUyQyUyMnZhbHVlJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyMiUyMiU3RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkZWZkZWMlMjIlMkMlMjJuYW1lJTIyJTNBJTIyTUFYX0xBTkRJTkdfU1BFRUQlMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjE1JTIyJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmRlZmRlYyUyMiUyQyUyMm5hbWUlMjIlM0ElMjJMWl9IRUlHSFQlMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjE4MCUyMiU3RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJkZWZkZWMlMjIlMkMlMjJuYW1lJTIyJTNBJTIycm9ja2V0JTIyJTJDJTIydmFsdWUlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIySW1hZ2UoKXdpZHRoKCloZWlnaHQlMjIlMkMlMjJwYXJ0cyUyMiUzQSU1QiU1QiU3QiUyMnR5cGUlMjIlM0ElMjJzdHJpbmclMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnJvY2tldC5wbmclMjIlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjI2NCUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjY0JTIyJTdEJTVEJTVEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmRlZmRlYyUyMiUyQyUyMm5hbWUlMjIlM0ElMjJyb2NrZXRXaXRoVGhydXN0JTIyJTJDJTIydmFsdWUlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyZGlhbGVjdC1tZXRob2QlMjIlMkMlMjJuYW1lJTIyJTNBJTIySW1hZ2UoKXdpZHRoKCloZWlnaHQlMjIlMkMlMjJwYXJ0cyUyMiUzQSU1QiU1QiU3QiUyMnR5cGUlMjIlM0ElMjJzdHJpbmclMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnRocnVzdC5wbmclMjIlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjI2NCUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjY0JTIyJTdEJTVEJTVEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmRlZmRlYyUyMiUyQyUyMm5hbWUlMjIlM0ElMjJleHBsb3Npb24lMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJkaWFsZWN0LW1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJJbWFnZSgpd2lkdGgoKWhlaWdodCUyMiUyQyUyMnBhcnRzJTIyJTNBJTVCJTVCJTdCJTIydHlwZSUyMiUzQSUyMnN0cmluZyUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZXhwbG9zaW9uLnBuZyUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjY0JTIyJTdEJTVEJTJDJTVCJTdCJTIydHlwZSUyMiUzQSUyMm51bWJlciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyNjQlMjIlN0QlNUQlNUQlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIyZGVmZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMmZsYWclMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJkaWFsZWN0LW1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJJbWFnZSgpd2lkdGgoKWhlaWdodCUyMiUyQyUyMnBhcnRzJTIyJTNBJTVCJTVCJTdCJTIydHlwZSUyMiUzQSUyMnN0cmluZyUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZmxhZy5wbmclMjIlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjI2NCUyMiU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjY0JTIyJTdEJTVEJTVEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnJvY2tldFdpdGhUaHJ1c3QlMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyZHJhd0ltYWdlJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJyb2NrZXQlMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyZ2V0VGFnJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU1RCU3RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJmbGFnJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmRyYXdJbWFnZSUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIycm9ja2V0JTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmdldFRhZyUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlNUQlN0QlNUQlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnNldEltYWdlJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnJvY2tldCUyMiU3RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJ2YXJkZWMlMjIlMkMlMjJuYW1lJTIyJTNBJTIyc3BlZWQlMjIlMkMlMjJ2YWx1ZSUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJudW1iZXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMjAlMjIlN0QlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIydmFyZGVjJTIyJTJDJTIybmFtZSUyMiUzQSUyMmFsdGl0dWRlJTIyJTJDJTIydmFsdWUlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmdldFklMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTVEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMm1ldGhvZCUyMiUyQyUyMm5hbWUlMjIlM0ElMjJ1cGRhdGUlMjIlMkMlMjJhcmclMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMmlmKCl0aGVuKCllbHNlJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyZm9vJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmlzS2V5RG93biUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjI4NyUyMiU3RCU1RCU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJibG9jayUyMiUyQyUyMnBhcmFtcyUyMiUzQSU1QiU1RCUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYXNzaWduJTIyJTJDJTIybGVmdCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnNwZWVkJTIyJTdEJTJDJTIycmlnaHQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIyb3BlcmF0b3IlMjIlMkMlMjJvcGVyYXRvciUyMiUzQSUyMi0lMjIlMkMlMjJsZWZ0JTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyc3BlZWQlMjIlN0QlMkMlMjJyaWdodCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMlRIUlVTVCUyMiU3RCU3RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJiYXIlMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyc2V0SW1hZ2UlMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIycm9ja2V0V2l0aFRocnVzdCUyMiU3RCU1RCU3RCU1RCU3RCU1RCUyQyU1QiU3QiUyMnR5cGUlMjIlM0ElMjJibG9jayUyMiUyQyUyMnBhcmFtcyUyMiUzQSU1QiU1RCUyQyUyMmJvZHklMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnNldEltYWdlJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnJvY2tldCUyMiU3RCU1RCU3RCU1RCU3RCU1RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJhc3NpZ24lMjIlMkMlMjJsZWZ0JTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyc3BlZWQlMjIlN0QlMkMlMjJyaWdodCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJvcGVyYXRvciUyMiUyQyUyMm9wZXJhdG9yJTIyJTNBJTIyJTJCJTIyJTJDJTIybGVmdCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnNwZWVkJTIyJTdEJTJDJTIycmlnaHQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjIxJTIyJTdEJTdEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmFzc2lnbiUyMiUyQyUyMmxlZnQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJhbHRpdHVkZSUyMiU3RCUyQyUyMnJpZ2h0JTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMm9wZXJhdG9yJTIyJTJDJTIyb3BlcmF0b3IlMjIlM0ElMjIlMkIlMjIlMkMlMjJsZWZ0JTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYWx0aXR1ZGUlMjIlN0QlMkMlMjJyaWdodCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJvcGVyYXRvciUyMiUyQyUyMm9wZXJhdG9yJTIyJTNBJTIyJTJGJTIyJTJDJTIybGVmdCUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMnNwZWVkJTIyJTdEJTJDJTIycmlnaHQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIybnVtYmVyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjIxMCUyMiU3RCU3RCU3RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJiYXIlMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyc2V0TG9jYXRpb24lMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmJhciUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJnZXRYJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmFsdGl0dWRlJTIyJTdEJTVEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMmlmKCl0aGVuJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyb3BlcmF0b3IlMjIlMkMlMjJvcGVyYXRvciUyMiUzQSUyMiUzRSUzRCUyMiUyQyUyMmxlZnQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMmdldFklMjIlMkMlMjJhcmdzJTIyJTNBJTVCJTVEJTdEJTJDJTIycmlnaHQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJMWl9IRUlHSFQlMjIlN0QlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYmxvY2slMjIlMkMlMjJwYXJhbXMlMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMmlmKCl0aGVuKCllbHNlJTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyb3BlcmF0b3IlMjIlMkMlMjJvcGVyYXRvciUyMiUzQSUyMiUzRSUzRCUyMiUyQyUyMmxlZnQlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJzcGVlZCUyMiU3RCUyQyUyMnJpZ2h0JTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyTUFYX0xBTkRJTkdfU1BFRUQlMjIlN0QlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYmxvY2slMjIlMkMlMjJwYXJhbXMlMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMnByaW50JTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyc3RyaW5nJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJLQSUyMEJPT00hISEhISElMjIlN0QlNUQlNUQlN0QlMkMlN0IlMjJ0eXBlJTIyJTNBJTIycmVxdWVzdCUyMiUyQyUyMnJlY2VpdmVyJTIyJTNBJTdCJTIydHlwZSUyMiUzQSUyMnZhciUyMiUyQyUyMnZhbHVlJTIyJTNBJTIyYmFyJTIyJTdEJTJDJTIybmFtZSUyMiUzQSUyMnNldEltYWdlJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmV4cGxvc2lvbiUyMiU3RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJmb28lMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyc3RvcCUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlNUQlN0QlNUQlN0QlNUQlMkMlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyYmxvY2slMjIlMkMlMjJwYXJhbXMlMjIlM0ElNUIlNUQlMkMlMjJib2R5JTIyJTNBJTVCJTdCJTIydHlwZSUyMiUzQSUyMmRpYWxlY3QtbWV0aG9kJTIyJTJDJTIybmFtZSUyMiUzQSUyMnByaW50JTIyJTJDJTIycGFydHMlMjIlM0ElNUIlNUIlN0IlMjJ0eXBlJTIyJTNBJTIyc3RyaW5nJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJBTk9USEVSJTIwSEFQUFklMjBMQU5ESU5HJTIyJTdEJTVEJTVEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmJhciUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJzZXRJbWFnZSUyMiUyQyUyMmFyZ3MlMjIlM0ElNUIlN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJmbGFnJTIyJTdEJTVEJTdEJTJDJTdCJTIydHlwZSUyMiUzQSUyMnJlcXVlc3QlMjIlMkMlMjJyZWNlaXZlciUyMiUzQSU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmZvbyUyMiU3RCUyQyUyMm5hbWUlMjIlM0ElMjJzdG9wJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU1RCU3RCU1RCU3RCU1RCU1RCU3RCU1RCU3RCU1RCU1RCU3RCU1RCU3RCU1RCU3RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJiYXIlMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyc2V0QWN0aW9uJTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmFjdGlvbiUyMiU3RCU1RCU3RCUyQyU3QiUyMnR5cGUlMjIlM0ElMjJyZXF1ZXN0JTIyJTJDJTIycmVjZWl2ZXIlMjIlM0ElN0IlMjJ0eXBlJTIyJTNBJTIydmFyJTIyJTJDJTIydmFsdWUlMjIlM0ElMjJmb28lMjIlN0QlMkMlMjJuYW1lJTIyJTNBJTIyYWRkRW50aXR5JTIyJTJDJTIyYXJncyUyMiUzQSU1QiU3QiUyMnR5cGUlMjIlM0ElMjJ2YXIlMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMmJhciUyMiU3RCU1RCU3RCU1RCU3RCU1RCUyQyUyMmRpYWxlY3QlMjIlM0ElMjJraXR0eSUyMiU3RA==)
 ````grace
 dialect "kitty"
 
@@ -198,17 +179,17 @@ def foo = World
 foo.setBackground("moon.jpg")
 setWorld(foo)
 
-def bar = Entity(20, -200)
+def bar = Entity("player")x(20)y(0)
 def action = object {
     
-    def THRUST = -2
+    def THRUST = 2
     def MAX_LANDING_SPEED = 15
     def LZ_HEIGHT = 180
     
-    def rocket = Image("rocket.png", 64, 64)
-    def rocketWithThrust = Image("thrust.png", 64, 64)
-    def explosion = Image("explosion.png", 64, 64)
-    def flag = Image("flag.png", 64, 64)
+    def rocket = Image("rocket.png")width(64)height(64)
+    def rocketWithThrust = Image("thrust.png")width(64)height(64)
+    def explosion = Image("explosion.png")width(64)height(64)
+    def flag = Image("flag.png")width(64)height(64)
     rocketWithThrust.drawImage(rocket.getTag) 
     flag.drawImage(rocket.getTag)
     bar.setImage(rocket)
@@ -216,39 +197,26 @@ def action = object {
     var speed := 0
     var altitude := bar.getY
     
-    
     method update {
-        
-        handleInput
-        fall
-        
-        altitude := altitude + (speed / 10)
-        bar.setLocation(bar.getX, altitude)
-        checkCollision
-    }
-    
-    method handleInput {
         if (foo.isKeyDown(87)) then {
-            speed := speed + THRUST
+            speed := speed - THRUST
             bar.setImage(rocketWithThrust)
         } else {
             bar.setImage(rocket)
         }   
-    }
-    
-    method fall {
         speed := speed + 1 
-    }
-    
-    method checkCollision {
-        if ((speed >= MAX_LANDING_SPEED) && (bar.getY >= LZ_HEIGHT)) then {
-            print "KA BOOM!!!!!!"
-            bar.setImage(explosion)
-            foo.stop
-        } elseif {(speed < MAX_LANDING_SPEED) && (bar.getY >= LZ_HEIGHT)} then {
-            print "ANOTHER HAPPY LANDING"
-            bar.setImage(flag)
-            foo.stop
+        altitude := altitude + (speed / 10)
+        bar.setLocation(bar.getX, altitude)
+        if (bar.getY >= LZ_HEIGHT) then {
+            if (speed >= MAX_LANDING_SPEED) then {
+                print "KA BOOM!!!!!!"
+                bar.setImage(explosion)
+                foo.stop
+            } else {
+                print "ANOTHER HAPPY LANDING"
+                bar.setImage(flag)
+                foo.stop
+            }
         }
     }
 }
