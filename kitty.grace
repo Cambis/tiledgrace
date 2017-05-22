@@ -21,7 +21,8 @@ def math = dom.window.Math
 // Represents an image in the game world
 class KittyImage.new(url', width', height') {
     
-    print "CREATING NEW IMAGE: {url'}..."
+    // print "CREATING NEW IMAGE: {url'}..."
+    
     def imgTag = dom.document.createElement("img")
     imgTag.src := url'
 
@@ -52,22 +53,21 @@ class KittyImage.new(url', width', height') {
         elements.push(imgTag')
     }
 
-    print "CREATED NEW IMAGE: {url'}"
+    // print "CREATED NEW IMAGE: {url'}"
 }
 
-method Image(url)width(width')height(height') {
+method Image(url')width(width')height(height') {
     object {
-        inherits KittyImage.new(url, width', height')
+        inherits KittyImage.new(url', width', height')
     }
 }
 
 // Represents an object in the game world
-class KittyKat.new(ghee', x', y') {
+class KittyKat.new(tag', x', y') {
     
-    print "HERE"
     // print "CREATING ENTITY AT ({x'}, {y'})..."
 
-    var tag := ghee'
+    var tag := tag'
     var posX := x'
     var posY := y'
     var rotation := 0
@@ -152,21 +152,11 @@ class KittyKat.new(ghee', x', y') {
     method getRotation {
         return rotation
     }
-
-    
-    print "ENTITY CREATED"
 } 
 
-class Kitty.new(a, b, c) {
-    print "{a}, {b}, {c}"
-}
-
-method Entity(ghee)x(x')y(y') {
+method Entity(tag')x(x')y(y') {
     object {
-        // inherits KittyImage.new(ghee, x', y')
-        // inherits KittyEntity.new(ghee, x', y')
-        // inherits Kitty.new(ghee, x', y')
-        inherits KittyKat.new(ghee, x', y')
+        inherits KittyKat.new(tag', x', y')
     }
 }
 
