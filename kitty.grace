@@ -21,7 +21,7 @@ def math = dom.window.Math
 // Represents an image in the game world
 class KittyImage.new(url', width', height') {
     
-    // print "CREATING NEW IMAGE: {url'}..."
+    print "CREATING NEW IMAGE: {url'}..."
     def imgTag = dom.document.createElement("img")
     imgTag.src := url'
 
@@ -52,7 +52,7 @@ class KittyImage.new(url', width', height') {
         elements.push(imgTag')
     }
 
-    // print "CREATED NEW IMAGE: {url'}"
+    print "CREATED NEW IMAGE: {url'}"
 }
 
 method Image(url)width(width')height(height') {
@@ -156,19 +156,17 @@ class KittyEntity.new(tag', x', y') {
     print "ENTITY CREATED"
 } 
 
-method Entity(tag)x(x')y(y') {
-    print "HERE"
+method Entity(tag)foo(x')bar(y') {
     object {
         inherits KittyEntity.new(tag, x', y')
     }
-    print "GUMMON"
 }
 
 // Represents the game world itself
 class KittyWorld.new() {
 
     // print "CREATING NEW WORLD..."
-    
+
     var background
     var backgroundColour := "black"
 
@@ -245,6 +243,9 @@ class KittyWorld.new() {
 
         // Default background
         setBackground("doggo.jpg")
+
+        // Test entity
+        var ent := Entity("test")foo(64)bar(64)
 
         isInit := true
         // print "INITIALIZATION FINISHED"

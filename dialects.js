@@ -927,8 +927,8 @@ dialects.kitty = {
             description: "Stop the game.",
             returns: "Done"
         },
-        "Entity()x()y": {
-            name: "Entity()x()y",
+        "Entity": {
+            name: "Entity",
             parts: [{
                     name: "Entity",
                     args: [{
@@ -937,14 +937,14 @@ dialects.kitty = {
                     }]
                 },
                 {
-                    name: "x",
+                    name: "foo",
                     args: [{
                         type: "Number",
                         description: "X coordinate"
                     }]
                 },
                 {
-                    name: "y",
+                    name: "bar",
                     args: [{
                         type: "Number",
                         description: "Y coordinate"
