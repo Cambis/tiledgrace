@@ -8,8 +8,7 @@ dialect "kitty"
 def foo = World
 foo.setBackground("moon.jpg")
 setWorld(foo)
-
-def bar = Entity("player")x(20)y(0)
+def bar = Entity("player")x(20)y(0 - 200)
 def action = object {
     
     def THRUST = 2
