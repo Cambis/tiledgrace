@@ -951,11 +951,11 @@ dialects.kitty = {
                     }]
                 }
             ],
-            returns: "Object",
+            returns: "Done",
             // selfcall: true,
             description: "Create an entity object",
             // toplevel: true,
-            inheritedVars: ["posX", "posY", "rotation", "action"]
+            inheritedVars: ["tag", "posX", "posY", "rotation", "action"]
         },
         "World": {
             name: "World",

@@ -64,9 +64,9 @@ method Image(url)width(width')height(height') {
 // Represents an object in the game world
 class KittyEntity.new(tag')x(x')y(y') {
     
-    // print "CREATING ENTITY AT ({x'}, {y'})..."
-    def tag = tag'
+    print "CREATING ENTITY AT ({x'}, {y'})..."
 
+    var tag := tag'
     var posX := x'
     var posY := y'
     var rotation := 0
@@ -152,10 +152,12 @@ class KittyEntity.new(tag')x(x')y(y') {
         return rotation
     }
 
-    // print "ENTITY CREATED"
+    
+    print "ENTITY CREATED"
 } 
 
 method Entity(tag)x(x')y(y') {
+    print "HERE"
     object {
         inherits KittyEntity.new(tag)x(x')y(y')
     }
