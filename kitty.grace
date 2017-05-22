@@ -22,7 +22,7 @@ def math = dom.window.Math
 class KittyImage.new(url', width', height') {
     
     // print "CREATING NEW IMAGE: {url'}..."
-    
+
     def imgTag = dom.document.createElement("img")
     imgTag.src := url'
 
@@ -128,7 +128,7 @@ class KittyKat.new(tag', x', y') {
         image := Image(url')width(64)height(64)
     }
 
-    method setImage(image') {
+    method setImage(image': KittyImage) {
         image := image'
     }
 

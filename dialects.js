@@ -909,24 +909,6 @@ dialects.kitty = {
             description: "Sets the world for the game",
             returns: "Done"
         },
-        "start": {
-            name: "start",
-            parts: [{
-                name: "start",
-                args: []
-            }],
-            description: "Starts the game.",
-            returns: "Done"
-        },
-        "stop": {
-            name: "stop",
-            parts: [{
-                name: "stop",
-                args: []
-            }],
-            description: "Stop the game.",
-            returns: "Done"
-        },
         "Entity()x()y": {
             name: "Entity()x()y",
             parts: [{
@@ -979,8 +961,8 @@ dialects.kitty = {
                 "mctx"
             ]
         },
-        "Image": {
-            name: "Image",
+        "Image()width()height": {
+            name: "Image()width()height",
             parts: [{
                     name: "Image",
                     args: [{
