@@ -927,8 +927,8 @@ dialects.kitty = {
             description: "Stop the game.",
             returns: "Done"
         },
-        "Entity": {
-            name: "Entity",
+        "Entity()x()y": {
+            name: "Entity()x()y",
             parts: [{
                     name: "Entity",
                     args: [{
@@ -951,8 +951,10 @@ dialects.kitty = {
                     }]
                 }
             ],
-            returns: "Done",
+            returns: "Object",
+            // selfcall: true,
             description: "Create an entity object",
+            // toplevel: true,
             inheritedVars: ["posX", "posY", "rotation", "action"]
         },
         "World": {
@@ -1007,6 +1009,8 @@ dialects.kitty = {
         }
     }
 };
+for (var k in dialects.kitty.methods)
+    dialects.kitty.methods[k].category = "Kitty";
 extendDialect("kitty", "StandardGrace")
 
 function createOperatorTile(op) {
