@@ -19,7 +19,7 @@ def math = dom.window.Math
 // XXX: Control functions are at the bottom
 
 // Represents an image in the game world
-class KittyImage.new(url', height', width') {
+class KittyImage.new(url')width(width')height(height') {
     
     // print "CREATING NEW IMAGE: {url'}..."
     def imgTag = dom.document.createElement("img")
@@ -55,16 +55,17 @@ class KittyImage.new(url', height', width') {
     // print "CREATED NEW IMAGE: {url'}"
 }
 
-method Image(url', x', y') {
+method Image(url)width(width')height(height') {
     object {
-        inherits KittyImage.new(url', x', y')
+        inherits KittyImage.new(url)width(width')height(height')
     }
 }
 
 // Represents an object in the game world
-class KittyEntity.x(x')y(y') {
+class KittyEntity.new(tag')x(x')y(y') {
     
     // print "CREATING ENTITY AT ({x'}, {y'})..."
+    def tag = tag'
 
     var posX := x'
     var posY := y'
@@ -123,7 +124,7 @@ class KittyEntity.x(x')y(y') {
     }
 
     method createImage(url') {
-        image := Image(url', 64, 64)
+        image := Image(url')width(64)height(64)
     }
 
     method setImage(image') {
@@ -154,10 +155,9 @@ class KittyEntity.x(x')y(y') {
     // print "ENTITY CREATED"
 } 
 
-method Entity(tag')x(x')y(y') {
+method Entity(tag)x(x')y(y') {
     object {
-        def tag = tag'
-        inherits KittyEntity.x(x')y(y')
+        inherits KittyEntity.new(tag)x(x')y(y')
     }
 }
 
@@ -293,8 +293,8 @@ class KittyWorld.new() {
         return key == currentKeyDown
     }
 
-    method setBackground(background') {
-        background := Image(background', canvasWidth, canvasHeight)
+    method setBackground(url) {
+        background := Image(url)width(canvasWidth)height(canvasHeight)
     }
 
     method addEntity(e: KittyEntity) {
