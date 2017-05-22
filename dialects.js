@@ -1,8 +1,7 @@
 "use strict"
 var serialisers = [];
 var StandardGrace = {
-    'operators': [
-        {
+    'operators': [{
             lhs: 'Number',
             rhs: 'Number',
             returns: 'Number',
@@ -34,32 +33,33 @@ var StandardGrace = {
     methods: {
         "print": {
             name: "print",
-            parts: [
-                {
-                    name: 'print',
-                    args: ["Any"]
-                },
-            ],
+            parts: [{
+                name: 'print',
+                args: ["Any"]
+            }, ],
             category: "Input/Output",
             description: "Write a string to the text area.",
             returns: "Done"
         },
         "while()do": {
             name: "while()do",
-            parts: [
-                {
+            parts: [{
                     name: 'while',
-                    args: [
-                        {type: 'Block', returns: 'Boolean', multiline: false,
-                            description: "Condition."}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Boolean',
+                        multiline: false,
+                        description: "Condition."
+                    }],
                 },
                 {
                     name: 'do',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to do."}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        description: "Something to do."
+                    }],
                 }
             ],
             category: "Control",
@@ -69,22 +69,19 @@ var StandardGrace = {
         },
         "for()do": {
             name: "for()do",
-            parts: [
-                {
+            parts: [{
                     name: 'for',
                     args: ["Iterable"],
                 },
                 {
                     name: 'do',
-                    args: [
-                        {
-                            type: 'Block',
-                            returns: 'Any',
-                            multiline: true,
-                            params: 1,
-                            description: "Something to do for each item.",
-                        }
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        params: 1,
+                        description: "Something to do for each item.",
+                    }],
                 }
             ],
             category: "Control",
@@ -94,18 +91,19 @@ var StandardGrace = {
         },
         "if()then": {
             name: "if()then",
-            parts: [
-                {
+            parts: [{
                     name: 'if',
                     args: ["Boolean"],
                     description: "Condition.",
                 },
                 {
                     name: 'then',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to do if true."}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        description: "Something to do if true."
+                    }],
                 }
             ],
             category: "Control",
@@ -115,25 +113,28 @@ var StandardGrace = {
         },
         "if()then()else": {
             name: "if()then()else",
-            parts: [
-                {
+            parts: [{
                     name: 'if',
                     args: ["Boolean"],
                     description: "Condition.",
                 },
                 {
                     name: 'then',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to do if true."}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        description: "Something to do if true."
+                    }],
                 },
                 {
                     name: 'else',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true,
-                            description: "Something to do if false."}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        description: "Something to do if false."
+                    }],
                 }
             ],
             category: "Control",
@@ -148,6 +149,7 @@ var dialects = {
     "StandardGrace": StandardGrace,
     "": StandardGrace
 };
+
 function extendDialect(sub, sup) {
     sub = dialects[sub];
     sup = dialects[sup];
@@ -172,45 +174,98 @@ dialects.logo = {
     methods: {
         "forward": {
             name: "forward",
-            parts: [{name: "forward", args: ["Number"]}],
+            parts: [{
+                name: "forward",
+                args: ["Number"]
+            }],
             description: "Move forward this much.",
             returns: "Done"
         },
         "turnRight": {
             name: "turnRight",
-            parts: [{name: "turnRight", args: ["Number"]}],
+            parts: [{
+                name: "turnRight",
+                args: ["Number"]
+            }],
             description: "Turn anticlockwise this many degrees.",
             returns: "Done"
         },
         "turnLeft": {
             name: "turnLeft",
-            parts: [{name: "turnLeft", args: ["Number"]}],
+            parts: [{
+                name: "turnLeft",
+                args: ["Number"]
+            }],
             description: "Turn clockwise this many degrees.",
             returns: "Done"
         },
         "lineColor:=": {
             name: "lineColor:=",
-            parts: [{name: "lineColor:=", args: ["Colour"]}],
+            parts: [{
+                name: "lineColor:=",
+                args: ["Colour"]
+            }],
             description: "Set the colour of the line.",
             returns: "Done"
         },
-        "penUp": {name: "penUp", parts: [{name: "penUp", args: []}],
-            returns: "Done", description: "Lift the pen and stop drawing."},
-        "penDown": {name: "penDown", parts: [{name: "penDown", args: []}],
+        "penUp": {
+            name: "penUp",
+            parts: [{
+                name: "penUp",
+                args: []
+            }],
             returns: "Done",
-            description: "Put the pen back down and start drawing again."},
-        "blue": {name: "blue", parts: [{name: "blue", args: []}],
-            returns: "Colour", constant: true,
-            description: "The colour blue."},
-        "red": {name: "red", parts: [{name: "red", args: []}],
-            returns: "Colour", constant: true,
-            description: "The colour red."},
-        "green": {name: "green", parts: [{name: "green", args: []}],
-            returns: "Colour", constant: true,
-            description: "The colour green."},
-        "black": {name: "black", parts: [{name: "black", args: []}],
-            returns: "Colour", constant: true,
-            description: "The colour black."},
+            description: "Lift the pen and stop drawing."
+        },
+        "penDown": {
+            name: "penDown",
+            parts: [{
+                name: "penDown",
+                args: []
+            }],
+            returns: "Done",
+            description: "Put the pen back down and start drawing again."
+        },
+        "blue": {
+            name: "blue",
+            parts: [{
+                name: "blue",
+                args: []
+            }],
+            returns: "Colour",
+            constant: true,
+            description: "The colour blue."
+        },
+        "red": {
+            name: "red",
+            parts: [{
+                name: "red",
+                args: []
+            }],
+            returns: "Colour",
+            constant: true,
+            description: "The colour red."
+        },
+        "green": {
+            name: "green",
+            parts: [{
+                name: "green",
+                args: []
+            }],
+            returns: "Colour",
+            constant: true,
+            description: "The colour green."
+        },
+        "black": {
+            name: "black",
+            parts: [{
+                name: "black",
+                args: []
+            }],
+            returns: "Colour",
+            constant: true,
+            description: "The colour black."
+        },
     }
 };
 for (var k in dialects.logo.methods)
@@ -220,35 +275,38 @@ dialects.loopinvariant = {
     methods: {
         "print": {
             name: "print",
-            parts: [
-                {
-                    name: 'print',
-                    args: ["Any"]
-                },
-            ],
+            parts: [{
+                name: 'print',
+                args: ["Any"]
+            }, ],
             category: "Input/Output",
             returns: "Done"
         },
         "while()invariant()do": {
             name: "while()invariant()do",
-            parts: [
-                {
+            parts: [{
                     name: 'while',
-                    args: [
-                        {type: 'Block', returns: 'Boolean', multiline: false}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Boolean',
+                        multiline: false
+                    }],
                 },
                 {
                     name: 'invariant',
-                    args: [
-                        {type: 'Block', returns: 'Boolean', multiline: false}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Boolean',
+                        multiline: false
+                    }],
                 },
                 {
                     name: 'do',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true
+                    }],
                 }
             ],
             category: "Control",
@@ -257,27 +315,26 @@ dialects.loopinvariant = {
         },
         "for()invariant()do": {
             name: "for()invariant()do",
-            parts: [
-                {
+            parts: [{
                     name: 'for',
                     args: ["Any"],
                 },
                 {
                     name: 'invariant',
-                    args: [
-                        {type: 'Block', returns: 'Boolean', multiline: false}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Boolean',
+                        multiline: false
+                    }],
                 },
                 {
                     name: 'do',
-                    args: [
-                        {
-                            type: 'Block',
-                            returns: 'Any',
-                            multiline: true,
-                            params: 1
-                        }
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        params: 1
+                    }],
                 }
             ],
             category: "Control",
@@ -286,16 +343,17 @@ dialects.loopinvariant = {
         },
         "if()then": {
             name: "if()then",
-            parts: [
-                {
+            parts: [{
                     name: 'if',
                     args: ["Boolean"],
                 },
                 {
                     name: 'then',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true
+                    }],
                 }
             ],
             category: "Control",
@@ -304,22 +362,25 @@ dialects.loopinvariant = {
         },
         "if()then()else": {
             name: "if()then()else",
-            parts: [
-                {
+            parts: [{
                     name: 'if',
                     args: ["Boolean"],
                 },
                 {
                     name: 'then',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true
+                    }],
                 },
                 {
                     name: 'else',
-                    args: [
-                        {type: 'Block', returns: 'Any', multiline: true}
-                    ],
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true
+                    }],
                 }
             ],
             category: "Control",
@@ -333,25 +394,34 @@ dialects.sniff = {
     methods: {
         "rectangle": {
             name: "rectangle",
-            parts: [{name: "rectangle", args: []}],
+            parts: [{
+                name: "rectangle",
+                args: []
+            }],
             returns: "Shape",
             description: "Create a rectangle.",
             inheritedVars: ["width", "height", "x", "y", "colour"]
         },
         "circle": {
             name: "circle",
-            parts: [{name: "circle", args: []}],
+            parts: [{
+                name: "circle",
+                args: []
+            }],
             returns: "Shape",
             description: "Create a circle.",
             inheritedVars: ["radius", "x", "y", "colour"]
         },
         "image": {
             name: "image",
-            parts: [{name: "image", args: []}],
+            parts: [{
+                name: "image",
+                args: []
+            }],
             returns: "Shape",
             description: "Create an image object.",
             inheritedVars: ["width", "height", "x", "y", "url"],
-            onRegenerate: function(tile) {
+            onRegenerate: function (tile) {
                 var inheritsTile = tile.parentNode.parentNode;
                 if (!inheritsTile.classList.contains("inherits"))
                     return;
@@ -360,7 +430,7 @@ dialects.sniff = {
                     return;
                 var assigns = objTile.getElementsByClassName("assign");
                 assigns = Array.prototype.slice.call(assigns, 0);
-                assigns.forEach(function(assign) {
+                assigns.forEach(function (assign) {
                     var extras = assign.getElementsByClassName("extra-indicator");
                     var extra = null;
                     if (extras.length == 1) {
@@ -394,7 +464,7 @@ dialects.sniff = {
                     }
                     var valtile = valhole.childNodes[0];
                     var valOrigin = findDefiniteValue(valtile);
-                    if (!valOrigin||!valOrigin.classList.contains("string")) {
+                    if (!valOrigin || !valOrigin.classList.contains("string")) {
                         if (extra)
                             extra.parentNode.removeChild(extra);
                         return;
@@ -410,14 +480,15 @@ dialects.sniff = {
                         var extra = extras[0];
                     var available = ["ball.png", "face.jpg", "moon.png",
                         "star.png", "sun.png", "bug.png",
-                        "smile.png", "stuart.jpg"];
-                    extra.onmousedown = function() {
+                        "smile.png", "stuart.jpg"
+                    ];
+                    extra.onmousedown = function () {
                         var menu = document.createElement("ul");
                         menu.classList.add("popup-menu");
                         var xy = findOffsetTopLeft(extra);
                         menu.style.top = (xy.top + extra.offsetHeight - codearea.offsetTop - 10) + 'px';
                         menu.style.left = xy.left + 'px';
-                        available.forEach(function(url) {
+                        available.forEach(function (url) {
                             var li = document.createElement('li');
                             var img = document.createElement('img');
                             img.style.maxWidth = '5ex';
@@ -427,8 +498,8 @@ dialects.sniff = {
                             img.src = url;
                             li.appendChild(img);
                             menu.appendChild(li);
-                            var inp=valOrigin.getElementsByTagName("input")[0];
-                            li.addEventListener('click', function() {
+                            var inp = valOrigin.getElementsByTagName("input")[0];
+                            li.addEventListener('click', function () {
                                 inp.value = url;
                                 codearea.removeChild(menu);
                                 updateTileIndicator();
@@ -440,10 +511,10 @@ dialects.sniff = {
                                 }
                                 inp.classList.remove('popout');
                             });
-                            li.addEventListener('mouseover', function() {
+                            li.addEventListener('mouseover', function () {
                                 inp.classList.add('popout');
                             });
-                            li.addEventListener('mouseout', function() {
+                            li.addEventListener('mouseout', function () {
                                 inp.classList.remove('popout');
                             });
                         });
@@ -456,8 +527,13 @@ dialects.sniff = {
         },
         "value": {
             name: "value",
-            parts: [{name: "value", args: [
-                {type: 'Block', returns: 'Any', multiline: false}]
+            parts: [{
+                name: "value",
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: false
+                }]
             }],
             returns: "Shape",
             description: "Display a value on screen.",
@@ -465,13 +541,25 @@ dialects.sniff = {
         },
         "whenever()do": {
             name: "whenever()do",
-            parts: [{name: "whenever", args: [
-                    {type: 'Block', returns: 'Boolean', multiline: false,
-                        description: "Condition."}]},
-                {name: "do", args: [
-                    {type: 'Block', returns: 'Any', multiline: true,
-                        description: "Something to do when true."}
-                    ]}],
+            parts: [{
+                    name: "whenever",
+                    args: [{
+                        type: 'Block',
+                        returns: 'Boolean',
+                        multiline: false,
+                        description: "Condition."
+                    }]
+                },
+                {
+                    name: "do",
+                    args: [{
+                        type: 'Block',
+                        returns: 'Any',
+                        multiline: true,
+                        description: "Something to do when true."
+                    }]
+                }
+            ],
             returns: "Done",
             multiline: true,
             selfcall: true,
@@ -480,9 +568,14 @@ dialects.sniff = {
         },
         "always": {
             name: "always",
-            parts: [{name: "always",
-                    args: [{type: 'Block', returns: 'Any', multiline: true}]
-                    }],
+            parts: [{
+                name: "always",
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
             returns: "Done",
             multiline: true,
             selfcall: true,
@@ -491,171 +584,263 @@ dialects.sniff = {
         },
         "bounce": {
             name: "bounce",
-            parts: [{name: "bounce", args: []}],
+            parts: [{
+                name: "bounce",
+                args: []
+            }],
             returns: "Done",
             description: "Bounce off an edge.",
             selfcall: true
         },
         "forward": {
             name: "forward",
-            parts: [{name: "forward", args: ["Number"]}],
+            parts: [{
+                name: "forward",
+                args: ["Number"]
+            }],
             returns: "Done",
             description: "Move forward some distance.",
             selfcall: true
         },
         "bounceOff": {
             name: "bounceOff",
-            parts: [{name: "bounceOff", args: ["Shape"]}],
+            parts: [{
+                name: "bounceOff",
+                args: ["Shape"]
+            }],
             returns: "Done",
             description: "Bounce off another object.",
             selfcall: true
         },
         "touchingEdge": {
             name: "touchingEdge",
-            parts: [{name: "touchingEdge", args: []}],
+            parts: [{
+                name: "touchingEdge",
+                args: []
+            }],
             returns: "Boolean",
             description: "True if this object is touching an edge.",
             selfcall: true
         },
         "touching": {
             name: "touching",
-            parts: [{name: "touching", args: ["Point"]}],
+            parts: [{
+                name: "touching",
+                args: ["Point"]
+            }],
             returns: "Boolean",
             description: "True if this object is touching the other.",
             selfcall: true
         },
         "face": {
             name: "face",
-            parts: [{name: "face", args: ["Point"]}],
+            parts: [{
+                name: "face",
+                args: ["Point"]
+            }],
             returns: "Done",
             description: "Turn to face a particular point.",
             selfcall: true
         },
         "above": {
             name: "above",
-            parts: [{name: "above", args: []}],
+            parts: [{
+                name: "above",
+                args: []
+            }],
             description: "Refers to the last object created.",
             returns: "Shape"
         },
         "Δ": {
             name: "Δ",
-            parts: [{name: "Δ", args: []}],
+            parts: [{
+                name: "Δ",
+                args: []
+            }],
             description: "Refers to the last object created.",
             returns: "Shape"
         },
         "stop": {
             name: "stop",
-            parts: [{name: "stop", args: []}],
+            parts: [{
+                name: "stop",
+                args: []
+            }],
             description: "Stop the program.",
             returns: "Done"
         },
         "random": {
             name: "random",
-            parts: [{name: "random", args: ["Number"]}],
+            parts: [{
+                name: "random",
+                args: ["Number"]
+            }],
             description: "Returns a random number.",
             returns: "Number"
         },
         "randomPoint": {
             name: "randomPoint",
-            parts: [{name: "randomPoint", args: []}],
+            parts: [{
+                name: "randomPoint",
+                args: []
+            }],
             description: "Returns a random point in the drawing area.",
             returns: "Point"
         },
         "canvasWidth": {
             name: "canvasWidth",
-            parts: [{name: "canvasWidth", args: []}],
+            parts: [{
+                name: "canvasWidth",
+                args: []
+            }],
             description: "Width of the drawing area.",
             returns: "Number"
         },
         "canvasHeight": {
             name: "canvasHeight",
-            parts: [{name: "canvasHeight", args: []}],
+            parts: [{
+                name: "canvasHeight",
+                args: []
+            }],
             description: "Height of the drawing area.",
             returns: "Number"
         },
         "turn": {
             name: "turn",
-            parts: [{name: "turn", args: ["Number"]}],
+            parts: [{
+                name: "turn",
+                args: ["Number"]
+            }],
             returns: "Done",
             description: "Rotate anticlockwise this many degrees.",
             selfcall: true
         },
         "jumpTo": {
             name: "jumpTo",
-            parts: [{name: "jumpTo", args: ["Point"]}],
+            parts: [{
+                name: "jumpTo",
+                args: ["Point"]
+            }],
             returns: "Done",
             description: "Move immediately to a point.",
             selfcall: true
         },
         "stamp": {
             name: "stamp",
-            parts: [{name: "stamp", args: []}],
+            parts: [{
+                name: "stamp",
+                args: []
+            }],
             returns: "Done",
             description: "Draw this item onto the background.",
             selfcall: true
         },
         "clear": {
             name: "clear",
-            parts: [{name: "clear", args: []}],
+            parts: [{
+                name: "clear",
+                args: []
+            }],
             description: "Erase the background.",
             returns: "Done",
         },
         "background": {
             name: "background",
-            parts: [{name: "background", args: ["String"]}],
+            parts: [{
+                name: "background",
+                args: ["String"]
+            }],
             description: "Set the background colour.",
             returns: "Done"
         },
         "playSound": {
             name: "playSound",
-            parts: [{name: "playSound", args: ["String"]}],
+            parts: [{
+                name: "playSound",
+                args: ["String"]
+            }],
             returns: "Done",
             description: "Play a sound.",
             selfcall: true
         },
         "stopSound": {
             name: "stopSound",
-            parts: [{name: "stopSound", args: ["String"]}],
+            parts: [{
+                name: "stopSound",
+                args: ["String"]
+            }],
             returns: "Done",
             description: "Stop playing a sound.",
             selfcall: true
         },
         "mouse": {
             name: "mouse",
-            parts: [{name: "mouse", args: []}],
+            parts: [{
+                name: "mouse",
+                args: []
+            }],
             description: "The current location of the mouse pointer.",
             returns: "Point"
         },
-        "centre": {name: "centre", parts: [{name: "centre", args: []}],
-            returns: "Point", constant: true,
-            description: "The centre of the drawing area."},
-        "rightCentre": {name: "rightCentre",
-            parts: [{name: "rightCentre", args: []}],
-            returns: "Point", constant: true,
-            description: "The middle of the right edge of the drawing area."},
-        "leftCentre": {name: "leftCentre",
-            parts: [{name: "leftCentre", args: []}],
-            returns: "Point", constant: true,
-            description: "The middle of the left edge of the drawing area."},
+        "centre": {
+            name: "centre",
+            parts: [{
+                name: "centre",
+                args: []
+            }],
+            returns: "Point",
+            constant: true,
+            description: "The centre of the drawing area."
+        },
+        "rightCentre": {
+            name: "rightCentre",
+            parts: [{
+                name: "rightCentre",
+                args: []
+            }],
+            returns: "Point",
+            constant: true,
+            description: "The middle of the right edge of the drawing area."
+        },
+        "leftCentre": {
+            name: "leftCentre",
+            parts: [{
+                name: "leftCentre",
+                args: []
+            }],
+            returns: "Point",
+            constant: true,
+            description: "The middle of the left edge of the drawing area."
+        },
         "hue()saturation()lightness": {
             name: "hue()saturation()lightness",
-            parts: [{name: "hue", args: [
-                    {type: 'Number',
-                        description: "0=red, 120=green, 240=blue."}]},
-                {name: "saturation", args: [
-                    {type: 'Number',
-                        description: "How strong the colour is (0-100)."}
-                    ]},
-                {name: "lightness", args: [
-                    {type: 'Number',
-                        description: "How light the colour is (0-100)."}
-                    ]}
+            parts: [{
+                    name: "hue",
+                    args: [{
+                        type: 'Number',
+                        description: "0=red, 120=green, 240=blue."
+                    }]
+                },
+                {
+                    name: "saturation",
+                    args: [{
+                        type: 'Number',
+                        description: "How strong the colour is (0-100)."
+                    }]
+                },
+                {
+                    name: "lightness",
+                    args: [{
+                        type: 'Number',
+                        description: "How light the colour is (0-100)."
+                    }]
+                }
             ],
             returns: "String",
             selfcall: true,
             description: "Create a colour.",
             toplevel: true,
-            onRegenerate: function(tile) {
+            onRegenerate: function (tile) {
                 var colours = tile.getElementsByClassName("extra-indicator");
                 var holes = tile.getElementsByClassName("hole");
                 if (holes.length > 3) {
@@ -664,7 +849,7 @@ dialects.sniff = {
                     return;
                 }
                 var definiteValues = [null, null, null];
-                for (var i=0; i<holes.length; i++) {
+                for (var i = 0; i < holes.length; i++) {
                     if (holes[i].childNodes.length != 1) {
                         if (colours.length)
                             colours[0].parentNode.removeChild(colours[0]);
@@ -672,9 +857,9 @@ dialects.sniff = {
                     }
                     definiteValues[i] = findDefiniteValue(holes[i].lastChild);
                 }
-                for (var i=0; i<definiteValues.length; i++) {
+                for (var i = 0; i < definiteValues.length; i++) {
                     if (!definiteValues[i] ||
-                            !definiteValues[i].classList.contains("number")) {
+                        !definiteValues[i].classList.contains("number")) {
                         if (colours.length)
                             colours[0].parentNode.removeChild(colours[0]);
                         return;
@@ -717,51 +902,87 @@ dialects.kitty = {
     methods: {
         "setWorld": {
             name: "setWorld",
-            parts: [{name: "setWorld", args: ["Object"]}],
+            parts: [{
+                name: "setWorld",
+                args: ["Object"]
+            }],
             description: "Sets the world for the game",
             returns: "Done"
         },
         "start": {
             name: "start",
-            parts: [{name: "start", args: []}],
+            parts: [{
+                name: "start",
+                args: []
+            }],
             description: "Starts the game.",
             returns: "Done"
         },
         "stop": {
             name: "stop",
-            parts: [{name: "stop", args: []}],
+            parts: [{
+                name: "stop",
+                args: []
+            }],
             description: "Stop the game.",
             returns: "Done"
         },
         "Entity": {
             name: "Entity",
-            parts: [{name: "Entity", args: ["Number", "Number"]}],
+            parts: [{
+                    name: "Entity",
+                    args: [{
+                        type: "String",
+                        description: "Tag for the entity"
+                    }]
+                },
+                {
+                    name: "x",
+                    args: [{
+                        type: "Number",
+                        description: "X coordinate"
+                    }]
+                },
+                {
+                    name: "y",
+                    args: [{
+                        type: "Number",
+                        description: "Y coordinate"
+                    }]
+                }
+            ],
             returns: "Done",
             description: "Create an entity object",
             inheritedVars: ["posX", "posY", "rotation", "action"]
         },
         "World": {
             name: "World",
-            parts: [{name: "World", args: []}],
+            parts: [{
+                name: "World",
+                args: []
+            }],
             returns: "Done",
             description: "Create a world object",
             inheritedVars: [
                 "background",
-                "backgroundColour", 
-                "document", 
+                "backgroundColour",
+                "document",
                 "backingCanvas",
                 "backingContext",
-                "canvas", 
-                "canvasWidth", 
+                "canvas",
+                "canvasWidth",
                 "canvasHeight",
                 "entities",
                 "isInit",
                 "mctx"
-                ]
+            ]
         },
         "Image": {
             name: "Image",
-            parts: [{name: "World", args: ["String", "Number", "Number"]}],
+            parts: [{
+                name: "World",
+                args: ["String", "Number", "Number"]
+            }],
             returns: "Done",
             description: "Creates an image",
             inheritedVars: ["imgTag", "height", "width"]
@@ -785,7 +1006,7 @@ function createOperatorTile(op) {
     oper.classList.add("op");
     oper.appendChild(document.createTextNode(op.operators[0]));
     var operators = op.operators[0];
-    for (var i=1; i<op.operators.length; i++)
+    for (var i = 1; i < op.operators.length; i++)
         operators = operators + " " + op.operators[i];
     oper.dataset.operators = operators;
     tile.appendChild(lhs);
@@ -812,7 +1033,7 @@ function createDialectRequestTile(req) {
     }
     if (req.description)
         line.title = req.description;
-    for (var i=0; i<req.parts.length; i++) {
+    for (var i = 0; i < req.parts.length; i++) {
         var mn = document.createElement('span');
         mn.classList.add("part");
         var ps = document.createElement('span');
@@ -829,12 +1050,12 @@ function createDialectRequestTile(req) {
         line.appendChild(ps);
         if (req.parts[i].args.length > 1)
             line.appendChild(document.createTextNode("("));
-        for (var j=0; j<req.parts[i].args.length; j++) {
+        for (var j = 0; j < req.parts[i].args.length; j++) {
             var arg = req.parts[i].args[j];
             if (arg.type == "Block" && arg.multiline) {
                 ps.appendChild(document.createTextNode(" {"));
                 if (arg.params) {
-                    for (var k=0; k<arg.params; k++) {
+                    for (var k = 0; k < arg.params; k++) {
                         if (k > 0)
                             line.appendChild(document.createTextNode(", "));
                         var inp = document.createElement("input");
@@ -870,8 +1091,8 @@ function createDialectRequestTile(req) {
                     hole.title = arg.description;
                 line.appendChild(hole);
                 line.appendChild(document.createTextNode("}"));
-            } else if (req.parts[i].name.substring(req.parts[i].name.length-2)
-                    == ":=") {
+            } else if (req.parts[i].name.substring(req.parts[i].name.length - 2) ==
+                ":=") {
                 var pad = document.createElement('span');
                 pad.style.marginLeft = '1ex';
                 ps.appendChild(pad);
@@ -901,6 +1122,7 @@ function createDialectRequestTile(req) {
         tile.dataset.types = req.returns;
     return tile;
 }
+
 function createHole(arg) {
     var hole = document.createElement("div");
     if (!hole.dataset)
@@ -911,24 +1133,27 @@ function createHole(arg) {
     }
     return hole;
 }
+
 function getHoles(n) {
     var holes = [];
-    for (var i=0; i<n.childNodes.length; i++)
-        if (n.childNodes[i].classList
-                && n.childNodes[i].classList.contains("hole"))
+    for (var i = 0; i < n.childNodes.length; i++)
+        if (n.childNodes[i].classList &&
+            n.childNodes[i].classList.contains("hole"))
             holes.push(n.childNodes[i]);
     return holes;
 }
+
 function getVarInputs(n) {
     var vars = [];
     if (n.classList.contains("multiline"))
         n = n.childNodes[0];
-    for (var i=0; i<n.childNodes.length; i++)
-        if (n.childNodes[i].classList
-                && n.childNodes[i].classList.contains("variable-name"))
+    for (var i = 0; i < n.childNodes.length; i++)
+        if (n.childNodes[i].classList &&
+            n.childNodes[i].classList.contains("variable-name"))
             vars.push(n.childNodes[i]);
     return vars;
 }
+
 function codeSerialiser(n) {
     var req = serialisers[n.dataset.serialiserIndex];
     var out = "";
@@ -941,19 +1166,18 @@ function codeSerialiser(n) {
     }
     var holes = getHoles(line);
     var ho = 0;
-    for (var i=0; i<req.parts.length; i++) {
+    for (var i = 0; i < req.parts.length; i++) {
         var part = req.parts[i];
         if (i > 0)
             out += " ";
         out += part.name;
-        if (part.args.length == 0) {
-        } else if (part.args.length == 1) {
+        if (part.args.length == 0) {} else if (part.args.length == 1) {
             var arg = part.args[0];
             if (arg.type == "Block" && arg.multiline) {
                 out += " {";
                 if (arg.params) {
                     var vars = getVarInputs(n);
-                    for (var j=0; j<vars.length; j++) {
+                    for (var j = 0; j < vars.length; j++) {
                         if (j > 0)
                             out += ", ";
                         out += vars[j].value;
@@ -962,12 +1186,12 @@ function codeSerialiser(n) {
                 }
                 out += "\n";
                 var indent = "";
-                for (var j=0; j<blockIndent; j++)
+                for (var j = 0; j < blockIndent; j++)
                     indent += '    ';
                 blockIndent++;
                 line = line.nextSibling;
                 var hole = line.childNodes[0].childNodes[0];
-                for (var j=0; j<hole.childNodes.length; j++) {
+                for (var j = 0; j < hole.childNodes.length; j++) {
                     out += '    ' + indent + generateNodeCode(hole.childNodes[j]) + "\n";
                 }
                 out += indent + "}"
@@ -984,7 +1208,7 @@ function codeSerialiser(n) {
             ho++;
         } else {
             out += " (";
-            for (var j=0; j<part.args.length; j++) {
+            for (var j = 0; j < part.args.length; j++) {
                 if (j > 0)
                     out += ", ";
                 out += generateNodeCode(holes[ho + j]);
@@ -1009,11 +1233,11 @@ function jsonSerialiser(n) {
         name: req.name,
         parts: []
     };
-    for (var i=0; i<req.parts.length; i++) {
+    for (var i = 0; i < req.parts.length; i++) {
         var part = req.parts[i];
         var opart = [];
         overallObject.parts.push(opart);
-        for (var j=0; j<part.args.length; j++) {
+        for (var j = 0; j < part.args.length; j++) {
             var arg = part.args[j];
             if (arg.type == "Block") {
                 var block = {
@@ -1024,14 +1248,14 @@ function jsonSerialiser(n) {
                 opart.push(block);
                 if (arg.params) {
                     var vars = getVarInputs(line);
-                    for (var j=0; j<vars.length; j++) {
+                    for (var j = 0; j < vars.length; j++) {
                         block.params.push(vars[j].value);
                     }
                 }
                 if (arg.multiline) {
                     line = line.nextSibling;
                     var hole = line.childNodes[0].childNodes[0];
-                    for (var j=0; j<hole.childNodes.length; j++) {
+                    for (var j = 0; j < hole.childNodes.length; j++) {
                         block.body.push(generateNodeJSON(hole.childNodes[j]));
                     }
                     line = line.nextSibling;
@@ -1039,7 +1263,7 @@ function jsonSerialiser(n) {
                     ho = 0;
                 } else {
                     var hole = holes[ho++];
-                    for (var j=0; j<hole.childNodes.length; j++) {
+                    for (var j = 0; j < hole.childNodes.length; j++) {
                         block.body.push(generateNodeJSON(hole.childNodes[j]));
                     }
                 }
@@ -1074,16 +1298,15 @@ function jsonDeserialiser(obj) {
         req.parts = [req.args];
     if (!obj.parts)
         obj.parts = [obj.args];
-    for (var i=0; i<req.parts.length; i++) {
+    for (var i = 0; i < req.parts.length; i++) {
         var part = req.parts[i];
-        for (var j=0; j<part.args.length; j++) {
+        for (var j = 0; j < part.args.length; j++) {
             var param = part.args[j];
             var arg = obj.parts[i][0];
-            if (!arg) {
-            } else if (arg.type == "block") {
+            if (!arg) {} else if (arg.type == "block") {
                 if (arg.params) {
                     var vars = getVarInputs(line);
-                    for (var k=0; k<vars.length; k++) {
+                    for (var k = 0; k < vars.length; k++) {
                         vars[k].value = arg.params[k];
                     }
                 }
@@ -1097,10 +1320,10 @@ function jsonDeserialiser(obj) {
                 } else {
                     hole = holes[ho++];
                 }
-                for (var k=0; k<arg.body.length; k++)
+                for (var k = 0; k < arg.body.length; k++)
                     appendChildFromJSON(hole, arg.body[k]);
                 fillNextPrev(hole);
-                for (var k=0; k<hole.childNodes.length; k++)
+                for (var k = 0; k < hole.childNodes.length; k++)
                     hole.childNodes[k].style.position = 'static';
             } else {
                 holes[ho++].appendChild(createTileFromJSON(arg));
@@ -1113,6 +1336,7 @@ function jsonDeserialiser(obj) {
         tile.dataset.onlyInObject = "y";
     return tile;
 }
+
 function addDialectMethods(dialect) {
     var tb = document.getElementById('toolbox');
     var di = dialects[dialect];
@@ -1133,6 +1357,6 @@ function addDialectMethods(dialect) {
         }
     }
 }
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     changeDialect();
 });
