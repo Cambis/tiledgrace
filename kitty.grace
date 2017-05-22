@@ -62,11 +62,12 @@ method Image(url)width(width')height(height') {
 }
 
 // Represents an object in the game world
-class KittyEntity.new(tag', x', y') {
+class KittyKat.new(ghee', x', y') {
     
-    print "CREATING ENTITY AT ({x'}, {y'})..."
+    print "HERE"
+    // print "CREATING ENTITY AT ({x'}, {y'})..."
 
-    var tag := tag'
+    var tag := ghee'
     var posX := x'
     var posY := y'
     var rotation := 0
@@ -156,9 +157,16 @@ class KittyEntity.new(tag', x', y') {
     print "ENTITY CREATED"
 } 
 
-method Entity(tag)foo(x')bar(y') {
+class Kitty.new(a, b, c) {
+    print "{a}, {b}, {c}"
+}
+
+method Entity(ghee)foo(x')bar(y') {
     object {
-        inherits KittyEntity.new(tag, x', y')
+        // inherits KittyImage.new(ghee, x', y')
+        // inherits KittyEntity.new(ghee, x', y')
+        // inherits Kitty.new(ghee, x', y')
+        inherits KittyKat.new(ghee, x', y')
     }
 }
 
@@ -187,6 +195,8 @@ class KittyWorld.new() {
     var mctx
 
     var currentKeyDown := -1
+
+    var ent
 
     init
 
@@ -245,7 +255,8 @@ class KittyWorld.new() {
         setBackground("doggo.jpg")
 
         // Test entity
-        var ent := Entity("test")foo(64)bar(64)
+        ent := Entity("explosion.png")foo(64)bar(64)
+        // Image(url)width(canvasWidth)height(canvasHeight)
 
         isInit := true
         // print "INITIALIZATION FINISHED"
