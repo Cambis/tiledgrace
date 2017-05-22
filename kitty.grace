@@ -19,9 +19,10 @@ def math = dom.window.Math
 // XXX: Control functions are at the bottom
 
 // Represents an image in the game world
-class KittyImage.new(url', height', width') {
+class KittyImage.new(url', width', height') {
     
     // print "CREATING NEW IMAGE: {url'}..."
+
     def imgTag = dom.document.createElement("img")
     imgTag.src := url'
 
@@ -55,17 +56,18 @@ class KittyImage.new(url', height', width') {
     // print "CREATED NEW IMAGE: {url'}"
 }
 
-method Image(url', x', y') {
+method Image(url')width(width')height(height') {
     object {
-        inherits KittyImage.new(url', x', y')
+        inherits KittyImage.new(url', width', height')
     }
 }
 
 // Represents an object in the game world
-class KittyEntity.new(x', y') {
+class KittyKat.new(tag', x', y') {
     
     // print "CREATING ENTITY AT ({x'}, {y'})..."
 
+    var tag := tag'
     var posX := x'
     var posY := y'
     var rotation := 0
@@ -123,10 +125,10 @@ class KittyEntity.new(x', y') {
     }
 
     method createImage(url') {
-        image := Image(url', 64, 64)
+        image := Image(url')width(64)height(64)
     }
 
-    method setImage(image') {
+    method setImage(image': KittyImage) {
         image := image'
     }
 
@@ -150,13 +152,11 @@ class KittyEntity.new(x', y') {
     method getRotation {
         return rotation
     }
-
-    // print "ENTITY CREATED"
 } 
 
-method Entity(x', y') {
+method Entity(tag')x(x')y(y') {
     object {
-        inherits KittyEntity.new(x', y')
+        inherits KittyKat.new(tag', x', y')
     }
 }
 
@@ -164,7 +164,7 @@ method Entity(x', y') {
 class KittyWorld.new() {
 
     // print "CREATING NEW WORLD..."
-    
+
     var background
     var backgroundColour := "black"
 
@@ -185,6 +185,8 @@ class KittyWorld.new() {
     var mctx
 
     var currentKeyDown := -1
+
+    var ent
 
     init
 
@@ -242,6 +244,10 @@ class KittyWorld.new() {
         // Default background
         setBackground("doggo.jpg")
 
+        // Test entity
+        ent := Entity("explosion.png")x(10)y(10)
+        // Image(url)width(canvasWidth)height(canvasHeight)
+
         isInit := true
         // print "INITIALIZATION FINISHED"
 
@@ -292,8 +298,8 @@ class KittyWorld.new() {
         return key == currentKeyDown
     }
 
-    method setBackground(background') {
-        background := Image(background', canvasWidth, canvasHeight)
+    method setBackground(url) {
+        background := Image(url)width(canvasWidth)height(canvasHeight)
     }
 
     method addEntity(e: KittyEntity) {
@@ -344,3 +350,4 @@ method atModuleEnd(module) {
 // def foo = World.new(100, 100)
 // def bar = Entity.new(10, 10)
 // foo.addEntity(bar)
+// print "IS THIS WORKING???"
