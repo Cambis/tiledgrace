@@ -118,11 +118,11 @@ function gracecode_kitty () {
     var var_x__39__ = arguments[curarg];
     curarg++;
     if (argcv[1] !=  func8.paramCounts[1])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (foo)"));
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 2 (x)"));
     var var_y__39__ = arguments[curarg];
     curarg++;
     if (argcv[2] !=  func8.paramCounts[2])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 3 (bar)"));
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 3 (y)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "kitty";
@@ -167,7 +167,7 @@ function gracecode_kitty () {
     false,
     false,
   ];
-  this.methods["Entity()foo()bar"] = func8;
+  this.methods["Entity()x()y"] = func8;
   func8.definitionLine = 164;
   func8.definitionModule = "kitty";
   var func12 = function(argcv) {
@@ -214,7 +214,7 @@ function gracecode_kitty () {
       }
     }
   }
-  this.methods["Entity()foo()bar()object"] = func12;
+  this.methods["Entity()x()y()object"] = func12;
   lineNumber = 325
   var func16 = function(argcv) {
     var curarg = 1;
@@ -3649,7 +3649,7 @@ function gracecode_kitty () {
               var call626 = callmethod(call625, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call627 = callmethod(call626, "Entity()foo()bar", [1, 1, 1], string624, new GraceNum(64), new GraceNum(64));
+              var call627 = callmethod(call626, "Entity()x()y", [1, 1, 1], string624, new GraceNum(10), new GraceNum(10));
               onSelf = true;
               var call628 = callmethod(this, "ent:=", [1], call627);
               lineNumber = 267
@@ -4626,7 +4626,7 @@ function gracecode_kitty () {
               var call836 = callmethod(call835, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call837 = callmethod(call836, "Entity()foo()bar", [1, 1, 1], string834, new GraceNum(64), new GraceNum(64));
+              var call837 = callmethod(call836, "Entity()x()y", [1, 1, 1], string834, new GraceNum(10), new GraceNum(10));
               onSelf = true;
               var call838 = callmethod(this, "ent:=", [1], call837);
               lineNumber = 267
@@ -5338,7 +5338,7 @@ gracecode_kitty.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['kitty'] = "fresh:Entity()foo()bar:\n awake\n posX\n posY\n turn\n draw\n setImage\n rotation\n tag:=\n move\n tag\n setAction\n setLocation\n getRotation\n update\n strafe\n start\n action:=\n createImage\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n onDestroy\n rotation:=\nconstructors-of:KittyImage:\n new\nfresh:Image()width()height:\n draw\n height:=\n drawImage\n elements:=\n width:=\n height\n imgTag\n elements\n width\n getTag\nconstructors-of:KittyWorld:\n new\nmodules:\n StandardPrelude\n mgcollections\nfresh:World:\n setBackground\n backingContext\n canvasWidth:=\n document:=\n mctx\n document\n backingCanvas:=\n update\n getContext\n backingCanvas\n backgroundColour:=\n canvas:=\n backgroundColour\n background:=\n currentKeyDown\n addEntity\n isRunning:=\n isInit\n mctx:=\n canvasWidth\n entities\n isRunning\n backingContext:=\n canvasHeight:=\n start\n init\n canvasHeight\n currentKeyDown:=\n canvas\n isKeyDown\n ent:=\n background\n ent\n entities:=\n stop\n isInit:=\nmethods-of:KittyKat.new:\n awake\n posX\n posY\n turn\n draw\n setImage\n rotation\n tag:=\n move\n tag\n setAction\n setLocation\n getRotation\n update\n strafe\n start\n action:=\n createImage\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n rotation:=\n onDestroy\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n KittyImage\n Image()width()height\n KittyKat\n Kitty\n Entity()foo()bar\n KittyWorld\n World\n start\n setWorld\n atModuleEnd\nconstructors-of:KittyKat:\n new\npath:\n kitty\nclasses:\n KittyImage\n KittyKat\n Kitty\n KittyWorld\nconstructors-of:Kitty:\n new\nconfidential:\nfresh-methods:\n Image()width()height\n Entity()foo()bar\n World\nmethods-of:Kitty.new:\nmethods-of:KittyImage.new:\n draw\n height:=\n drawImage\n elements:=\n width:=\n height\n imgTag\n elements\n width\n getTag\nmethods-of:KittyWorld.new:\n setBackground\n backgroundColour\n canvasWidth:=\n document:=\n mctx\n document\n backingCanvas:=\n update\n getContext\n backingCanvas\n backingContext:=\n canvas:=\n backingContext\n background:=\n currentKeyDown\n addEntity\n init\n isInit\n mctx:=\n canvasWidth\n entities\n isRunning\n backgroundColour:=\n canvasHeight:=\n start\n isRunning:=\n canvasHeight\n currentKeyDown:=\n canvas\n isKeyDown\n ent:=\n background\n isInit:=\n entities:=\n stop\n ent\n";
+  gctCache['kitty'] = "constructors-of:KittyImage:\n new\nfresh:Image()width()height:\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n getTag\n elements\n width\n height\nconstructors-of:KittyWorld:\n new\nfresh-methods:\n Image()width()height\n Entity()x()y\n World\nfresh:World:\n isInit\n mctx:=\n canvasWidth\n entities:=\n isInit:=\n entities\n backingContext:=\n canvasHeight:=\n start\n init\n canvasHeight\n currentKeyDown:=\n canvas\n isRunning\n ent:=\n background\n backingContext\n stop\n ent\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n document\n backingCanvas:=\n update\n getContext\n backgroundColour:=\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n currentKeyDown\n isRunning:=\n addEntity\nmethods-of:KittyKat.new:\n draw\n setImage\n rotation\n rotation:=\n tag:=\n move\n setLocation\n getRotation\n tag\n setAction\n update\n strafe\n start\n createImage\n action:=\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n turn\n onDestroy\n awake\n posX\n posY\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n KittyImage\n Image()width()height\n KittyKat\n Kitty\n Entity()x()y\n KittyWorld\n World\n start\n setWorld\n atModuleEnd\nconstructors-of:Kitty:\n new\nconstructors-of:KittyKat:\n new\npath:\n kitty\nclasses:\n KittyImage\n KittyKat\n Kitty\n KittyWorld\nconfidential:\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:Kitty.new:\nmethods-of:KittyImage.new:\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n getTag\n elements\n width\n height\nfresh:Entity()x()y:\n draw\n setImage\n rotation\n onDestroy\n tag:=\n createImage\n setLocation\n getRotation\n tag\n posX\n update\n strafe\n move\n start\n action:=\n getX\n getY\n image:=\n action\n posX:=\n posY:=\n image\n awake\n rotation:=\n turn\n setAction\n posY\nmethods-of:KittyWorld.new:\n isInit\n mctx:=\n canvasWidth\n entities:=\n isInit:=\n entities\n backgroundColour:=\n canvasHeight:=\n start\n init\n canvasHeight\n currentKeyDown:=\n canvas\n isRunning\n ent:=\n background\n backingContext\n stop\n ent\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n document\n backingCanvas:=\n update\n getContext\n backingContext:=\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n currentKeyDown\n isRunning:=\n addEntity\n";
 if (originalSourceLines) {
   originalSourceLines["kitty"] = [
     "import \"mgcollections\" as collections",
@@ -5504,7 +5504,7 @@ if (originalSourceLines) {
     "    print \"{a}, {b}, {c}\"",
     "}",
     "",
-    "method Entity(ghee)foo(x')bar(y') {",
+    "method Entity(ghee)x(x')y(y') {",
     "    object {",
     "        // inherits KittyImage.new(ghee, x', y')",
     "        // inherits KittyEntity.new(ghee, x', y')",
@@ -5598,7 +5598,7 @@ if (originalSourceLines) {
     "        setBackground(\"doggo.jpg\")",
     "",
     "        // Test entity",
-    "        ent := Entity(\"explosion.png\")foo(64)bar(64)",
+    "        ent := Entity(\"explosion.png\")x(10)y(10)",
     "        // Image(url)width(canvasWidth)height(canvasHeight)",
     "",
     "        isInit := true",

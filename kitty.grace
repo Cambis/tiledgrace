@@ -161,7 +161,7 @@ class Kitty.new(a, b, c) {
     print "{a}, {b}, {c}"
 }
 
-method Entity(ghee)foo(x')bar(y') {
+method Entity(ghee)x(x')y(y') {
     object {
         // inherits KittyImage.new(ghee, x', y')
         // inherits KittyEntity.new(ghee, x', y')
@@ -255,7 +255,7 @@ class KittyWorld.new() {
         setBackground("doggo.jpg")
 
         // Test entity
-        ent := Entity("explosion.png")foo(64)bar(64)
+        ent := Entity("explosion.png")x(10)y(10)
         // Image(url)width(canvasWidth)height(canvasHeight)
 
         isInit := true
