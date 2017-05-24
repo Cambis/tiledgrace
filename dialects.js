@@ -988,6 +988,36 @@ dialects.kitty = {
             returns: "Done",
             description: "Creates an image",
             inheritedVars: ["imgTag", "height", "width"]
+        },
+        'move': {
+            name: 'move',
+            parts: [{
+                name: 'move',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Move in the current direction object is facing',
+            selfcall: true
+        },
+        'strafe': {
+            name: 'strafe',
+            parts: [{
+                name: 'strafe',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Move 90 degrees to the current direction object is facing',
+            selfcall: true
+        },
+        'turn': {
+            name: 'turn',
+            parts: [{
+                name: 'turn',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Turn object according to angle',
+            selfcall: true
         }
     }
 };
