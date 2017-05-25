@@ -144,6 +144,7 @@ class KittyEntity.new(tag', x', y') {
 method Entity(tag')x(x')y(y')actions(actions') {
     object {
         inherits KittyEntity.new(tag', x', y')
+        { setLocation(10, -200) }.apply
         actions'.apply
     }
 } 
@@ -166,9 +167,9 @@ method turn(angle') {
     newborn.turn(angle')
 }
 
-method setLocation(x, y) {
-    newborn.setLocation(x, y)
-}
+// method setLocation(x, y) {
+//     newborn.setLocation(x, y)
+// }
 
 method setImage(image': KittyImage) {
     newborn.setImage(image')
