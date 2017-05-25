@@ -177,6 +177,18 @@ method setImage(image': KittyImage) {
 method createImage(url') {
     newborn.createImage(url')
 }
+
+method setX(x') {
+    
+}
+
+method getX {
+    return newborn.getX
+}
+
+method getY {
+    return newborn.getY
+}
 // ========================== //
 
 // Represents the game world itself

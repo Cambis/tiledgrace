@@ -994,6 +994,42 @@ dialects.kitty = {
             description: 'Turn object according to angle',
             selfcall: true
         },
+        'setImage': {
+            name: 'setImage',
+            parts: [{
+                name: 'setImage',
+                args: ['KittyImage']
+            }],
+            returns: 'Done',
+            description: 'Set the image of an Entity.'
+        },
+        'createImage': {
+            name: 'createImage',
+            parts: [{
+                name: 'createImage',
+                args: ['String']
+            }],
+            returns: 'Done',
+            description: 'Create the image of an Entity.'
+        },
+        'getX': {
+            name: 'getX',
+            parts: [{
+                name: 'getX',
+                args: []
+            }],
+            returns: 'Number',
+            description: 'Return x positon of object'
+        },
+        'getY': {
+            name: 'getY',
+            parts: [{
+                name: 'getY',
+                args: []
+            }],
+            returns: 'Number',
+            description: 'Return y positon of object'
+        },
         "World": {
             name: "World",
             parts: [{
