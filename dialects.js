@@ -946,7 +946,8 @@ dialects.kitty = {
                     args: [{
                         type: 'Block',
                         returns: 'Any',
-                        multiline: true
+                        multiline: true,
+                        selfcall: true,
                     }]
                 }
             ],

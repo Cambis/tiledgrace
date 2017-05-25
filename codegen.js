@@ -291,6 +291,9 @@ function generateNodeCode(n, loc) {
         blockIndent--;
         return 'object {\n' + body + indent + '}'
     }
+    // if (n.classList.contains('Entity')) {
+    //     console.log('Here');
+    // }
     if (n.classList.contains('class')) {
         var name = n.childNodes[0].getElementsByClassName('variable-name')[0].value;
         var constructor = n.childNodes[0].getElementsByClassName('method-name')[0].value;
