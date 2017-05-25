@@ -149,7 +149,7 @@ method Entity(tag')x(x')y(y')actions(actions') {
 } 
 
 // XXX: Gross but neccessary
-// ======== ENTITY METHODS ========== //
+// ======== KITTY METHODS ========== //
 method update(action') {
     newborn.setAction(action')
 }

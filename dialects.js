@@ -1000,8 +1000,9 @@ dialects.kitty = {
                 name: "World",
                 args: []
             }],
-            returns: "Done",
+            returns: "Object",
             description: "Create a world object",
+            multiline: true,
             inheritedVars: [
                 "background",
                 "backgroundColour",
@@ -1048,6 +1049,10 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
+dialects.kitty.methods.move.category = "Motion";
+dialects.kitty.methods.strafe.category = "Motion";
+dialects.kitty.methods.turn.category = "Motion";
+// dialects.kitty.methods.setLocation.category = "Motion";
 extendDialect("kitty", "StandardGrace")
 
 function createOperatorTile(op) {
