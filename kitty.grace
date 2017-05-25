@@ -78,6 +78,8 @@ class KittyKat.new(tag', x', y') {
         }
     }
 
+    var actions := collections.list.new
+
     var image
 
     awake
@@ -89,14 +91,21 @@ class KittyKat.new(tag', x', y') {
     }
 
     // Called on game start
-    method start {
-        // print "start"
+    method start(block) {
+        block.apply
     }
 
     // Called by main game class
-    method update {
-        action.update
+    // method update {
+    //     action.update
+    // }
+    method tick() {
+        action.apply
     }
+
+    method update(action') {
+        action := action'
+    } 
 
     // Called on class destructor
     method onDestroy {
@@ -154,10 +163,15 @@ class KittyKat.new(tag', x', y') {
     }
 } 
 
-method Entity(tag')x(x')y(y') {
+method Entity(tag')x(x')y(y')actions(actions') {
     object {
         inherits KittyKat.new(tag', x', y')
+        actions'
     }
+}
+
+method action {
+
 }
 
 // Represents the game world itself
@@ -245,7 +259,7 @@ class KittyWorld.new() {
         setBackground("doggo.jpg")
 
         // Test entity
-        ent := Entity("explosion.png")x(10)y(10)
+        // ent := Entity("explosion.png")x(10)y(10)
         // Image(url)width(canvasWidth)height(canvasHeight)
 
         isInit := true
@@ -279,7 +293,7 @@ class KittyWorld.new() {
 
         // Draw the entities
         for (entities) do { entity->
-            entity.update
+            entity.tick
             entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
         }
 

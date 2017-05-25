@@ -909,8 +909,8 @@ dialects.kitty = {
             description: "Sets the world for the game",
             returns: "Done"
         },
-        "Entity()x()y": {
-            name: "Entity()x()y",
+        "Entity()x()y()actions": {
+            name: "Entity()x()y()actions",
             parts: [{
                     name: "Entity",
                     args: [{
@@ -933,7 +933,7 @@ dialects.kitty = {
                     }]
                 },
                 {
-                    name: '',
+                    name: 'actions',
                     args: [{
                         type: 'Block',
                         returns: 'Any',
