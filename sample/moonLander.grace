@@ -30,63 +30,18 @@ def bar = Entity("player")x(20)y(0 - 200)actions{
         }   
         speed := speed + 1 
         altitude := altitude + (speed / 10)
-        bar.setLocation(getX, altitude)
+        setY(altitude)
         if (getY >= LZ_HEIGHT) then {
             if (speed >= MAX_LANDING_SPEED) then {
                 print "KA BOOM!!!!!!"
                 setImage(explosion)
-                foo.stop
+                stop
             } else {
                 print "ANOTHER HAPPY LANDING"
                 setImage(flag)
-                foo.stop
+                stop
             }
         }
     }
 } 
 foo.addEntity(bar)
-
-
-// def bar = Entity("player")x(20)y(0 - 200)
-// def action = object {
-    
-//     def THRUST = 2
-//     def MAX_LANDING_SPEED = 15
-//     def LZ_HEIGHT = 180
-    
-//     def rocket = Image("rocket.png")width(64)height(64)
-//     def rocketWithThrust = Image("thrust.png")width(64)height(64)
-//     def explosion = Image("explosion.png")width(64)height(64)
-//     def flag = Image("flag.png")width(64)height(64)
-//     rocketWithThrust.drawImage(rocket.getTag) 
-//     flag.drawImage(rocket.getTag)
-//     bar.setImage(rocket)
-    
-//     var speed := 0
-//     var altitude := bar.getY
-    
-//     method update {
-//         if (foo.isKeyDown(87)) then {
-//             speed := speed - THRUST
-//             bar.setImage(rocketWithThrust)
-//         } else {
-//             bar.setImage(rocket)
-//         }   
-//         speed := speed + 1 
-//         altitude := altitude + (speed / 10)
-//         bar.setLocation(bar.getX, altitude)
-//         if (bar.getY >= LZ_HEIGHT) then {
-//             if (speed >= MAX_LANDING_SPEED) then {
-//                 print "KA BOOM!!!!!!"
-//                 bar.setImage(explosion)
-//                 foo.stop
-//             } else {
-//                 print "ANOTHER HAPPY LANDING"
-//                 bar.setImage(flag)
-//                 foo.stop
-//             }
-//         }
-//     }
-// }
-// bar.setAction(action)
-// foo.addEntity(bar)
