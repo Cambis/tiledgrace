@@ -74,12 +74,7 @@ class KittyEntity.new(tag', x', y') {
     var posX := x'
     var posY := y'
     var rotation := 0
-
-    var action := object {
-        method update {
-            // print "UPDATING ENTITY..."
-        }
-    }
+    var action := {}
 
     var image
 
@@ -87,32 +82,12 @@ class KittyEntity.new(tag', x', y') {
 
     // Called on creation
     method awake {
-        // print "awake"
         createImage("realyee.png")
         newborn := self
     }
 
-    // Called on game start
-    method start(block) {
-        block.apply
-    }
-
-    // Called by main game class
-    // method update {
-    //     action.update
-    // }
-    method tick() {
+    method update() {
         action.apply
-    }
-
-    method update(action') {
-        action := action'
-        print "GUMMON"
-    } 
-
-    // Called on class destructor
-    method onDestroy {
-
     }
 
     method move(distance) {
@@ -173,13 +148,36 @@ method Entity(tag')x(x')y(y')actions(actions') {
     }
 } 
 
+// XXX: Gross but neccessary
+// ======== ENTITY METHODS ========== //
 method update(action') {
-    newborn.update(action')
+    newborn.setAction(action')
 }
 
 method move(distance') {
     newborn.move(distance')
 }
+
+method strafe(distance') {
+    newborn.strafe(distance')
+}
+
+method turn(angle') {
+    newborn.turn(angle')
+}
+
+method setLocation(x, y) {
+    newborn.setLocation(x, y)
+}
+
+method setImage(image': KittyImage) {
+    newborn.setImage(image')
+}
+
+method createImage(url') {
+    newborn.createImage(url')
+}
+// ========================== //
 
 // Represents the game world itself
 class KittyWorld.new() {
@@ -300,7 +298,7 @@ class KittyWorld.new() {
 
         // Draw the entities
         for (entities) do { entity->
-            entity.tick
+            entity.update
             entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
         }
 
@@ -342,7 +340,7 @@ method World {
 // CONTROL SECTION //
 
 // Called on game start
-method start {
+method startWorld {
 
     print "CHECKING..."
 
@@ -363,7 +361,7 @@ method setWorld(world': KittyWorld) {
 }
 
 method atModuleEnd(module) {
-    start
+    startWorld
 }
 
 // TEST SECTION //
