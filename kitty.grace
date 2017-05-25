@@ -144,7 +144,6 @@ class KittyEntity.new(tag', x', y') {
 method Entity(tag')x(x')y(y')actions(actions') {
     object {
         inherits KittyEntity.new(tag', x', y')
-        { setLocation(10, -200) }.apply
         actions'.apply
     }
 } 
@@ -180,7 +179,11 @@ method createImage(url') {
 }
 
 method setX(x') {
-    
+    newborn.setLocation(x', newborn.getY)
+}
+
+method setY(y') {
+    newborn.setLocation(newborn.getX, y')
 }
 
 method getX {
@@ -353,7 +356,7 @@ method World {
 // CONTROL SECTION //
 
 // Called on game start
-method startWorld {
+method start {
 
     print "CHECKING..."
 
@@ -368,13 +371,17 @@ method startWorld {
     m_world.start
 }
 
+method stop {
+    m_world.stop
+}
+
 method setWorld(world': KittyWorld) {
     m_world := world'
     worldSet := true
 }
 
 method atModuleEnd(module) {
-    startWorld
+    start
 }
 
 // TEST SECTION //
