@@ -16,6 +16,9 @@ var mouseDownListener
 // Grace math returns NaNs
 def math = dom.window.Math
 
+// Last object created
+var newborn
+
 // XXX: Control functions are at the bottom
 
 // Represents an image in the game world
@@ -63,7 +66,7 @@ method Image(url')width(width')height(height') {
 }
 
 // Represents an object in the game world
-class KittyKat.new(tag', x', y') {
+class KittyEntity.new(tag', x', y') {
     
     // print "CREATING ENTITY AT ({x'}, {y'})..."
 
@@ -78,8 +81,6 @@ class KittyKat.new(tag', x', y') {
         }
     }
 
-    var actions := collections.list.new
-
     var image
 
     awake
@@ -88,6 +89,7 @@ class KittyKat.new(tag', x', y') {
     method awake {
         // print "awake"
         createImage("realyee.png")
+        newborn := self
     }
 
     // Called on game start
@@ -105,6 +107,7 @@ class KittyKat.new(tag', x', y') {
 
     method update(action') {
         action := action'
+        print "GUMMON"
     } 
 
     // Called on class destructor
@@ -165,13 +168,17 @@ class KittyKat.new(tag', x', y') {
 
 method Entity(tag')x(x')y(y')actions(actions') {
     object {
-        inherits KittyKat.new(tag', x', y')
-        actions'
+        inherits KittyEntity.new(tag', x', y')
+        actions'.apply
     }
+} 
+
+method update(action') {
+    newborn.update(action')
 }
 
-method action {
-
+method move(distance') {
+    newborn.move(distance')
 }
 
 // Represents the game world itself
