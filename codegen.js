@@ -1,31 +1,10 @@
 "use strict"
 var compatibleOperators = {
-    '+': {
-        '+': true,
-        '-': true,
-        '*': true,
-        '/': true
-    },
-    '-': {
-        '+': true,
-        '-': true,
-        '*': true,
-        '/': true
-    },
-    '*': {
-        '+': true,
-        '-': true,
-        '*': true,
-        '/': true
-    },
-    '/': {
-        '+': true,
-        '-': true,
-        '*': true,
-        '/': true
-    },
+    '+': {'+': true, '-': true, '*': true, '/': true},
+    '-': {'+': true, '-': true, '*': true, '/': true},
+    '*': {'+': true, '-': true, '*': true, '/': true},
+    '/': {'+': true, '-': true, '*': true, '/': true},
 };
-
 function generateNodeCode(n, loc) {
     if (typeof n == 'undefined' || typeof n == 'boolean')
         return '!ABSENT!';
@@ -76,8 +55,8 @@ function generateNodeCode(n, loc) {
         var name = n.getElementsByClassName('method-name')[0].innerHTML;
         if (!arg)
             return name + '(!ABSENT!)'
-        if (name.substring(name.length - 2) == ":=")
-            return name + ' ' + generateNodeCode(arg);
+        if (name.substring(name.length -2) == ":=")
+                return name + ' ' + generateNodeCode(arg);
         if (arg.classList.contains('string')) {
             return name + ' ' + generateNodeCode(arg);
         } else if (arg.classList.contains('operator')) {
@@ -93,7 +72,7 @@ function generateNodeCode(n, loc) {
         var argStr = '';
         if (n.getElementsByClassName('hole').length > 0) {
             var args = [];
-            for (var i = 0; i < n.childNodes.length; i++) {
+            for (var i=0; i<n.childNodes.length; i++) {
                 var node = n.childNodes[i];
                 if (!node.classList)
                     continue;
@@ -112,7 +91,7 @@ function generateNodeCode(n, loc) {
             var args = [];
             // The receiver is in a hole
             var first = true;
-            for (var i = 0; i < n.childNodes.length; i++) {
+            for (var i=0; i<n.childNodes.length; i++) {
                 var node = n.childNodes[i];
                 if (!node.classList)
                     continue;
@@ -133,7 +112,7 @@ function generateNodeCode(n, loc) {
         var l = false;
         var r = false;
         var op = '';
-        for (var i = 0; i < n.children.length; i++) {
+        for (var i=0; i<n.children.length; i++) {
             var c = n.children[i];
             if (c.classList.contains('hole')) {
                 if (l) {
@@ -156,13 +135,13 @@ function generateNodeCode(n, loc) {
                 lop = l.childNodes[1].firstChild.data;
             if (r && r.classList && r.classList.contains('operator'))
                 rop = r.childNodes[1].firstChild.data;
-            if (lop && rop && lop == rop && lop == op ||
-                (lop && !rop &&
-                    (lop == op || (compatibleOperators[op] &&
-                        compatibleOperators[op][lop]))) ||
-                (rop && !lop &&
-                    (rop == op || (compatibleOperators[op] &&
-                        compatibleOperators[op][rop])))) {
+            if (lop && rop && lop == rop && lop == op
+                    || (lop && !rop
+                        && (lop == op || (compatibleOperators[op]
+                                && compatibleOperators[op][lop])))
+                    || (rop && !lop
+                        && (rop == op || (compatibleOperators[op]
+                                && compatibleOperators[op][rop])))) {
                 if (lop)
                     lMode = 'assignment';
                 if (rop)
@@ -170,16 +149,16 @@ function generateNodeCode(n, loc) {
             }
         }
         if (loc == 'assignment')
-            return generateNodeCode(l, lMode) + ' ' + op +
-                ' ' + generateNodeCode(r, rMode);
-        return '(' + generateNodeCode(l, lMode) + ' ' + op +
-            ' ' + generateNodeCode(r, rMode) + ')';
+            return generateNodeCode(l, lMode) + ' ' + op
+                + ' ' + generateNodeCode(r, rMode);
+        return '(' + generateNodeCode(l, lMode) + ' ' + op
+            + ' ' + generateNodeCode(r, rMode) + ')';
     }
     if (n.classList.contains('assign')) {
         var l = false;
         var r = false;
         var op = '';
-        for (var i = 0; i < n.children.length; i++) {
+        for (var i=0; i<n.children.length; i++) {
             var c = n.children[i];
             if (c.classList.contains('hole')) {
                 if (l) {
@@ -197,10 +176,10 @@ function generateNodeCode(n, loc) {
         var bodyHole = n.children[1].children[0];
         var body = '';
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch) + '\n'
         }
@@ -208,7 +187,7 @@ function generateNodeCode(n, loc) {
         if (n.classList.contains('else')) {
             elseText = ' else {\n';
             var elseHole = n.children[3].children[0];
-            for (var i = 0; i < elseHole.children.length; i++) {
+            for (var i=0; i<elseHole.children.length; i++) {
                 var ch = elseHole.children[i];
                 elseText = elseText + indent + '    ' + generateNodeCode(ch) + '\n'
             }
@@ -224,10 +203,10 @@ function generateNodeCode(n, loc) {
         var bodyHole = n.children[1].children[0];
         var body = '';
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch) + '\n'
         }
@@ -241,10 +220,10 @@ function generateNodeCode(n, loc) {
         var bodyHole = n.children[1].children[0];
         var body = '';
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch) + '\n'
         }
@@ -255,18 +234,18 @@ function generateNodeCode(n, loc) {
         var name = n.childNodes[0].childNodes[1].value;
         var argInputs = n.childNodes[0].getElementsByClassName('variable-name');
         var args = [];
-        for (var i = 0; i < argInputs.length; i++)
+        for (var i=0; i<argInputs.length; i++)
             args.push(argInputs[i].value);
         var arg = '';
         if (args.length)
             arg = '(' + args.join(',') + ')';
         var bodyHole = n.children[1].children[0];
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
         var body = '';
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch, 'assignment') + '\n';
         }
@@ -280,37 +259,34 @@ function generateNodeCode(n, loc) {
     if (n.classList.contains('object')) {
         var bodyHole = n.children[1].children[0];
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
         var body = '';
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch) + '\n';
         }
         blockIndent--;
         return 'object {\n' + body + indent + '}'
     }
-    // if (n.classList.contains('Entity')) {
-    //     console.log('Here');
-    // }
     if (n.classList.contains('class')) {
         var name = n.childNodes[0].getElementsByClassName('variable-name')[0].value;
         var constructor = n.childNodes[0].getElementsByClassName('method-name')[0].value;
         var argInputs = n.childNodes[0].getElementsByClassName('variable-name');
         var args = [];
-        for (var i = 1; i < argInputs.length; i++)
+        for (var i=1; i<argInputs.length; i++)
             args.push(argInputs[i].value);
         var arg = '';
         if (args.length)
             arg = '(' + args.join(',') + ')';
         var bodyHole = n.children[1].children[0];
         var indent = '';
-        for (var i = 0; i < blockIndent; i++)
+        for (var i=0; i<blockIndent; i++)
             indent += '    ';
         blockIndent++;
         var body = '';
-        for (var i = 0; i < bodyHole.children.length; i++) {
+        for (var i=0; i<bodyHole.children.length; i++) {
             var ch = bodyHole.children[i];
             body = body + indent + '    ' + generateNodeCode(ch) + '\n';
         }
@@ -318,12 +294,11 @@ function generateNodeCode(n, loc) {
         return 'class ' + name + '.' + constructor + arg + ' {\n' + body + indent + '}'
     }
 }
-
 function sortChunks() {
     var classes = [];
     var defs = [];
     var others = [];
-    for (var i = 0; i < codearea.children.length; i++) {
+    for (var i=0; i<codearea.children.length; i++) {
         var child = codearea.children[i];
         if (child.prev != false)
             continue;
@@ -336,7 +311,6 @@ function sortChunks() {
     }
     return classes.concat(defs).concat(others);
 }
-
 function generateCode() {
     blockIndent = 0;
     var tb = document.getElementById('gracecode');
@@ -346,7 +320,7 @@ function generateCode() {
         tb.value = 'dialect "' + dialect + '"\n';
     var chunkLine = "// chunks:";
     var chunks = sortChunks();
-    for (var i = 0; i < chunks.length; i++) {
+    for (var i=0; i<chunks.length; i++) {
         var child = chunks[i];
         chunkLine += " " + child.style.left + "," + child.style.top;
         while (child) {
@@ -355,9 +329,7 @@ function generateCode() {
         }
         tb.value = tb.value + "\n";
     }
-    var blob = new Blob([tb.value + chunkLine], {
-        type: "text/x-grace;charset=utf-8"
-    });
+    var blob = new Blob([tb.value + chunkLine], {type: "text/x-grace;charset=utf-8"});
     if (document.getElementById('downloadlink').href)
         URL.revokeObjectURL(document.getElementById('downloadlink').href);
     document.getElementById('downloadlink').href = URL.createObjectURL(blob);

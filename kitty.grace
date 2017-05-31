@@ -12,6 +12,7 @@ var worldSet := false
 var keyDownListener
 var keyUpListener
 var mouseDownListener
+var currentKeyDown := -1
 
 // Grace math returns NaNs
 def math = dom.window.Math
@@ -153,6 +154,10 @@ method Entity(tag')x(x')y(y') {
 method update(action') {
     kitten.setAction(action')
 }
+
+method isKeyDown(key) {
+    return key == currentKeyDown
+}
 // ========================== //
 
 // Represents the game world itself
@@ -178,9 +183,6 @@ class KittyWorld.new() {
     var isRunning := false
 
     var mctx
-
-    var currentKeyDown := -1
-
     var ent
 
     init
@@ -290,10 +292,6 @@ class KittyWorld.new() {
         canvas.removeEventListener("mousedown", mouseDownListener)
         document.removeEventListener("keydown", keyDownListener)
         document.removeEventListener("keyup", keyUpListener)
-    }
-
-    method isKeyDown(key) {
-        return key == currentKeyDown
     }
 
     method setBackground(url) {

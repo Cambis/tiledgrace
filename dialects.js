@@ -909,15 +909,16 @@ dialects.kitty = {
             description: "Refers to the last object created.",
             returns: "Done"
         },
-        // "setWorld": {
-        //     name: "setWorld",
-        //     parts: [{
-        //         name: "setWorld",
-        //         args: ["Object"]
-        //     }],
-        //     description: "Sets the world for the game",
-        //     returns: "Done"
-        // },
+        'isKeyDown': {
+            name: 'isKeyDown',
+            parts: [{
+                name: 'isKeyDown',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Check if a key is pressed',
+            selfcall: true
+        },
         "stop": {
             name: "stop",
             parts: [{
@@ -1022,6 +1023,15 @@ dialects.kitty = {
             returns: 'Done',
             description: 'Create the image of an Entity.'
         },
+        'setBackground': {
+            name: 'setBackground',
+            parts: [{
+                name: 'setBackground',
+                args: ['String']
+            }],
+            returns: 'Done',
+            description: 'Set the background of the World.'
+        },
         // 'getX': {
         //     name: 'getX',
         //     parts: [{
@@ -1113,7 +1123,9 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
-dialects.kitty.methods.update.category = "Control";
+dialects.kitty.methods['Entity()x()y'].category = "Entity";
+dialects.kitty.methods['createImage'].category = "Entity";
+dialects.kitty.methods['setImage'].category = "Entity";
 dialects.kitty.methods.move.category = "Motion";
 dialects.kitty.methods.strafe.category = "Motion";
 dialects.kitty.methods.turn.category = "Motion";
