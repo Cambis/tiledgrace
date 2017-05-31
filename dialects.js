@@ -1126,9 +1126,9 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
-dialects.kitty.methods['Entity()x()y'].category = "Entity";
-dialects.kitty.methods['createImage'].category = "Entity";
-dialects.kitty.methods['setImage'].category = "Entity";
+// dialects.kitty.methods['Entity()x()y'].category = "Entity";
+// dialects.kitty.methods['createImage'].category = "Entity";
+// dialects.kitty.methods['setImage'].category = "Entity";
 dialects.kitty.methods.move.category = "Motion";
 dialects.kitty.methods.strafe.category = "Motion";
 dialects.kitty.methods.turn.category = "Motion";
