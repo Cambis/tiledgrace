@@ -108,7 +108,7 @@ function gracecode_kitty () {
     }
   }
   this.methods["Image()width()height()object"] = func4;
-  lineNumber = 144
+  lineNumber = 145
   var func8 = function(argcv) {
     var curarg = 1;
     var var_tag__39__ = arguments[curarg];
@@ -127,10 +127,10 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 145
+      lineNumber = 146
       var obj9 = Grace_allocObject();
       obj9.definitionModule = "kitty";
-      obj9.definitionLine = 145;
+      obj9.definitionLine = 146;
       obj9.outer = this;
       var reader_kitty_outer_10 = function() {
         return this.outer;
@@ -141,7 +141,7 @@ function gracecode_kitty () {
         superDepth = obj9;
         obj9.annotations = [];
         sourceObject = obj9;
-        lineNumber = 146
+        lineNumber = 147
         var call11 = callmethod(var_KittyEntity,"new()object", [3, 1], var_tag__39__, var_x__39__, var_y__39__, this);
         obj9.superobj = call11;
         obj9._value = call11._value;
@@ -168,7 +168,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["Entity()x()y"] = func8;
-  func8.definitionLine = 144;
+  func8.definitionLine = 145;
   func8.definitionModule = "kitty";
   var func12 = function(argcv) {
     var curarg = 1;
@@ -184,7 +184,7 @@ function gracecode_kitty () {
     try {
       var obj13 = Grace_allocObject();
       obj13.definitionModule = "kitty";
-      obj13.definitionLine = 145;
+      obj13.definitionLine = 146;
       var inho13 = inheritingObject;
       while (inho13.superobj) inho13 = inho13.superobj;
       inho13.superobj = obj13;
@@ -227,7 +227,7 @@ function gracecode_kitty () {
     moduleName = "kitty";
     try {
       lineNumber = 154
-      var call17 = callmethod(var_newborn,"setAction", [1], var_action__39__);
+      var call17 = callmethod(var_kitten,"setAction", [1], var_action__39__);
       return call17
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -246,7 +246,7 @@ function gracecode_kitty () {
   this.methods["update"] = func16;
   func16.definitionLine = 153;
   func16.definitionModule = "kitty";
-  lineNumber = 350
+  lineNumber = 313
   var func18 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func18.paramCounts[0])
@@ -255,10 +255,10 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 351
+      lineNumber = 314
       var obj19 = Grace_allocObject();
       obj19.definitionModule = "kitty";
-      obj19.definitionLine = 351;
+      obj19.definitionLine = 314;
       obj19.outer = this;
       var reader_kitty_outer_20 = function() {
         return this.outer;
@@ -269,7 +269,7 @@ function gracecode_kitty () {
         superDepth = obj19;
         obj19.annotations = [];
         sourceObject = obj19;
-        lineNumber = 352
+        lineNumber = 315
         var call21 = callmethod(var_KittyWorld,"new()object", [0, 1], this);
         obj19.superobj = call21;
         obj19._value = call21._value;
@@ -292,7 +292,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["World"] = func18;
-  func18.definitionLine = 350;
+  func18.definitionLine = 313;
   func18.definitionModule = "kitty";
   var func22 = function(argcv) {
     var curarg = 1;
@@ -302,7 +302,7 @@ function gracecode_kitty () {
     try {
       var obj23 = Grace_allocObject();
       obj23.definitionModule = "kitty";
-      obj23.definitionLine = 351;
+      obj23.definitionLine = 314;
       var inho23 = inheritingObject;
       while (inho23.superobj) inho23 = inho23.superobj;
       inho23.superobj = obj23;
@@ -333,7 +333,7 @@ function gracecode_kitty () {
     }
   }
   this.methods["World()object"] = func22;
-  lineNumber = 359
+  lineNumber = 322
   var func26 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func26.paramCounts[0])
@@ -342,24 +342,24 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 361
+      lineNumber = 324
       var string27 = new GraceString("CHECKING...");
       var call28 = Grace_print(string27);
-      lineNumber = 368
+      lineNumber = 331
       var if29 = var_done;
-      lineNumber = 363
+      lineNumber = 326
       var call30 = callmethod(var_worldSet,"prefix!", [0]);
       if (Grace_isTrue(call30)) {
-        lineNumber = 364
+        lineNumber = 327
         var string31 = new GraceString("NO WORLD!!");
         var call32 = Grace_print(string31);
-        lineNumber = 366
+        lineNumber = 329
         return var_done
       }
-      lineNumber = 368
+      lineNumber = 331
       var string33 = new GraceString("STARTING...");
       var call34 = Grace_print(string33);
-      lineNumber = 371
+      lineNumber = 334
       var call35 = callmethod(var_m__95__world,"start", [0]);
       return call35
     } catch(e) {
@@ -377,9 +377,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["start"] = func26;
-  func26.definitionLine = 359;
+  func26.definitionLine = 322;
   func26.definitionModule = "kitty";
-  lineNumber = 374
+  lineNumber = 337
   var func36 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func36.paramCounts[0])
@@ -388,7 +388,7 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 375
+      lineNumber = 338
       var call37 = callmethod(var_m__95__world,"stop", [0]);
       return call37
     } catch(e) {
@@ -406,9 +406,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["stop"] = func36;
-  func36.definitionLine = 374;
+  func36.definitionLine = 337;
   func36.definitionModule = "kitty";
-  lineNumber = 378
+  lineNumber = 341
   var func38 = function(argcv) {
     var curarg = 1;
     var var_world__39__ = arguments[curarg];
@@ -419,11 +419,11 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 380
-      lineNumber = 379
+      lineNumber = 343
+      lineNumber = 342
       var_m__95__world = var_world__39__;
-      lineNumber = 381
-      lineNumber = 380
+      lineNumber = 344
+      lineNumber = 343
       var bool39 = new GraceBoolean(true)
       var_worldSet = bool39;
       return bool39
@@ -444,9 +444,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["setWorld"] = func38;
-  func38.definitionLine = 378;
+  func38.definitionLine = 341;
   func38.definitionModule = "kitty";
-  lineNumber = 383
+  lineNumber = 346
   var func40 = function(argcv) {
     var curarg = 1;
     var var_module = arguments[curarg];
@@ -457,7 +457,7 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 384
+      lineNumber = 347
       onSelf = true;
       var call41 = callmethod(this, "start", [0]);
       return call41
@@ -476,7 +476,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["atModuleEnd"] = func40;
-  func40.definitionLine = 383;
+  func40.definitionLine = 346;
   func40.definitionModule = "kitty";
   lineNumber = 1
   // Import of mgcollections
@@ -504,7 +504,7 @@ function gracecode_kitty () {
   lineNumber = 8
   lineNumber = 9
   var var_m__95__world;
-  lineNumber = 375
+  lineNumber = 338
   var func43 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func43.paramCounts[0])
@@ -530,9 +530,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["m_world"] = func43;
-  func43.definitionLine = 375;
+  func43.definitionLine = 338;
   func43.definitionModule = "kitty";
-  lineNumber = 375
+  lineNumber = 338
   var func44 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -560,13 +560,13 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["m_world:="] = func44;
-  func44.definitionLine = 375;
+  func44.definitionLine = 338;
   func44.definitionModule = "kitty";
   lineNumber = 12
   lineNumber = 9
   var bool45 = new GraceBoolean(false)
   var var_worldSet = bool45;
-  lineNumber = 375
+  lineNumber = 338
   var func46 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func46.paramCounts[0])
@@ -592,9 +592,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["worldSet"] = func46;
-  func46.definitionLine = 375;
+  func46.definitionLine = 338;
   func46.definitionModule = "kitty";
-  lineNumber = 375
+  lineNumber = 338
   var func47 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -622,7 +622,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["worldSet:="] = func47;
-  func47.definitionLine = 375;
+  func47.definitionLine = 338;
   func47.definitionModule = "kitty";
   lineNumber = 12;
   moduleName = "kitty";
@@ -635,7 +635,7 @@ function gracecode_kitty () {
   lineNumber = 12
   lineNumber = 13
   var var_keyDownListener;
-  lineNumber = 375
+  lineNumber = 338
   var func48 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func48.paramCounts[0])
@@ -661,9 +661,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyDownListener"] = func48;
-  func48.definitionLine = 375;
+  func48.definitionLine = 338;
   func48.definitionModule = "kitty";
-  lineNumber = 375
+  lineNumber = 338
   var func49 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -691,11 +691,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyDownListener:="] = func49;
-  func49.definitionLine = 375;
+  func49.definitionLine = 338;
   func49.definitionModule = "kitty";
   lineNumber = 14
   var var_keyUpListener;
-  lineNumber = 375
+  lineNumber = 338
   var func50 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func50.paramCounts[0])
@@ -721,9 +721,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyUpListener"] = func50;
-  func50.definitionLine = 375;
+  func50.definitionLine = 338;
   func50.definitionModule = "kitty";
-  lineNumber = 375
+  lineNumber = 338
   var func51 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -751,11 +751,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyUpListener:="] = func51;
-  func51.definitionLine = 375;
+  func51.definitionLine = 338;
   func51.definitionModule = "kitty";
   lineNumber = 17
   var var_mouseDownListener;
-  lineNumber = 375
+  lineNumber = 338
   var func52 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func52.paramCounts[0])
@@ -781,9 +781,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseDownListener"] = func52;
-  func52.definitionLine = 375;
+  func52.definitionLine = 338;
   func52.definitionModule = "kitty";
-  lineNumber = 375
+  lineNumber = 338
   var func53 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -811,7 +811,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseDownListener:="] = func53;
-  func53.definitionLine = 375;
+  func53.definitionLine = 338;
   func53.definitionModule = "kitty";
   lineNumber = 17
   lineNumber = 20
@@ -855,18 +855,18 @@ function gracecode_kitty () {
             + "initial value of def 'math' to be of type Unknown"))
   lineNumber = 20
   lineNumber = 25
-  var var_newborn;
+  var var_kitten;
   lineNumber = 17
   var func57 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func57.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (newborn)"));
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (kitten)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "kitty";
     try {
       lineNumber = 20
-      return var_newborn
+      return var_kitten
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
         return e.returnvalue;
@@ -881,7 +881,7 @@ function gracecode_kitty () {
   func57.variableArities = [
     false,
   ];
-  this.methods["newborn"] = func57;
+  this.methods["kitten"] = func57;
   func57.definitionLine = 17;
   func57.definitionModule = "kitty";
   lineNumber = 17
@@ -890,12 +890,12 @@ function gracecode_kitty () {
     var var___95__var__95__assign__95__tmp = arguments[curarg];
     curarg++;
     if (argcv[0] !=  func58.paramCounts[0])
-      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (newborn:=)"));
+      callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (kitten:=)"));
     var returnTarget = invocationCount;
     invocationCount++;
     moduleName = "kitty";
     try {
-      var_newborn = var___95__var__95__assign__95__tmp;
+      var_kitten = var___95__var__95__assign__95__tmp;
       return var___95__var__95__assign__95__tmp
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -911,7 +911,7 @@ function gracecode_kitty () {
   func58.variableArities = [
     false,
   ];
-  this.methods["newborn:="] = func58;
+  this.methods["kitten:="] = func58;
   func58.definitionLine = 17;
   func58.definitionModule = "kitty";
   lineNumber = 25
@@ -1657,8 +1657,10 @@ function gracecode_kitty () {
               var call170 = callmethod(this, "createImage", [1], string169);
               lineNumber = 87
               lineNumber = 86
-              var_newborn = this;
-              return this
+              var_kitten = this;
+              lineNumber = 87
+              var call171 = callmethod(var_m__95__world,"addEntity", [1], this);
+              return call171
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1676,19 +1678,19 @@ function gracecode_kitty () {
           obj166.methods["awake"] = func168;
           func168.definitionLine = 84;
           func168.definitionModule = "kitty";
-          var func171 = function(argcv) {
+          var func172 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func171.paramCounts[0])
+            if (argcv[0] !=  func172.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (tick)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 90
+              lineNumber = 91
               onSelf = true;
-              var call172 = callmethod(this, "action", [0]);
-              var call173 = callmethod(call172,"apply", [0]);
-              return call173
+              var call173 = callmethod(this, "action", [0]);
+              var call174 = callmethod(call173,"apply", [0]);
+              return call174
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1697,54 +1699,54 @@ function gracecode_kitty () {
               }
             }
           }
-          func171.paramCounts = [
+          func172.paramCounts = [
             0,
           ];
-          func171.variableArities = [
+          func172.variableArities = [
             false,
           ];
-          obj166.methods["tick"] = func171;
-          func171.definitionLine = 89;
-          func171.definitionModule = "kitty";
-          var func174 = function(argcv) {
+          obj166.methods["tick"] = func172;
+          func172.definitionLine = 90;
+          func172.definitionModule = "kitty";
+          var func175 = function(argcv) {
             var curarg = 1;
             var var_distance = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func174.paramCounts[0])
+            if (argcv[0] !=  func175.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (move)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 94
-              lineNumber = 90
-              lineNumber = 94
-              onSelf = true;
-              var call177 = callmethod(this, "rotation", [0]);
-              var prod179 = callmethod(call177, "*", [1], new GraceNum(3.14159));
-              var quotient181 = callmethod(prod179, "/", [1], new GraceNum(180));
-              var call182 = callmethod(var_math,"cos", [1], quotient181);
-              var prod185 = callmethod(var_distance, "*", [1], call182);
-              onSelf = true;
-              var call187 = callmethod(this, "posX", [0]);
-              var opresult189 = callmethod(call187, "+", [1], prod185);
-              onSelf = true;
-              var call190 = callmethod(this, "posX:=", [1], opresult189);
               lineNumber = 95
-              lineNumber = 90
+              lineNumber = 91
               lineNumber = 95
               onSelf = true;
-              var call193 = callmethod(this, "rotation", [0]);
-              var prod195 = callmethod(call193, "*", [1], new GraceNum(3.14159));
-              var quotient197 = callmethod(prod195, "/", [1], new GraceNum(180));
-              var call198 = callmethod(var_math,"sin", [1], quotient197);
-              var prod201 = callmethod(var_distance, "*", [1], call198);
+              var call178 = callmethod(this, "rotation", [0]);
+              var prod180 = callmethod(call178, "*", [1], new GraceNum(3.14159));
+              var quotient182 = callmethod(prod180, "/", [1], new GraceNum(180));
+              var call183 = callmethod(var_math,"cos", [1], quotient182);
+              var prod186 = callmethod(var_distance, "*", [1], call183);
               onSelf = true;
-              var call203 = callmethod(this, "posY", [0]);
-              var opresult205 = callmethod(call203, "+", [1], prod201);
+              var call188 = callmethod(this, "posX", [0]);
+              var opresult190 = callmethod(call188, "+", [1], prod186);
               onSelf = true;
-              var call206 = callmethod(this, "posY:=", [1], opresult205);
-              return call206
+              var call191 = callmethod(this, "posX:=", [1], opresult190);
+              lineNumber = 96
+              lineNumber = 91
+              lineNumber = 96
+              onSelf = true;
+              var call194 = callmethod(this, "rotation", [0]);
+              var prod196 = callmethod(call194, "*", [1], new GraceNum(3.14159));
+              var quotient198 = callmethod(prod196, "/", [1], new GraceNum(180));
+              var call199 = callmethod(var_math,"sin", [1], quotient198);
+              var prod202 = callmethod(var_distance, "*", [1], call199);
+              onSelf = true;
+              var call204 = callmethod(this, "posY", [0]);
+              var opresult206 = callmethod(call204, "+", [1], prod202);
+              onSelf = true;
+              var call207 = callmethod(this, "posY:=", [1], opresult206);
+              return call207
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1753,56 +1755,56 @@ function gracecode_kitty () {
               }
             }
           }
-          func174.paramCounts = [
+          func175.paramCounts = [
             1,
           ];
-          func174.variableArities = [
+          func175.variableArities = [
             false,
           ];
-          obj166.methods["move"] = func174;
-          func174.definitionLine = 93;
-          func174.definitionModule = "kitty";
-          var func207 = function(argcv) {
+          obj166.methods["move"] = func175;
+          func175.definitionLine = 94;
+          func175.definitionModule = "kitty";
+          var func208 = function(argcv) {
             var curarg = 1;
             var var_distance = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func207.paramCounts[0])
+            if (argcv[0] !=  func208.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (strafe)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 99
-              lineNumber = 90
-              lineNumber = 99
-              onSelf = true;
-              var call210 = callmethod(this, "rotation", [0]);
-              var opresult213 = callmethod(new GraceNum(90), "+", [1], call210);
-              var prod215 = callmethod(opresult213, "*", [1], new GraceNum(3.14159));
-              var quotient217 = callmethod(prod215, "/", [1], new GraceNum(180));
-              var call218 = callmethod(var_math,"cos", [1], quotient217);
-              var prod221 = callmethod(var_distance, "*", [1], call218);
-              onSelf = true;
-              var call223 = callmethod(this, "posX", [0]);
-              var opresult225 = callmethod(call223, "+", [1], prod221);
-              onSelf = true;
-              var call226 = callmethod(this, "posX:=", [1], opresult225);
               lineNumber = 100
-              lineNumber = 90
+              lineNumber = 91
               lineNumber = 100
               onSelf = true;
-              var call229 = callmethod(this, "rotation", [0]);
-              var opresult232 = callmethod(new GraceNum(90), "+", [1], call229);
-              var prod234 = callmethod(opresult232, "*", [1], new GraceNum(3.14159));
-              var quotient236 = callmethod(prod234, "/", [1], new GraceNum(180));
-              var call237 = callmethod(var_math,"sin", [1], quotient236);
-              var prod240 = callmethod(var_distance, "*", [1], call237);
+              var call211 = callmethod(this, "rotation", [0]);
+              var opresult214 = callmethod(new GraceNum(90), "+", [1], call211);
+              var prod216 = callmethod(opresult214, "*", [1], new GraceNum(3.14159));
+              var quotient218 = callmethod(prod216, "/", [1], new GraceNum(180));
+              var call219 = callmethod(var_math,"cos", [1], quotient218);
+              var prod222 = callmethod(var_distance, "*", [1], call219);
               onSelf = true;
-              var call242 = callmethod(this, "posY", [0]);
-              var opresult244 = callmethod(call242, "+", [1], prod240);
+              var call224 = callmethod(this, "posX", [0]);
+              var opresult226 = callmethod(call224, "+", [1], prod222);
               onSelf = true;
-              var call245 = callmethod(this, "posY:=", [1], opresult244);
-              return call245
+              var call227 = callmethod(this, "posX:=", [1], opresult226);
+              lineNumber = 101
+              lineNumber = 91
+              lineNumber = 101
+              onSelf = true;
+              var call230 = callmethod(this, "rotation", [0]);
+              var opresult233 = callmethod(new GraceNum(90), "+", [1], call230);
+              var prod235 = callmethod(opresult233, "*", [1], new GraceNum(3.14159));
+              var quotient237 = callmethod(prod235, "/", [1], new GraceNum(180));
+              var call238 = callmethod(var_math,"sin", [1], quotient237);
+              var prod241 = callmethod(var_distance, "*", [1], call238);
+              onSelf = true;
+              var call243 = callmethod(this, "posY", [0]);
+              var opresult245 = callmethod(call243, "+", [1], prod241);
+              onSelf = true;
+              var call246 = callmethod(this, "posY:=", [1], opresult245);
+              return call246
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1811,35 +1813,35 @@ function gracecode_kitty () {
               }
             }
           }
-          func207.paramCounts = [
+          func208.paramCounts = [
             1,
           ];
-          func207.variableArities = [
+          func208.variableArities = [
             false,
           ];
-          obj166.methods["strafe"] = func207;
-          func207.definitionLine = 98;
-          func207.definitionModule = "kitty";
-          var func246 = function(argcv) {
+          obj166.methods["strafe"] = func208;
+          func208.definitionLine = 99;
+          func208.definitionModule = "kitty";
+          var func247 = function(argcv) {
             var curarg = 1;
             var var_angle = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func246.paramCounts[0])
+            if (argcv[0] !=  func247.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (turn)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 106
+              lineNumber = 91
+              lineNumber = 106
               lineNumber = 105
-              lineNumber = 90
-              lineNumber = 105
-              lineNumber = 104
               onSelf = true;
-              var call248 = callmethod(this, "rotation", [0]);
-              var opresult250 = callmethod(call248, "+", [1], var_angle);
+              var call249 = callmethod(this, "rotation", [0]);
+              var opresult251 = callmethod(call249, "+", [1], var_angle);
               onSelf = true;
-              var call251 = callmethod(this, "rotation:=", [1], opresult250);
-              return call251
+              var call252 = callmethod(this, "rotation:=", [1], opresult251);
+              return call252
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1848,16 +1850,16 @@ function gracecode_kitty () {
               }
             }
           }
-          func246.paramCounts = [
+          func247.paramCounts = [
             1,
           ];
-          func246.variableArities = [
+          func247.variableArities = [
             false,
           ];
-          obj166.methods["turn"] = func246;
-          func246.definitionLine = 103;
-          func246.definitionModule = "kitty";
-          var func252 = function(argcv) {
+          obj166.methods["turn"] = func247;
+          func247.definitionLine = 104;
+          func247.definitionModule = "kitty";
+          var func253 = function(argcv) {
             var curarg = 1;
             var var_ctx = arguments[curarg];
             curarg++;
@@ -1865,29 +1867,29 @@ function gracecode_kitty () {
             curarg++;
             var var_dy = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func252.paramCounts[0])
+            if (argcv[0] !=  func253.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (draw)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 108
-              var call253 = callmethod(var_ctx,"save", [0]);
               lineNumber = 109
-              onSelf = true;
-              var call254 = callmethod(this, "posX", [0]);
-              onSelf = true;
-              var call255 = callmethod(this, "posY", [0]);
-              var call256 = callmethod(var_ctx,"translate", [2], call254, call255);
+              var call254 = callmethod(var_ctx,"save", [0]);
               lineNumber = 110
               onSelf = true;
-              var call257 = callmethod(this, "rotation", [0]);
+              var call255 = callmethod(this, "posX", [0]);
               onSelf = true;
-              var call258 = callmethod(this, "image", [0]);
-              var call259 = callmethod(call258,"draw", [4], var_ctx, var_dx, var_dy, call257);
+              var call256 = callmethod(this, "posY", [0]);
+              var call257 = callmethod(var_ctx,"translate", [2], call255, call256);
               lineNumber = 111
-              var call260 = callmethod(var_ctx,"restore", [0]);
-              return call260
+              onSelf = true;
+              var call258 = callmethod(this, "rotation", [0]);
+              onSelf = true;
+              var call259 = callmethod(this, "image", [0]);
+              var call260 = callmethod(call259,"draw", [4], var_ctx, var_dx, var_dy, call258);
+              lineNumber = 112
+              var call261 = callmethod(var_ctx,"restore", [0]);
+              return call261
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1896,38 +1898,38 @@ function gracecode_kitty () {
               }
             }
           }
-          func252.paramCounts = [
+          func253.paramCounts = [
             3,
           ];
-          func252.variableArities = [
+          func253.variableArities = [
             false,
           ];
-          obj166.methods["draw"] = func252;
-          func252.definitionLine = 107;
-          func252.definitionModule = "kitty";
-          var func261 = function(argcv) {
+          obj166.methods["draw"] = func253;
+          func253.definitionLine = 108;
+          func253.definitionModule = "kitty";
+          var func262 = function(argcv) {
             var curarg = 1;
             var var_url__39__ = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func261.paramCounts[0])
+            if (argcv[0] !=  func262.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (createImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 115
-              lineNumber = 111
-              lineNumber = 115
-              var call262 = callmethod(superDepth, "outer", [0]);
+              lineNumber = 116
+              lineNumber = 112
+              lineNumber = 116
+              var call263 = callmethod(superDepth, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call263 = callmethod(call262, "outer", [0]);
+              var call264 = callmethod(call263, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call264 = callmethod(call263, "Image()width()height", [1, 1, 1], var_url__39__, new GraceNum(64), new GraceNum(64));
+              var call265 = callmethod(call264, "Image()width()height", [1, 1, 1], var_url__39__, new GraceNum(64), new GraceNum(64));
               onSelf = true;
-              var call265 = callmethod(this, "image:=", [1], call264);
-              return call265
+              var call266 = callmethod(this, "image:=", [1], call265);
+              return call266
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1936,31 +1938,31 @@ function gracecode_kitty () {
               }
             }
           }
-          func261.paramCounts = [
+          func262.paramCounts = [
             1,
           ];
-          func261.variableArities = [
+          func262.variableArities = [
             false,
           ];
-          obj166.methods["createImage"] = func261;
-          func261.definitionLine = 114;
-          func261.definitionModule = "kitty";
-          var func266 = function(argcv) {
+          obj166.methods["createImage"] = func262;
+          func262.definitionLine = 115;
+          func262.definitionModule = "kitty";
+          var func267 = function(argcv) {
             var curarg = 1;
             var var_image__39__ = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func266.paramCounts[0])
+            if (argcv[0] !=  func267.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 121
+              lineNumber = 116
               lineNumber = 120
-              lineNumber = 115
-              lineNumber = 119
               onSelf = true;
-              var call267 = callmethod(this, "image:=", [1], var_image__39__);
-              return call267
+              var call268 = callmethod(this, "image:=", [1], var_image__39__);
+              return call268
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -1969,33 +1971,33 @@ function gracecode_kitty () {
               }
             }
           }
-          func266.paramTypes = [];
-          func266.paramTypes.push([]);
-          func266.paramCounts = [
+          func267.paramTypes = [];
+          func267.paramTypes.push([]);
+          func267.paramCounts = [
             1,
           ];
-          func266.variableArities = [
+          func267.variableArities = [
             false,
           ];
-          obj166.methods["setImage"] = func266;
-          func266.definitionLine = 118;
-          func266.definitionModule = "kitty";
-          var func268 = function(argcv) {
+          obj166.methods["setImage"] = func267;
+          func267.definitionLine = 119;
+          func267.definitionModule = "kitty";
+          var func269 = function(argcv) {
             var curarg = 1;
             var var_action__39__ = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func268.paramCounts[0])
+            if (argcv[0] !=  func269.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setAction)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 125
+              lineNumber = 116
               lineNumber = 124
-              lineNumber = 115
-              lineNumber = 123
               onSelf = true;
-              var call269 = callmethod(this, "action:=", [1], var_action__39__);
-              return call269
+              var call270 = callmethod(this, "action:=", [1], var_action__39__);
+              return call270
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2004,38 +2006,38 @@ function gracecode_kitty () {
               }
             }
           }
-          func268.paramCounts = [
+          func269.paramCounts = [
             1,
           ];
-          func268.variableArities = [
+          func269.variableArities = [
             false,
           ];
-          obj166.methods["setAction"] = func268;
-          func268.definitionLine = 122;
-          func268.definitionModule = "kitty";
-          var func270 = function(argcv) {
+          obj166.methods["setAction"] = func269;
+          func269.definitionLine = 123;
+          func269.definitionModule = "kitty";
+          var func271 = function(argcv) {
             var curarg = 1;
             var var_x = arguments[curarg];
             curarg++;
             var var_y = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func270.paramCounts[0])
+            if (argcv[0] !=  func271.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setLocation)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 128
-              lineNumber = 115
-              lineNumber = 127
-              onSelf = true;
-              var call271 = callmethod(this, "posX:=", [1], var_x);
               lineNumber = 129
-              lineNumber = 115
+              lineNumber = 116
               lineNumber = 128
               onSelf = true;
-              var call272 = callmethod(this, "posY:=", [1], var_y);
-              return call272
+              var call272 = callmethod(this, "posX:=", [1], var_x);
+              lineNumber = 130
+              lineNumber = 116
+              lineNumber = 129
+              onSelf = true;
+              var call273 = callmethod(this, "posY:=", [1], var_y);
+              return call273
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2044,28 +2046,28 @@ function gracecode_kitty () {
               }
             }
           }
-          func270.paramCounts = [
+          func271.paramCounts = [
             2,
           ];
-          func270.variableArities = [
+          func271.variableArities = [
             false,
           ];
-          obj166.methods["setLocation"] = func270;
-          func270.definitionLine = 126;
-          func270.definitionModule = "kitty";
-          var func273 = function(argcv) {
+          obj166.methods["setLocation"] = func271;
+          func271.definitionLine = 127;
+          func271.definitionModule = "kitty";
+          var func274 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func273.paramCounts[0])
+            if (argcv[0] !=  func274.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getX)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 134
               lineNumber = 133
-              lineNumber = 132
               onSelf = true;
-              var call274 = callmethod(this, "posX", [0]);
-              return call274
+              var call275 = callmethod(this, "posX", [0]);
+              return call275
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2074,28 +2076,28 @@ function gracecode_kitty () {
               }
             }
           }
-          func273.paramCounts = [
+          func274.paramCounts = [
             0,
           ];
-          func273.variableArities = [
+          func274.variableArities = [
             false,
           ];
-          obj166.methods["getX"] = func273;
-          func273.definitionLine = 131;
-          func273.definitionModule = "kitty";
-          var func275 = function(argcv) {
+          obj166.methods["getX"] = func274;
+          func274.definitionLine = 132;
+          func274.definitionModule = "kitty";
+          var func276 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func275.paramCounts[0])
+            if (argcv[0] !=  func276.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getY)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 138
               lineNumber = 137
-              lineNumber = 136
               onSelf = true;
-              var call276 = callmethod(this, "posY", [0]);
-              return call276
+              var call277 = callmethod(this, "posY", [0]);
+              return call277
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2104,28 +2106,28 @@ function gracecode_kitty () {
               }
             }
           }
-          func275.paramCounts = [
+          func276.paramCounts = [
             0,
           ];
-          func275.variableArities = [
+          func276.variableArities = [
             false,
           ];
-          obj166.methods["getY"] = func275;
-          func275.definitionLine = 135;
-          func275.definitionModule = "kitty";
-          var func277 = function(argcv) {
+          obj166.methods["getY"] = func276;
+          func276.definitionLine = 136;
+          func276.definitionModule = "kitty";
+          var func278 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func277.paramCounts[0])
+            if (argcv[0] !=  func278.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getRotation)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 142
               lineNumber = 141
-              lineNumber = 140
               onSelf = true;
-              var call278 = callmethod(this, "rotation", [0]);
-              return call278
+              var call279 = callmethod(this, "rotation", [0]);
+              return call279
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2134,29 +2136,29 @@ function gracecode_kitty () {
               }
             }
           }
-          func277.paramCounts = [
+          func278.paramCounts = [
             0,
           ];
-          func277.variableArities = [
+          func278.variableArities = [
             false,
           ];
-          obj166.methods["getRotation"] = func277;
-          func277.definitionLine = 139;
-          func277.definitionModule = "kitty";
+          obj166.methods["getRotation"] = func278;
+          func278.definitionLine = 140;
+          func278.definitionModule = "kitty";
           sourceObject = obj166;
           lineNumber = 73
           obj166.data["tag"] = var_tag__39__;
-          var reader_kitty_tag_279 = function() {
+          var reader_kitty_tag_280 = function() {
             return this.data["tag"];
           }
-          obj166.methods["tag"] = reader_kitty_tag_279;
+          obj166.methods["tag"] = reader_kitty_tag_280;
           obj166.data["tag"] = var_tag__39__;
-          var writer_kitty_tag_279 = function(argcv, o) {
+          var writer_kitty_tag_280 = function(argcv, o) {
             this.data["tag"] = o;
           }
-          obj166.methods["tag:="] = writer_kitty_tag_279;
-          reader_kitty_tag_279.confidential = true;
-          writer_kitty_tag_279.confidential = true;
+          obj166.methods["tag:="] = writer_kitty_tag_280;
+          reader_kitty_tag_280.confidential = true;
+          writer_kitty_tag_280.confidential = true;
           lineNumber = 74;
           moduleName = "kitty";
           lineNumber = 73
@@ -2169,17 +2171,17 @@ function gracecode_kitty () {
           sourceObject = obj166;
           lineNumber = 74
           obj166.data["posX"] = var_x__39__;
-          var reader_kitty_posX_280 = function() {
+          var reader_kitty_posX_281 = function() {
             return this.data["posX"];
           }
-          obj166.methods["posX"] = reader_kitty_posX_280;
+          obj166.methods["posX"] = reader_kitty_posX_281;
           obj166.data["posX"] = var_x__39__;
-          var writer_kitty_posX_280 = function(argcv, o) {
+          var writer_kitty_posX_281 = function(argcv, o) {
             this.data["posX"] = o;
           }
-          obj166.methods["posX:="] = writer_kitty_posX_280;
-          reader_kitty_posX_280.confidential = true;
-          writer_kitty_posX_280.confidential = true;
+          obj166.methods["posX:="] = writer_kitty_posX_281;
+          reader_kitty_posX_281.confidential = true;
+          writer_kitty_posX_281.confidential = true;
           lineNumber = 75;
           moduleName = "kitty";
           lineNumber = 74
@@ -2192,17 +2194,17 @@ function gracecode_kitty () {
           sourceObject = obj166;
           lineNumber = 75
           obj166.data["posY"] = var_y__39__;
-          var reader_kitty_posY_281 = function() {
+          var reader_kitty_posY_282 = function() {
             return this.data["posY"];
           }
-          obj166.methods["posY"] = reader_kitty_posY_281;
+          obj166.methods["posY"] = reader_kitty_posY_282;
           obj166.data["posY"] = var_y__39__;
-          var writer_kitty_posY_281 = function(argcv, o) {
+          var writer_kitty_posY_282 = function(argcv, o) {
             this.data["posY"] = o;
           }
-          obj166.methods["posY:="] = writer_kitty_posY_281;
-          reader_kitty_posY_281.confidential = true;
-          writer_kitty_posY_281.confidential = true;
+          obj166.methods["posY:="] = writer_kitty_posY_282;
+          reader_kitty_posY_282.confidential = true;
+          writer_kitty_posY_282.confidential = true;
           lineNumber = 76;
           moduleName = "kitty";
           lineNumber = 75
@@ -2215,17 +2217,17 @@ function gracecode_kitty () {
           sourceObject = obj166;
           lineNumber = 76
           obj166.data["rotation"] = new GraceNum(0);
-          var reader_kitty_rotation_282 = function() {
+          var reader_kitty_rotation_283 = function() {
             return this.data["rotation"];
           }
-          obj166.methods["rotation"] = reader_kitty_rotation_282;
+          obj166.methods["rotation"] = reader_kitty_rotation_283;
           obj166.data["rotation"] = new GraceNum(0);
-          var writer_kitty_rotation_282 = function(argcv, o) {
+          var writer_kitty_rotation_283 = function(argcv, o) {
             this.data["rotation"] = o;
           }
-          obj166.methods["rotation:="] = writer_kitty_rotation_282;
-          reader_kitty_rotation_282.confidential = true;
-          writer_kitty_rotation_282.confidential = true;
+          obj166.methods["rotation:="] = writer_kitty_rotation_283;
+          reader_kitty_rotation_283.confidential = true;
+          writer_kitty_rotation_283.confidential = true;
           lineNumber = 77;
           moduleName = "kitty";
           lineNumber = 76
@@ -2237,65 +2239,65 @@ function gracecode_kitty () {
           obj166.mutable = true;
           sourceObject = obj166;
           lineNumber = 79
-          var block283 = Grace_allocObject();
-          block283.methods["apply"] = function() {
+          var block284 = Grace_allocObject();
+          block284.methods["apply"] = function() {
             var args = Array.prototype.slice.call(arguments, 1);
             return this.real.apply(this.receiver, args);
           }
-          block283.methods["applyIndirectly"] = function(argcv, a) {
+          block284.methods["applyIndirectly"] = function(argcv, a) {
             return this.real.apply(this.receiver, a._value);
           }
-          block283.methods["outer"] = function() {
+          block284.methods["outer"] = function() {
             return callmethod(this.receiver, 'outer', [0]);
           }
-          block283.methods["match"] = GraceBlock_match;
-          block283.methods["prefix?"] = GraceBlock_lift;
-          block283.receiver = this;
-          block283.className = 'block<kitty:79>';
-          block283.real = function(
+          block284.methods["match"] = GraceBlock_match;
+          block284.methods["prefix?"] = GraceBlock_lift;
+          block284.receiver = this;
+          block284.className = 'block<kitty:79>';
+          block284.real = function(
           ) {
             sourceObject = this;
             return undefined;
           };
-          obj166.data["action"] = block283;
-          var reader_kitty_action_284 = function() {
+          obj166.data["action"] = block284;
+          var reader_kitty_action_285 = function() {
             return this.data["action"];
           }
-          obj166.methods["action"] = reader_kitty_action_284;
-          obj166.data["action"] = block283;
-          var writer_kitty_action_284 = function(argcv, o) {
+          obj166.methods["action"] = reader_kitty_action_285;
+          obj166.data["action"] = block284;
+          var writer_kitty_action_285 = function(argcv, o) {
             this.data["action"] = o;
           }
-          obj166.methods["action:="] = writer_kitty_action_284;
-          reader_kitty_action_284.confidential = true;
-          writer_kitty_action_284.confidential = true;
+          obj166.methods["action:="] = writer_kitty_action_285;
+          reader_kitty_action_285.confidential = true;
+          writer_kitty_action_285.confidential = true;
           lineNumber = 79;
           moduleName = "kitty";
           lineNumber = 77
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], block283)))
+            [1], block284)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'action' to be of type Unknown"))
           obj166.mutable = true;
           sourceObject = obj166;
           obj166.data["image"] = undefined;
-          var reader_kitty_image_285 = function() {
+          var reader_kitty_image_286 = function() {
             return this.data["image"];
           }
-          obj166.methods["image"] = reader_kitty_image_285;
+          obj166.methods["image"] = reader_kitty_image_286;
           obj166.data["image"] = undefined;
-          var writer_kitty_image_285 = function(argcv, o) {
+          var writer_kitty_image_286 = function(argcv, o) {
             this.data["image"] = o;
           }
-          obj166.methods["image:="] = writer_kitty_image_285;
-          reader_kitty_image_285.confidential = true;
-          writer_kitty_image_285.confidential = true;
+          obj166.methods["image:="] = writer_kitty_image_286;
+          reader_kitty_image_286.confidential = true;
+          writer_kitty_image_286.confidential = true;
           obj166.mutable = true;
           sourceObject = obj166;
           lineNumber = 81
           onSelf = true;
-          var call286 = callmethod(this, "awake", [0]);
+          var call287 = callmethod(this, "awake", [0]);
           sourceObject = obj166;
           sourceObject = obj166;
           sourceObject = obj166;
@@ -2330,7 +2332,7 @@ function gracecode_kitty () {
     obj163.methods["new"] = func165;
     func165.definitionLine = 69;
     func165.definitionModule = "kitty";
-    var func287 = function(argcv) {
+    var func288 = function(argcv) {
       var curarg = 1;
       var var_tag__39__ = arguments[curarg];
       curarg++;
@@ -2342,38 +2344,40 @@ function gracecode_kitty () {
       var returnTarget = invocationCount;
       invocationCount++;
       try {
-        var obj288 = Grace_allocObject();
-        obj288.definitionModule = "kitty";
-        obj288.definitionLine = 69;
-        var inho288 = inheritingObject;
-        while (inho288.superobj) inho288 = inho288.superobj;
-        inho288.superobj = obj288;
-        obj288.data = inheritingObject.data;
-        obj288.outer = this;
-        var reader_kitty_outer_289 = function() {
+        var obj289 = Grace_allocObject();
+        obj289.definitionModule = "kitty";
+        obj289.definitionLine = 69;
+        var inho289 = inheritingObject;
+        while (inho289.superobj) inho289 = inho289.superobj;
+        inho289.superobj = obj289;
+        obj289.data = inheritingObject.data;
+        obj289.outer = this;
+        var reader_kitty_outer_290 = function() {
           return this.outer;
         }
-        obj288.methods["outer"] = reader_kitty_outer_289;
-        function obj_init_288() {
+        obj289.methods["outer"] = reader_kitty_outer_290;
+        function obj_init_289() {
           var origSuperDepth = superDepth;
-          superDepth = obj288;
-          obj288.annotations = [];
-          var func290 = function(argcv) {
+          superDepth = obj289;
+          obj289.annotations = [];
+          var func291 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func290.paramCounts[0])
+            if (argcv[0] !=  func291.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (awake)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
               lineNumber = 85
-              var string291 = new GraceString("realyee.png");
+              var string292 = new GraceString("realyee.png");
               onSelf = true;
-              var call292 = callmethod(this, "createImage", [1], string291);
+              var call293 = callmethod(this, "createImage", [1], string292);
               lineNumber = 87
               lineNumber = 86
-              var_newborn = this;
-              return this
+              var_kitten = this;
+              lineNumber = 87
+              var call294 = callmethod(var_m__95__world,"addEntity", [1], this);
+              return call294
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2382,28 +2386,28 @@ function gracecode_kitty () {
               }
             }
           }
-          func290.paramCounts = [
+          func291.paramCounts = [
             0,
           ];
-          func290.variableArities = [
+          func291.variableArities = [
             false,
           ];
-          obj288.methods["awake"] = func290;
-          func290.definitionLine = 84;
-          func290.definitionModule = "kitty";
-          var func293 = function(argcv) {
+          obj289.methods["awake"] = func291;
+          func291.definitionLine = 84;
+          func291.definitionModule = "kitty";
+          var func295 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func293.paramCounts[0])
+            if (argcv[0] !=  func295.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (tick)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 90
+              lineNumber = 91
               onSelf = true;
-              var call294 = callmethod(this, "action", [0]);
-              var call295 = callmethod(call294,"apply", [0]);
-              return call295
+              var call296 = callmethod(this, "action", [0]);
+              var call297 = callmethod(call296,"apply", [0]);
+              return call297
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2412,54 +2416,54 @@ function gracecode_kitty () {
               }
             }
           }
-          func293.paramCounts = [
+          func295.paramCounts = [
             0,
           ];
-          func293.variableArities = [
+          func295.variableArities = [
             false,
           ];
-          obj288.methods["tick"] = func293;
-          func293.definitionLine = 89;
-          func293.definitionModule = "kitty";
-          var func296 = function(argcv) {
+          obj289.methods["tick"] = func295;
+          func295.definitionLine = 90;
+          func295.definitionModule = "kitty";
+          var func298 = function(argcv) {
             var curarg = 1;
             var var_distance = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func296.paramCounts[0])
+            if (argcv[0] !=  func298.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (move)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 94
-              lineNumber = 90
-              lineNumber = 94
-              onSelf = true;
-              var call299 = callmethod(this, "rotation", [0]);
-              var prod301 = callmethod(call299, "*", [1], new GraceNum(3.14159));
-              var quotient303 = callmethod(prod301, "/", [1], new GraceNum(180));
-              var call304 = callmethod(var_math,"cos", [1], quotient303);
-              var prod307 = callmethod(var_distance, "*", [1], call304);
-              onSelf = true;
-              var call309 = callmethod(this, "posX", [0]);
-              var opresult311 = callmethod(call309, "+", [1], prod307);
-              onSelf = true;
-              var call312 = callmethod(this, "posX:=", [1], opresult311);
               lineNumber = 95
-              lineNumber = 90
+              lineNumber = 91
               lineNumber = 95
               onSelf = true;
-              var call315 = callmethod(this, "rotation", [0]);
-              var prod317 = callmethod(call315, "*", [1], new GraceNum(3.14159));
-              var quotient319 = callmethod(prod317, "/", [1], new GraceNum(180));
-              var call320 = callmethod(var_math,"sin", [1], quotient319);
-              var prod323 = callmethod(var_distance, "*", [1], call320);
+              var call301 = callmethod(this, "rotation", [0]);
+              var prod303 = callmethod(call301, "*", [1], new GraceNum(3.14159));
+              var quotient305 = callmethod(prod303, "/", [1], new GraceNum(180));
+              var call306 = callmethod(var_math,"cos", [1], quotient305);
+              var prod309 = callmethod(var_distance, "*", [1], call306);
               onSelf = true;
-              var call325 = callmethod(this, "posY", [0]);
-              var opresult327 = callmethod(call325, "+", [1], prod323);
+              var call311 = callmethod(this, "posX", [0]);
+              var opresult313 = callmethod(call311, "+", [1], prod309);
               onSelf = true;
-              var call328 = callmethod(this, "posY:=", [1], opresult327);
-              return call328
+              var call314 = callmethod(this, "posX:=", [1], opresult313);
+              lineNumber = 96
+              lineNumber = 91
+              lineNumber = 96
+              onSelf = true;
+              var call317 = callmethod(this, "rotation", [0]);
+              var prod319 = callmethod(call317, "*", [1], new GraceNum(3.14159));
+              var quotient321 = callmethod(prod319, "/", [1], new GraceNum(180));
+              var call322 = callmethod(var_math,"sin", [1], quotient321);
+              var prod325 = callmethod(var_distance, "*", [1], call322);
+              onSelf = true;
+              var call327 = callmethod(this, "posY", [0]);
+              var opresult329 = callmethod(call327, "+", [1], prod325);
+              onSelf = true;
+              var call330 = callmethod(this, "posY:=", [1], opresult329);
+              return call330
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2468,56 +2472,56 @@ function gracecode_kitty () {
               }
             }
           }
-          func296.paramCounts = [
+          func298.paramCounts = [
             1,
           ];
-          func296.variableArities = [
+          func298.variableArities = [
             false,
           ];
-          obj288.methods["move"] = func296;
-          func296.definitionLine = 93;
-          func296.definitionModule = "kitty";
-          var func329 = function(argcv) {
+          obj289.methods["move"] = func298;
+          func298.definitionLine = 94;
+          func298.definitionModule = "kitty";
+          var func331 = function(argcv) {
             var curarg = 1;
             var var_distance = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func329.paramCounts[0])
+            if (argcv[0] !=  func331.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (strafe)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 99
-              lineNumber = 90
-              lineNumber = 99
-              onSelf = true;
-              var call332 = callmethod(this, "rotation", [0]);
-              var opresult335 = callmethod(new GraceNum(90), "+", [1], call332);
-              var prod337 = callmethod(opresult335, "*", [1], new GraceNum(3.14159));
-              var quotient339 = callmethod(prod337, "/", [1], new GraceNum(180));
-              var call340 = callmethod(var_math,"cos", [1], quotient339);
-              var prod343 = callmethod(var_distance, "*", [1], call340);
-              onSelf = true;
-              var call345 = callmethod(this, "posX", [0]);
-              var opresult347 = callmethod(call345, "+", [1], prod343);
-              onSelf = true;
-              var call348 = callmethod(this, "posX:=", [1], opresult347);
               lineNumber = 100
-              lineNumber = 90
+              lineNumber = 91
               lineNumber = 100
               onSelf = true;
-              var call351 = callmethod(this, "rotation", [0]);
-              var opresult354 = callmethod(new GraceNum(90), "+", [1], call351);
-              var prod356 = callmethod(opresult354, "*", [1], new GraceNum(3.14159));
-              var quotient358 = callmethod(prod356, "/", [1], new GraceNum(180));
-              var call359 = callmethod(var_math,"sin", [1], quotient358);
-              var prod362 = callmethod(var_distance, "*", [1], call359);
+              var call334 = callmethod(this, "rotation", [0]);
+              var opresult337 = callmethod(new GraceNum(90), "+", [1], call334);
+              var prod339 = callmethod(opresult337, "*", [1], new GraceNum(3.14159));
+              var quotient341 = callmethod(prod339, "/", [1], new GraceNum(180));
+              var call342 = callmethod(var_math,"cos", [1], quotient341);
+              var prod345 = callmethod(var_distance, "*", [1], call342);
               onSelf = true;
-              var call364 = callmethod(this, "posY", [0]);
-              var opresult366 = callmethod(call364, "+", [1], prod362);
+              var call347 = callmethod(this, "posX", [0]);
+              var opresult349 = callmethod(call347, "+", [1], prod345);
               onSelf = true;
-              var call367 = callmethod(this, "posY:=", [1], opresult366);
-              return call367
+              var call350 = callmethod(this, "posX:=", [1], opresult349);
+              lineNumber = 101
+              lineNumber = 91
+              lineNumber = 101
+              onSelf = true;
+              var call353 = callmethod(this, "rotation", [0]);
+              var opresult356 = callmethod(new GraceNum(90), "+", [1], call353);
+              var prod358 = callmethod(opresult356, "*", [1], new GraceNum(3.14159));
+              var quotient360 = callmethod(prod358, "/", [1], new GraceNum(180));
+              var call361 = callmethod(var_math,"sin", [1], quotient360);
+              var prod364 = callmethod(var_distance, "*", [1], call361);
+              onSelf = true;
+              var call366 = callmethod(this, "posY", [0]);
+              var opresult368 = callmethod(call366, "+", [1], prod364);
+              onSelf = true;
+              var call369 = callmethod(this, "posY:=", [1], opresult368);
+              return call369
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2526,35 +2530,35 @@ function gracecode_kitty () {
               }
             }
           }
-          func329.paramCounts = [
+          func331.paramCounts = [
             1,
           ];
-          func329.variableArities = [
+          func331.variableArities = [
             false,
           ];
-          obj288.methods["strafe"] = func329;
-          func329.definitionLine = 98;
-          func329.definitionModule = "kitty";
-          var func368 = function(argcv) {
+          obj289.methods["strafe"] = func331;
+          func331.definitionLine = 99;
+          func331.definitionModule = "kitty";
+          var func370 = function(argcv) {
             var curarg = 1;
             var var_angle = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func368.paramCounts[0])
+            if (argcv[0] !=  func370.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (turn)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
+              lineNumber = 106
+              lineNumber = 91
+              lineNumber = 106
               lineNumber = 105
-              lineNumber = 90
-              lineNumber = 105
-              lineNumber = 104
               onSelf = true;
-              var call370 = callmethod(this, "rotation", [0]);
-              var opresult372 = callmethod(call370, "+", [1], var_angle);
+              var call372 = callmethod(this, "rotation", [0]);
+              var opresult374 = callmethod(call372, "+", [1], var_angle);
               onSelf = true;
-              var call373 = callmethod(this, "rotation:=", [1], opresult372);
-              return call373
+              var call375 = callmethod(this, "rotation:=", [1], opresult374);
+              return call375
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2563,16 +2567,16 @@ function gracecode_kitty () {
               }
             }
           }
-          func368.paramCounts = [
+          func370.paramCounts = [
             1,
           ];
-          func368.variableArities = [
+          func370.variableArities = [
             false,
           ];
-          obj288.methods["turn"] = func368;
-          func368.definitionLine = 103;
-          func368.definitionModule = "kitty";
-          var func374 = function(argcv) {
+          obj289.methods["turn"] = func370;
+          func370.definitionLine = 104;
+          func370.definitionModule = "kitty";
+          var func376 = function(argcv) {
             var curarg = 1;
             var var_ctx = arguments[curarg];
             curarg++;
@@ -2580,29 +2584,29 @@ function gracecode_kitty () {
             curarg++;
             var var_dy = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func374.paramCounts[0])
+            if (argcv[0] !=  func376.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (draw)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 108
-              var call375 = callmethod(var_ctx,"save", [0]);
               lineNumber = 109
-              onSelf = true;
-              var call376 = callmethod(this, "posX", [0]);
-              onSelf = true;
-              var call377 = callmethod(this, "posY", [0]);
-              var call378 = callmethod(var_ctx,"translate", [2], call376, call377);
+              var call377 = callmethod(var_ctx,"save", [0]);
               lineNumber = 110
               onSelf = true;
-              var call379 = callmethod(this, "rotation", [0]);
+              var call378 = callmethod(this, "posX", [0]);
               onSelf = true;
-              var call380 = callmethod(this, "image", [0]);
-              var call381 = callmethod(call380,"draw", [4], var_ctx, var_dx, var_dy, call379);
+              var call379 = callmethod(this, "posY", [0]);
+              var call380 = callmethod(var_ctx,"translate", [2], call378, call379);
               lineNumber = 111
-              var call382 = callmethod(var_ctx,"restore", [0]);
-              return call382
+              onSelf = true;
+              var call381 = callmethod(this, "rotation", [0]);
+              onSelf = true;
+              var call382 = callmethod(this, "image", [0]);
+              var call383 = callmethod(call382,"draw", [4], var_ctx, var_dx, var_dy, call381);
+              lineNumber = 112
+              var call384 = callmethod(var_ctx,"restore", [0]);
+              return call384
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2611,70 +2615,37 @@ function gracecode_kitty () {
               }
             }
           }
-          func374.paramCounts = [
+          func376.paramCounts = [
             3,
           ];
-          func374.variableArities = [
+          func376.variableArities = [
             false,
           ];
-          obj288.methods["draw"] = func374;
-          func374.definitionLine = 107;
-          func374.definitionModule = "kitty";
-          var func383 = function(argcv) {
+          obj289.methods["draw"] = func376;
+          func376.definitionLine = 108;
+          func376.definitionModule = "kitty";
+          var func385 = function(argcv) {
             var curarg = 1;
             var var_url__39__ = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func383.paramCounts[0])
+            if (argcv[0] !=  func385.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (createImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 115
-              lineNumber = 111
-              lineNumber = 115
-              var call384 = callmethod(superDepth, "outer", [0]);
+              lineNumber = 116
+              lineNumber = 112
+              lineNumber = 116
+              var call386 = callmethod(superDepth, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call385 = callmethod(call384, "outer", [0]);
+              var call387 = callmethod(call386, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call386 = callmethod(call385, "Image()width()height", [1, 1, 1], var_url__39__, new GraceNum(64), new GraceNum(64));
+              var call388 = callmethod(call387, "Image()width()height", [1, 1, 1], var_url__39__, new GraceNum(64), new GraceNum(64));
               onSelf = true;
-              var call387 = callmethod(this, "image:=", [1], call386);
-              return call387
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func383.paramCounts = [
-            1,
-          ];
-          func383.variableArities = [
-            false,
-          ];
-          obj288.methods["createImage"] = func383;
-          func383.definitionLine = 114;
-          func383.definitionModule = "kitty";
-          var func388 = function(argcv) {
-            var curarg = 1;
-            var var_image__39__ = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func388.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "kitty";
-            try {
-              lineNumber = 120
-              lineNumber = 115
-              lineNumber = 119
-              onSelf = true;
-              var call389 = callmethod(this, "image:=", [1], var_image__39__);
+              var call389 = callmethod(this, "image:=", [1], call388);
               return call389
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2684,32 +2655,30 @@ function gracecode_kitty () {
               }
             }
           }
-          func388.paramTypes = [];
-          func388.paramTypes.push([]);
-          func388.paramCounts = [
+          func385.paramCounts = [
             1,
           ];
-          func388.variableArities = [
+          func385.variableArities = [
             false,
           ];
-          obj288.methods["setImage"] = func388;
-          func388.definitionLine = 118;
-          func388.definitionModule = "kitty";
+          obj289.methods["createImage"] = func385;
+          func385.definitionLine = 115;
+          func385.definitionModule = "kitty";
           var func390 = function(argcv) {
             var curarg = 1;
-            var var_action__39__ = arguments[curarg];
+            var var_image__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func390.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setAction)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setImage)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 124
-              lineNumber = 115
-              lineNumber = 123
+              lineNumber = 121
+              lineNumber = 116
+              lineNumber = 120
               onSelf = true;
-              var call391 = callmethod(this, "action:=", [1], var_action__39__);
+              var call391 = callmethod(this, "image:=", [1], var_image__39__);
               return call391
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2719,38 +2688,33 @@ function gracecode_kitty () {
               }
             }
           }
+          func390.paramTypes = [];
+          func390.paramTypes.push([]);
           func390.paramCounts = [
             1,
           ];
           func390.variableArities = [
             false,
           ];
-          obj288.methods["setAction"] = func390;
-          func390.definitionLine = 122;
+          obj289.methods["setImage"] = func390;
+          func390.definitionLine = 119;
           func390.definitionModule = "kitty";
           var func392 = function(argcv) {
             var curarg = 1;
-            var var_x = arguments[curarg];
-            curarg++;
-            var var_y = arguments[curarg];
+            var var_action__39__ = arguments[curarg];
             curarg++;
             if (argcv[0] !=  func392.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setLocation)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setAction)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 128
-              lineNumber = 115
-              lineNumber = 127
+              lineNumber = 125
+              lineNumber = 116
+              lineNumber = 124
               onSelf = true;
-              var call393 = callmethod(this, "posX:=", [1], var_x);
-              lineNumber = 129
-              lineNumber = 115
-              lineNumber = 128
-              onSelf = true;
-              var call394 = callmethod(this, "posY:=", [1], var_y);
-              return call394
+              var call393 = callmethod(this, "action:=", [1], var_action__39__);
+              return call393
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -2760,26 +2724,36 @@ function gracecode_kitty () {
             }
           }
           func392.paramCounts = [
-            2,
+            1,
           ];
           func392.variableArities = [
             false,
           ];
-          obj288.methods["setLocation"] = func392;
-          func392.definitionLine = 126;
+          obj289.methods["setAction"] = func392;
+          func392.definitionLine = 123;
           func392.definitionModule = "kitty";
-          var func395 = function(argcv) {
+          var func394 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func395.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getX)"));
+            var var_x = arguments[curarg];
+            curarg++;
+            var var_y = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func394.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setLocation)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 133
-              lineNumber = 132
+              lineNumber = 129
+              lineNumber = 116
+              lineNumber = 128
               onSelf = true;
-              var call396 = callmethod(this, "posX", [0]);
+              var call395 = callmethod(this, "posX:=", [1], var_x);
+              lineNumber = 130
+              lineNumber = 116
+              lineNumber = 129
+              onSelf = true;
+              var call396 = callmethod(this, "posY:=", [1], var_y);
               return call396
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2789,27 +2763,27 @@ function gracecode_kitty () {
               }
             }
           }
-          func395.paramCounts = [
-            0,
+          func394.paramCounts = [
+            2,
           ];
-          func395.variableArities = [
+          func394.variableArities = [
             false,
           ];
-          obj288.methods["getX"] = func395;
-          func395.definitionLine = 131;
-          func395.definitionModule = "kitty";
+          obj289.methods["setLocation"] = func394;
+          func394.definitionLine = 127;
+          func394.definitionModule = "kitty";
           var func397 = function(argcv) {
             var curarg = 1;
             if (argcv[0] !=  func397.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getY)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getX)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 137
-              lineNumber = 136
+              lineNumber = 134
+              lineNumber = 133
               onSelf = true;
-              var call398 = callmethod(this, "posY", [0]);
+              var call398 = callmethod(this, "posX", [0]);
               return call398
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2825,21 +2799,21 @@ function gracecode_kitty () {
           func397.variableArities = [
             false,
           ];
-          obj288.methods["getY"] = func397;
-          func397.definitionLine = 135;
+          obj289.methods["getX"] = func397;
+          func397.definitionLine = 132;
           func397.definitionModule = "kitty";
           var func399 = function(argcv) {
             var curarg = 1;
             if (argcv[0] !=  func399.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getRotation)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getY)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 141
-              lineNumber = 140
+              lineNumber = 138
+              lineNumber = 137
               onSelf = true;
-              var call400 = callmethod(this, "rotation", [0]);
+              var call400 = callmethod(this, "posY", [0]);
               return call400
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -2855,23 +2829,53 @@ function gracecode_kitty () {
           func399.variableArities = [
             false,
           ];
-          obj288.methods["getRotation"] = func399;
-          func399.definitionLine = 139;
+          obj289.methods["getY"] = func399;
+          func399.definitionLine = 136;
           func399.definitionModule = "kitty";
-          sourceObject = obj288;
+          var func401 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func401.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getRotation)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "kitty";
+            try {
+              lineNumber = 142
+              lineNumber = 141
+              onSelf = true;
+              var call402 = callmethod(this, "rotation", [0]);
+              return call402
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func401.paramCounts = [
+            0,
+          ];
+          func401.variableArities = [
+            false,
+          ];
+          obj289.methods["getRotation"] = func401;
+          func401.definitionLine = 140;
+          func401.definitionModule = "kitty";
+          sourceObject = obj289;
           lineNumber = 73
-          obj288.data["tag"] = var_tag__39__;
-          var reader_kitty_tag_401 = function() {
+          obj289.data["tag"] = var_tag__39__;
+          var reader_kitty_tag_403 = function() {
             return this.data["tag"];
           }
-          obj288.methods["tag"] = reader_kitty_tag_401;
-          obj288.data["tag"] = var_tag__39__;
-          var writer_kitty_tag_401 = function(argcv, o) {
+          obj289.methods["tag"] = reader_kitty_tag_403;
+          obj289.data["tag"] = var_tag__39__;
+          var writer_kitty_tag_403 = function(argcv, o) {
             this.data["tag"] = o;
           }
-          obj288.methods["tag:="] = writer_kitty_tag_401;
-          reader_kitty_tag_401.confidential = true;
-          writer_kitty_tag_401.confidential = true;
+          obj289.methods["tag:="] = writer_kitty_tag_403;
+          reader_kitty_tag_403.confidential = true;
+          writer_kitty_tag_403.confidential = true;
           lineNumber = 74;
           moduleName = "kitty";
           lineNumber = 73
@@ -2880,21 +2884,21 @@ function gracecode_kitty () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'tag' to be of type Unknown"))
-          obj288.mutable = true;
-          sourceObject = obj288;
+          obj289.mutable = true;
+          sourceObject = obj289;
           lineNumber = 74
-          obj288.data["posX"] = var_x__39__;
-          var reader_kitty_posX_402 = function() {
+          obj289.data["posX"] = var_x__39__;
+          var reader_kitty_posX_404 = function() {
             return this.data["posX"];
           }
-          obj288.methods["posX"] = reader_kitty_posX_402;
-          obj288.data["posX"] = var_x__39__;
-          var writer_kitty_posX_402 = function(argcv, o) {
+          obj289.methods["posX"] = reader_kitty_posX_404;
+          obj289.data["posX"] = var_x__39__;
+          var writer_kitty_posX_404 = function(argcv, o) {
             this.data["posX"] = o;
           }
-          obj288.methods["posX:="] = writer_kitty_posX_402;
-          reader_kitty_posX_402.confidential = true;
-          writer_kitty_posX_402.confidential = true;
+          obj289.methods["posX:="] = writer_kitty_posX_404;
+          reader_kitty_posX_404.confidential = true;
+          writer_kitty_posX_404.confidential = true;
           lineNumber = 75;
           moduleName = "kitty";
           lineNumber = 74
@@ -2903,21 +2907,21 @@ function gracecode_kitty () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'posX' to be of type Unknown"))
-          obj288.mutable = true;
-          sourceObject = obj288;
+          obj289.mutable = true;
+          sourceObject = obj289;
           lineNumber = 75
-          obj288.data["posY"] = var_y__39__;
-          var reader_kitty_posY_403 = function() {
+          obj289.data["posY"] = var_y__39__;
+          var reader_kitty_posY_405 = function() {
             return this.data["posY"];
           }
-          obj288.methods["posY"] = reader_kitty_posY_403;
-          obj288.data["posY"] = var_y__39__;
-          var writer_kitty_posY_403 = function(argcv, o) {
+          obj289.methods["posY"] = reader_kitty_posY_405;
+          obj289.data["posY"] = var_y__39__;
+          var writer_kitty_posY_405 = function(argcv, o) {
             this.data["posY"] = o;
           }
-          obj288.methods["posY:="] = writer_kitty_posY_403;
-          reader_kitty_posY_403.confidential = true;
-          writer_kitty_posY_403.confidential = true;
+          obj289.methods["posY:="] = writer_kitty_posY_405;
+          reader_kitty_posY_405.confidential = true;
+          writer_kitty_posY_405.confidential = true;
           lineNumber = 76;
           moduleName = "kitty";
           lineNumber = 75
@@ -2926,21 +2930,21 @@ function gracecode_kitty () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'posY' to be of type Unknown"))
-          obj288.mutable = true;
-          sourceObject = obj288;
+          obj289.mutable = true;
+          sourceObject = obj289;
           lineNumber = 76
-          obj288.data["rotation"] = new GraceNum(0);
-          var reader_kitty_rotation_404 = function() {
+          obj289.data["rotation"] = new GraceNum(0);
+          var reader_kitty_rotation_406 = function() {
             return this.data["rotation"];
           }
-          obj288.methods["rotation"] = reader_kitty_rotation_404;
-          obj288.data["rotation"] = new GraceNum(0);
-          var writer_kitty_rotation_404 = function(argcv, o) {
+          obj289.methods["rotation"] = reader_kitty_rotation_406;
+          obj289.data["rotation"] = new GraceNum(0);
+          var writer_kitty_rotation_406 = function(argcv, o) {
             this.data["rotation"] = o;
           }
-          obj288.methods["rotation:="] = writer_kitty_rotation_404;
-          reader_kitty_rotation_404.confidential = true;
-          writer_kitty_rotation_404.confidential = true;
+          obj289.methods["rotation:="] = writer_kitty_rotation_406;
+          reader_kitty_rotation_406.confidential = true;
+          writer_kitty_rotation_406.confidential = true;
           lineNumber = 77;
           moduleName = "kitty";
           lineNumber = 76
@@ -2949,85 +2953,85 @@ function gracecode_kitty () {
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'rotation' to be of type Unknown"))
-          obj288.mutable = true;
-          sourceObject = obj288;
+          obj289.mutable = true;
+          sourceObject = obj289;
           lineNumber = 79
-          var block405 = Grace_allocObject();
-          block405.methods["apply"] = function() {
+          var block407 = Grace_allocObject();
+          block407.methods["apply"] = function() {
             var args = Array.prototype.slice.call(arguments, 1);
             return this.real.apply(this.receiver, args);
           }
-          block405.methods["applyIndirectly"] = function(argcv, a) {
+          block407.methods["applyIndirectly"] = function(argcv, a) {
             return this.real.apply(this.receiver, a._value);
           }
-          block405.methods["outer"] = function() {
+          block407.methods["outer"] = function() {
             return callmethod(this.receiver, 'outer', [0]);
           }
-          block405.methods["match"] = GraceBlock_match;
-          block405.methods["prefix?"] = GraceBlock_lift;
-          block405.receiver = this;
-          block405.className = 'block<kitty:79>';
-          block405.real = function(
+          block407.methods["match"] = GraceBlock_match;
+          block407.methods["prefix?"] = GraceBlock_lift;
+          block407.receiver = this;
+          block407.className = 'block<kitty:79>';
+          block407.real = function(
           ) {
             sourceObject = this;
             return undefined;
           };
-          obj288.data["action"] = block405;
-          var reader_kitty_action_406 = function() {
+          obj289.data["action"] = block407;
+          var reader_kitty_action_408 = function() {
             return this.data["action"];
           }
-          obj288.methods["action"] = reader_kitty_action_406;
-          obj288.data["action"] = block405;
-          var writer_kitty_action_406 = function(argcv, o) {
+          obj289.methods["action"] = reader_kitty_action_408;
+          obj289.data["action"] = block407;
+          var writer_kitty_action_408 = function(argcv, o) {
             this.data["action"] = o;
           }
-          obj288.methods["action:="] = writer_kitty_action_406;
-          reader_kitty_action_406.confidential = true;
-          writer_kitty_action_406.confidential = true;
+          obj289.methods["action:="] = writer_kitty_action_408;
+          reader_kitty_action_408.confidential = true;
+          writer_kitty_action_408.confidential = true;
           lineNumber = 79;
           moduleName = "kitty";
           lineNumber = 77
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], block405)))
+            [1], block407)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'action' to be of type Unknown"))
-          obj288.mutable = true;
-          sourceObject = obj288;
-          obj288.data["image"] = undefined;
-          var reader_kitty_image_407 = function() {
+          obj289.mutable = true;
+          sourceObject = obj289;
+          obj289.data["image"] = undefined;
+          var reader_kitty_image_409 = function() {
             return this.data["image"];
           }
-          obj288.methods["image"] = reader_kitty_image_407;
-          obj288.data["image"] = undefined;
-          var writer_kitty_image_407 = function(argcv, o) {
+          obj289.methods["image"] = reader_kitty_image_409;
+          obj289.data["image"] = undefined;
+          var writer_kitty_image_409 = function(argcv, o) {
             this.data["image"] = o;
           }
-          obj288.methods["image:="] = writer_kitty_image_407;
-          reader_kitty_image_407.confidential = true;
-          writer_kitty_image_407.confidential = true;
-          obj288.mutable = true;
-          sourceObject = obj288;
+          obj289.methods["image:="] = writer_kitty_image_409;
+          reader_kitty_image_409.confidential = true;
+          writer_kitty_image_409.confidential = true;
+          obj289.mutable = true;
+          sourceObject = obj289;
           lineNumber = 81
           onSelf = true;
-          var call408 = callmethod(this, "awake", [0]);
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
-          sourceObject = obj288;
+          var call410 = callmethod(this, "awake", [0]);
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
+          sourceObject = obj289;
           superDepth = origSuperDepth;
         }
-        obj_init_288.apply(inheritingObject, []);
-        return obj288
+        obj_init_289.apply(inheritingObject, []);
+        return obj289
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -3036,16 +3040,16 @@ function gracecode_kitty () {
         }
       }
     }
-    obj163.methods["new()object"] = func287;
-    var func409 = function(argcv) {
+    obj163.methods["new()object"] = func288;
+    var func411 = function(argcv) {
       var curarg = 1;
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "kitty";
       try {
         lineNumber = 69
-        var string410 = new GraceString("class KittyEntity");
-        return string410
+        var string412 = new GraceString("class KittyEntity");
+        return string412
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -3054,25 +3058,25 @@ function gracecode_kitty () {
         }
       }
     }
-    func409.paramCounts = [
+    func411.paramCounts = [
     ];
-    func409.variableArities = [
+    func411.variableArities = [
     ];
-    obj163.methods["asDebugString"] = func409;
-    func409.definitionLine = 69;
-    func409.definitionModule = "kitty";
+    obj163.methods["asDebugString"] = func411;
+    func411.definitionLine = 69;
+    func411.definitionModule = "kitty";
     sourceObject = obj163;
     sourceObject = obj163;
     superDepth = origSuperDepth;
   }
   obj_init_163.apply(obj163, []);
   var var_KittyEntity = obj163;
-  lineNumber = 144
+  lineNumber = 145
   lineNumber = 153
-  lineNumber = 199
-  var func411 = function(argcv) {
+  lineNumber = 159
+  var func413 = function(argcv) {
     var curarg = 1;
-    if (argcv[0] !=  func411.paramCounts[0])
+    if (argcv[0] !=  func413.paramCounts[0])
       callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (KittyWorld)"));
     var returnTarget = invocationCount;
     invocationCount++;
@@ -3087,321 +3091,329 @@ function gracecode_kitty () {
       }
     }
   }
-  func411.paramCounts = [
+  func413.paramCounts = [
     0,
   ];
-  func411.variableArities = [
+  func413.variableArities = [
     false,
   ];
-  this.methods["KittyWorld"] = func411;
-  func411.definitionLine = 199;
-  func411.definitionModule = "kitty";
-  var obj412 = Grace_allocObject();
-  obj412.definitionModule = "kitty";
-  obj412.definitionLine = 199;
-  obj412.outer = this;
-  var reader_kitty_outer_413 = function() {
+  this.methods["KittyWorld"] = func413;
+  func413.definitionLine = 159;
+  func413.definitionModule = "kitty";
+  var obj414 = Grace_allocObject();
+  obj414.definitionModule = "kitty";
+  obj414.definitionLine = 159;
+  obj414.outer = this;
+  var reader_kitty_outer_415 = function() {
     return this.outer;
   }
-  obj412.methods["outer"] = reader_kitty_outer_413;
-  function obj_init_412() {
+  obj414.methods["outer"] = reader_kitty_outer_415;
+  function obj_init_414() {
     var origSuperDepth = superDepth;
-    superDepth = obj412;
-    obj412.annotations = [];
-    var func414 = function(argcv) {
+    superDepth = obj414;
+    obj414.annotations = [];
+    var func416 = function(argcv) {
       var curarg = 1;
-      if (argcv[0] !=  func414.paramCounts[0])
+      if (argcv[0] !=  func416.paramCounts[0])
         callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (new)"));
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "kitty";
       try {
-        var obj415 = Grace_allocObject();
-        obj415.definitionModule = "kitty";
-        obj415.definitionLine = 199;
-        obj415.outer = this;
-        var reader_kitty_outer_416 = function() {
+        var obj417 = Grace_allocObject();
+        obj417.definitionModule = "kitty";
+        obj417.definitionLine = 159;
+        obj417.outer = this;
+        var reader_kitty_outer_418 = function() {
           return this.outer;
         }
-        obj415.methods["outer"] = reader_kitty_outer_416;
-        function obj_init_415() {
+        obj417.methods["outer"] = reader_kitty_outer_418;
+        function obj_init_417() {
           var origSuperDepth = superDepth;
-          superDepth = obj415;
-          obj415.annotations = [];
-          var func417 = function(argcv) {
+          superDepth = obj417;
+          obj417.annotations = [];
+          var func419 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func417.paramCounts[0])
+            if (argcv[0] !=  func419.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (init)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 237
-              var if418 = var_done;
-              lineNumber = 233
+              lineNumber = 197
+              var if420 = var_done;
+              lineNumber = 193
               onSelf = true;
-              var call419 = callmethod(this, "isInit", [0]);
-              if (Grace_isTrue(call419)) {
-                lineNumber = 235
-                lineNumber = 234
-                var bool420 = new GraceBoolean(false)
-                return bool420
+              var call421 = callmethod(this, "isInit", [0]);
+              if (Grace_isTrue(call421)) {
+                lineNumber = 195
+                lineNumber = 194
+                var bool422 = new GraceBoolean(false)
+                return bool422
               }
-              lineNumber = 238
+              lineNumber = 198
+              lineNumber = 159
+              lineNumber = 197
+              var call423 = callmethod(var_dom,"document", [0]);
+              onSelf = true;
+              var call424 = callmethod(this, "document:=", [1], call423);
+              lineNumber = 198
+              lineNumber = 197
+              lineNumber = 198
+              var string425 = new GraceString("standard-canvas");
+              onSelf = true;
+              var call426 = callmethod(this, "document", [0]);
+              var call427 = callmethod(call426,"getElementById", [1], string425);
+              onSelf = true;
+              var call428 = callmethod(this, "canvas:=", [1], call427);
+              lineNumber = 200
+              lineNumber = 197
               lineNumber = 199
-              lineNumber = 237
-              var call421 = callmethod(var_dom,"document", [0]);
               onSelf = true;
-              var call422 = callmethod(this, "document:=", [1], call421);
-              lineNumber = 238
-              lineNumber = 237
-              lineNumber = 238
-              var string423 = new GraceString("standard-canvas");
+              var call429 = callmethod(this, "canvas", [0]);
+              var call430 = callmethod(call429,"width", [0]);
               onSelf = true;
-              var call424 = callmethod(this, "document", [0]);
-              var call425 = callmethod(call424,"getElementById", [1], string423);
+              var call431 = callmethod(this, "canvasWidth:=", [1], call430);
+              lineNumber = 203
+              lineNumber = 199
+              lineNumber = 200
               onSelf = true;
-              var call426 = callmethod(this, "canvas:=", [1], call425);
-              lineNumber = 240
-              lineNumber = 237
-              lineNumber = 239
+              var call432 = callmethod(this, "canvas", [0]);
+              var call433 = callmethod(call432,"height", [0]);
               onSelf = true;
-              var call427 = callmethod(this, "canvas", [0]);
-              var call428 = callmethod(call427,"width", [0]);
-              onSelf = true;
-              var call429 = callmethod(this, "canvasWidth:=", [1], call428);
-              lineNumber = 243
-              lineNumber = 239
-              lineNumber = 240
-              onSelf = true;
-              var call430 = callmethod(this, "canvas", [0]);
-              var call431 = callmethod(call430,"height", [0]);
-              onSelf = true;
-              var call432 = callmethod(this, "canvasHeight:=", [1], call431);
-              lineNumber = 255
-              var block433 = Grace_allocObject();
-              block433.methods["apply"] = function() {
+              var call434 = callmethod(this, "canvasHeight:=", [1], call433);
+              lineNumber = 215
+              var block435 = Grace_allocObject();
+              block435.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block433.methods["applyIndirectly"] = function(argcv, a) {
+              block435.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block433.methods["outer"] = function() {
+              block435.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block433.methods["match"] = GraceBlock_match;
-              block433.methods["prefix?"] = GraceBlock_lift;
-              block433.receiver = this;
-              block433.className = 'block<kitty:255>';
-              block433.real = function(
+              block435.methods["match"] = GraceBlock_match;
+              block435.methods["prefix?"] = GraceBlock_lift;
+              block435.receiver = this;
+              block435.className = 'block<kitty:215>';
+              block435.real = function(
                 var_ev
               ) {
                 sourceObject = this;
-                lineNumber = 246
-                lineNumber = 245
+                lineNumber = 206
+                lineNumber = 205
                 onSelf = true;
-                var call434 = callmethod(this, "canvasHeight", [0]);
+                var call436 = callmethod(this, "canvasHeight", [0]);
                 onSelf = true;
-                var call436 = callmethod(this, "canvas", [0]);
-                var call437 = callmethod(call436,"offsetWidth", [0]);
+                var call438 = callmethod(this, "canvas", [0]);
+                var call439 = callmethod(call438,"offsetWidth", [0]);
                 onSelf = true;
-                var call439 = callmethod(this, "canvas", [0]);
-                var call440 = callmethod(call439,"offsetLeft", [0]);
-                var call442 = callmethod(var_ev,"clientX", [0]);
-                var diff444 = callmethod(call442, "-", [1], call440);
-                var quotient446 = callmethod(diff444, "/", [1], call437);
-                var prod448 = callmethod(quotient446, "*", [1], call434);
-                var var_x = prod448;
-                lineNumber = 246;
+                var call441 = callmethod(this, "canvas", [0]);
+                var call442 = callmethod(call441,"offsetLeft", [0]);
+                var call444 = callmethod(var_ev,"clientX", [0]);
+                var diff446 = callmethod(call444, "-", [1], call442);
+                var quotient448 = callmethod(diff446, "/", [1], call439);
+                var prod450 = callmethod(quotient448, "*", [1], call436);
+                var var_x = prod450;
+                lineNumber = 206;
                 moduleName = "kitty";
-                lineNumber = 245
+                lineNumber = 205
                 if (!Grace_isTrue(callmethod(var_Unknown, "match",
                   [1], var_x)))
                     throw new GraceExceptionPacket(TypeErrorObject,
                           new GraceString("expected "
                           + "initial value of def 'x' to be of type Unknown"))
-                lineNumber = 250
-                lineNumber = 246
+                lineNumber = 210
+                lineNumber = 206
                 onSelf = true;
-                var call449 = callmethod(this, "canvasHeight", [0]);
+                var call451 = callmethod(this, "canvasHeight", [0]);
                 onSelf = true;
-                var call451 = callmethod(this, "canvas", [0]);
-                var call452 = callmethod(call451,"offsetHeight", [0]);
+                var call453 = callmethod(this, "canvas", [0]);
+                var call454 = callmethod(call453,"offsetHeight", [0]);
                 onSelf = true;
-                var call454 = callmethod(this, "canvas", [0]);
-                var call455 = callmethod(call454,"offsetTop", [0]);
-                var call457 = callmethod(var_ev,"clientY", [0]);
-                var diff459 = callmethod(call457, "-", [1], call455);
-                var quotient461 = callmethod(diff459, "/", [1], call452);
-                var prod463 = callmethod(quotient461, "*", [1], call449);
-                var var_y = prod463;
-                lineNumber = 250;
+                var call456 = callmethod(this, "canvas", [0]);
+                var call457 = callmethod(call456,"offsetTop", [0]);
+                var call459 = callmethod(var_ev,"clientY", [0]);
+                var diff461 = callmethod(call459, "-", [1], call457);
+                var quotient463 = callmethod(diff461, "/", [1], call454);
+                var prod465 = callmethod(quotient463, "*", [1], call451);
+                var var_y = prod465;
+                lineNumber = 210;
                 moduleName = "kitty";
-                lineNumber = 246
+                lineNumber = 206
                 if (!Grace_isTrue(callmethod(var_Unknown, "match",
                   [1], var_y)))
                     throw new GraceExceptionPacket(TypeErrorObject,
                           new GraceString("expected "
                           + "initial value of def 'y' to be of type Unknown"))
-                lineNumber = 254
-                var if464 = var_done;
-                lineNumber = 250
-                var opresult467 = callmethod(var_y, "<", [1], new GraceNum(20));
+                lineNumber = 214
+                var if466 = var_done;
+                lineNumber = 210
+                var opresult469 = callmethod(var_y, "<", [1], new GraceNum(20));
                 onSelf = true;
-                var call470 = callmethod(this, "canvasWidth", [0]);
-                var diff472 = callmethod(call470, "-", [1], new GraceNum(20));
-                var opresult475 = callmethod(var_x, ">", [1], diff472);
-                var opresult477 = callmethod(opresult475, "&&", [1], opresult467);
-                if (Grace_isTrue(opresult477)) {
-                  lineNumber = 251
-                  var call478 = callmethod(var_ev,"preventDefault", [0]);
-                  lineNumber = 252
+                var call472 = callmethod(this, "canvasWidth", [0]);
+                var diff474 = callmethod(call472, "-", [1], new GraceNum(20));
+                var opresult477 = callmethod(var_x, ">", [1], diff474);
+                var opresult479 = callmethod(opresult477, "&&", [1], opresult469);
+                if (Grace_isTrue(opresult479)) {
+                  lineNumber = 211
+                  var call480 = callmethod(var_ev,"preventDefault", [0]);
+                  lineNumber = 212
                   onSelf = true;
-                  var call479 = callmethod(this, "stop", [0]);
-                  if464 = call479;
+                  var call481 = callmethod(this, "stop", [0]);
+                  if466 = call481;
                 }
-                return if464;
+                return if466;
               };
-              var_mouseDownListener = block433;
-              lineNumber = 255
-              var string480 = new GraceString("mousedown");
+              var_mouseDownListener = block435;
+              lineNumber = 215
+              var string482 = new GraceString("mousedown");
               onSelf = true;
-              var call481 = callmethod(this, "canvas", [0]);
-              var call482 = callmethod(call481,"addEventListener", [2], string480, var_mouseDownListener);
-              lineNumber = 265
-              var block483 = Grace_allocObject();
-              block483.methods["apply"] = function() {
+              var call483 = callmethod(this, "canvas", [0]);
+              var call484 = callmethod(call483,"addEventListener", [2], string482, var_mouseDownListener);
+              lineNumber = 225
+              var block485 = Grace_allocObject();
+              block485.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block483.methods["applyIndirectly"] = function(argcv, a) {
+              block485.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block483.methods["outer"] = function() {
+              block485.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block483.methods["match"] = GraceBlock_match;
-              block483.methods["prefix?"] = GraceBlock_lift;
-              block483.receiver = this;
-              block483.className = 'block<kitty:265>';
-              block483.real = function(
+              block485.methods["match"] = GraceBlock_match;
+              block485.methods["prefix?"] = GraceBlock_lift;
+              block485.receiver = this;
+              block485.className = 'block<kitty:225>';
+              block485.real = function(
                 var_ev
               ) {
                 sourceObject = this;
-                lineNumber = 263
-                var if484 = var_done;
-                lineNumber = 260
-                var call486 = callmethod(var_ev,"keyCode", [0]);
-                var opresult488 = callmethod(call486, "==", [1], new GraceNum(75));
-                if (Grace_isTrue(opresult488)) {
-                  lineNumber = 261
+                lineNumber = 223
+                var if486 = var_done;
+                lineNumber = 220
+                var call488 = callmethod(var_ev,"keyCode", [0]);
+                var opresult490 = callmethod(call488, "==", [1], new GraceNum(75));
+                if (Grace_isTrue(opresult490)) {
+                  lineNumber = 221
                   onSelf = true;
-                  var call489 = callmethod(this, "stop", [0]);
-                  if484 = call489;
+                  var call491 = callmethod(this, "stop", [0]);
+                  if486 = call491;
                 }
-                lineNumber = 264
-                lineNumber = 260
-                lineNumber = 263
-                var call490 = callmethod(var_ev,"keyCode", [0]);
+                lineNumber = 224
+                lineNumber = 220
+                lineNumber = 223
+                var call492 = callmethod(var_ev,"keyCode", [0]);
                 onSelf = true;
-                var call491 = callmethod(this, "currentKeyDown:=", [1], call490);
-                return call491;
+                var call493 = callmethod(this, "currentKeyDown:=", [1], call492);
+                return call493;
               };
-              var_keyDownListener = block483;
-              lineNumber = 265
-              var string492 = new GraceString("keydown");
+              var_keyDownListener = block485;
+              lineNumber = 225
+              var string494 = new GraceString("keydown");
               onSelf = true;
-              var call493 = callmethod(this, "document", [0]);
-              var call494 = callmethod(call493,"addEventListener", [2], string492, var_keyDownListener);
-              lineNumber = 271
-              var block495 = Grace_allocObject();
-              block495.methods["apply"] = function() {
+              var call495 = callmethod(this, "document", [0]);
+              var call496 = callmethod(call495,"addEventListener", [2], string494, var_keyDownListener);
+              lineNumber = 231
+              var block497 = Grace_allocObject();
+              block497.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block495.methods["applyIndirectly"] = function(argcv, a) {
+              block497.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block495.methods["outer"] = function() {
+              block497.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block495.methods["match"] = GraceBlock_match;
-              block495.methods["prefix?"] = GraceBlock_lift;
-              block495.receiver = this;
-              block495.className = 'block<kitty:271>';
-              block495.real = function(
+              block497.methods["match"] = GraceBlock_match;
+              block497.methods["prefix?"] = GraceBlock_lift;
+              block497.receiver = this;
+              block497.className = 'block<kitty:231>';
+              block497.real = function(
                 var_ev
               ) {
                 sourceObject = this;
-                lineNumber = 270
-                lineNumber = 263
-                lineNumber = 270
-                lineNumber = 269
-                var call496 = callmethod(new GraceNum(1),"prefix-", [0]);
+                lineNumber = 230
+                lineNumber = 223
+                lineNumber = 230
+                lineNumber = 229
+                var call498 = callmethod(new GraceNum(1),"prefix-", [0]);
                 onSelf = true;
-                var call497 = callmethod(this, "currentKeyDown:=", [1], call496);
-                return call497;
+                var call499 = callmethod(this, "currentKeyDown:=", [1], call498);
+                return call499;
               };
-              var_keyUpListener = block495;
-              lineNumber = 271
-              var string498 = new GraceString("keyup");
+              var_keyUpListener = block497;
+              lineNumber = 231
+              var string500 = new GraceString("keyup");
               onSelf = true;
-              var call499 = callmethod(this, "document", [0]);
-              var call500 = callmethod(call499,"addEventListener", [2], string498, var_keyUpListener);
-              lineNumber = 273
-              lineNumber = 263
-              lineNumber = 273
-              var string501 = new GraceString("canvas");
-              var call502 = callmethod(var_dom,"document", [0]);
-              var call503 = callmethod(call502,"createElement", [1], string501);
+              var call501 = callmethod(this, "document", [0]);
+              var call502 = callmethod(call501,"addEventListener", [2], string500, var_keyUpListener);
+              lineNumber = 233
+              lineNumber = 223
+              lineNumber = 233
+              var string503 = new GraceString("canvas");
+              var call504 = callmethod(var_dom,"document", [0]);
+              var call505 = callmethod(call504,"createElement", [1], string503);
               onSelf = true;
-              var call504 = callmethod(this, "backingCanvas:=", [1], call503);
-              lineNumber = 275
-              lineNumber = 273
-              lineNumber = 274
+              var call506 = callmethod(this, "backingCanvas:=", [1], call505);
+              lineNumber = 235
+              lineNumber = 233
+              lineNumber = 234
               onSelf = true;
-              var call505 = callmethod(this, "canvasHeight", [0]);
+              var call507 = callmethod(this, "canvasHeight", [0]);
               onSelf = true;
-              var call506 = callmethod(this, "backingCanvas", [0]);
-              var call507 = callmethod(call506,"height:=", [1], call505);
-              lineNumber = 276
-              lineNumber = 273
-              lineNumber = 275
+              var call508 = callmethod(this, "backingCanvas", [0]);
+              var call509 = callmethod(call508,"height:=", [1], call507);
+              lineNumber = 236
+              lineNumber = 233
+              lineNumber = 235
               onSelf = true;
-              var call508 = callmethod(this, "canvasWidth", [0]);
+              var call510 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
-              var call509 = callmethod(this, "backingCanvas", [0]);
-              var call510 = callmethod(call509,"width:=", [1], call508);
-              lineNumber = 276
-              lineNumber = 273
-              lineNumber = 276
-              var string511 = new GraceString("2d");
+              var call511 = callmethod(this, "backingCanvas", [0]);
+              var call512 = callmethod(call511,"width:=", [1], call510);
+              lineNumber = 236
+              lineNumber = 233
+              lineNumber = 236
+              var string513 = new GraceString("2d");
               onSelf = true;
-              var call512 = callmethod(this, "backingCanvas", [0]);
-              var call513 = callmethod(call512,"getContext", [1], string511);
+              var call514 = callmethod(this, "backingCanvas", [0]);
+              var call515 = callmethod(call514,"getContext", [1], string513);
               onSelf = true;
-              var call514 = callmethod(this, "backingContext:=", [1], call513);
-              lineNumber = 277
-              lineNumber = 273
-              lineNumber = 277
-              var string515 = new GraceString("2d");
+              var call516 = callmethod(this, "backingContext:=", [1], call515);
+              lineNumber = 237
+              lineNumber = 233
+              lineNumber = 237
+              var string517 = new GraceString("2d");
               onSelf = true;
-              var call516 = callmethod(this, "canvas", [0]);
-              var call517 = callmethod(call516,"getContext", [1], string515);
+              var call518 = callmethod(this, "canvas", [0]);
+              var call519 = callmethod(call518,"getContext", [1], string517);
               onSelf = true;
-              var call518 = callmethod(this, "mctx:=", [1], call517);
-              lineNumber = 280
-              var string519 = new GraceString("doggo.jpg");
+              var call520 = callmethod(this, "mctx:=", [1], call519);
+              lineNumber = 240
+              var string521 = new GraceString("doggo.jpg");
               onSelf = true;
-              var call520 = callmethod(this, "setBackground", [1], string519);
-              lineNumber = 292
-              lineNumber = 273
-              lineNumber = 286
-              var bool521 = new GraceBoolean(true)
+              var call522 = callmethod(this, "setBackground", [1], string521);
+              lineNumber = 249
+              lineNumber = 233
+              lineNumber = 246
+              var bool523 = new GraceBoolean(true)
               onSelf = true;
-              var call522 = callmethod(this, "isInit:=", [1], bool521);
-              return call522
+              var call524 = callmethod(this, "isInit:=", [1], bool523);
+              lineNumber = 249
+              var call525 = callmethod(superDepth, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call526 = callmethod(call525, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call527 = callmethod(call526, "setWorld", [1], this);
+              return call527
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -3410,79 +3422,79 @@ function gracecode_kitty () {
               }
             }
           }
-          func417.paramCounts = [
+          func419.paramCounts = [
             0,
           ];
-          func417.variableArities = [
+          func419.variableArities = [
             false,
           ];
-          obj415.methods["init"] = func417;
-          func417.definitionLine = 229;
-          func417.definitionModule = "kitty";
-          var func523 = function(argcv) {
+          obj417.methods["init"] = func419;
+          func419.definitionLine = 189;
+          func419.definitionModule = "kitty";
+          var func528 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func523.paramCounts[0])
+            if (argcv[0] !=  func528.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (start)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 298
-              lineNumber = 273
-              lineNumber = 297
-              var bool524 = new GraceBoolean(true)
+              lineNumber = 261
+              lineNumber = 249
+              lineNumber = 260
+              var bool529 = new GraceBoolean(true)
               onSelf = true;
-              var call525 = callmethod(this, "isRunning:=", [1], bool524);
-              lineNumber = 298
-              var block526 = Grace_allocObject();
-              block526.methods["apply"] = function() {
+              var call530 = callmethod(this, "isRunning:=", [1], bool529);
+              lineNumber = 261
+              var block531 = Grace_allocObject();
+              block531.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block526.methods["applyIndirectly"] = function(argcv, a) {
+              block531.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block526.methods["outer"] = function() {
+              block531.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block526.methods["match"] = GraceBlock_match;
-              block526.methods["prefix?"] = GraceBlock_lift;
-              block526.receiver = this;
-              block526.className = 'block<kitty:298>';
-              block526.real = function(
+              block531.methods["match"] = GraceBlock_match;
+              block531.methods["prefix?"] = GraceBlock_lift;
+              block531.receiver = this;
+              block531.className = 'block<kitty:261>';
+              block531.real = function(
               ) {
                 sourceObject = this;
                 onSelf = true;
-                var call527 = callmethod(this, "isRunning", [0]);
-                return call527;
+                var call532 = callmethod(this, "isRunning", [0]);
+                return call532;
               };
-              lineNumber = 302
-              var block528 = Grace_allocObject();
-              block528.methods["apply"] = function() {
+              lineNumber = 265
+              var block533 = Grace_allocObject();
+              block533.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block528.methods["applyIndirectly"] = function(argcv, a) {
+              block533.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block528.methods["outer"] = function() {
+              block533.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block528.methods["match"] = GraceBlock_match;
-              block528.methods["prefix?"] = GraceBlock_lift;
-              block528.receiver = this;
-              block528.className = 'block<kitty:302>';
-              block528.real = function(
+              block533.methods["match"] = GraceBlock_match;
+              block533.methods["prefix?"] = GraceBlock_lift;
+              block533.receiver = this;
+              block533.className = 'block<kitty:265>';
+              block533.real = function(
               ) {
                 sourceObject = this;
-                lineNumber = 299
+                lineNumber = 262
                 onSelf = true;
-                var call529 = callmethod(this, "update", [0]);
-                return call529;
+                var call534 = callmethod(this, "update", [0]);
+                return call534;
               };
-              lineNumber = 298
-              var call530 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block526, new GraceNum(10), block528);
-              return call530
+              lineNumber = 261
+              var call535 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block531, new GraceNum(10), block533);
+              return call535
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -3491,96 +3503,96 @@ function gracecode_kitty () {
               }
             }
           }
-          func523.paramCounts = [
+          func528.paramCounts = [
             0,
           ];
-          func523.variableArities = [
+          func528.variableArities = [
             false,
           ];
-          obj415.methods["start"] = func523;
-          func523.definitionLine = 295;
-          func523.definitionModule = "kitty";
-          var func531 = function(argcv) {
+          obj417.methods["start"] = func528;
+          func528.definitionLine = 258;
+          func528.definitionModule = "kitty";
+          var func536 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func531.paramCounts[0])
+            if (argcv[0] !=  func536.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (update)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 311
+              lineNumber = 274
+              lineNumber = 249
               lineNumber = 273
-              lineNumber = 310
               onSelf = true;
-              var call532 = callmethod(this, "backgroundColour", [0]);
+              var call537 = callmethod(this, "backgroundColour", [0]);
               onSelf = true;
-              var call533 = callmethod(this, "mctx", [0]);
-              var call534 = callmethod(call533,"fillStyle:=", [1], call532);
-              lineNumber = 311
+              var call538 = callmethod(this, "mctx", [0]);
+              var call539 = callmethod(call538,"fillStyle:=", [1], call537);
+              lineNumber = 274
               onSelf = true;
-              var call535 = callmethod(this, "canvasWidth", [0]);
+              var call540 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
-              var call536 = callmethod(this, "canvasHeight", [0]);
-              onSelf = true;
-              var call537 = callmethod(this, "mctx", [0]);
-              var call538 = callmethod(call537,"fillRect", [4], new GraceNum(0), new GraceNum(0), call535, call536);
-              lineNumber = 312
-              onSelf = true;
-              var call539 = callmethod(this, "backingCanvas", [0]);
-              onSelf = true;
-              var call540 = callmethod(this, "mctx", [0]);
-              var call541 = callmethod(call540,"drawImage", [3], call539, new GraceNum(0), new GraceNum(0));
-              lineNumber = 313
+              var call541 = callmethod(this, "canvasHeight", [0]);
               onSelf = true;
               var call542 = callmethod(this, "mctx", [0]);
+              var call543 = callmethod(call542,"fillRect", [4], new GraceNum(0), new GraceNum(0), call540, call541);
+              lineNumber = 275
               onSelf = true;
-              var call544 = callmethod(this, "canvasWidth", [0]);
-              var quotient546 = callmethod(call544, "/", [1], new GraceNum(2));
+              var call544 = callmethod(this, "backingCanvas", [0]);
               onSelf = true;
-              var call548 = callmethod(this, "canvasHeight", [0]);
-              var quotient550 = callmethod(call548, "/", [1], new GraceNum(2));
+              var call545 = callmethod(this, "mctx", [0]);
+              var call546 = callmethod(call545,"drawImage", [3], call544, new GraceNum(0), new GraceNum(0));
+              lineNumber = 276
               onSelf = true;
-              var call551 = callmethod(this, "background", [0]);
-              var call552 = callmethod(call551,"draw", [4], call542, quotient546, quotient550, new GraceNum(0));
-              lineNumber = 316
+              var call547 = callmethod(this, "mctx", [0]);
               onSelf = true;
-              var call553 = callmethod(this, "entities", [0]);
-              lineNumber = 322
-              var block554 = Grace_allocObject();
-              block554.methods["apply"] = function() {
+              var call549 = callmethod(this, "canvasWidth", [0]);
+              var quotient551 = callmethod(call549, "/", [1], new GraceNum(2));
+              onSelf = true;
+              var call553 = callmethod(this, "canvasHeight", [0]);
+              var quotient555 = callmethod(call553, "/", [1], new GraceNum(2));
+              onSelf = true;
+              var call556 = callmethod(this, "background", [0]);
+              var call557 = callmethod(call556,"draw", [4], call547, quotient551, quotient555, new GraceNum(0));
+              lineNumber = 279
+              onSelf = true;
+              var call558 = callmethod(this, "entities", [0]);
+              lineNumber = 285
+              var block559 = Grace_allocObject();
+              block559.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block554.methods["applyIndirectly"] = function(argcv, a) {
+              block559.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block554.methods["outer"] = function() {
+              block559.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block554.methods["match"] = GraceBlock_match;
-              block554.methods["prefix?"] = GraceBlock_lift;
-              block554.receiver = this;
-              block554.className = 'block<kitty:322>';
-              block554.real = function(
+              block559.methods["match"] = GraceBlock_match;
+              block559.methods["prefix?"] = GraceBlock_lift;
+              block559.receiver = this;
+              block559.className = 'block<kitty:285>';
+              block559.real = function(
                 var_entity
               ) {
                 sourceObject = this;
-                lineNumber = 317
-                var call555 = callmethod(var_entity,"tick", [0]);
-                lineNumber = 318
+                lineNumber = 280
+                var call560 = callmethod(var_entity,"tick", [0]);
+                lineNumber = 281
                 onSelf = true;
-                var call556 = callmethod(this, "mctx", [0]);
+                var call561 = callmethod(this, "mctx", [0]);
                 onSelf = true;
-                var call558 = callmethod(this, "canvasWidth", [0]);
-                var quotient560 = callmethod(call558, "/", [1], new GraceNum(2));
+                var call563 = callmethod(this, "canvasWidth", [0]);
+                var quotient565 = callmethod(call563, "/", [1], new GraceNum(2));
                 onSelf = true;
-                var call562 = callmethod(this, "canvasHeight", [0]);
-                var quotient564 = callmethod(call562, "/", [1], new GraceNum(2));
-                var call565 = callmethod(var_entity,"draw", [3], call556, quotient560, quotient564);
-                return call565;
+                var call567 = callmethod(this, "canvasHeight", [0]);
+                var quotient569 = callmethod(call567, "/", [1], new GraceNum(2));
+                var call570 = callmethod(var_entity,"draw", [3], call561, quotient565, quotient569);
+                return call570;
               };
-              var call566 = callmethod(Grace_prelude,"for()do", [1, 1], call553, block554);
-              return call566
+              var call571 = callmethod(Grace_prelude,"for()do", [1, 1], call558, block559);
+              return call571
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -3589,48 +3601,48 @@ function gracecode_kitty () {
               }
             }
           }
-          func531.paramCounts = [
+          func536.paramCounts = [
             0,
           ];
-          func531.variableArities = [
+          func536.variableArities = [
             false,
           ];
-          obj415.methods["update"] = func531;
-          func531.definitionLine = 305;
-          func531.definitionModule = "kitty";
-          var func567 = function(argcv) {
+          obj417.methods["update"] = func536;
+          func536.definitionLine = 268;
+          func536.definitionModule = "kitty";
+          var func572 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func567.paramCounts[0])
+            if (argcv[0] !=  func572.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stop)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 325
-              var string568 = new GraceString("WORLD STOPPING...");
-              var call569 = Grace_print(string568);
-              lineNumber = 327
-              lineNumber = 317
-              lineNumber = 326
-              var bool570 = new GraceBoolean(false)
+              lineNumber = 288
+              var string573 = new GraceString("WORLD STOPPING...");
+              var call574 = Grace_print(string573);
+              lineNumber = 290
+              lineNumber = 280
+              lineNumber = 289
+              var bool575 = new GraceBoolean(false)
               onSelf = true;
-              var call571 = callmethod(this, "isRunning:=", [1], bool570);
-              lineNumber = 327
-              var string572 = new GraceString("mousedown");
+              var call576 = callmethod(this, "isRunning:=", [1], bool575);
+              lineNumber = 290
+              var string577 = new GraceString("mousedown");
               onSelf = true;
-              var call573 = callmethod(this, "canvas", [0]);
-              var call574 = callmethod(call573,"removeEventListener", [2], string572, var_mouseDownListener);
-              lineNumber = 328
-              var string575 = new GraceString("keydown");
+              var call578 = callmethod(this, "canvas", [0]);
+              var call579 = callmethod(call578,"removeEventListener", [2], string577, var_mouseDownListener);
+              lineNumber = 291
+              var string580 = new GraceString("keydown");
               onSelf = true;
-              var call576 = callmethod(this, "document", [0]);
-              var call577 = callmethod(call576,"removeEventListener", [2], string575, var_keyDownListener);
-              lineNumber = 329
-              var string578 = new GraceString("keyup");
+              var call581 = callmethod(this, "document", [0]);
+              var call582 = callmethod(call581,"removeEventListener", [2], string580, var_keyDownListener);
+              lineNumber = 292
+              var string583 = new GraceString("keyup");
               onSelf = true;
-              var call579 = callmethod(this, "document", [0]);
-              var call580 = callmethod(call579,"removeEventListener", [2], string578, var_keyUpListener);
-              return call580
+              var call584 = callmethod(this, "document", [0]);
+              var call585 = callmethod(call584,"removeEventListener", [2], string583, var_keyUpListener);
+              return call585
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -3639,75 +3651,31 @@ function gracecode_kitty () {
               }
             }
           }
-          func567.paramCounts = [
+          func572.paramCounts = [
             0,
           ];
-          func567.variableArities = [
+          func572.variableArities = [
             false,
           ];
-          obj415.methods["stop"] = func567;
-          func567.definitionLine = 324;
-          func567.definitionModule = "kitty";
-          var func581 = function(argcv) {
+          obj417.methods["stop"] = func572;
+          func572.definitionLine = 287;
+          func572.definitionModule = "kitty";
+          var func586 = function(argcv) {
             var curarg = 1;
             var var_key = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func581.paramCounts[0])
+            if (argcv[0] !=  func586.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (isKeyDown)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 334
-              lineNumber = 333
+              lineNumber = 297
+              lineNumber = 296
               onSelf = true;
-              var call582 = callmethod(this, "currentKeyDown", [0]);
-              var opresult585 = callmethod(var_key, "==", [1], call582);
-              return opresult585
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func581.paramCounts = [
-            1,
-          ];
-          func581.variableArities = [
-            false,
-          ];
-          obj415.methods["isKeyDown"] = func581;
-          func581.definitionLine = 332;
-          func581.definitionModule = "kitty";
-          var func586 = function(argcv) {
-            var curarg = 1;
-            var var_url = arguments[curarg];
-            curarg++;
-            if (argcv[0] !=  func586.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setBackground)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "kitty";
-            try {
-              lineNumber = 337
-              lineNumber = 317
-              lineNumber = 337
-              onSelf = true;
-              var call587 = callmethod(this, "canvasWidth", [0]);
-              onSelf = true;
-              var call588 = callmethod(this, "canvasHeight", [0]);
-              var call589 = callmethod(superDepth, "outer", [0]);
-              onOuter = true;
-              onSelf = true;
-              var call590 = callmethod(call589, "outer", [0]);
-              onOuter = true;
-              onSelf = true;
-              var call591 = callmethod(call590, "Image()width()height", [1, 1, 1], var_url, call587, call588);
-              onSelf = true;
-              var call592 = callmethod(this, "background:=", [1], call591);
-              return call592
+              var call587 = callmethod(this, "currentKeyDown", [0]);
+              var opresult590 = callmethod(var_key, "==", [1], call587);
+              return opresult590
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -3722,53 +3690,35 @@ function gracecode_kitty () {
           func586.variableArities = [
             false,
           ];
-          obj415.methods["setBackground"] = func586;
-          func586.definitionLine = 336;
+          obj417.methods["isKeyDown"] = func586;
+          func586.definitionLine = 295;
           func586.definitionModule = "kitty";
-          var func593 = function(argcv) {
+          var func591 = function(argcv) {
             var curarg = 1;
-            var var_e = arguments[curarg];
+            var var_url = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func593.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (addEntity)"));
+            if (argcv[0] !=  func591.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setBackground)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 341
+              lineNumber = 300
+              lineNumber = 280
+              lineNumber = 300
               onSelf = true;
-              var call594 = callmethod(this, "entities", [0]);
-              var call595 = callmethod(call594,"push", [1], var_e);
-              return call595
-            } catch(e) {
-              if ((e.exctype == 'return') && (e.target == returnTarget)) {
-                return e.returnvalue;
-              } else {
-                throw e;
-              }
-            }
-          }
-          func593.paramCounts = [
-            1,
-          ];
-          func593.variableArities = [
-            false,
-          ];
-          obj415.methods["addEntity"] = func593;
-          func593.definitionLine = 340;
-          func593.definitionModule = "kitty";
-          var func596 = function(argcv) {
-            var curarg = 1;
-            if (argcv[0] !=  func596.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getContext)"));
-            var returnTarget = invocationCount;
-            invocationCount++;
-            moduleName = "kitty";
-            try {
-              lineNumber = 346
-              lineNumber = 345
+              var call592 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
-              var call597 = callmethod(this, "mctx", [0]);
+              var call593 = callmethod(this, "canvasHeight", [0]);
+              var call594 = callmethod(superDepth, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call595 = callmethod(call594, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call596 = callmethod(call595, "Image()width()height", [1, 1, 1], var_url, call592, call593);
+              onSelf = true;
+              var call597 = callmethod(this, "background:=", [1], call596);
               return call597
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -3778,592 +3728,30 @@ function gracecode_kitty () {
               }
             }
           }
-          func596.paramCounts = [
-            0,
+          func591.paramCounts = [
+            1,
           ];
-          func596.variableArities = [
+          func591.variableArities = [
             false,
           ];
-          obj415.methods["getContext"] = func596;
-          func596.definitionLine = 344;
-          func596.definitionModule = "kitty";
-          sourceObject = obj415;
-          obj415.data["background"] = undefined;
-          var reader_kitty_background_598 = function() {
-            return this.data["background"];
-          }
-          obj415.methods["background"] = reader_kitty_background_598;
-          obj415.data["background"] = undefined;
-          var writer_kitty_background_598 = function(argcv, o) {
-            this.data["background"] = o;
-          }
-          obj415.methods["background:="] = writer_kitty_background_598;
-          reader_kitty_background_598.confidential = true;
-          writer_kitty_background_598.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 204
-          var string599 = new GraceString("black");
-          obj415.data["backgroundColour"] = string599;
-          var reader_kitty_backgroundColour_600 = function() {
-            return this.data["backgroundColour"];
-          }
-          obj415.methods["backgroundColour"] = reader_kitty_backgroundColour_600;
-          obj415.data["backgroundColour"] = string599;
-          var writer_kitty_backgroundColour_600 = function(argcv, o) {
-            this.data["backgroundColour"] = o;
-          }
-          obj415.methods["backgroundColour:="] = writer_kitty_backgroundColour_600;
-          reader_kitty_backgroundColour_600.confidential = true;
-          writer_kitty_backgroundColour_600.confidential = true;
-          lineNumber = 206;
-          moduleName = "kitty";
-          lineNumber = 204
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], string599)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'backgroundColour' to be of type Unknown"))
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["document"] = undefined;
-          var reader_kitty_document_601 = function() {
-            return this.data["document"];
-          }
-          obj415.methods["document"] = reader_kitty_document_601;
-          obj415.data["document"] = undefined;
-          var writer_kitty_document_601 = function(argcv, o) {
-            this.data["document"] = o;
-          }
-          obj415.methods["document:="] = writer_kitty_document_601;
-          reader_kitty_document_601.confidential = true;
-          writer_kitty_document_601.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["backingCanvas"] = undefined;
-          var reader_kitty_backingCanvas_602 = function() {
-            return this.data["backingCanvas"];
-          }
-          obj415.methods["backingCanvas"] = reader_kitty_backingCanvas_602;
-          obj415.data["backingCanvas"] = undefined;
-          var writer_kitty_backingCanvas_602 = function(argcv, o) {
-            this.data["backingCanvas"] = o;
-          }
-          obj415.methods["backingCanvas:="] = writer_kitty_backingCanvas_602;
-          reader_kitty_backingCanvas_602.confidential = true;
-          writer_kitty_backingCanvas_602.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["backingContext"] = undefined;
-          var reader_kitty_backingContext_603 = function() {
-            return this.data["backingContext"];
-          }
-          obj415.methods["backingContext"] = reader_kitty_backingContext_603;
-          obj415.data["backingContext"] = undefined;
-          var writer_kitty_backingContext_603 = function(argcv, o) {
-            this.data["backingContext"] = o;
-          }
-          obj415.methods["backingContext:="] = writer_kitty_backingContext_603;
-          reader_kitty_backingContext_603.confidential = true;
-          writer_kitty_backingContext_603.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["canvas"] = undefined;
-          var reader_kitty_canvas_604 = function() {
-            return this.data["canvas"];
-          }
-          obj415.methods["canvas"] = reader_kitty_canvas_604;
-          obj415.data["canvas"] = undefined;
-          var writer_kitty_canvas_604 = function(argcv, o) {
-            this.data["canvas"] = o;
-          }
-          obj415.methods["canvas:="] = writer_kitty_canvas_604;
-          reader_kitty_canvas_604.confidential = true;
-          writer_kitty_canvas_604.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["canvasWidth"] = undefined;
-          var reader_kitty_canvasWidth_605 = function() {
-            return this.data["canvasWidth"];
-          }
-          obj415.methods["canvasWidth"] = reader_kitty_canvasWidth_605;
-          obj415.data["canvasWidth"] = undefined;
-          var writer_kitty_canvasWidth_605 = function(argcv, o) {
-            this.data["canvasWidth"] = o;
-          }
-          obj415.methods["canvasWidth:="] = writer_kitty_canvasWidth_605;
-          reader_kitty_canvasWidth_605.confidential = true;
-          writer_kitty_canvasWidth_605.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["canvasHeight"] = undefined;
-          var reader_kitty_canvasHeight_606 = function() {
-            return this.data["canvasHeight"];
-          }
-          obj415.methods["canvasHeight"] = reader_kitty_canvasHeight_606;
-          obj415.data["canvasHeight"] = undefined;
-          var writer_kitty_canvasHeight_606 = function(argcv, o) {
-            this.data["canvasHeight"] = o;
-          }
-          obj415.methods["canvasHeight:="] = writer_kitty_canvasHeight_606;
-          reader_kitty_canvasHeight_606.confidential = true;
-          writer_kitty_canvasHeight_606.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 215
-          var call607 = callmethod(var_collections,"list", [0]);
-          var call608 = callmethod(call607,"new", [0]);
-          obj415.data["entities"] = call608;
-          var reader_kitty_entities_609 = function() {
-            return this.data["entities"];
-          }
-          obj415.methods["entities"] = reader_kitty_entities_609;
-          obj415.data["entities"] = call608;
-          var writer_kitty_entities_609 = function(argcv, o) {
-            this.data["entities"] = o;
-          }
-          obj415.methods["entities:="] = writer_kitty_entities_609;
-          reader_kitty_entities_609.confidential = true;
-          writer_kitty_entities_609.confidential = true;
-          lineNumber = 217;
-          moduleName = "kitty";
-          lineNumber = 215
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call608)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'entities' to be of type Unknown"))
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 217
-          var bool610 = new GraceBoolean(false)
-          obj415.data["isInit"] = bool610;
-          var reader_kitty_isInit_611 = function() {
-            return this.data["isInit"];
-          }
-          obj415.methods["isInit"] = reader_kitty_isInit_611;
-          obj415.data["isInit"] = bool610;
-          var writer_kitty_isInit_611 = function(argcv, o) {
-            this.data["isInit"] = o;
-          }
-          obj415.methods["isInit:="] = writer_kitty_isInit_611;
-          reader_kitty_isInit_611.confidential = true;
-          writer_kitty_isInit_611.confidential = true;
-          lineNumber = 218;
-          moduleName = "kitty";
-          lineNumber = 217
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], bool610)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'isInit' to be of type Unknown"))
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 218
-          var bool612 = new GraceBoolean(false)
-          obj415.data["isRunning"] = bool612;
-          var reader_kitty_isRunning_613 = function() {
-            return this.data["isRunning"];
-          }
-          obj415.methods["isRunning"] = reader_kitty_isRunning_613;
-          obj415.data["isRunning"] = bool612;
-          var writer_kitty_isRunning_613 = function(argcv, o) {
-            this.data["isRunning"] = o;
-          }
-          obj415.methods["isRunning:="] = writer_kitty_isRunning_613;
-          reader_kitty_isRunning_613.confidential = true;
-          writer_kitty_isRunning_613.confidential = true;
-          lineNumber = 220;
-          moduleName = "kitty";
-          lineNumber = 218
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], bool612)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'isRunning' to be of type Unknown"))
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["mctx"] = undefined;
-          var reader_kitty_mctx_614 = function() {
-            return this.data["mctx"];
-          }
-          obj415.methods["mctx"] = reader_kitty_mctx_614;
-          obj415.data["mctx"] = undefined;
-          var writer_kitty_mctx_614 = function(argcv, o) {
-            this.data["mctx"] = o;
-          }
-          obj415.methods["mctx:="] = writer_kitty_mctx_614;
-          reader_kitty_mctx_614.confidential = true;
-          writer_kitty_mctx_614.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 224
-          lineNumber = 222
-          var call615 = callmethod(new GraceNum(1),"prefix-", [0]);
-          obj415.data["currentKeyDown"] = call615;
-          var reader_kitty_currentKeyDown_616 = function() {
-            return this.data["currentKeyDown"];
-          }
-          obj415.methods["currentKeyDown"] = reader_kitty_currentKeyDown_616;
-          obj415.data["currentKeyDown"] = call615;
-          var writer_kitty_currentKeyDown_616 = function(argcv, o) {
-            this.data["currentKeyDown"] = o;
-          }
-          obj415.methods["currentKeyDown:="] = writer_kitty_currentKeyDown_616;
-          reader_kitty_currentKeyDown_616.confidential = true;
-          writer_kitty_currentKeyDown_616.confidential = true;
-          lineNumber = 224;
-          moduleName = "kitty";
-          lineNumber = 222
-          if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call615)))
-              throw new GraceExceptionPacket(TypeErrorObject,
-                    new GraceString("expected "
-                    + "initial value of var 'currentKeyDown' to be of type Unknown"))
-          obj415.mutable = true;
-          sourceObject = obj415;
-          obj415.data["ent"] = undefined;
-          var reader_kitty_ent_617 = function() {
-            return this.data["ent"];
-          }
-          obj415.methods["ent"] = reader_kitty_ent_617;
-          obj415.data["ent"] = undefined;
-          var writer_kitty_ent_617 = function(argcv, o) {
-            this.data["ent"] = o;
-          }
-          obj415.methods["ent:="] = writer_kitty_ent_617;
-          reader_kitty_ent_617.confidential = true;
-          writer_kitty_ent_617.confidential = true;
-          obj415.mutable = true;
-          sourceObject = obj415;
-          lineNumber = 226
-          onSelf = true;
-          var call618 = callmethod(this, "init", [0]);
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          sourceObject = obj415;
-          superDepth = origSuperDepth;
-        }
-        obj_init_415.apply(obj415, []);
-        return obj415
-      } catch(e) {
-        if ((e.exctype == 'return') && (e.target == returnTarget)) {
-          return e.returnvalue;
-        } else {
-          throw e;
-        }
-      }
-    }
-    func414.paramCounts = [
-      0,
-    ];
-    func414.variableArities = [
-      false,
-    ];
-    obj412.methods["new"] = func414;
-    func414.definitionLine = 199;
-    func414.definitionModule = "kitty";
-    var func619 = function(argcv) {
-      var curarg = 1;
-      var inheritingObject = arguments[curarg++];
-      var returnTarget = invocationCount;
-      invocationCount++;
-      try {
-        var obj620 = Grace_allocObject();
-        obj620.definitionModule = "kitty";
-        obj620.definitionLine = 199;
-        var inho620 = inheritingObject;
-        while (inho620.superobj) inho620 = inho620.superobj;
-        inho620.superobj = obj620;
-        obj620.data = inheritingObject.data;
-        obj620.outer = this;
-        var reader_kitty_outer_621 = function() {
-          return this.outer;
-        }
-        obj620.methods["outer"] = reader_kitty_outer_621;
-        function obj_init_620() {
-          var origSuperDepth = superDepth;
-          superDepth = obj620;
-          obj620.annotations = [];
-          var func622 = function(argcv) {
+          obj417.methods["setBackground"] = func591;
+          func591.definitionLine = 299;
+          func591.definitionModule = "kitty";
+          var func598 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func622.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (init)"));
+            var var_e = arguments[curarg];
+            curarg++;
+            if (argcv[0] !=  func598.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (addEntity)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 237
-              var if623 = var_done;
-              lineNumber = 233
+              lineNumber = 304
               onSelf = true;
-              var call624 = callmethod(this, "isInit", [0]);
-              if (Grace_isTrue(call624)) {
-                lineNumber = 235
-                lineNumber = 234
-                var bool625 = new GraceBoolean(false)
-                return bool625
-              }
-              lineNumber = 238
-              lineNumber = 215
-              lineNumber = 237
-              var call626 = callmethod(var_dom,"document", [0]);
-              onSelf = true;
-              var call627 = callmethod(this, "document:=", [1], call626);
-              lineNumber = 238
-              lineNumber = 237
-              lineNumber = 238
-              var string628 = new GraceString("standard-canvas");
-              onSelf = true;
-              var call629 = callmethod(this, "document", [0]);
-              var call630 = callmethod(call629,"getElementById", [1], string628);
-              onSelf = true;
-              var call631 = callmethod(this, "canvas:=", [1], call630);
-              lineNumber = 240
-              lineNumber = 237
-              lineNumber = 239
-              onSelf = true;
-              var call632 = callmethod(this, "canvas", [0]);
-              var call633 = callmethod(call632,"width", [0]);
-              onSelf = true;
-              var call634 = callmethod(this, "canvasWidth:=", [1], call633);
-              lineNumber = 243
-              lineNumber = 239
-              lineNumber = 240
-              onSelf = true;
-              var call635 = callmethod(this, "canvas", [0]);
-              var call636 = callmethod(call635,"height", [0]);
-              onSelf = true;
-              var call637 = callmethod(this, "canvasHeight:=", [1], call636);
-              lineNumber = 255
-              var block638 = Grace_allocObject();
-              block638.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block638.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block638.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block638.methods["match"] = GraceBlock_match;
-              block638.methods["prefix?"] = GraceBlock_lift;
-              block638.receiver = this;
-              block638.className = 'block<kitty:255>';
-              block638.real = function(
-                var_ev
-              ) {
-                sourceObject = this;
-                lineNumber = 246
-                lineNumber = 245
-                onSelf = true;
-                var call639 = callmethod(this, "canvasHeight", [0]);
-                onSelf = true;
-                var call641 = callmethod(this, "canvas", [0]);
-                var call642 = callmethod(call641,"offsetWidth", [0]);
-                onSelf = true;
-                var call644 = callmethod(this, "canvas", [0]);
-                var call645 = callmethod(call644,"offsetLeft", [0]);
-                var call647 = callmethod(var_ev,"clientX", [0]);
-                var diff649 = callmethod(call647, "-", [1], call645);
-                var quotient651 = callmethod(diff649, "/", [1], call642);
-                var prod653 = callmethod(quotient651, "*", [1], call639);
-                var var_x = prod653;
-                lineNumber = 246;
-                moduleName = "kitty";
-                lineNumber = 245
-                if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                  [1], var_x)))
-                    throw new GraceExceptionPacket(TypeErrorObject,
-                          new GraceString("expected "
-                          + "initial value of def 'x' to be of type Unknown"))
-                lineNumber = 250
-                lineNumber = 246
-                onSelf = true;
-                var call654 = callmethod(this, "canvasHeight", [0]);
-                onSelf = true;
-                var call656 = callmethod(this, "canvas", [0]);
-                var call657 = callmethod(call656,"offsetHeight", [0]);
-                onSelf = true;
-                var call659 = callmethod(this, "canvas", [0]);
-                var call660 = callmethod(call659,"offsetTop", [0]);
-                var call662 = callmethod(var_ev,"clientY", [0]);
-                var diff664 = callmethod(call662, "-", [1], call660);
-                var quotient666 = callmethod(diff664, "/", [1], call657);
-                var prod668 = callmethod(quotient666, "*", [1], call654);
-                var var_y = prod668;
-                lineNumber = 250;
-                moduleName = "kitty";
-                lineNumber = 246
-                if (!Grace_isTrue(callmethod(var_Unknown, "match",
-                  [1], var_y)))
-                    throw new GraceExceptionPacket(TypeErrorObject,
-                          new GraceString("expected "
-                          + "initial value of def 'y' to be of type Unknown"))
-                lineNumber = 254
-                var if669 = var_done;
-                lineNumber = 250
-                var opresult672 = callmethod(var_y, "<", [1], new GraceNum(20));
-                onSelf = true;
-                var call675 = callmethod(this, "canvasWidth", [0]);
-                var diff677 = callmethod(call675, "-", [1], new GraceNum(20));
-                var opresult680 = callmethod(var_x, ">", [1], diff677);
-                var opresult682 = callmethod(opresult680, "&&", [1], opresult672);
-                if (Grace_isTrue(opresult682)) {
-                  lineNumber = 251
-                  var call683 = callmethod(var_ev,"preventDefault", [0]);
-                  lineNumber = 252
-                  onSelf = true;
-                  var call684 = callmethod(this, "stop", [0]);
-                  if669 = call684;
-                }
-                return if669;
-              };
-              var_mouseDownListener = block638;
-              lineNumber = 255
-              var string685 = new GraceString("mousedown");
-              onSelf = true;
-              var call686 = callmethod(this, "canvas", [0]);
-              var call687 = callmethod(call686,"addEventListener", [2], string685, var_mouseDownListener);
-              lineNumber = 265
-              var block688 = Grace_allocObject();
-              block688.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block688.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block688.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block688.methods["match"] = GraceBlock_match;
-              block688.methods["prefix?"] = GraceBlock_lift;
-              block688.receiver = this;
-              block688.className = 'block<kitty:265>';
-              block688.real = function(
-                var_ev
-              ) {
-                sourceObject = this;
-                lineNumber = 263
-                var if689 = var_done;
-                lineNumber = 260
-                var call691 = callmethod(var_ev,"keyCode", [0]);
-                var opresult693 = callmethod(call691, "==", [1], new GraceNum(75));
-                if (Grace_isTrue(opresult693)) {
-                  lineNumber = 261
-                  onSelf = true;
-                  var call694 = callmethod(this, "stop", [0]);
-                  if689 = call694;
-                }
-                lineNumber = 264
-                lineNumber = 260
-                lineNumber = 263
-                var call695 = callmethod(var_ev,"keyCode", [0]);
-                onSelf = true;
-                var call696 = callmethod(this, "currentKeyDown:=", [1], call695);
-                return call696;
-              };
-              var_keyDownListener = block688;
-              lineNumber = 265
-              var string697 = new GraceString("keydown");
-              onSelf = true;
-              var call698 = callmethod(this, "document", [0]);
-              var call699 = callmethod(call698,"addEventListener", [2], string697, var_keyDownListener);
-              lineNumber = 271
-              var block700 = Grace_allocObject();
-              block700.methods["apply"] = function() {
-                var args = Array.prototype.slice.call(arguments, 1);
-                return this.real.apply(this.receiver, args);
-              }
-              block700.methods["applyIndirectly"] = function(argcv, a) {
-                return this.real.apply(this.receiver, a._value);
-              }
-              block700.methods["outer"] = function() {
-                return callmethod(this.receiver, 'outer', [0]);
-              }
-              block700.methods["match"] = GraceBlock_match;
-              block700.methods["prefix?"] = GraceBlock_lift;
-              block700.receiver = this;
-              block700.className = 'block<kitty:271>';
-              block700.real = function(
-                var_ev
-              ) {
-                sourceObject = this;
-                lineNumber = 270
-                lineNumber = 263
-                lineNumber = 270
-                lineNumber = 269
-                var call701 = callmethod(new GraceNum(1),"prefix-", [0]);
-                onSelf = true;
-                var call702 = callmethod(this, "currentKeyDown:=", [1], call701);
-                return call702;
-              };
-              var_keyUpListener = block700;
-              lineNumber = 271
-              var string703 = new GraceString("keyup");
-              onSelf = true;
-              var call704 = callmethod(this, "document", [0]);
-              var call705 = callmethod(call704,"addEventListener", [2], string703, var_keyUpListener);
-              lineNumber = 273
-              lineNumber = 263
-              lineNumber = 273
-              var string706 = new GraceString("canvas");
-              var call707 = callmethod(var_dom,"document", [0]);
-              var call708 = callmethod(call707,"createElement", [1], string706);
-              onSelf = true;
-              var call709 = callmethod(this, "backingCanvas:=", [1], call708);
-              lineNumber = 275
-              lineNumber = 273
-              lineNumber = 274
-              onSelf = true;
-              var call710 = callmethod(this, "canvasHeight", [0]);
-              onSelf = true;
-              var call711 = callmethod(this, "backingCanvas", [0]);
-              var call712 = callmethod(call711,"height:=", [1], call710);
-              lineNumber = 276
-              lineNumber = 273
-              lineNumber = 275
-              onSelf = true;
-              var call713 = callmethod(this, "canvasWidth", [0]);
-              onSelf = true;
-              var call714 = callmethod(this, "backingCanvas", [0]);
-              var call715 = callmethod(call714,"width:=", [1], call713);
-              lineNumber = 276
-              lineNumber = 273
-              lineNumber = 276
-              var string716 = new GraceString("2d");
-              onSelf = true;
-              var call717 = callmethod(this, "backingCanvas", [0]);
-              var call718 = callmethod(call717,"getContext", [1], string716);
-              onSelf = true;
-              var call719 = callmethod(this, "backingContext:=", [1], call718);
-              lineNumber = 277
-              lineNumber = 273
-              lineNumber = 277
-              var string720 = new GraceString("2d");
-              onSelf = true;
-              var call721 = callmethod(this, "canvas", [0]);
-              var call722 = callmethod(call721,"getContext", [1], string720);
-              onSelf = true;
-              var call723 = callmethod(this, "mctx:=", [1], call722);
-              lineNumber = 280
-              var string724 = new GraceString("doggo.jpg");
-              onSelf = true;
-              var call725 = callmethod(this, "setBackground", [1], string724);
-              lineNumber = 292
-              lineNumber = 273
-              lineNumber = 286
-              var bool726 = new GraceBoolean(true)
-              onSelf = true;
-              var call727 = callmethod(this, "isInit:=", [1], bool726);
-              return call727
+              var call599 = callmethod(this, "entities", [0]);
+              var call600 = callmethod(call599,"push", [1], var_e);
+              return call600
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4372,78 +3760,629 @@ function gracecode_kitty () {
               }
             }
           }
-          func622.paramCounts = [
-            0,
+          func598.paramCounts = [
+            1,
           ];
-          func622.variableArities = [
+          func598.variableArities = [
             false,
           ];
-          obj620.methods["init"] = func622;
-          func622.definitionLine = 229;
-          func622.definitionModule = "kitty";
-          var func728 = function(argcv) {
+          obj417.methods["addEntity"] = func598;
+          func598.definitionLine = 303;
+          func598.definitionModule = "kitty";
+          var func601 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func728.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (start)"));
+            if (argcv[0] !=  func601.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getContext)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 298
-              lineNumber = 273
-              lineNumber = 297
-              var bool729 = new GraceBoolean(true)
+              lineNumber = 309
+              lineNumber = 308
               onSelf = true;
-              var call730 = callmethod(this, "isRunning:=", [1], bool729);
-              lineNumber = 298
-              var block731 = Grace_allocObject();
-              block731.methods["apply"] = function() {
+              var call602 = callmethod(this, "mctx", [0]);
+              return call602
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func601.paramCounts = [
+            0,
+          ];
+          func601.variableArities = [
+            false,
+          ];
+          obj417.methods["getContext"] = func601;
+          func601.definitionLine = 307;
+          func601.definitionModule = "kitty";
+          sourceObject = obj417;
+          obj417.data["background"] = undefined;
+          var reader_kitty_background_603 = function() {
+            return this.data["background"];
+          }
+          obj417.methods["background"] = reader_kitty_background_603;
+          obj417.data["background"] = undefined;
+          var writer_kitty_background_603 = function(argcv, o) {
+            this.data["background"] = o;
+          }
+          obj417.methods["background:="] = writer_kitty_background_603;
+          reader_kitty_background_603.confidential = true;
+          writer_kitty_background_603.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 164
+          var string604 = new GraceString("black");
+          obj417.data["backgroundColour"] = string604;
+          var reader_kitty_backgroundColour_605 = function() {
+            return this.data["backgroundColour"];
+          }
+          obj417.methods["backgroundColour"] = reader_kitty_backgroundColour_605;
+          obj417.data["backgroundColour"] = string604;
+          var writer_kitty_backgroundColour_605 = function(argcv, o) {
+            this.data["backgroundColour"] = o;
+          }
+          obj417.methods["backgroundColour:="] = writer_kitty_backgroundColour_605;
+          reader_kitty_backgroundColour_605.confidential = true;
+          writer_kitty_backgroundColour_605.confidential = true;
+          lineNumber = 166;
+          moduleName = "kitty";
+          lineNumber = 164
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], string604)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'backgroundColour' to be of type Unknown"))
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["document"] = undefined;
+          var reader_kitty_document_606 = function() {
+            return this.data["document"];
+          }
+          obj417.methods["document"] = reader_kitty_document_606;
+          obj417.data["document"] = undefined;
+          var writer_kitty_document_606 = function(argcv, o) {
+            this.data["document"] = o;
+          }
+          obj417.methods["document:="] = writer_kitty_document_606;
+          reader_kitty_document_606.confidential = true;
+          writer_kitty_document_606.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["backingCanvas"] = undefined;
+          var reader_kitty_backingCanvas_607 = function() {
+            return this.data["backingCanvas"];
+          }
+          obj417.methods["backingCanvas"] = reader_kitty_backingCanvas_607;
+          obj417.data["backingCanvas"] = undefined;
+          var writer_kitty_backingCanvas_607 = function(argcv, o) {
+            this.data["backingCanvas"] = o;
+          }
+          obj417.methods["backingCanvas:="] = writer_kitty_backingCanvas_607;
+          reader_kitty_backingCanvas_607.confidential = true;
+          writer_kitty_backingCanvas_607.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["backingContext"] = undefined;
+          var reader_kitty_backingContext_608 = function() {
+            return this.data["backingContext"];
+          }
+          obj417.methods["backingContext"] = reader_kitty_backingContext_608;
+          obj417.data["backingContext"] = undefined;
+          var writer_kitty_backingContext_608 = function(argcv, o) {
+            this.data["backingContext"] = o;
+          }
+          obj417.methods["backingContext:="] = writer_kitty_backingContext_608;
+          reader_kitty_backingContext_608.confidential = true;
+          writer_kitty_backingContext_608.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["canvas"] = undefined;
+          var reader_kitty_canvas_609 = function() {
+            return this.data["canvas"];
+          }
+          obj417.methods["canvas"] = reader_kitty_canvas_609;
+          obj417.data["canvas"] = undefined;
+          var writer_kitty_canvas_609 = function(argcv, o) {
+            this.data["canvas"] = o;
+          }
+          obj417.methods["canvas:="] = writer_kitty_canvas_609;
+          reader_kitty_canvas_609.confidential = true;
+          writer_kitty_canvas_609.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["canvasWidth"] = undefined;
+          var reader_kitty_canvasWidth_610 = function() {
+            return this.data["canvasWidth"];
+          }
+          obj417.methods["canvasWidth"] = reader_kitty_canvasWidth_610;
+          obj417.data["canvasWidth"] = undefined;
+          var writer_kitty_canvasWidth_610 = function(argcv, o) {
+            this.data["canvasWidth"] = o;
+          }
+          obj417.methods["canvasWidth:="] = writer_kitty_canvasWidth_610;
+          reader_kitty_canvasWidth_610.confidential = true;
+          writer_kitty_canvasWidth_610.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["canvasHeight"] = undefined;
+          var reader_kitty_canvasHeight_611 = function() {
+            return this.data["canvasHeight"];
+          }
+          obj417.methods["canvasHeight"] = reader_kitty_canvasHeight_611;
+          obj417.data["canvasHeight"] = undefined;
+          var writer_kitty_canvasHeight_611 = function(argcv, o) {
+            this.data["canvasHeight"] = o;
+          }
+          obj417.methods["canvasHeight:="] = writer_kitty_canvasHeight_611;
+          reader_kitty_canvasHeight_611.confidential = true;
+          writer_kitty_canvasHeight_611.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 175
+          var call612 = callmethod(var_collections,"list", [0]);
+          var call613 = callmethod(call612,"new", [0]);
+          obj417.data["entities"] = call613;
+          var reader_kitty_entities_614 = function() {
+            return this.data["entities"];
+          }
+          obj417.methods["entities"] = reader_kitty_entities_614;
+          obj417.data["entities"] = call613;
+          var writer_kitty_entities_614 = function(argcv, o) {
+            this.data["entities"] = o;
+          }
+          obj417.methods["entities:="] = writer_kitty_entities_614;
+          reader_kitty_entities_614.confidential = true;
+          writer_kitty_entities_614.confidential = true;
+          lineNumber = 177;
+          moduleName = "kitty";
+          lineNumber = 175
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], call613)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'entities' to be of type Unknown"))
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 177
+          var bool615 = new GraceBoolean(false)
+          obj417.data["isInit"] = bool615;
+          var reader_kitty_isInit_616 = function() {
+            return this.data["isInit"];
+          }
+          obj417.methods["isInit"] = reader_kitty_isInit_616;
+          obj417.data["isInit"] = bool615;
+          var writer_kitty_isInit_616 = function(argcv, o) {
+            this.data["isInit"] = o;
+          }
+          obj417.methods["isInit:="] = writer_kitty_isInit_616;
+          reader_kitty_isInit_616.confidential = true;
+          writer_kitty_isInit_616.confidential = true;
+          lineNumber = 178;
+          moduleName = "kitty";
+          lineNumber = 177
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], bool615)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'isInit' to be of type Unknown"))
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 178
+          var bool617 = new GraceBoolean(false)
+          obj417.data["isRunning"] = bool617;
+          var reader_kitty_isRunning_618 = function() {
+            return this.data["isRunning"];
+          }
+          obj417.methods["isRunning"] = reader_kitty_isRunning_618;
+          obj417.data["isRunning"] = bool617;
+          var writer_kitty_isRunning_618 = function(argcv, o) {
+            this.data["isRunning"] = o;
+          }
+          obj417.methods["isRunning:="] = writer_kitty_isRunning_618;
+          reader_kitty_isRunning_618.confidential = true;
+          writer_kitty_isRunning_618.confidential = true;
+          lineNumber = 180;
+          moduleName = "kitty";
+          lineNumber = 178
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], bool617)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'isRunning' to be of type Unknown"))
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["mctx"] = undefined;
+          var reader_kitty_mctx_619 = function() {
+            return this.data["mctx"];
+          }
+          obj417.methods["mctx"] = reader_kitty_mctx_619;
+          obj417.data["mctx"] = undefined;
+          var writer_kitty_mctx_619 = function(argcv, o) {
+            this.data["mctx"] = o;
+          }
+          obj417.methods["mctx:="] = writer_kitty_mctx_619;
+          reader_kitty_mctx_619.confidential = true;
+          writer_kitty_mctx_619.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 184
+          lineNumber = 182
+          var call620 = callmethod(new GraceNum(1),"prefix-", [0]);
+          obj417.data["currentKeyDown"] = call620;
+          var reader_kitty_currentKeyDown_621 = function() {
+            return this.data["currentKeyDown"];
+          }
+          obj417.methods["currentKeyDown"] = reader_kitty_currentKeyDown_621;
+          obj417.data["currentKeyDown"] = call620;
+          var writer_kitty_currentKeyDown_621 = function(argcv, o) {
+            this.data["currentKeyDown"] = o;
+          }
+          obj417.methods["currentKeyDown:="] = writer_kitty_currentKeyDown_621;
+          reader_kitty_currentKeyDown_621.confidential = true;
+          writer_kitty_currentKeyDown_621.confidential = true;
+          lineNumber = 184;
+          moduleName = "kitty";
+          lineNumber = 182
+          if (!Grace_isTrue(callmethod(var_Unknown, "match",
+            [1], call620)))
+              throw new GraceExceptionPacket(TypeErrorObject,
+                    new GraceString("expected "
+                    + "initial value of var 'currentKeyDown' to be of type Unknown"))
+          obj417.mutable = true;
+          sourceObject = obj417;
+          obj417.data["ent"] = undefined;
+          var reader_kitty_ent_622 = function() {
+            return this.data["ent"];
+          }
+          obj417.methods["ent"] = reader_kitty_ent_622;
+          obj417.data["ent"] = undefined;
+          var writer_kitty_ent_622 = function(argcv, o) {
+            this.data["ent"] = o;
+          }
+          obj417.methods["ent:="] = writer_kitty_ent_622;
+          reader_kitty_ent_622.confidential = true;
+          writer_kitty_ent_622.confidential = true;
+          obj417.mutable = true;
+          sourceObject = obj417;
+          lineNumber = 186
+          onSelf = true;
+          var call623 = callmethod(this, "init", [0]);
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          sourceObject = obj417;
+          superDepth = origSuperDepth;
+        }
+        obj_init_417.apply(obj417, []);
+        return obj417
+      } catch(e) {
+        if ((e.exctype == 'return') && (e.target == returnTarget)) {
+          return e.returnvalue;
+        } else {
+          throw e;
+        }
+      }
+    }
+    func416.paramCounts = [
+      0,
+    ];
+    func416.variableArities = [
+      false,
+    ];
+    obj414.methods["new"] = func416;
+    func416.definitionLine = 159;
+    func416.definitionModule = "kitty";
+    var func624 = function(argcv) {
+      var curarg = 1;
+      var inheritingObject = arguments[curarg++];
+      var returnTarget = invocationCount;
+      invocationCount++;
+      try {
+        var obj625 = Grace_allocObject();
+        obj625.definitionModule = "kitty";
+        obj625.definitionLine = 159;
+        var inho625 = inheritingObject;
+        while (inho625.superobj) inho625 = inho625.superobj;
+        inho625.superobj = obj625;
+        obj625.data = inheritingObject.data;
+        obj625.outer = this;
+        var reader_kitty_outer_626 = function() {
+          return this.outer;
+        }
+        obj625.methods["outer"] = reader_kitty_outer_626;
+        function obj_init_625() {
+          var origSuperDepth = superDepth;
+          superDepth = obj625;
+          obj625.annotations = [];
+          var func627 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func627.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (init)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "kitty";
+            try {
+              lineNumber = 197
+              var if628 = var_done;
+              lineNumber = 193
+              onSelf = true;
+              var call629 = callmethod(this, "isInit", [0]);
+              if (Grace_isTrue(call629)) {
+                lineNumber = 195
+                lineNumber = 194
+                var bool630 = new GraceBoolean(false)
+                return bool630
+              }
+              lineNumber = 198
+              lineNumber = 175
+              lineNumber = 197
+              var call631 = callmethod(var_dom,"document", [0]);
+              onSelf = true;
+              var call632 = callmethod(this, "document:=", [1], call631);
+              lineNumber = 198
+              lineNumber = 197
+              lineNumber = 198
+              var string633 = new GraceString("standard-canvas");
+              onSelf = true;
+              var call634 = callmethod(this, "document", [0]);
+              var call635 = callmethod(call634,"getElementById", [1], string633);
+              onSelf = true;
+              var call636 = callmethod(this, "canvas:=", [1], call635);
+              lineNumber = 200
+              lineNumber = 197
+              lineNumber = 199
+              onSelf = true;
+              var call637 = callmethod(this, "canvas", [0]);
+              var call638 = callmethod(call637,"width", [0]);
+              onSelf = true;
+              var call639 = callmethod(this, "canvasWidth:=", [1], call638);
+              lineNumber = 203
+              lineNumber = 199
+              lineNumber = 200
+              onSelf = true;
+              var call640 = callmethod(this, "canvas", [0]);
+              var call641 = callmethod(call640,"height", [0]);
+              onSelf = true;
+              var call642 = callmethod(this, "canvasHeight:=", [1], call641);
+              lineNumber = 215
+              var block643 = Grace_allocObject();
+              block643.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block731.methods["applyIndirectly"] = function(argcv, a) {
+              block643.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block731.methods["outer"] = function() {
+              block643.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block731.methods["match"] = GraceBlock_match;
-              block731.methods["prefix?"] = GraceBlock_lift;
-              block731.receiver = this;
-              block731.className = 'block<kitty:298>';
-              block731.real = function(
+              block643.methods["match"] = GraceBlock_match;
+              block643.methods["prefix?"] = GraceBlock_lift;
+              block643.receiver = this;
+              block643.className = 'block<kitty:215>';
+              block643.real = function(
+                var_ev
               ) {
                 sourceObject = this;
+                lineNumber = 206
+                lineNumber = 205
                 onSelf = true;
-                var call732 = callmethod(this, "isRunning", [0]);
-                return call732;
+                var call644 = callmethod(this, "canvasHeight", [0]);
+                onSelf = true;
+                var call646 = callmethod(this, "canvas", [0]);
+                var call647 = callmethod(call646,"offsetWidth", [0]);
+                onSelf = true;
+                var call649 = callmethod(this, "canvas", [0]);
+                var call650 = callmethod(call649,"offsetLeft", [0]);
+                var call652 = callmethod(var_ev,"clientX", [0]);
+                var diff654 = callmethod(call652, "-", [1], call650);
+                var quotient656 = callmethod(diff654, "/", [1], call647);
+                var prod658 = callmethod(quotient656, "*", [1], call644);
+                var var_x = prod658;
+                lineNumber = 206;
+                moduleName = "kitty";
+                lineNumber = 205
+                if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                  [1], var_x)))
+                    throw new GraceExceptionPacket(TypeErrorObject,
+                          new GraceString("expected "
+                          + "initial value of def 'x' to be of type Unknown"))
+                lineNumber = 210
+                lineNumber = 206
+                onSelf = true;
+                var call659 = callmethod(this, "canvasHeight", [0]);
+                onSelf = true;
+                var call661 = callmethod(this, "canvas", [0]);
+                var call662 = callmethod(call661,"offsetHeight", [0]);
+                onSelf = true;
+                var call664 = callmethod(this, "canvas", [0]);
+                var call665 = callmethod(call664,"offsetTop", [0]);
+                var call667 = callmethod(var_ev,"clientY", [0]);
+                var diff669 = callmethod(call667, "-", [1], call665);
+                var quotient671 = callmethod(diff669, "/", [1], call662);
+                var prod673 = callmethod(quotient671, "*", [1], call659);
+                var var_y = prod673;
+                lineNumber = 210;
+                moduleName = "kitty";
+                lineNumber = 206
+                if (!Grace_isTrue(callmethod(var_Unknown, "match",
+                  [1], var_y)))
+                    throw new GraceExceptionPacket(TypeErrorObject,
+                          new GraceString("expected "
+                          + "initial value of def 'y' to be of type Unknown"))
+                lineNumber = 214
+                var if674 = var_done;
+                lineNumber = 210
+                var opresult677 = callmethod(var_y, "<", [1], new GraceNum(20));
+                onSelf = true;
+                var call680 = callmethod(this, "canvasWidth", [0]);
+                var diff682 = callmethod(call680, "-", [1], new GraceNum(20));
+                var opresult685 = callmethod(var_x, ">", [1], diff682);
+                var opresult687 = callmethod(opresult685, "&&", [1], opresult677);
+                if (Grace_isTrue(opresult687)) {
+                  lineNumber = 211
+                  var call688 = callmethod(var_ev,"preventDefault", [0]);
+                  lineNumber = 212
+                  onSelf = true;
+                  var call689 = callmethod(this, "stop", [0]);
+                  if674 = call689;
+                }
+                return if674;
               };
-              lineNumber = 302
-              var block733 = Grace_allocObject();
-              block733.methods["apply"] = function() {
+              var_mouseDownListener = block643;
+              lineNumber = 215
+              var string690 = new GraceString("mousedown");
+              onSelf = true;
+              var call691 = callmethod(this, "canvas", [0]);
+              var call692 = callmethod(call691,"addEventListener", [2], string690, var_mouseDownListener);
+              lineNumber = 225
+              var block693 = Grace_allocObject();
+              block693.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block733.methods["applyIndirectly"] = function(argcv, a) {
+              block693.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block733.methods["outer"] = function() {
+              block693.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block733.methods["match"] = GraceBlock_match;
-              block733.methods["prefix?"] = GraceBlock_lift;
-              block733.receiver = this;
-              block733.className = 'block<kitty:302>';
-              block733.real = function(
+              block693.methods["match"] = GraceBlock_match;
+              block693.methods["prefix?"] = GraceBlock_lift;
+              block693.receiver = this;
+              block693.className = 'block<kitty:225>';
+              block693.real = function(
+                var_ev
               ) {
                 sourceObject = this;
-                lineNumber = 299
+                lineNumber = 223
+                var if694 = var_done;
+                lineNumber = 220
+                var call696 = callmethod(var_ev,"keyCode", [0]);
+                var opresult698 = callmethod(call696, "==", [1], new GraceNum(75));
+                if (Grace_isTrue(opresult698)) {
+                  lineNumber = 221
+                  onSelf = true;
+                  var call699 = callmethod(this, "stop", [0]);
+                  if694 = call699;
+                }
+                lineNumber = 224
+                lineNumber = 220
+                lineNumber = 223
+                var call700 = callmethod(var_ev,"keyCode", [0]);
                 onSelf = true;
-                var call734 = callmethod(this, "update", [0]);
-                return call734;
+                var call701 = callmethod(this, "currentKeyDown:=", [1], call700);
+                return call701;
               };
-              lineNumber = 298
-              var call735 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block731, new GraceNum(10), block733);
+              var_keyDownListener = block693;
+              lineNumber = 225
+              var string702 = new GraceString("keydown");
+              onSelf = true;
+              var call703 = callmethod(this, "document", [0]);
+              var call704 = callmethod(call703,"addEventListener", [2], string702, var_keyDownListener);
+              lineNumber = 231
+              var block705 = Grace_allocObject();
+              block705.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block705.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block705.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block705.methods["match"] = GraceBlock_match;
+              block705.methods["prefix?"] = GraceBlock_lift;
+              block705.receiver = this;
+              block705.className = 'block<kitty:231>';
+              block705.real = function(
+                var_ev
+              ) {
+                sourceObject = this;
+                lineNumber = 230
+                lineNumber = 223
+                lineNumber = 230
+                lineNumber = 229
+                var call706 = callmethod(new GraceNum(1),"prefix-", [0]);
+                onSelf = true;
+                var call707 = callmethod(this, "currentKeyDown:=", [1], call706);
+                return call707;
+              };
+              var_keyUpListener = block705;
+              lineNumber = 231
+              var string708 = new GraceString("keyup");
+              onSelf = true;
+              var call709 = callmethod(this, "document", [0]);
+              var call710 = callmethod(call709,"addEventListener", [2], string708, var_keyUpListener);
+              lineNumber = 233
+              lineNumber = 223
+              lineNumber = 233
+              var string711 = new GraceString("canvas");
+              var call712 = callmethod(var_dom,"document", [0]);
+              var call713 = callmethod(call712,"createElement", [1], string711);
+              onSelf = true;
+              var call714 = callmethod(this, "backingCanvas:=", [1], call713);
+              lineNumber = 235
+              lineNumber = 233
+              lineNumber = 234
+              onSelf = true;
+              var call715 = callmethod(this, "canvasHeight", [0]);
+              onSelf = true;
+              var call716 = callmethod(this, "backingCanvas", [0]);
+              var call717 = callmethod(call716,"height:=", [1], call715);
+              lineNumber = 236
+              lineNumber = 233
+              lineNumber = 235
+              onSelf = true;
+              var call718 = callmethod(this, "canvasWidth", [0]);
+              onSelf = true;
+              var call719 = callmethod(this, "backingCanvas", [0]);
+              var call720 = callmethod(call719,"width:=", [1], call718);
+              lineNumber = 236
+              lineNumber = 233
+              lineNumber = 236
+              var string721 = new GraceString("2d");
+              onSelf = true;
+              var call722 = callmethod(this, "backingCanvas", [0]);
+              var call723 = callmethod(call722,"getContext", [1], string721);
+              onSelf = true;
+              var call724 = callmethod(this, "backingContext:=", [1], call723);
+              lineNumber = 237
+              lineNumber = 233
+              lineNumber = 237
+              var string725 = new GraceString("2d");
+              onSelf = true;
+              var call726 = callmethod(this, "canvas", [0]);
+              var call727 = callmethod(call726,"getContext", [1], string725);
+              onSelf = true;
+              var call728 = callmethod(this, "mctx:=", [1], call727);
+              lineNumber = 240
+              var string729 = new GraceString("doggo.jpg");
+              onSelf = true;
+              var call730 = callmethod(this, "setBackground", [1], string729);
+              lineNumber = 249
+              lineNumber = 233
+              lineNumber = 246
+              var bool731 = new GraceBoolean(true)
+              onSelf = true;
+              var call732 = callmethod(this, "isInit:=", [1], bool731);
+              lineNumber = 249
+              var call733 = callmethod(superDepth, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call734 = callmethod(call733, "outer", [0]);
+              onOuter = true;
+              onSelf = true;
+              var call735 = callmethod(call734, "setWorld", [1], this);
               return call735
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -4453,96 +4392,79 @@ function gracecode_kitty () {
               }
             }
           }
-          func728.paramCounts = [
+          func627.paramCounts = [
             0,
           ];
-          func728.variableArities = [
+          func627.variableArities = [
             false,
           ];
-          obj620.methods["start"] = func728;
-          func728.definitionLine = 295;
-          func728.definitionModule = "kitty";
+          obj625.methods["init"] = func627;
+          func627.definitionLine = 189;
+          func627.definitionModule = "kitty";
           var func736 = function(argcv) {
             var curarg = 1;
             if (argcv[0] !=  func736.paramCounts[0])
-              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (update)"));
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (start)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 311
-              lineNumber = 273
-              lineNumber = 310
+              lineNumber = 261
+              lineNumber = 249
+              lineNumber = 260
+              var bool737 = new GraceBoolean(true)
               onSelf = true;
-              var call737 = callmethod(this, "backgroundColour", [0]);
-              onSelf = true;
-              var call738 = callmethod(this, "mctx", [0]);
-              var call739 = callmethod(call738,"fillStyle:=", [1], call737);
-              lineNumber = 311
-              onSelf = true;
-              var call740 = callmethod(this, "canvasWidth", [0]);
-              onSelf = true;
-              var call741 = callmethod(this, "canvasHeight", [0]);
-              onSelf = true;
-              var call742 = callmethod(this, "mctx", [0]);
-              var call743 = callmethod(call742,"fillRect", [4], new GraceNum(0), new GraceNum(0), call740, call741);
-              lineNumber = 312
-              onSelf = true;
-              var call744 = callmethod(this, "backingCanvas", [0]);
-              onSelf = true;
-              var call745 = callmethod(this, "mctx", [0]);
-              var call746 = callmethod(call745,"drawImage", [3], call744, new GraceNum(0), new GraceNum(0));
-              lineNumber = 313
-              onSelf = true;
-              var call747 = callmethod(this, "mctx", [0]);
-              onSelf = true;
-              var call749 = callmethod(this, "canvasWidth", [0]);
-              var quotient751 = callmethod(call749, "/", [1], new GraceNum(2));
-              onSelf = true;
-              var call753 = callmethod(this, "canvasHeight", [0]);
-              var quotient755 = callmethod(call753, "/", [1], new GraceNum(2));
-              onSelf = true;
-              var call756 = callmethod(this, "background", [0]);
-              var call757 = callmethod(call756,"draw", [4], call747, quotient751, quotient755, new GraceNum(0));
-              lineNumber = 316
-              onSelf = true;
-              var call758 = callmethod(this, "entities", [0]);
-              lineNumber = 322
-              var block759 = Grace_allocObject();
-              block759.methods["apply"] = function() {
+              var call738 = callmethod(this, "isRunning:=", [1], bool737);
+              lineNumber = 261
+              var block739 = Grace_allocObject();
+              block739.methods["apply"] = function() {
                 var args = Array.prototype.slice.call(arguments, 1);
                 return this.real.apply(this.receiver, args);
               }
-              block759.methods["applyIndirectly"] = function(argcv, a) {
+              block739.methods["applyIndirectly"] = function(argcv, a) {
                 return this.real.apply(this.receiver, a._value);
               }
-              block759.methods["outer"] = function() {
+              block739.methods["outer"] = function() {
                 return callmethod(this.receiver, 'outer', [0]);
               }
-              block759.methods["match"] = GraceBlock_match;
-              block759.methods["prefix?"] = GraceBlock_lift;
-              block759.receiver = this;
-              block759.className = 'block<kitty:322>';
-              block759.real = function(
-                var_entity
+              block739.methods["match"] = GraceBlock_match;
+              block739.methods["prefix?"] = GraceBlock_lift;
+              block739.receiver = this;
+              block739.className = 'block<kitty:261>';
+              block739.real = function(
               ) {
                 sourceObject = this;
-                lineNumber = 317
-                var call760 = callmethod(var_entity,"tick", [0]);
-                lineNumber = 318
                 onSelf = true;
-                var call761 = callmethod(this, "mctx", [0]);
-                onSelf = true;
-                var call763 = callmethod(this, "canvasWidth", [0]);
-                var quotient765 = callmethod(call763, "/", [1], new GraceNum(2));
-                onSelf = true;
-                var call767 = callmethod(this, "canvasHeight", [0]);
-                var quotient769 = callmethod(call767, "/", [1], new GraceNum(2));
-                var call770 = callmethod(var_entity,"draw", [3], call761, quotient765, quotient769);
-                return call770;
+                var call740 = callmethod(this, "isRunning", [0]);
+                return call740;
               };
-              var call771 = callmethod(Grace_prelude,"for()do", [1, 1], call758, block759);
-              return call771
+              lineNumber = 265
+              var block741 = Grace_allocObject();
+              block741.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block741.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block741.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block741.methods["match"] = GraceBlock_match;
+              block741.methods["prefix?"] = GraceBlock_lift;
+              block741.receiver = this;
+              block741.className = 'block<kitty:265>';
+              block741.real = function(
+              ) {
+                sourceObject = this;
+                lineNumber = 262
+                onSelf = true;
+                var call742 = callmethod(this, "update", [0]);
+                return call742;
+              };
+              lineNumber = 261
+              var call743 = callmethod(var_dom,"while()waiting()do", [1, 1, 1], block739, new GraceNum(10), block741);
+              return call743
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4557,42 +4479,140 @@ function gracecode_kitty () {
           func736.variableArities = [
             false,
           ];
-          obj620.methods["update"] = func736;
-          func736.definitionLine = 305;
+          obj625.methods["start"] = func736;
+          func736.definitionLine = 258;
           func736.definitionModule = "kitty";
-          var func772 = function(argcv) {
+          var func744 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func772.paramCounts[0])
+            if (argcv[0] !=  func744.paramCounts[0])
+              callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (update)"));
+            var returnTarget = invocationCount;
+            invocationCount++;
+            moduleName = "kitty";
+            try {
+              lineNumber = 274
+              lineNumber = 249
+              lineNumber = 273
+              onSelf = true;
+              var call745 = callmethod(this, "backgroundColour", [0]);
+              onSelf = true;
+              var call746 = callmethod(this, "mctx", [0]);
+              var call747 = callmethod(call746,"fillStyle:=", [1], call745);
+              lineNumber = 274
+              onSelf = true;
+              var call748 = callmethod(this, "canvasWidth", [0]);
+              onSelf = true;
+              var call749 = callmethod(this, "canvasHeight", [0]);
+              onSelf = true;
+              var call750 = callmethod(this, "mctx", [0]);
+              var call751 = callmethod(call750,"fillRect", [4], new GraceNum(0), new GraceNum(0), call748, call749);
+              lineNumber = 275
+              onSelf = true;
+              var call752 = callmethod(this, "backingCanvas", [0]);
+              onSelf = true;
+              var call753 = callmethod(this, "mctx", [0]);
+              var call754 = callmethod(call753,"drawImage", [3], call752, new GraceNum(0), new GraceNum(0));
+              lineNumber = 276
+              onSelf = true;
+              var call755 = callmethod(this, "mctx", [0]);
+              onSelf = true;
+              var call757 = callmethod(this, "canvasWidth", [0]);
+              var quotient759 = callmethod(call757, "/", [1], new GraceNum(2));
+              onSelf = true;
+              var call761 = callmethod(this, "canvasHeight", [0]);
+              var quotient763 = callmethod(call761, "/", [1], new GraceNum(2));
+              onSelf = true;
+              var call764 = callmethod(this, "background", [0]);
+              var call765 = callmethod(call764,"draw", [4], call755, quotient759, quotient763, new GraceNum(0));
+              lineNumber = 279
+              onSelf = true;
+              var call766 = callmethod(this, "entities", [0]);
+              lineNumber = 285
+              var block767 = Grace_allocObject();
+              block767.methods["apply"] = function() {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return this.real.apply(this.receiver, args);
+              }
+              block767.methods["applyIndirectly"] = function(argcv, a) {
+                return this.real.apply(this.receiver, a._value);
+              }
+              block767.methods["outer"] = function() {
+                return callmethod(this.receiver, 'outer', [0]);
+              }
+              block767.methods["match"] = GraceBlock_match;
+              block767.methods["prefix?"] = GraceBlock_lift;
+              block767.receiver = this;
+              block767.className = 'block<kitty:285>';
+              block767.real = function(
+                var_entity
+              ) {
+                sourceObject = this;
+                lineNumber = 280
+                var call768 = callmethod(var_entity,"tick", [0]);
+                lineNumber = 281
+                onSelf = true;
+                var call769 = callmethod(this, "mctx", [0]);
+                onSelf = true;
+                var call771 = callmethod(this, "canvasWidth", [0]);
+                var quotient773 = callmethod(call771, "/", [1], new GraceNum(2));
+                onSelf = true;
+                var call775 = callmethod(this, "canvasHeight", [0]);
+                var quotient777 = callmethod(call775, "/", [1], new GraceNum(2));
+                var call778 = callmethod(var_entity,"draw", [3], call769, quotient773, quotient777);
+                return call778;
+              };
+              var call779 = callmethod(Grace_prelude,"for()do", [1, 1], call766, block767);
+              return call779
+            } catch(e) {
+              if ((e.exctype == 'return') && (e.target == returnTarget)) {
+                return e.returnvalue;
+              } else {
+                throw e;
+              }
+            }
+          }
+          func744.paramCounts = [
+            0,
+          ];
+          func744.variableArities = [
+            false,
+          ];
+          obj625.methods["update"] = func744;
+          func744.definitionLine = 268;
+          func744.definitionModule = "kitty";
+          var func780 = function(argcv) {
+            var curarg = 1;
+            if (argcv[0] !=  func780.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (stop)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 325
-              var string773 = new GraceString("WORLD STOPPING...");
-              var call774 = Grace_print(string773);
-              lineNumber = 327
-              lineNumber = 317
-              lineNumber = 326
-              var bool775 = new GraceBoolean(false)
+              lineNumber = 288
+              var string781 = new GraceString("WORLD STOPPING...");
+              var call782 = Grace_print(string781);
+              lineNumber = 290
+              lineNumber = 280
+              lineNumber = 289
+              var bool783 = new GraceBoolean(false)
               onSelf = true;
-              var call776 = callmethod(this, "isRunning:=", [1], bool775);
-              lineNumber = 327
-              var string777 = new GraceString("mousedown");
+              var call784 = callmethod(this, "isRunning:=", [1], bool783);
+              lineNumber = 290
+              var string785 = new GraceString("mousedown");
               onSelf = true;
-              var call778 = callmethod(this, "canvas", [0]);
-              var call779 = callmethod(call778,"removeEventListener", [2], string777, var_mouseDownListener);
-              lineNumber = 328
-              var string780 = new GraceString("keydown");
+              var call786 = callmethod(this, "canvas", [0]);
+              var call787 = callmethod(call786,"removeEventListener", [2], string785, var_mouseDownListener);
+              lineNumber = 291
+              var string788 = new GraceString("keydown");
               onSelf = true;
-              var call781 = callmethod(this, "document", [0]);
-              var call782 = callmethod(call781,"removeEventListener", [2], string780, var_keyDownListener);
-              lineNumber = 329
-              var string783 = new GraceString("keyup");
+              var call789 = callmethod(this, "document", [0]);
+              var call790 = callmethod(call789,"removeEventListener", [2], string788, var_keyDownListener);
+              lineNumber = 292
+              var string791 = new GraceString("keyup");
               onSelf = true;
-              var call784 = callmethod(this, "document", [0]);
-              var call785 = callmethod(call784,"removeEventListener", [2], string783, var_keyUpListener);
-              return call785
+              var call792 = callmethod(this, "document", [0]);
+              var call793 = callmethod(call792,"removeEventListener", [2], string791, var_keyUpListener);
+              return call793
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4601,31 +4621,31 @@ function gracecode_kitty () {
               }
             }
           }
-          func772.paramCounts = [
+          func780.paramCounts = [
             0,
           ];
-          func772.variableArities = [
+          func780.variableArities = [
             false,
           ];
-          obj620.methods["stop"] = func772;
-          func772.definitionLine = 324;
-          func772.definitionModule = "kitty";
-          var func786 = function(argcv) {
+          obj625.methods["stop"] = func780;
+          func780.definitionLine = 287;
+          func780.definitionModule = "kitty";
+          var func794 = function(argcv) {
             var curarg = 1;
             var var_key = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func786.paramCounts[0])
+            if (argcv[0] !=  func794.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (isKeyDown)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 334
-              lineNumber = 333
+              lineNumber = 297
+              lineNumber = 296
               onSelf = true;
-              var call787 = callmethod(this, "currentKeyDown", [0]);
-              var opresult790 = callmethod(var_key, "==", [1], call787);
-              return opresult790
+              var call795 = callmethod(this, "currentKeyDown", [0]);
+              var opresult798 = callmethod(var_key, "==", [1], call795);
+              return opresult798
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4634,42 +4654,42 @@ function gracecode_kitty () {
               }
             }
           }
-          func786.paramCounts = [
+          func794.paramCounts = [
             1,
           ];
-          func786.variableArities = [
+          func794.variableArities = [
             false,
           ];
-          obj620.methods["isKeyDown"] = func786;
-          func786.definitionLine = 332;
-          func786.definitionModule = "kitty";
-          var func791 = function(argcv) {
+          obj625.methods["isKeyDown"] = func794;
+          func794.definitionLine = 295;
+          func794.definitionModule = "kitty";
+          var func799 = function(argcv) {
             var curarg = 1;
             var var_url = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func791.paramCounts[0])
+            if (argcv[0] !=  func799.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (setBackground)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 337
-              lineNumber = 317
-              lineNumber = 337
+              lineNumber = 300
+              lineNumber = 280
+              lineNumber = 300
               onSelf = true;
-              var call792 = callmethod(this, "canvasWidth", [0]);
+              var call800 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
-              var call793 = callmethod(this, "canvasHeight", [0]);
-              var call794 = callmethod(superDepth, "outer", [0]);
+              var call801 = callmethod(this, "canvasHeight", [0]);
+              var call802 = callmethod(superDepth, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call795 = callmethod(call794, "outer", [0]);
+              var call803 = callmethod(call802, "outer", [0]);
               onOuter = true;
               onSelf = true;
-              var call796 = callmethod(call795, "Image()width()height", [1, 1, 1], var_url, call792, call793);
+              var call804 = callmethod(call803, "Image()width()height", [1, 1, 1], var_url, call800, call801);
               onSelf = true;
-              var call797 = callmethod(this, "background:=", [1], call796);
-              return call797
+              var call805 = callmethod(this, "background:=", [1], call804);
+              return call805
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4678,30 +4698,30 @@ function gracecode_kitty () {
               }
             }
           }
-          func791.paramCounts = [
+          func799.paramCounts = [
             1,
           ];
-          func791.variableArities = [
+          func799.variableArities = [
             false,
           ];
-          obj620.methods["setBackground"] = func791;
-          func791.definitionLine = 336;
-          func791.definitionModule = "kitty";
-          var func798 = function(argcv) {
+          obj625.methods["setBackground"] = func799;
+          func799.definitionLine = 299;
+          func799.definitionModule = "kitty";
+          var func806 = function(argcv) {
             var curarg = 1;
             var var_e = arguments[curarg];
             curarg++;
-            if (argcv[0] !=  func798.paramCounts[0])
+            if (argcv[0] !=  func806.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (addEntity)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 341
+              lineNumber = 304
               onSelf = true;
-              var call799 = callmethod(this, "entities", [0]);
-              var call800 = callmethod(call799,"push", [1], var_e);
-              return call800
+              var call807 = callmethod(this, "entities", [0]);
+              var call808 = callmethod(call807,"push", [1], var_e);
+              return call808
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4710,28 +4730,28 @@ function gracecode_kitty () {
               }
             }
           }
-          func798.paramCounts = [
+          func806.paramCounts = [
             1,
           ];
-          func798.variableArities = [
+          func806.variableArities = [
             false,
           ];
-          obj620.methods["addEntity"] = func798;
-          func798.definitionLine = 340;
-          func798.definitionModule = "kitty";
-          var func801 = function(argcv) {
+          obj625.methods["addEntity"] = func806;
+          func806.definitionLine = 303;
+          func806.definitionModule = "kitty";
+          var func809 = function(argcv) {
             var curarg = 1;
-            if (argcv[0] !=  func801.paramCounts[0])
+            if (argcv[0] !=  func809.paramCounts[0])
               callmethod(RuntimeErrorObject, "raise", [1], new GraceString("wrong number of arguments for part 1 (getContext)"));
             var returnTarget = invocationCount;
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 346
-              lineNumber = 345
+              lineNumber = 309
+              lineNumber = 308
               onSelf = true;
-              var call802 = callmethod(this, "mctx", [0]);
-              return call802
+              var call810 = callmethod(this, "mctx", [0]);
+              return call810
             } catch(e) {
               if ((e.exctype == 'return') && (e.target == returnTarget)) {
                 return e.returnvalue;
@@ -4740,279 +4760,279 @@ function gracecode_kitty () {
               }
             }
           }
-          func801.paramCounts = [
+          func809.paramCounts = [
             0,
           ];
-          func801.variableArities = [
+          func809.variableArities = [
             false,
           ];
-          obj620.methods["getContext"] = func801;
-          func801.definitionLine = 344;
-          func801.definitionModule = "kitty";
-          sourceObject = obj620;
-          obj620.data["background"] = undefined;
-          var reader_kitty_background_803 = function() {
+          obj625.methods["getContext"] = func809;
+          func809.definitionLine = 307;
+          func809.definitionModule = "kitty";
+          sourceObject = obj625;
+          obj625.data["background"] = undefined;
+          var reader_kitty_background_811 = function() {
             return this.data["background"];
           }
-          obj620.methods["background"] = reader_kitty_background_803;
-          obj620.data["background"] = undefined;
-          var writer_kitty_background_803 = function(argcv, o) {
+          obj625.methods["background"] = reader_kitty_background_811;
+          obj625.data["background"] = undefined;
+          var writer_kitty_background_811 = function(argcv, o) {
             this.data["background"] = o;
           }
-          obj620.methods["background:="] = writer_kitty_background_803;
-          reader_kitty_background_803.confidential = true;
-          writer_kitty_background_803.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 204
-          var string804 = new GraceString("black");
-          obj620.data["backgroundColour"] = string804;
-          var reader_kitty_backgroundColour_805 = function() {
+          obj625.methods["background:="] = writer_kitty_background_811;
+          reader_kitty_background_811.confidential = true;
+          writer_kitty_background_811.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 164
+          var string812 = new GraceString("black");
+          obj625.data["backgroundColour"] = string812;
+          var reader_kitty_backgroundColour_813 = function() {
             return this.data["backgroundColour"];
           }
-          obj620.methods["backgroundColour"] = reader_kitty_backgroundColour_805;
-          obj620.data["backgroundColour"] = string804;
-          var writer_kitty_backgroundColour_805 = function(argcv, o) {
+          obj625.methods["backgroundColour"] = reader_kitty_backgroundColour_813;
+          obj625.data["backgroundColour"] = string812;
+          var writer_kitty_backgroundColour_813 = function(argcv, o) {
             this.data["backgroundColour"] = o;
           }
-          obj620.methods["backgroundColour:="] = writer_kitty_backgroundColour_805;
-          reader_kitty_backgroundColour_805.confidential = true;
-          writer_kitty_backgroundColour_805.confidential = true;
-          lineNumber = 206;
+          obj625.methods["backgroundColour:="] = writer_kitty_backgroundColour_813;
+          reader_kitty_backgroundColour_813.confidential = true;
+          writer_kitty_backgroundColour_813.confidential = true;
+          lineNumber = 166;
           moduleName = "kitty";
-          lineNumber = 204
+          lineNumber = 164
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], string804)))
+            [1], string812)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'backgroundColour' to be of type Unknown"))
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["document"] = undefined;
-          var reader_kitty_document_806 = function() {
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["document"] = undefined;
+          var reader_kitty_document_814 = function() {
             return this.data["document"];
           }
-          obj620.methods["document"] = reader_kitty_document_806;
-          obj620.data["document"] = undefined;
-          var writer_kitty_document_806 = function(argcv, o) {
+          obj625.methods["document"] = reader_kitty_document_814;
+          obj625.data["document"] = undefined;
+          var writer_kitty_document_814 = function(argcv, o) {
             this.data["document"] = o;
           }
-          obj620.methods["document:="] = writer_kitty_document_806;
-          reader_kitty_document_806.confidential = true;
-          writer_kitty_document_806.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["backingCanvas"] = undefined;
-          var reader_kitty_backingCanvas_807 = function() {
+          obj625.methods["document:="] = writer_kitty_document_814;
+          reader_kitty_document_814.confidential = true;
+          writer_kitty_document_814.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["backingCanvas"] = undefined;
+          var reader_kitty_backingCanvas_815 = function() {
             return this.data["backingCanvas"];
           }
-          obj620.methods["backingCanvas"] = reader_kitty_backingCanvas_807;
-          obj620.data["backingCanvas"] = undefined;
-          var writer_kitty_backingCanvas_807 = function(argcv, o) {
+          obj625.methods["backingCanvas"] = reader_kitty_backingCanvas_815;
+          obj625.data["backingCanvas"] = undefined;
+          var writer_kitty_backingCanvas_815 = function(argcv, o) {
             this.data["backingCanvas"] = o;
           }
-          obj620.methods["backingCanvas:="] = writer_kitty_backingCanvas_807;
-          reader_kitty_backingCanvas_807.confidential = true;
-          writer_kitty_backingCanvas_807.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["backingContext"] = undefined;
-          var reader_kitty_backingContext_808 = function() {
+          obj625.methods["backingCanvas:="] = writer_kitty_backingCanvas_815;
+          reader_kitty_backingCanvas_815.confidential = true;
+          writer_kitty_backingCanvas_815.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["backingContext"] = undefined;
+          var reader_kitty_backingContext_816 = function() {
             return this.data["backingContext"];
           }
-          obj620.methods["backingContext"] = reader_kitty_backingContext_808;
-          obj620.data["backingContext"] = undefined;
-          var writer_kitty_backingContext_808 = function(argcv, o) {
+          obj625.methods["backingContext"] = reader_kitty_backingContext_816;
+          obj625.data["backingContext"] = undefined;
+          var writer_kitty_backingContext_816 = function(argcv, o) {
             this.data["backingContext"] = o;
           }
-          obj620.methods["backingContext:="] = writer_kitty_backingContext_808;
-          reader_kitty_backingContext_808.confidential = true;
-          writer_kitty_backingContext_808.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["canvas"] = undefined;
-          var reader_kitty_canvas_809 = function() {
+          obj625.methods["backingContext:="] = writer_kitty_backingContext_816;
+          reader_kitty_backingContext_816.confidential = true;
+          writer_kitty_backingContext_816.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["canvas"] = undefined;
+          var reader_kitty_canvas_817 = function() {
             return this.data["canvas"];
           }
-          obj620.methods["canvas"] = reader_kitty_canvas_809;
-          obj620.data["canvas"] = undefined;
-          var writer_kitty_canvas_809 = function(argcv, o) {
+          obj625.methods["canvas"] = reader_kitty_canvas_817;
+          obj625.data["canvas"] = undefined;
+          var writer_kitty_canvas_817 = function(argcv, o) {
             this.data["canvas"] = o;
           }
-          obj620.methods["canvas:="] = writer_kitty_canvas_809;
-          reader_kitty_canvas_809.confidential = true;
-          writer_kitty_canvas_809.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["canvasWidth"] = undefined;
-          var reader_kitty_canvasWidth_810 = function() {
+          obj625.methods["canvas:="] = writer_kitty_canvas_817;
+          reader_kitty_canvas_817.confidential = true;
+          writer_kitty_canvas_817.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["canvasWidth"] = undefined;
+          var reader_kitty_canvasWidth_818 = function() {
             return this.data["canvasWidth"];
           }
-          obj620.methods["canvasWidth"] = reader_kitty_canvasWidth_810;
-          obj620.data["canvasWidth"] = undefined;
-          var writer_kitty_canvasWidth_810 = function(argcv, o) {
+          obj625.methods["canvasWidth"] = reader_kitty_canvasWidth_818;
+          obj625.data["canvasWidth"] = undefined;
+          var writer_kitty_canvasWidth_818 = function(argcv, o) {
             this.data["canvasWidth"] = o;
           }
-          obj620.methods["canvasWidth:="] = writer_kitty_canvasWidth_810;
-          reader_kitty_canvasWidth_810.confidential = true;
-          writer_kitty_canvasWidth_810.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["canvasHeight"] = undefined;
-          var reader_kitty_canvasHeight_811 = function() {
+          obj625.methods["canvasWidth:="] = writer_kitty_canvasWidth_818;
+          reader_kitty_canvasWidth_818.confidential = true;
+          writer_kitty_canvasWidth_818.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["canvasHeight"] = undefined;
+          var reader_kitty_canvasHeight_819 = function() {
             return this.data["canvasHeight"];
           }
-          obj620.methods["canvasHeight"] = reader_kitty_canvasHeight_811;
-          obj620.data["canvasHeight"] = undefined;
-          var writer_kitty_canvasHeight_811 = function(argcv, o) {
+          obj625.methods["canvasHeight"] = reader_kitty_canvasHeight_819;
+          obj625.data["canvasHeight"] = undefined;
+          var writer_kitty_canvasHeight_819 = function(argcv, o) {
             this.data["canvasHeight"] = o;
           }
-          obj620.methods["canvasHeight:="] = writer_kitty_canvasHeight_811;
-          reader_kitty_canvasHeight_811.confidential = true;
-          writer_kitty_canvasHeight_811.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 215
-          var call812 = callmethod(var_collections,"list", [0]);
-          var call813 = callmethod(call812,"new", [0]);
-          obj620.data["entities"] = call813;
-          var reader_kitty_entities_814 = function() {
+          obj625.methods["canvasHeight:="] = writer_kitty_canvasHeight_819;
+          reader_kitty_canvasHeight_819.confidential = true;
+          writer_kitty_canvasHeight_819.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 175
+          var call820 = callmethod(var_collections,"list", [0]);
+          var call821 = callmethod(call820,"new", [0]);
+          obj625.data["entities"] = call821;
+          var reader_kitty_entities_822 = function() {
             return this.data["entities"];
           }
-          obj620.methods["entities"] = reader_kitty_entities_814;
-          obj620.data["entities"] = call813;
-          var writer_kitty_entities_814 = function(argcv, o) {
+          obj625.methods["entities"] = reader_kitty_entities_822;
+          obj625.data["entities"] = call821;
+          var writer_kitty_entities_822 = function(argcv, o) {
             this.data["entities"] = o;
           }
-          obj620.methods["entities:="] = writer_kitty_entities_814;
-          reader_kitty_entities_814.confidential = true;
-          writer_kitty_entities_814.confidential = true;
-          lineNumber = 217;
+          obj625.methods["entities:="] = writer_kitty_entities_822;
+          reader_kitty_entities_822.confidential = true;
+          writer_kitty_entities_822.confidential = true;
+          lineNumber = 177;
           moduleName = "kitty";
-          lineNumber = 215
+          lineNumber = 175
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call813)))
+            [1], call821)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'entities' to be of type Unknown"))
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 217
-          var bool815 = new GraceBoolean(false)
-          obj620.data["isInit"] = bool815;
-          var reader_kitty_isInit_816 = function() {
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 177
+          var bool823 = new GraceBoolean(false)
+          obj625.data["isInit"] = bool823;
+          var reader_kitty_isInit_824 = function() {
             return this.data["isInit"];
           }
-          obj620.methods["isInit"] = reader_kitty_isInit_816;
-          obj620.data["isInit"] = bool815;
-          var writer_kitty_isInit_816 = function(argcv, o) {
+          obj625.methods["isInit"] = reader_kitty_isInit_824;
+          obj625.data["isInit"] = bool823;
+          var writer_kitty_isInit_824 = function(argcv, o) {
             this.data["isInit"] = o;
           }
-          obj620.methods["isInit:="] = writer_kitty_isInit_816;
-          reader_kitty_isInit_816.confidential = true;
-          writer_kitty_isInit_816.confidential = true;
-          lineNumber = 218;
+          obj625.methods["isInit:="] = writer_kitty_isInit_824;
+          reader_kitty_isInit_824.confidential = true;
+          writer_kitty_isInit_824.confidential = true;
+          lineNumber = 178;
           moduleName = "kitty";
-          lineNumber = 217
+          lineNumber = 177
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], bool815)))
+            [1], bool823)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'isInit' to be of type Unknown"))
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 218
-          var bool817 = new GraceBoolean(false)
-          obj620.data["isRunning"] = bool817;
-          var reader_kitty_isRunning_818 = function() {
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 178
+          var bool825 = new GraceBoolean(false)
+          obj625.data["isRunning"] = bool825;
+          var reader_kitty_isRunning_826 = function() {
             return this.data["isRunning"];
           }
-          obj620.methods["isRunning"] = reader_kitty_isRunning_818;
-          obj620.data["isRunning"] = bool817;
-          var writer_kitty_isRunning_818 = function(argcv, o) {
+          obj625.methods["isRunning"] = reader_kitty_isRunning_826;
+          obj625.data["isRunning"] = bool825;
+          var writer_kitty_isRunning_826 = function(argcv, o) {
             this.data["isRunning"] = o;
           }
-          obj620.methods["isRunning:="] = writer_kitty_isRunning_818;
-          reader_kitty_isRunning_818.confidential = true;
-          writer_kitty_isRunning_818.confidential = true;
-          lineNumber = 220;
+          obj625.methods["isRunning:="] = writer_kitty_isRunning_826;
+          reader_kitty_isRunning_826.confidential = true;
+          writer_kitty_isRunning_826.confidential = true;
+          lineNumber = 180;
           moduleName = "kitty";
-          lineNumber = 218
+          lineNumber = 178
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], bool817)))
+            [1], bool825)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'isRunning' to be of type Unknown"))
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["mctx"] = undefined;
-          var reader_kitty_mctx_819 = function() {
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["mctx"] = undefined;
+          var reader_kitty_mctx_827 = function() {
             return this.data["mctx"];
           }
-          obj620.methods["mctx"] = reader_kitty_mctx_819;
-          obj620.data["mctx"] = undefined;
-          var writer_kitty_mctx_819 = function(argcv, o) {
+          obj625.methods["mctx"] = reader_kitty_mctx_827;
+          obj625.data["mctx"] = undefined;
+          var writer_kitty_mctx_827 = function(argcv, o) {
             this.data["mctx"] = o;
           }
-          obj620.methods["mctx:="] = writer_kitty_mctx_819;
-          reader_kitty_mctx_819.confidential = true;
-          writer_kitty_mctx_819.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 224
-          lineNumber = 222
-          var call820 = callmethod(new GraceNum(1),"prefix-", [0]);
-          obj620.data["currentKeyDown"] = call820;
-          var reader_kitty_currentKeyDown_821 = function() {
+          obj625.methods["mctx:="] = writer_kitty_mctx_827;
+          reader_kitty_mctx_827.confidential = true;
+          writer_kitty_mctx_827.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 184
+          lineNumber = 182
+          var call828 = callmethod(new GraceNum(1),"prefix-", [0]);
+          obj625.data["currentKeyDown"] = call828;
+          var reader_kitty_currentKeyDown_829 = function() {
             return this.data["currentKeyDown"];
           }
-          obj620.methods["currentKeyDown"] = reader_kitty_currentKeyDown_821;
-          obj620.data["currentKeyDown"] = call820;
-          var writer_kitty_currentKeyDown_821 = function(argcv, o) {
+          obj625.methods["currentKeyDown"] = reader_kitty_currentKeyDown_829;
+          obj625.data["currentKeyDown"] = call828;
+          var writer_kitty_currentKeyDown_829 = function(argcv, o) {
             this.data["currentKeyDown"] = o;
           }
-          obj620.methods["currentKeyDown:="] = writer_kitty_currentKeyDown_821;
-          reader_kitty_currentKeyDown_821.confidential = true;
-          writer_kitty_currentKeyDown_821.confidential = true;
-          lineNumber = 224;
+          obj625.methods["currentKeyDown:="] = writer_kitty_currentKeyDown_829;
+          reader_kitty_currentKeyDown_829.confidential = true;
+          writer_kitty_currentKeyDown_829.confidential = true;
+          lineNumber = 184;
           moduleName = "kitty";
-          lineNumber = 222
+          lineNumber = 182
           if (!Grace_isTrue(callmethod(var_Unknown, "match",
-            [1], call820)))
+            [1], call828)))
               throw new GraceExceptionPacket(TypeErrorObject,
                     new GraceString("expected "
                     + "initial value of var 'currentKeyDown' to be of type Unknown"))
-          obj620.mutable = true;
-          sourceObject = obj620;
-          obj620.data["ent"] = undefined;
-          var reader_kitty_ent_822 = function() {
+          obj625.mutable = true;
+          sourceObject = obj625;
+          obj625.data["ent"] = undefined;
+          var reader_kitty_ent_830 = function() {
             return this.data["ent"];
           }
-          obj620.methods["ent"] = reader_kitty_ent_822;
-          obj620.data["ent"] = undefined;
-          var writer_kitty_ent_822 = function(argcv, o) {
+          obj625.methods["ent"] = reader_kitty_ent_830;
+          obj625.data["ent"] = undefined;
+          var writer_kitty_ent_830 = function(argcv, o) {
             this.data["ent"] = o;
           }
-          obj620.methods["ent:="] = writer_kitty_ent_822;
-          reader_kitty_ent_822.confidential = true;
-          writer_kitty_ent_822.confidential = true;
-          obj620.mutable = true;
-          sourceObject = obj620;
-          lineNumber = 226
+          obj625.methods["ent:="] = writer_kitty_ent_830;
+          reader_kitty_ent_830.confidential = true;
+          writer_kitty_ent_830.confidential = true;
+          obj625.mutable = true;
+          sourceObject = obj625;
+          lineNumber = 186
           onSelf = true;
-          var call823 = callmethod(this, "init", [0]);
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
-          sourceObject = obj620;
+          var call831 = callmethod(this, "init", [0]);
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
+          sourceObject = obj625;
           superDepth = origSuperDepth;
         }
-        obj_init_620.apply(inheritingObject, []);
-        return obj620
+        obj_init_625.apply(inheritingObject, []);
+        return obj625
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -5021,16 +5041,16 @@ function gracecode_kitty () {
         }
       }
     }
-    obj412.methods["new()object"] = func619;
-    var func824 = function(argcv) {
+    obj414.methods["new()object"] = func624;
+    var func832 = function(argcv) {
       var curarg = 1;
       var returnTarget = invocationCount;
       invocationCount++;
       moduleName = "kitty";
       try {
-        lineNumber = 199
-        var string825 = new GraceString("class KittyWorld");
-        return string825
+        lineNumber = 159
+        var string833 = new GraceString("class KittyWorld");
+        return string833
       } catch(e) {
         if ((e.exctype == 'return') && (e.target == returnTarget)) {
           return e.returnvalue;
@@ -5039,24 +5059,24 @@ function gracecode_kitty () {
         }
       }
     }
-    func824.paramCounts = [
+    func832.paramCounts = [
     ];
-    func824.variableArities = [
+    func832.variableArities = [
     ];
-    obj412.methods["asDebugString"] = func824;
-    func824.definitionLine = 199;
-    func824.definitionModule = "kitty";
-    sourceObject = obj412;
-    sourceObject = obj412;
+    obj414.methods["asDebugString"] = func832;
+    func832.definitionLine = 159;
+    func832.definitionModule = "kitty";
+    sourceObject = obj414;
+    sourceObject = obj414;
     superDepth = origSuperDepth;
   }
-  obj_init_412.apply(obj412, []);
-  var var_KittyWorld = obj412;
-  lineNumber = 350
-  lineNumber = 359
-  lineNumber = 374
-  lineNumber = 378
-  lineNumber = 383
+  obj_init_414.apply(obj414, []);
+  var var_KittyWorld = obj414;
+  lineNumber = 313
+  lineNumber = 322
+  lineNumber = 337
+  lineNumber = 341
+  lineNumber = 346
   return this;
 }
 gracecode_kitty.imports = [
@@ -5065,7 +5085,7 @@ gracecode_kitty.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['kitty'] = "public:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n newborn\n newborn:=\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n KittyWorld\n World\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n getTag\n elements\n width\n height\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\nfresh:Entity()x()y:\n action\n posX:=\n posY:=\n image\n rotation:=\n awake\n posX\n posY\n draw\n setImage\n rotation\n tag:=\n move\n tag\n turn\n strafe\n setAction\n tick\n setLocation\n createImage\n getY\n action:=\n getX\n getRotation\n image:=\nmethods-of:KittyWorld.new:\n canvas\n isRunning\n ent:=\n background\n stop\n isInit:=\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n entities:=\n ent\n document\n backingCanvas:=\n update\n backingContext\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n entities\n currentKeyDown\n addEntity\n backingContext:=\n isInit\n mctx:=\n canvasWidth\n isRunning:=\n backgroundColour:=\n canvasHeight:=\n start\n init\n canvasHeight\n getContext\n currentKeyDown:=\nconstructors-of:KittyEntity:\n new\nconstructors-of:KittyImage:\n new\nclasses:\n KittyImage\n KittyEntity\n KittyWorld\npath:\n kitty\nfresh:Image()width()height:\n getTag\n elements\n width\n imgTag\n draw\n height:=\n drawImage\n elements:=\n width:=\n height\nconstructors-of:KittyWorld:\n new\nconfidential:\nfresh:World:\n canvas\n isRunning\n ent:=\n background\n stop\n ent\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n canvasWidth\n isInit:=\n document\n backingCanvas:=\n update\n backingContext\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n entities\n currentKeyDown\n addEntity\n backgroundColour:=\n isInit\n mctx:=\n entities:=\n isRunning:=\n backingContext:=\n canvasHeight:=\n start\n init\n canvasHeight\n getContext\n currentKeyDown:=\nfresh-methods:\n Image()width()height\n Entity()x()y\n World\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n action\n posX:=\n posY:=\n image\n rotation:=\n turn\n posX\n posY\n draw\n setImage\n rotation\n tag:=\n move\n tag\n awake\n strafe\n setAction\n tick\n getX\n createImage\n getRotation\n action:=\n setLocation\n getY\n image:=\n";
+  gctCache['kitty'] = "fresh:Image()width()height:\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n height\n getTag\n elements\n width\npath:\n kitty\nclasses:\n KittyImage\n KittyEntity\n KittyWorld\nconfidential:\nconstructors-of:KittyWorld:\n new\nconstructors-of:KittyImage:\n new\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n awake\n setAction\n getRotation\n tag:=\n action:=\n createImage\n getX\n getY\n tag\n action\n posX:=\n posY:=\n setLocation\n rotation:=\n turn\n posX\n posY\n draw\n setImage\n rotation\n move\n image:=\n tick\n image\n strafe\nfresh-methods:\n Image()width()height\n Entity()x()y\n World\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n kitten\n kitten:=\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n KittyWorld\n World\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n height\n getTag\n elements\n width\nfresh:Entity()x()y:\n awake\n setAction\n getRotation\n tag:=\n action:=\n createImage\n getX\n getY\n tag\n action\n posX:=\n posY:=\n setLocation\n rotation:=\n turn\n posX\n posY\n draw\n setImage\n rotation\n move\n image:=\n tick\n image\n strafe\nmethods-of:KittyWorld.new:\n backingContext:=\n setBackground\n canvasWidth:=\n backingContext\n canvasHeight\n currentKeyDown:=\n canvasWidth\n entities:=\n currentKeyDown\n stop\n isInit:=\n backingCanvas\n isInit\n mctx:=\n isRunning:=\n mctx\n document\n addEntity\n ent\n backgroundColour:=\n canvasHeight:=\n canvas:=\n backgroundColour\n background:=\n canvas\n background\n backingCanvas:=\n isRunning\n getContext\n start\n init\n document:=\n isKeyDown\n ent:=\n update\n entities\nfresh:World:\n backingContext:=\n setBackground\n canvasWidth:=\n backingContext\n canvasHeight\n currentKeyDown:=\n canvasWidth\n mctx\n currentKeyDown\n stop\n isInit:=\n backingCanvas\n isInit\n mctx:=\n isRunning:=\n entities:=\n document\n addEntity\n ent\n backgroundColour:=\n canvasHeight:=\n canvas:=\n backgroundColour\n background:=\n canvas\n background\n backingCanvas:=\n isRunning\n entities\n start\n init\n document:=\n isKeyDown\n ent:=\n update\n getContext\nconstructors-of:KittyEntity:\n new\n";
 if (originalSourceLines) {
   originalSourceLines["kitty"] = [
     "import \"mgcollections\" as collections",
@@ -5087,7 +5107,7 @@ if (originalSourceLines) {
     "def math = dom.window.Math",
     "",
     "// Last object created",
-    "var newborn",
+    "var kitten",
     "",
     "// XXX: Control functions are at the bottom",
     "",
@@ -5153,7 +5173,8 @@ if (originalSourceLines) {
     "    // Called on creation",
     "    method awake {",
     "        createImage(\"realyee.png\")",
-    "        newborn := self",
+    "        kitten := self",
+    "        m_world.addEntity(self)",
     "    }",
     "",
     "    method tick() {",
@@ -5218,51 +5239,10 @@ if (originalSourceLines) {
     "    }",
     "} ",
     "",
-    "// XXX: Gross but neccessary",
     "// ======== KITTY METHODS ========== //",
     "method update(action') {",
-    "    newborn.setAction(action')",
+    "    kitten.setAction(action')",
     "}",
-    "",
-    "// method move(distance') {",
-    "//     newborn.move(distance')",
-    "// }",
-    "",
-    "// method strafe(distance') {",
-    "//     newborn.strafe(distance')",
-    "// }",
-    "",
-    "// method turn(angle') {",
-    "//     newborn.turn(angle')",
-    "// }",
-    "",
-    "// // method setLocation(x, y) {",
-    "// //     newborn.setLocation(x, y)",
-    "// // }",
-    "",
-    "// method setImage(image': KittyImage) {",
-    "//     newborn.setImage(image')",
-    "// }",
-    "",
-    "// method createImage(url') {",
-    "//     newborn.createImage(url')",
-    "// }",
-    "",
-    "// method setX(x') {",
-    "//     newborn.setLocation(x', newborn.getY)",
-    "// }",
-    "",
-    "// method setY(y') {",
-    "//     newborn.setLocation(newborn.getX, y')",
-    "// }",
-    "",
-    "// method getX {",
-    "//     return newborn.getX",
-    "// }",
-    "",
-    "// method getY {",
-    "//     return newborn.getY",
-    "// }",
     "// ========================== //",
     "",
     "// Represents the game world itself",
@@ -5354,6 +5334,9 @@ if (originalSourceLines) {
     "        // Image(url)width(canvasWidth)height(canvasHeight)",
     "",
     "        isInit := true",
+    "",
+    "        // Set the world",
+    "        setWorld(self)",
     "        // print \"INITIALIZATION FINISHED\"",
     "",
     "        // Start the game",

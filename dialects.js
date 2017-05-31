@@ -900,15 +900,24 @@ extendDialect("sniff", "StandardGrace");
 
 dialects.kitty = {
     methods: {
-        "setWorld": {
-            name: "setWorld",
+        "kitten": {
+            name: "kitten",
             parts: [{
-                name: "setWorld",
-                args: ["Object"]
+                name: "kitten",
+                args: []
             }],
-            description: "Sets the world for the game",
+            description: "Refers to the last object created.",
             returns: "Done"
         },
+        // "setWorld": {
+        //     name: "setWorld",
+        //     parts: [{
+        //         name: "setWorld",
+        //         args: ["Object"]
+        //     }],
+        //     description: "Sets the world for the game",
+        //     returns: "Done"
+        // },
         "stop": {
             name: "stop",
             parts: [{

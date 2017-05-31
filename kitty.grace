@@ -17,7 +17,7 @@ var mouseDownListener
 def math = dom.window.Math
 
 // Last object created
-var newborn
+var kitten
 
 // XXX: Control functions are at the bottom
 
@@ -83,7 +83,8 @@ class KittyEntity.new(tag', x', y') {
     // Called on creation
     method awake {
         createImage("realyee.png")
-        newborn := self
+        kitten := self
+        m_world.addEntity(self)
     }
 
     method tick() {
@@ -150,7 +151,7 @@ method Entity(tag')x(x')y(y') {
 
 // ======== KITTY METHODS ========== //
 method update(action') {
-    newborn.setAction(action')
+    kitten.setAction(action')
 }
 // ========================== //
 
@@ -243,6 +244,9 @@ class KittyWorld.new() {
         // Image(url)width(canvasWidth)height(canvasHeight)
 
         isInit := true
+
+        // Set the world
+        setWorld(self)
         // print "INITIALIZATION FINISHED"
 
         // Start the game
