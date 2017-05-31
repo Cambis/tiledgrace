@@ -148,51 +148,10 @@ method Entity(tag')x(x')y(y') {
     }
 } 
 
-// XXX: Gross but neccessary
 // ======== KITTY METHODS ========== //
 method update(action') {
     newborn.setAction(action')
 }
-
-// method move(distance') {
-//     newborn.move(distance')
-// }
-
-// method strafe(distance') {
-//     newborn.strafe(distance')
-// }
-
-// method turn(angle') {
-//     newborn.turn(angle')
-// }
-
-// // method setLocation(x, y) {
-// //     newborn.setLocation(x, y)
-// // }
-
-// method setImage(image': KittyImage) {
-//     newborn.setImage(image')
-// }
-
-// method createImage(url') {
-//     newborn.createImage(url')
-// }
-
-// method setX(x') {
-//     newborn.setLocation(x', newborn.getY)
-// }
-
-// method setY(y') {
-//     newborn.setLocation(newborn.getX, y')
-// }
-
-// method getX {
-//     return newborn.getX
-// }
-
-// method getY {
-//     return newborn.getY
-// }
 // ========================== //
 
 // Represents the game world itself
@@ -337,7 +296,7 @@ class KittyWorld.new() {
         background := Image(url)width(canvasWidth)height(canvasHeight)
     }
 
-    method addEntity(e: KittyEntity) {
+    method addEntity(e) {
         return entities.push(e)
     }
 

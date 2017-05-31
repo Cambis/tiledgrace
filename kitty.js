@@ -3748,8 +3748,6 @@ function gracecode_kitty () {
               }
             }
           }
-          func593.paramTypes = [];
-          func593.paramTypes.push([]);
           func593.paramCounts = [
             1,
           ];
@@ -4712,8 +4710,6 @@ function gracecode_kitty () {
               }
             }
           }
-          func798.paramTypes = [];
-          func798.paramTypes.push([]);
           func798.paramCounts = [
             1,
           ];
@@ -5069,7 +5065,7 @@ gracecode_kitty.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['kitty'] = "classes:\n KittyImage\n KittyEntity\n KittyWorld\nconfidential:\nconstructors-of:KittyWorld:\n new\nfresh:World:\n isKeyDown\n document:=\n canvasWidth\n document\n update\n getContext\n backgroundColour:=\n start\n canvas:=\n isRunning:=\n background:=\n mctx\n isRunning\n ent:=\n currentKeyDown\n ent\n setBackground\n isInit\n canvasWidth:=\n backingContext:=\n entities:=\n mctx:=\n backingCanvas:=\n entities\n backingContext\n backingCanvas\n canvasHeight:=\n init\n canvasHeight\n stop\n currentKeyDown:=\n canvas\n background\n backgroundColour\n addEntity\n isInit:=\nfresh-methods:\n Image()width()height\n Entity()x()y\n World\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n draw\n setImage\n rotation\n tag:=\n setLocation\n getRotation\n move\n tag\n strafe\n createImage\n setAction\n action:=\n getX\n getY\n image:=\n action\n awake\n posX:=\n posY:=\n image\n posY\n rotation:=\n turn\n posX\n tick\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n newborn\n newborn:=\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n KittyWorld\n World\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n draw\n height:=\n drawImage\n elements:=\n height\n width:=\n imgTag\n getTag\n elements\n width\nfresh:Entity()x()y:\n draw\n setImage\n rotation\n tag:=\n strafe\n getRotation\n move\n tag\n setLocation\n createImage\n posX\n action:=\n getX\n getY\n image:=\n action\n turn\n posX:=\n posY:=\n image\n tick\n rotation:=\n awake\n setAction\n posY\nfresh:Image()width()height:\n draw\n height:=\n drawImage\n elements:=\n height\n width:=\n imgTag\n getTag\n elements\n width\nmethods-of:KittyWorld.new:\n isRunning\n document:=\n mctx\n document\n update\n getContext\n backingContext:=\n start\n canvas:=\n isRunning:=\n background:=\n canvasWidth\n isKeyDown\n ent:=\n currentKeyDown\n ent\n setBackground\n isInit\n canvasWidth:=\n backgroundColour:=\n entities:=\n mctx:=\n backingCanvas:=\n entities\n backgroundColour\n backingCanvas\n canvasHeight:=\n init\n canvasHeight\n addEntity\n currentKeyDown:=\n canvas\n background\n backingContext\n stop\n isInit:=\nconstructors-of:KittyEntity:\n new\nconstructors-of:KittyImage:\n new\npath:\n kitty\n";
+  gctCache['kitty'] = "public:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n math\n newborn\n newborn:=\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n KittyWorld\n World\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n getTag\n elements\n width\n height\n draw\n height:=\n drawImage\n elements:=\n width:=\n imgTag\nfresh:Entity()x()y:\n action\n posX:=\n posY:=\n image\n rotation:=\n awake\n posX\n posY\n draw\n setImage\n rotation\n tag:=\n move\n tag\n turn\n strafe\n setAction\n tick\n setLocation\n createImage\n getY\n action:=\n getX\n getRotation\n image:=\nmethods-of:KittyWorld.new:\n canvas\n isRunning\n ent:=\n background\n stop\n isInit:=\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n entities:=\n ent\n document\n backingCanvas:=\n update\n backingContext\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n entities\n currentKeyDown\n addEntity\n backingContext:=\n isInit\n mctx:=\n canvasWidth\n isRunning:=\n backgroundColour:=\n canvasHeight:=\n start\n init\n canvasHeight\n getContext\n currentKeyDown:=\nconstructors-of:KittyEntity:\n new\nconstructors-of:KittyImage:\n new\nclasses:\n KittyImage\n KittyEntity\n KittyWorld\npath:\n kitty\nfresh:Image()width()height:\n getTag\n elements\n width\n imgTag\n draw\n height:=\n drawImage\n elements:=\n width:=\n height\nconstructors-of:KittyWorld:\n new\nconfidential:\nfresh:World:\n canvas\n isRunning\n ent:=\n background\n stop\n ent\n isKeyDown\n setBackground\n canvasWidth:=\n document:=\n mctx\n canvasWidth\n isInit:=\n document\n backingCanvas:=\n update\n backingContext\n backingCanvas\n canvas:=\n backgroundColour\n background:=\n entities\n currentKeyDown\n addEntity\n backgroundColour:=\n isInit\n mctx:=\n entities:=\n isRunning:=\n backingContext:=\n canvasHeight:=\n start\n init\n canvasHeight\n getContext\n currentKeyDown:=\nfresh-methods:\n Image()width()height\n Entity()x()y\n World\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n action\n posX:=\n posY:=\n image\n rotation:=\n turn\n posX\n posY\n draw\n setImage\n rotation\n tag:=\n move\n tag\n awake\n strafe\n setAction\n tick\n getX\n createImage\n getRotation\n action:=\n setLocation\n getY\n image:=\n";
 if (originalSourceLines) {
   originalSourceLines["kitty"] = [
     "import \"mgcollections\" as collections",
@@ -5411,7 +5407,7 @@ if (originalSourceLines) {
     "        background := Image(url)width(canvasWidth)height(canvasHeight)",
     "    }",
     "",
-    "    method addEntity(e: KittyEntity) {",
+    "    method addEntity(e) {",
     "        return entities.push(e)",
     "    }",
     "",
