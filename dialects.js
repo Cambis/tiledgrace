@@ -1012,7 +1012,8 @@ dialects.kitty = {
                 args: ['KittyImage']
             }],
             returns: 'Done',
-            description: 'Set the image of an Entity.'
+            description: 'Set the image of an Entity.',
+            selfcall: true
         },
         'createImage': {
             name: 'createImage',
@@ -1021,7 +1022,8 @@ dialects.kitty = {
                 args: ['String']
             }],
             returns: 'Done',
-            description: 'Create the image of an Entity.'
+            description: 'Create the image of an Entity.',
+            selfcall: true
         },
         'setBackground': {
             name: 'setBackground',
@@ -1030,7 +1032,8 @@ dialects.kitty = {
                 args: ['String']
             }],
             returns: 'Done',
-            description: 'Set the background of the World.'
+            description: 'Set the background of the World.',
+            selfcall: true
         },
         // 'getX': {
         //     name: 'getX',
