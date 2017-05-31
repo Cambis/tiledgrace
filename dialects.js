@@ -918,8 +918,8 @@ dialects.kitty = {
             description: "Stop the world.",
             returns: "Done"
         },
-        "Entity()x()y()actions": {
-            name: "Entity()x()y()actions",
+        "Entity()x()y": {
+            name: "Entity()x()y",
             parts: [{
                     name: "Entity",
                     args: [{
@@ -941,21 +941,12 @@ dialects.kitty = {
                         description: "Y coordinate"
                     }]
                 },
-                {
-                    name: 'actions',
-                    args: [{
-                        type: 'Block',
-                        returns: 'Any',
-                        multiline: true,
-                        selfcall: true,
-                    }]
-                }
             ],
-            returns: "Done",
-            selfcall: true,
+            returns: "Object",
+            // selfcall: true,
             description: "Create an entity object",
-            toplevel: true,
-            multiline: true,
+            // toplevel: true,
+            // multiline: true,
             inheritedVars: ["tag", "posX", "posY", "rotation", "action"]
         },
         'update': {
@@ -972,7 +963,7 @@ dialects.kitty = {
             multiline: true,
             selfcall: true,
             description: 'Update',
-            toplevel: true
+            // toplevel: true
         },
         'move': {
             name: 'move',
@@ -984,80 +975,80 @@ dialects.kitty = {
             description: 'Move in the current direction object is facing',
             selfcall: true
         },
-        'strafe': {
-            name: 'strafe',
-            parts: [{
-                name: 'strafe',
-                args: ['Number']
-            }],
-            returns: 'Done',
-            description: 'Move 90 degrees to the current direction object is facing',
-            selfcall: true
-        },
-        'turn': {
-            name: 'turn',
-            parts: [{
-                name: 'turn',
-                args: ['Number']
-            }],
-            returns: 'Done',
-            description: 'Turn object according to angle',
-            selfcall: true
-        },
-        'setImage': {
-            name: 'setImage',
-            parts: [{
-                name: 'setImage',
-                args: ['KittyImage']
-            }],
-            returns: 'Done',
-            description: 'Set the image of an Entity.'
-        },
-        'createImage': {
-            name: 'createImage',
-            parts: [{
-                name: 'createImage',
-                args: ['String']
-            }],
-            returns: 'Done',
-            description: 'Create the image of an Entity.'
-        },
-        'getX': {
-            name: 'getX',
-            parts: [{
-                name: 'getX',
-                args: []
-            }],
-            returns: 'Number',
-            description: 'Return x positon of object'
-        },
-        'getY': {
-            name: 'getY',
-            parts: [{
-                name: 'getY',
-                args: []
-            }],
-            returns: 'Number',
-            description: 'Return y positon of object'
-        },
-        'setX': {
-            name: 'setX',
-            parts: [{
-                name: 'setX',
-                args: ['Number']
-            }],
-            returns: 'Done',
-            description: 'Set x position of object'
-        },
-        'setY': {
-            name: 'setY',
-            parts: [{
-                name: 'setY',
-                args: ['Number']
-            }],
-            returns: 'Done',
-            description: 'Set y position of object'
-        },
+        // 'strafe': {
+        //     name: 'strafe',
+        //     parts: [{
+        //         name: 'strafe',
+        //         args: ['Number']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Move 90 degrees to the current direction object is facing',
+        //     selfcall: true
+        // },
+        // 'turn': {
+        //     name: 'turn',
+        //     parts: [{
+        //         name: 'turn',
+        //         args: ['Number']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Turn object according to angle',
+        //     selfcall: true
+        // },
+        // 'setImage': {
+        //     name: 'setImage',
+        //     parts: [{
+        //         name: 'setImage',
+        //         args: ['KittyImage']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Set the image of an Entity.'
+        // },
+        // 'createImage': {
+        //     name: 'createImage',
+        //     parts: [{
+        //         name: 'createImage',
+        //         args: ['String']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Create the image of an Entity.'
+        // },
+        // 'getX': {
+        //     name: 'getX',
+        //     parts: [{
+        //         name: 'getX',
+        //         args: []
+        //     }],
+        //     returns: 'Number',
+        //     description: 'Return x positon of object'
+        // },
+        // 'getY': {
+        //     name: 'getY',
+        //     parts: [{
+        //         name: 'getY',
+        //         args: []
+        //     }],
+        //     returns: 'Number',
+        //     description: 'Return y positon of object'
+        // },
+        // 'setX': {
+        //     name: 'setX',
+        //     parts: [{
+        //         name: 'setX',
+        //         args: ['Number']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Set x position of object'
+        // },
+        // 'setY': {
+        //     name: 'setY',
+        //     parts: [{
+        //         name: 'setY',
+        //         args: ['Number']
+        //     }],
+        //     returns: 'Done',
+        //     description: 'Set y position of object'
+        // },
         "World": {
             name: "World",
             parts: [{
@@ -1113,6 +1104,7 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
+dialects.kitty.methods.update.category = "Control";
 dialects.kitty.methods.move.category = "Motion";
 dialects.kitty.methods.strafe.category = "Motion";
 dialects.kitty.methods.turn.category = "Motion";

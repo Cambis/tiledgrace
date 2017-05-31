@@ -86,7 +86,7 @@ class KittyEntity.new(tag', x', y') {
         newborn := self
     }
 
-    method update() {
+    method tick() {
         action.apply
     }
 
@@ -141,10 +141,10 @@ class KittyEntity.new(tag', x', y') {
     }
 } 
 
-method Entity(tag')x(x')y(y')actions(actions') {
+method Entity(tag')x(x')y(y') {
     object {
         inherits KittyEntity.new(tag', x', y')
-        actions'.apply
+        // actions'.apply
     }
 } 
 
@@ -154,45 +154,45 @@ method update(action') {
     newborn.setAction(action')
 }
 
-method move(distance') {
-    newborn.move(distance')
-}
-
-method strafe(distance') {
-    newborn.strafe(distance')
-}
-
-method turn(angle') {
-    newborn.turn(angle')
-}
-
-// method setLocation(x, y) {
-//     newborn.setLocation(x, y)
+// method move(distance') {
+//     newborn.move(distance')
 // }
 
-method setImage(image': KittyImage) {
-    newborn.setImage(image')
-}
+// method strafe(distance') {
+//     newborn.strafe(distance')
+// }
 
-method createImage(url') {
-    newborn.createImage(url')
-}
+// method turn(angle') {
+//     newborn.turn(angle')
+// }
 
-method setX(x') {
-    newborn.setLocation(x', newborn.getY)
-}
+// // method setLocation(x, y) {
+// //     newborn.setLocation(x, y)
+// // }
 
-method setY(y') {
-    newborn.setLocation(newborn.getX, y')
-}
+// method setImage(image': KittyImage) {
+//     newborn.setImage(image')
+// }
 
-method getX {
-    return newborn.getX
-}
+// method createImage(url') {
+//     newborn.createImage(url')
+// }
 
-method getY {
-    return newborn.getY
-}
+// method setX(x') {
+//     newborn.setLocation(x', newborn.getY)
+// }
+
+// method setY(y') {
+//     newborn.setLocation(newborn.getX, y')
+// }
+
+// method getX {
+//     return newborn.getX
+// }
+
+// method getY {
+//     return newborn.getY
+// }
 // ========================== //
 
 // Represents the game world itself
@@ -314,7 +314,7 @@ class KittyWorld.new() {
 
         // Draw the entities
         for (entities) do { entity->
-            entity.update
+            entity.tick
             entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
         }
 
