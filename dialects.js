@@ -984,44 +984,44 @@ dialects.kitty = {
             description: 'Move in the current direction object is facing',
             selfcall: true
         },
-        // 'strafe': {
-        //     name: 'strafe',
-        //     parts: [{
-        //         name: 'strafe',
-        //         args: ['Number']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Move 90 degrees to the current direction object is facing',
-        //     selfcall: true
-        // },
-        // 'turn': {
-        //     name: 'turn',
-        //     parts: [{
-        //         name: 'turn',
-        //         args: ['Number']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Turn object according to angle',
-        //     selfcall: true
-        // },
-        // 'setImage': {
-        //     name: 'setImage',
-        //     parts: [{
-        //         name: 'setImage',
-        //         args: ['KittyImage']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Set the image of an Entity.'
-        // },
-        // 'createImage': {
-        //     name: 'createImage',
-        //     parts: [{
-        //         name: 'createImage',
-        //         args: ['String']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Create the image of an Entity.'
-        // },
+        'strafe': {
+            name: 'strafe',
+            parts: [{
+                name: 'strafe',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Move 90 degrees to the current direction object is facing',
+            selfcall: true
+        },
+        'turn': {
+            name: 'turn',
+            parts: [{
+                name: 'turn',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Turn object according to angle',
+            selfcall: true
+        },
+        'setImage': {
+            name: 'setImage',
+            parts: [{
+                name: 'setImage',
+                args: ['KittyImage']
+            }],
+            returns: 'Done',
+            description: 'Set the image of an Entity.'
+        },
+        'createImage': {
+            name: 'createImage',
+            parts: [{
+                name: 'createImage',
+                args: ['String']
+            }],
+            returns: 'Done',
+            description: 'Create the image of an Entity.'
+        },
         // 'getX': {
         //     name: 'getX',
         //     parts: [{
