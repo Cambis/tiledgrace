@@ -28,7 +28,7 @@ object {
         }
         speed := speed + 1
         altitude := altitude + speed / 10
-        posY := altitude
+        setY (altitude)
         if (posY >= LZ_HEIGHT) then {
             if (speed >= MAX_LANDING_SPEED) then {
                 print ("KA BOOM!!!!!!")

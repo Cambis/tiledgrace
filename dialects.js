@@ -1053,24 +1053,24 @@ dialects.kitty = {
         //     returns: 'Number',
         //     description: 'Return y positon of object'
         // },
-        // 'setX': {
-        //     name: 'setX',
-        //     parts: [{
-        //         name: 'setX',
-        //         args: ['Number']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Set x position of object'
-        // },
-        // 'setY': {
-        //     name: 'setY',
-        //     parts: [{
-        //         name: 'setY',
-        //         args: ['Number']
-        //     }],
-        //     returns: 'Done',
-        //     description: 'Set y position of object'
-        // },
+        'setX': {
+            name: 'setX',
+            parts: [{
+                name: 'setX',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Set x position of object'
+        },
+        'setY': {
+            name: 'setY',
+            parts: [{
+                name: 'setY',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Set y position of object'
+        },
         "World": {
             name: "World",
             parts: [{

@@ -138,6 +138,14 @@ class KittyEntity.new(tag', x', y') {
         return posY
     }
 
+    method setX(posX') {
+        posX := posX'
+    }
+
+    method setY(posY') {
+        posY := posY'
+    }
+
     method getRotation {
         return rotation
     }
