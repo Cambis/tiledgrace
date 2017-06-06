@@ -1060,7 +1060,8 @@ dialects.kitty = {
                 args: ['Number']
             }],
             returns: 'Done',
-            description: 'Set x position of object'
+            description: 'Set x position of object',
+            selfcall: true
         },
         'setY': {
             name: 'setY',
@@ -1069,17 +1070,36 @@ dialects.kitty = {
                 args: ['Number']
             }],
             returns: 'Done',
-            description: 'Set y position of object'
+            description: 'Set y position of object',
+            selfcall: true
         },
-        "World": {
-            name: "World",
+        "World()width()height": {
+            name: "World()width()height",
             parts: [{
-                name: "World",
-                args: []
-            }],
-            returns: "Object",
+                    name: "World",
+                    args: [{
+                        type: "String",
+                        description: "Tag for the World."
+                    }]
+                },
+                {
+                    name: "width",
+                    args: [{
+                        type: "Number",
+                        description: "Width of the world."
+                    }]
+                },
+                {
+                    name: "height",
+                    args: [{
+                        type: "Number",
+                        description: "Height of the World."
+                    }]
+                },
+            ],
+            returns: "Done",
             description: "Create a world object",
-            multiline: true,
+            // multiline: true,
             inheritedVars: [
                 "background",
                 "backgroundColour",

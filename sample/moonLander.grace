@@ -10,7 +10,7 @@ rocketWithThrust.drawImage(rocket.getTag)
 flag.drawImage(rocket.getTag)
 
 object {
-    inherits World
+    inherits World ("moon") width (500) height (500)
     setBackground ("moon.jpg")
 }
 
@@ -18,7 +18,6 @@ object {
     inherits Entity ("player") x (20) y (0 - 200)
     setImage (rocket)
     var speed := 0
-    var altitude := posY
     update {
         if (isKeyDown (87)) then {
             speed := speed - THRUST
@@ -27,18 +26,14 @@ object {
             setImage (rocket)
         }
         speed := speed + 1
-        altitude := altitude + speed / 10
-        setY (altitude)
+        strafe (speed / 10)
         if (posY >= LZ_HEIGHT) then {
             if (speed >= MAX_LANDING_SPEED) then {
-                print ("KA BOOM!!!!!!")
                 setImage (explosion)
-                stop
             } else {
-                print ("ANOTHER HAPPY LANDING")
                 setImage (flag)
-                stop
             }
+            stop
         }
     }
 }

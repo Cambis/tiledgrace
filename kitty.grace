@@ -42,6 +42,7 @@ class KittyImage.new(url', width', height') {
         ctx.translate(dx, dy)
         // ctx.rotate(rot *  180 / 3.14)
         ctx.rotate(rot * 3.14159 / 180)
+        // print "{dx}, {dy}"
         for (elements) do {element->
             ctx.drawImage(element, -width / 2, -height / 2, width, height)
         }
@@ -92,14 +93,14 @@ class KittyEntity.new(tag', x', y') {
         action.apply
     }
 
-    method move(distance) {
-        posX := posX + distance * math.cos(rotation * 3.14159 / 180)
-        posY := posY + distance * math.sin(rotation * 3.14159 / 180)
+    method move(distance) { 
+        posX := posX + distance * m_world.moveWidthMultipler * math.cos(rotation * 3.14159 / 180)
+        posY := posY + distance * m_world.moveHeightMultipler * math.sin(rotation * 3.14159 / 180)
     }
 
     method strafe(distance) {
-        posX := posX + distance * math.cos((90 + rotation) * 3.14159 / 180)
-        posY := posY + distance * math.sin((90 + rotation) * 3.14159 / 180)
+        posX := posX + distance * m_world.moveWidthMultipler * math.cos((90 + rotation) * 3.14159 / 180)
+        posY := posY + distance * m_world.moveHeightMultipler * math.sin((90 + rotation) * 3.14159 / 180)
     }
 
     method turn(angle) {
@@ -169,9 +170,12 @@ method isKeyDown(key) {
 // ========================== //
 
 // Represents the game world itself
-class KittyWorld.new() {
+class KittyWorld.new(tag', width', height') {
 
     // print "CREATING NEW WORLD..."
+    var width is public, readable := width'
+    var height is public, readable := height'
+    var tag is public, readable := tag'
 
     var background
     var backgroundColour := "black"
@@ -182,8 +186,8 @@ class KittyWorld.new() {
     var backingContext
 
     var canvas
-    var canvasWidth
-    var canvasHeight
+    var canvasWidth is public, readable
+    var canvasHeight is public, readable
 
     var entities := collections.list.new
 
@@ -313,12 +317,21 @@ class KittyWorld.new() {
     method getContext {
         return mctx
     }
+
+    method moveWidthMultipler {
+        return canvasWidth / width
+    }
+
+    method moveHeightMultipler {
+        return canvasHeight / height
+    }
+
     // print "WORLD CREATED"
 }
 
-method World {
+method World(tag')width(width')height(height') {
     object {
-        inherits KittyWorld.new()
+        inherits KittyWorld.new(tag', width', height')
     }
 }
 
