@@ -267,6 +267,10 @@ input {
     background: hsl(90, 50%, 35%);
     border: 2px outset hsl(90, 100%, 25%);
 }
+.tile.dialect-method[data-category="Kitty"] {
+    background: hsl(35, 80.6%, 46.5%);
+    border: 2px outset hsl(35, 100%, 36.5%);
+}
 .tile.dialect-method.constant {
     background: hsl(300, 25%, 75%);
     border: 2px outset hsl(300, 100%, 25%);

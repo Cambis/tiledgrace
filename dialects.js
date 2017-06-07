@@ -900,13 +900,32 @@ extendDialect("sniff", "StandardGrace");
 
 dialects.kitty = {
     methods: {
-        "setWorld": {
-            name: "setWorld",
+        "kitten": {
+            name: "kitten",
             parts: [{
-                name: "setWorld",
-                args: ["Object"]
+                name: "kitten",
+                args: []
             }],
-            description: "Sets the world for the game",
+            description: "Refers to the last object created.",
+            returns: "Done"
+        },
+        'isKeyDown': {
+            name: 'isKeyDown',
+            parts: [{
+                name: 'isKeyDown',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Check if a key is pressed',
+            selfcall: true
+        },
+        "stop": {
+            name: "stop",
+            parts: [{
+                name: "stop",
+                args: []
+            }],
+            description: "Stop the world.",
             returns: "Done"
         },
         "Entity()x()y": {
@@ -931,22 +950,156 @@ dialects.kitty = {
                         type: "Number",
                         description: "Y coordinate"
                     }]
-                }
+                },
             ],
-            returns: "Done",
+            returns: "Object",
             // selfcall: true,
             description: "Create an entity object",
             // toplevel: true,
+            // multiline: true,
             inheritedVars: ["tag", "posX", "posY", "rotation", "action"]
         },
-        "World": {
-            name: "World",
+        'update': {
+            name: 'update',
             parts: [{
-                name: "World",
-                args: []
+                name: 'update',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
             }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Update',
+            // toplevel: true
+        },
+        'move': {
+            name: 'move',
+            parts: [{
+                name: 'move',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Move in the current direction object is facing',
+            selfcall: true
+        },
+        'strafe': {
+            name: 'strafe',
+            parts: [{
+                name: 'strafe',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Move 90 degrees to the current direction object is facing',
+            selfcall: true
+        },
+        'turn': {
+            name: 'turn',
+            parts: [{
+                name: 'turn',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Turn object according to angle',
+            selfcall: true
+        },
+        'setImage': {
+            name: 'setImage',
+            parts: [{
+                name: 'setImage',
+                args: ['KittyImage']
+            }],
+            returns: 'Done',
+            description: 'Set the image of an Entity.',
+            selfcall: true
+        },
+        'createImage': {
+            name: 'createImage',
+            parts: [{
+                name: 'createImage',
+                args: ['String']
+            }],
+            returns: 'Done',
+            description: 'Create the image of an Entity.',
+            selfcall: true
+        },
+        'setBackground': {
+            name: 'setBackground',
+            parts: [{
+                name: 'setBackground',
+                args: ['String']
+            }],
+            returns: 'Done',
+            description: 'Set the background of the World.',
+            selfcall: true
+        },
+        // 'getX': {
+        //     name: 'getX',
+        //     parts: [{
+        //         name: 'getX',
+        //         args: []
+        //     }],
+        //     returns: 'Number',
+        //     description: 'Return x positon of object'
+        // },
+        // 'getY': {
+        //     name: 'getY',
+        //     parts: [{
+        //         name: 'getY',
+        //         args: []
+        //     }],
+        //     returns: 'Number',
+        //     description: 'Return y positon of object'
+        // },
+        'setX': {
+            name: 'setX',
+            parts: [{
+                name: 'setX',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Set x position of object',
+            selfcall: true
+        },
+        'setY': {
+            name: 'setY',
+            parts: [{
+                name: 'setY',
+                args: ['Number']
+            }],
+            returns: 'Done',
+            description: 'Set y position of object',
+            selfcall: true
+        },
+        "World()width()height": {
+            name: "World()width()height",
+            parts: [{
+                    name: "World",
+                    args: [{
+                        type: "String",
+                        description: "Tag for the World."
+                    }]
+                },
+                {
+                    name: "width",
+                    args: [{
+                        type: "Number",
+                        description: "Width of the world."
+                    }]
+                },
+                {
+                    name: "height",
+                    args: [{
+                        type: "Number",
+                        description: "Height of the World."
+                    }]
+                },
+            ],
             returns: "Done",
             description: "Create a world object",
+            // multiline: true,
             inheritedVars: [
                 "background",
                 "backgroundColour",
@@ -993,6 +1146,13 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
+// dialects.kitty.methods['Entity()x()y'].category = "Entity";
+// dialects.kitty.methods['createImage'].category = "Entity";
+// dialects.kitty.methods['setImage'].category = "Entity";
+dialects.kitty.methods.move.category = "Motion";
+dialects.kitty.methods.strafe.category = "Motion";
+dialects.kitty.methods.turn.category = "Motion";
+// dialects.kitty.methods.setLocation.category = "Motion";
 extendDialect("kitty", "StandardGrace")
 
 function createOperatorTile(op) {

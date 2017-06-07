@@ -12,9 +12,13 @@ var worldSet := false
 var keyDownListener
 var keyUpListener
 var mouseDownListener
+var currentKeyDown := -1
 
 // Grace math returns NaNs
 def math = dom.window.Math
+
+// Last object created
+var kitten
 
 // XXX: Control functions are at the bottom
 
@@ -38,6 +42,7 @@ class KittyImage.new(url', width', height') {
         ctx.translate(dx, dy)
         // ctx.rotate(rot *  180 / 3.14)
         ctx.rotate(rot * 3.14159 / 180)
+        // print "{dx}, {dy}"
         for (elements) do {element->
             ctx.drawImage(element, -width / 2, -height / 2, width, height)
         }
@@ -63,7 +68,7 @@ method Image(url')width(width')height(height') {
 }
 
 // Represents an object in the game world
-class KittyKat.new(tag', x', y') {
+class KittyEntity.new(tag', x', y') {
     
     // print "CREATING ENTITY AT ({x'}, {y'})..."
 
@@ -71,12 +76,7 @@ class KittyKat.new(tag', x', y') {
     var posX := x'
     var posY := y'
     var rotation := 0
-
-    var action := object {
-        method update {
-            // print "UPDATING ENTITY..."
-        }
-    }
+    var action := {}
 
     var image
 
@@ -84,33 +84,23 @@ class KittyKat.new(tag', x', y') {
 
     // Called on creation
     method awake {
-        // print "awake"
         createImage("realyee.png")
+        kitten := self
+        m_world.addEntity(self)
     }
 
-    // Called on game start
-    method start {
-        // print "start"
+    method tick() {
+        action.apply
     }
 
-    // Called by main game class
-    method update {
-        action.update
-    }
-
-    // Called on class destructor
-    method onDestroy {
-
-    }
-
-    method move(distance) {
-        posX := posX + distance * math.cos(rotation * 3.14159 / 180)
-        posY := posY + distance * math.sin(rotation * 3.14159 / 180)
+    method move(distance) { 
+        posX := posX + distance * m_world.moveWidthMultipler * math.cos(rotation * 3.14159 / 180)
+        posY := posY + distance * m_world.moveHeightMultipler * math.sin(rotation * 3.14159 / 180)
     }
 
     method strafe(distance) {
-        posX := posX + distance * math.cos((90 + rotation) * 3.14159 / 180)
-        posY := posY + distance * math.sin((90 + rotation) * 3.14159 / 180)
+        posX := posX + distance * m_world.moveWidthMultipler * math.cos((90 + rotation) * 3.14159 / 180)
+        posY := posY + distance * m_world.moveHeightMultipler * math.sin((90 + rotation) * 3.14159 / 180)
     }
 
     method turn(angle) {
@@ -149,6 +139,14 @@ class KittyKat.new(tag', x', y') {
         return posY
     }
 
+    method setX(posX') {
+        posX := posX'
+    }
+
+    method setY(posY') {
+        posY := posY'
+    }
+
     method getRotation {
         return rotation
     }
@@ -156,14 +154,28 @@ class KittyKat.new(tag', x', y') {
 
 method Entity(tag')x(x')y(y') {
     object {
-        inherits KittyKat.new(tag', x', y')
+        inherits KittyEntity.new(tag', x', y')
+        // actions'.apply
     }
+} 
+
+// ======== KITTY METHODS ========== //
+method update(action') {
+    kitten.setAction(action')
 }
 
+method isKeyDown(key) {
+    return key == currentKeyDown
+}
+// ========================== //
+
 // Represents the game world itself
-class KittyWorld.new() {
+class KittyWorld.new(tag', width', height') {
 
     // print "CREATING NEW WORLD..."
+    var width is public, readable := width'
+    var height is public, readable := height'
+    var tag is public, readable := tag'
 
     var background
     var backgroundColour := "black"
@@ -174,8 +186,8 @@ class KittyWorld.new() {
     var backingContext
 
     var canvas
-    var canvasWidth
-    var canvasHeight
+    var canvasWidth is public, readable
+    var canvasHeight is public, readable
 
     var entities := collections.list.new
 
@@ -183,9 +195,6 @@ class KittyWorld.new() {
     var isRunning := false
 
     var mctx
-
-    var currentKeyDown := -1
-
     var ent
 
     init
@@ -245,10 +254,13 @@ class KittyWorld.new() {
         setBackground("doggo.jpg")
 
         // Test entity
-        ent := Entity("explosion.png")x(10)y(10)
+        // ent := Entity("explosion.png")x(10)y(10)
         // Image(url)width(canvasWidth)height(canvasHeight)
 
         isInit := true
+
+        // Set the world
+        setWorld(self)
         // print "INITIALIZATION FINISHED"
 
         // Start the game
@@ -279,7 +291,7 @@ class KittyWorld.new() {
 
         // Draw the entities
         for (entities) do { entity->
-            entity.update
+            entity.tick
             entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
         }
 
@@ -294,27 +306,32 @@ class KittyWorld.new() {
         document.removeEventListener("keyup", keyUpListener)
     }
 
-    method isKeyDown(key) {
-        return key == currentKeyDown
-    }
-
     method setBackground(url) {
         background := Image(url)width(canvasWidth)height(canvasHeight)
     }
 
-    method addEntity(e: KittyEntity) {
+    method addEntity(e) {
         return entities.push(e)
     }
 
     method getContext {
         return mctx
     }
+
+    method moveWidthMultipler {
+        return canvasWidth / width
+    }
+
+    method moveHeightMultipler {
+        return canvasHeight / height
+    }
+
     // print "WORLD CREATED"
 }
 
-method World {
+method World(tag')width(width')height(height') {
     object {
-        inherits KittyWorld.new()
+        inherits KittyWorld.new(tag', width', height')
     }
 }
 
@@ -334,6 +351,10 @@ method start {
 
     // Dewit
     m_world.start
+}
+
+method stop {
+    m_world.stop
 }
 
 method setWorld(world': KittyWorld) {

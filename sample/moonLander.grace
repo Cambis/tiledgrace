@@ -1,53 +1,40 @@
 dialect "kitty"
+def THRUST = 2
+def MAX_LANDING_SPEED = 15
+def LZ_HEIGHT = 180
+def rocket = Image ("rocket.png") width (64) height (64)
+def rocketWithThrust = Image ("thrust.png") width (64) height (64)
+def explosion = Image ("explosion.png") width (64) height (64)
+def flag = Image ("flag.png") width (64) height (64)
+rocketWithThrust.drawImage(rocket.getTag)
+flag.drawImage(rocket.getTag)
 
-// Press 'Run' button to start the game.
-// Press the 'K' key to stop the game.
-// Press the 'W' key for thrust.
-// Press the 'Spacebar' key to restart the game.
+object {
+    inherits World ("moon") width (500) height (500)
+    setBackground ("moon.jpg")
+}
 
-def foo = World
-foo.setBackground("moon.jpg")
-setWorld(foo)
-def bar = Entity("player")x(20)y(0 - 200)
-def action = object {
-    
-    def THRUST = 2
-    def MAX_LANDING_SPEED = 15
-    def LZ_HEIGHT = 180
-    
-    def rocket = Image("rocket.png")width(64)height(64)
-    def rocketWithThrust = Image("thrust.png")width(64)height(64)
-    def explosion = Image("explosion.png")width(64)height(64)
-    def flag = Image("flag.png")width(64)height(64)
-    rocketWithThrust.drawImage(rocket.getTag) 
-    flag.drawImage(rocket.getTag)
-    bar.setImage(rocket)
-    
+object {
+    inherits Entity ("player") x (20) y (0 - 200)
+    setImage (rocket)
     var speed := 0
-    var altitude := bar.getY
-    
-    method update {
-        if (foo.isKeyDown(87)) then {
+    update {
+        if (isKeyDown (87)) then {
             speed := speed - THRUST
-            bar.setImage(rocketWithThrust)
+            setImage (rocketWithThrust)
         } else {
-            bar.setImage(rocket)
-        }   
-        speed := speed + 1 
-        altitude := altitude + (speed / 10)
-        bar.setLocation(bar.getX, altitude)
-        if (bar.getY >= LZ_HEIGHT) then {
+            setImage (rocket)
+        }
+        speed := speed + 1
+        strafe (speed / 10)
+        if (posY >= LZ_HEIGHT) then {
             if (speed >= MAX_LANDING_SPEED) then {
-                print "KA BOOM!!!!!!"
-                bar.setImage(explosion)
-                foo.stop
+                setImage (explosion)
             } else {
-                print "ANOTHER HAPPY LANDING"
-                bar.setImage(flag)
-                foo.stop
+                setImage (flag)
             }
+            stop
         }
     }
 }
-bar.setAction(action)
-foo.addEntity(bar)
+

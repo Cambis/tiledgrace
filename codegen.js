@@ -334,4 +334,3 @@ function generateCode() {
         URL.revokeObjectURL(document.getElementById('downloadlink').href);
     document.getElementById('downloadlink').href = URL.createObjectURL(blob);
 }
-
