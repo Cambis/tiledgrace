@@ -76,7 +76,9 @@ class KittyEntity.new(tag', x', y') {
     var posX := x'
     var posY := y'
     var rotation := 0
+    
     var action := {}
+    var destroyAction := {}
 
     var image
 
@@ -89,8 +91,12 @@ class KittyEntity.new(tag', x', y') {
         m_world.addEntity(self)
     }
 
-    method tick() {
+    method tick {
         action.apply
+    }
+
+    method kill {
+        destroyAction.apply
     }
 
     method move(distance) { 
@@ -124,6 +130,10 @@ class KittyEntity.new(tag', x', y') {
 
     method setAction(action') {
         action := action'
+    }
+
+    method setDestroyAction(action') {
+        destroyAction := action'
     }
 
     method setLocation(x, y) {
@@ -162,6 +172,10 @@ method Entity(tag')x(x')y(y') {
 // ======== KITTY METHODS ========== //
 method update(action') {
     kitten.setAction(action')
+}
+
+method onDestroy(action') {
+    kitten.setDestroyAction(action')
 }
 
 method isKeyDown(key) {
@@ -301,6 +315,9 @@ class KittyWorld.new(tag', width', height') {
     method stop {
         print "WORLD STOPPING..."
         isRunning := false
+        for (entities) do { entity->
+            entity.kill
+        }
         canvas.removeEventListener("mousedown", mouseDownListener)
         document.removeEventListener("keydown", keyDownListener)
         document.removeEventListener("keyup", keyUpListener)

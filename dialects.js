@@ -975,6 +975,22 @@ dialects.kitty = {
             description: 'Update',
             // toplevel: true
         },
+        'onDestroy': {
+            name: 'onDestroy',
+            parts: [{
+                name: 'onDestroy',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on game stop.',
+            // toplevel: true
+        },
         'move': {
             name: 'move',
             parts: [{
