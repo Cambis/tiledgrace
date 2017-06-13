@@ -77,7 +77,8 @@ class KittyEntity.new(tag', x', y') {
     var posY := y'
     var rotation := 0
     
-    var action := {}
+    // Actions
+    var updateAction := {}
     var destroyAction := {}
 
     var image
@@ -92,7 +93,7 @@ class KittyEntity.new(tag', x', y') {
     }
 
     method tick {
-        action.apply
+        updateAction.apply
     }
 
     method kill {
@@ -128,8 +129,8 @@ class KittyEntity.new(tag', x', y') {
         image := image'
     }
 
-    method setAction(action') {
-        action := action'
+    method setUpdateAction(action') {
+        updateAction := action'
     }
 
     method setDestroyAction(action') {
@@ -170,10 +171,15 @@ method Entity(tag')x(x')y(y') {
 } 
 
 // ======== KITTY METHODS ========== //
+
+// CONTROL
+
+// Called always
 method update(action') {
-    kitten.setAction(action')
+    kitten.setUpdateAction(action')
 }
 
+// Called on game end
 method onDestroy(action') {
     kitten.setDestroyAction(action')
 }
@@ -181,6 +187,13 @@ method onDestroy(action') {
 method isKeyDown(key) {
     return key == currentKeyDown
 }
+
+// MOUSE
+method onMouseDown(action') {
+    kitten.setMouseDownAction(action')
+}
+
+
 // ========================== //
 
 // Represents the game world itself
@@ -210,6 +223,10 @@ class KittyWorld.new(tag', width', height') {
 
     var mctx
     var ent
+
+    // World actions
+    var updateAction := {}
+    var destroyAction := {}
 
     init
 
@@ -267,19 +284,11 @@ class KittyWorld.new(tag', width', height') {
         // Default background
         setBackground("doggo.jpg")
 
-        // Test entity
-        // ent := Entity("explosion.png")x(10)y(10)
-        // Image(url)width(canvasWidth)height(canvasHeight)
-
-        isInit := true
-
         // Set the world
         setWorld(self)
-        // print "INITIALIZATION FINISHED"
 
-        // Start the game
-        // print "STARTING WORLD..."
-        // start
+        kitten := self
+        isInit := true
     }
 
     // Called on game start
@@ -287,13 +296,13 @@ class KittyWorld.new(tag', width', height') {
         // print "WORLD STARTED"
         isRunning := true
         dom.while { isRunning } waiting 10 do {
-            update
+            tick
         }
         // print "WORLD STOPPED"        
     }
 
     // Updates the game world
-    method update {
+    method tick {
 
         // print "UPDATING WORLD..."
 
@@ -302,6 +311,9 @@ class KittyWorld.new(tag', width', height') {
         mctx.fillRect(0, 0, canvasWidth, canvasHeight)
         mctx.drawImage(backingCanvas, 0, 0)
         background.draw(mctx, canvasWidth / 2, canvasHeight / 2, 0)
+
+        // Update world
+        updateAction.apply
 
         // Draw the entities
         for (entities) do { entity->
@@ -315,6 +327,7 @@ class KittyWorld.new(tag', width', height') {
     method stop {
         print "WORLD STOPPING..."
         isRunning := false
+        destroyAction.apply
         for (entities) do { entity->
             entity.kill
         }
@@ -341,6 +354,14 @@ class KittyWorld.new(tag', width', height') {
 
     method moveHeightMultipler {
         return canvasHeight / height
+    }
+
+    method setUpdateAction(action') {
+        updateAction := action'
+    }
+
+    method setDestroyAction(action') {
+        destroyAction := action'
     }
 
     // print "WORLD CREATED"
