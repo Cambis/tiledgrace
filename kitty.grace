@@ -80,12 +80,13 @@ class KittyEntity.new(tag', x', y') {
     // Actions
     var updateAction := {}
     var destroyAction := {}
+    var mouseDownAction := {}
 
     var image
 
     awake
 
-    // Called on creation
+    // ===== ACTIONS ===== //
     method awake {
         createImage("realyee.png")
         kitten := self
@@ -100,6 +101,12 @@ class KittyEntity.new(tag', x', y') {
         destroyAction.apply
     }
 
+    // ===== MOUSE ACTIONS ===== //
+    method mouseDown {
+        mouseDownAction.apply
+    }
+
+    // ===== MOVEMENT ===== //
     method move(distance) { 
         posX := posX + distance * m_world.moveWidthMultipler * math.cos(rotation * 3.14159 / 180)
         posY := posY + distance * m_world.moveHeightMultipler * math.sin(rotation * 3.14159 / 180)
@@ -114,6 +121,7 @@ class KittyEntity.new(tag', x', y') {
         rotation := rotation + angle
     }
 
+    // ===== DRAWING ===== //
     method draw(ctx, dx, dy) {
         ctx.save
         ctx.translate(posX, posY)
@@ -129,12 +137,17 @@ class KittyEntity.new(tag', x', y') {
         image := image'
     }
 
+    // ===== SETTERS ===== //
     method setUpdateAction(action') {
         updateAction := action'
     }
 
     method setDestroyAction(action') {
         destroyAction := action'
+    }
+
+    method setMouseDownAction(action') {
+        mouseDownAction := action'
     }
 
     method setLocation(x, y) {
@@ -191,6 +204,18 @@ method isKeyDown(key) {
 // MOUSE
 method onMouseDown(action') {
     kitten.setMouseDownAction(action')
+}
+
+method onMouseDrag(action') {
+    kitten.setMouseDragAction(action')
+}
+
+method onMouseEnter(action') {
+    kitten.setMouseEnterAction(action');
+}
+
+method onMouseClick(action') {
+    kitten.setMouseClickAction(action');
 }
 
 
@@ -252,9 +277,14 @@ class KittyWorld.new(tag', width', height') {
             
             // print "MOUSEDOWN"
             
-            if ((x > (canvasWidth - 20)) && (y < 20)) then {
-                ev.preventDefault
-                stop
+            // if ((x > (canvasWidth - 20)) && (y < 20)) then {
+            //     ev.preventDefault
+            //     stop
+            // }
+            
+            // Mouse actions
+            for (entities) do { entity->
+                entity.mouseDown
             }
         }
         canvas.addEventListener("mousedown", mouseDownListener)

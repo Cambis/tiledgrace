@@ -991,6 +991,22 @@ dialects.kitty = {
             description: 'Called on game stop.',
             // toplevel: true
         },
+        'onMouseDown': {
+            name: 'onMouseDown',
+            parts: [{
+                name: 'onMouseDown',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on mouse down.',
+            // toplevel: true
+        },
         'move': {
             name: 'move',
             parts: [{
