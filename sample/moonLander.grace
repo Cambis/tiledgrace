@@ -1,7 +1,7 @@
 dialect "kitty"
 def THRUST = 2
 def MAX_LANDING_SPEED = 15
-def LZ_HEIGHT = 180
+def LZ_HEIGHT = 432
 def rocket = Image ("rocket.png") width (64) height (64)
 def rocketWithThrust = Image ("thrust.png") width (64) height (64)
 def explosion = Image ("explosion.png") width (64) height (64)
@@ -15,7 +15,7 @@ object {
 }
 
 object {
-    inherits Entity ("player") x (20) y (0 - 200)
+    inherits Entity ("player") x (272) y (0)
     setImage (rocket)
     var speed := 0
     update {
@@ -37,4 +37,6 @@ object {
         }
     }
 }
+
+
 

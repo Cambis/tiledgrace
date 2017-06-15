@@ -9,7 +9,7 @@ class Rocket.new(x, y) {
     inherits Entity ("rocket") x (x) y (y)
     def THRUST = 2
     def MAX_LANDING_SPEED = 15
-    def LZ_HEIGHT = 180
+    def LZ_HEIGHT = 432
     def rocket = Image ("rocket.png") width (64) height (64)
     def rocketWithThrust = Image ("thrust.png") width (64) height (64)
     def explosion = Image ("explosion.png") width (64) height (64)
@@ -42,4 +42,4 @@ object {
     inherits World ("moon") width (500) height (500)
     setBackground ("moon.jpg")
 }
-def foo = Rocket.new(20, 0 - 200)
+def foo = Rocket.new(272, 0)
