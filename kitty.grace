@@ -104,7 +104,7 @@ class KittyEntity.new(tag', x', y') {
     var destroyAction := {}
     var mouseDownAction := {}
     var mouseUpAction := {}
-    var mouseDragAction := {}
+    var mouseDragAction := { setLocation(mouse.x, mouse.y) }
     var mouseEnterAction := {}
     var mouseOverAction := {}
     var mouseExitAction := {}
@@ -127,9 +127,9 @@ class KittyEntity.new(tag', x', y') {
         if (mouseOver) then {
             mouseOverAction.apply
         }
-        // if (mouseOver && mouseDown) then {
-        //     mouseDragAction.apply
-        // }
+        if (mouseOver && mouseDownEntity) then {
+            mouseDragAction.apply
+        }
     }
 
     method kill {
@@ -233,6 +233,10 @@ class KittyEntity.new(tag', x', y') {
 
     method setMouseEnterAction(action') {
         mouseEnterAction := action'
+    }
+
+    method setMouseDragAction(action') {
+        mouseDragAction := action'
     }
 
     method setMouseOverAction(action') {
