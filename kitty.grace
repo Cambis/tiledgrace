@@ -127,9 +127,11 @@ class KittyEntity.new(tag', x', y') {
 
     // ===== MOUSE ACTIONS ===== //
     method mouseDown {
+        def w = image.width / 2
+        def h = image.height / 2
         var poly := collections.list.new(
-            Point.x(posX - 32)y(posY - 32), Point.x(posX - 32)y(posY + 32),
-            Point.x(posX + 32)y(posY + 32), Point.x(posX + 32)y(posY - 32)
+            Point.x(posX - w)y(posY - h), Point.x(posX - w)y(posY + h),
+            Point.x(posX + w)y(posY + h), Point.x(posX + w)y(posY - h)
         )
         if (pointInPolygon(mouse.location, poly)) then {
             mouseDownAction.apply
@@ -460,7 +462,7 @@ method pointInPolygon(point, vs) {
     
     var x := point.x 
     var y := point.y
-    print "({x}, {y})"
+    // print "({x}, {y})"
     
     var j := vs.size
     
@@ -473,7 +475,7 @@ method pointInPolygon(point, vs) {
         var xj := vs.at(j).x
         var yj := vs.at(j).y
 
-        print "({xi}, {yi}) ({xj}, {yj})"
+        // print "({xi}, {yi}) ({xj}, {yj})"
         
         var intersect := ((yi > y) != (yj > y)) && (x < ((xj - xi) * (y - yi) / (yj - yi) + xi))
         if (intersect) then {
