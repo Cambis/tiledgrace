@@ -584,10 +584,3 @@ method setWorld(world': KittyWorld) {
 method atModuleEnd(module) {
     start
 }
-
-// TEST SECTION //
-
-// def foo = World.new(100, 100)
-// def bar = Entity.new(10, 10)
-// foo.addEntity(bar)
-// print "IS THIS WORKING???"
