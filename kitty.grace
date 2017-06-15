@@ -12,6 +12,7 @@ var worldSet := false
 var keyDownListener
 var keyUpListener
 var mouseDownListener
+var mouseMoveListener
 var currentKeyDown := -1
 
 // Grace math returns NaNs
@@ -21,6 +22,27 @@ def math = dom.window.Math
 var kitten
 
 // XXX: Control functions are at the bottom
+class Point.x(x')y(y') {
+    def x is public = x'
+    def y is public = y'
+    method left(dx) { Point.x(x - dx)sy(y) }
+    method right(dx) { Point.x(x + dx)y(y) }
+    method up(dy) { Point.x(x)y(y - dy) }
+    method down(dy) { Point.x(x)y(y + dy) }
+}
+
+def mouse = object {
+    var position is public := Point.x(0)y(0)
+    method x {
+        position.x 
+    }
+    method y {
+        position.y 
+    }
+    method location {
+        position
+    }
+}
 
 // Represents an image in the game world
 class KittyImage.new(url', width', height') {
@@ -33,16 +55,14 @@ class KittyImage.new(url', width', height') {
     var elements := collections.list.new
     elements.push(imgTag)
 
-    var height := height'
-    var width := width'
+    var height is public, readable := height'
+    var width is public, readable := width'
 
     method draw(ctx, dx, dy, rot) {
         // print "DRAWING IMAGE: {imgTag.src} ({width}, {height})..."
         ctx.save
         ctx.translate(dx, dy)
-        // ctx.rotate(rot *  180 / 3.14)
         ctx.rotate(rot * 3.14159 / 180)
-        // print "{dx}, {dy}"
         for (elements) do {element->
             ctx.drawImage(element, -width / 2, -height / 2, width, height)
         }
@@ -81,6 +101,9 @@ class KittyEntity.new(tag', x', y') {
     var updateAction := {}
     var destroyAction := {}
     var mouseDownAction := {}
+    var mouseDragAction := {}
+    var mouseEnterAction := {}
+    var mouseExitAction := {}
 
     var image
 
@@ -95,6 +118,7 @@ class KittyEntity.new(tag', x', y') {
 
     method tick {
         updateAction.apply
+
     }
 
     method kill {
@@ -103,7 +127,21 @@ class KittyEntity.new(tag', x', y') {
 
     // ===== MOUSE ACTIONS ===== //
     method mouseDown {
-        mouseDownAction.apply
+        var poly := collections.list.new(
+            Point.x(posX - 32)y(posY - 32), Point.x(posX - 32)y(posY + 32),
+            Point.x(posX + 32)y(posY + 32), Point.x(posX + 32)y(posY - 32)
+        )
+        if (pointInPolygon(mouse.location, poly)) then {
+            mouseDownAction.apply
+        }
+    }
+
+    method mouseEnter {
+        mouseEnterAction.apply
+    }
+    
+    method mouseExit {
+        mouseExitAction.apply
     }
 
     // ===== MOVEMENT ===== //
@@ -148,6 +186,14 @@ class KittyEntity.new(tag', x', y') {
 
     method setMouseDownAction(action') {
         mouseDownAction := action'
+    }
+
+    method setMouseEnterAction(action') {
+        mouseEnterAction := action'
+    }
+
+    method setMouseExitAction(action') {
+        mouseExitAction := action'
     }
 
     method setLocation(x, y) {
@@ -214,10 +260,9 @@ method onMouseEnter(action') {
     kitten.setMouseEnterAction(action');
 }
 
-method onMouseClick(action') {
-    kitten.setMouseClickAction(action');
+method onMouseExit(action') {
+    kitten.setMouseExitAction(action');
 }
-
 
 // ========================== //
 
@@ -274,20 +319,21 @@ class KittyWorld.new(tag', width', height') {
             
             def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight
             def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight
-            
-            // print "MOUSEDOWN"
-            
-            // if ((x > (canvasWidth - 20)) && (y < 20)) then {
-            //     ev.preventDefault
-            //     stop
-            // }
-            
+            mouse.position := Point.x(x)y(y)
+
             // Mouse actions
             for (entities) do { entity->
                 entity.mouseDown
             }
         }
         canvas.addEventListener("mousedown", mouseDownListener)
+
+        mouseMoveListener := { ev ->
+            def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight
+            def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight
+            mouse.position := Point.x(x)y(y)
+        }
+        canvas.addEventListener("mousemove", mouseMoveListener)
 
         // Key Listeners
         keyDownListener := { ev->
@@ -348,7 +394,8 @@ class KittyWorld.new(tag', width', height') {
         // Draw the entities
         for (entities) do { entity->
             entity.tick
-            entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
+            // entity.draw(mctx, canvasWidth / 2, canvasHeight / 2)
+            entity.draw(mctx, 0, 0)
         }
 
         // print "WORLD UPDATED"
@@ -362,6 +409,7 @@ class KittyWorld.new(tag', width', height') {
             entity.kill
         }
         canvas.removeEventListener("mousedown", mouseDownListener)
+        canvas.removeEventListener("mousemove", mouseMoveListener)
         document.removeEventListener("keydown", keyDownListener)
         document.removeEventListener("keyup", keyUpListener)
     }
@@ -401,6 +449,40 @@ method World(tag')width(width')height(height') {
     object {
         inherits KittyWorld.new(tag', width', height')
     }
+}
+
+// ===== HELPERS ===== //
+
+// Grace adaption of javascript algorithm under MIT license https://github.com/substack/point-in-polygon
+method pointInPolygon(point, vs) {
+    // ray-casting algorithm based on
+    // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+    
+    var x := point.x 
+    var y := point.y
+    print "({x}, {y})"
+    
+    var j := vs.size
+    
+    var inside := false
+
+    for (1..vs.size) do { i->
+        
+        var xi := vs.at(i).x
+        var yi := vs.at(i).y
+        var xj := vs.at(j).x
+        var yj := vs.at(j).y
+
+        print "({xi}, {yi}) ({xj}, {yj})"
+        
+        var intersect := ((yi > y) != (yj > y)) && (x < ((xj - xi) * (y - yi) / (yj - yi) + xi))
+        if (intersect) then {
+            inside := !inside
+        }
+        j := i
+    
+    }
+    return inside   
 }
 
 // CONTROL SECTION //
