@@ -103,7 +103,9 @@ class KittyEntity.new(tag', x', y') {
     var mouseDownAction := {}
     var mouseDragAction := {}
     var mouseEnterAction := {}
+    var mouseOverAction := {}
     var mouseExitAction := {}
+    var mouseOver := false
 
     var image
 
@@ -118,7 +120,9 @@ class KittyEntity.new(tag', x', y') {
 
     method tick {
         updateAction.apply
-
+        if (mouseOver) then {
+            mouseOverAction.apply
+        }
     }
 
     method kill {
@@ -139,11 +143,35 @@ class KittyEntity.new(tag', x', y') {
     }
 
     method mouseEnter {
-        mouseEnterAction.apply
+        if (mouseOver) then {
+            return
+        }
+        def w = image.width / 2
+        def h = image.height / 2
+        var poly := collections.list.new(
+            Point.x(posX - w)y(posY - h), Point.x(posX - w)y(posY + h),
+            Point.x(posX + w)y(posY + h), Point.x(posX + w)y(posY - h)
+        )
+        if (pointInPolygon(mouse.location, poly)) then {
+            mouseEnterAction.apply
+            mouseOver := true
+        }
     }
     
     method mouseExit {
-        mouseExitAction.apply
+        if (!mouseOver) then {
+            return
+        }
+        def w = image.width / 2
+        def h = image.height / 2
+        var poly := collections.list.new(
+            Point.x(posX - w)y(posY - h), Point.x(posX - w)y(posY + h),
+            Point.x(posX + w)y(posY + h), Point.x(posX + w)y(posY - h)
+        )
+        if (!pointInPolygon(mouse.location, poly) && mouseOver) then {
+            mouseExitAction.apply
+            mouseOver := false
+        }
     }
 
     // ===== MOVEMENT ===== //
@@ -192,6 +220,10 @@ class KittyEntity.new(tag', x', y') {
 
     method setMouseEnterAction(action') {
         mouseEnterAction := action'
+    }
+
+    method setMouseOverAction(action') {
+        mouseOverAction := action'
     }
 
     method setMouseExitAction(action') {
@@ -260,6 +292,10 @@ method onMouseDrag(action') {
 
 method onMouseEnter(action') {
     kitten.setMouseEnterAction(action');
+}
+
+method onMouseOver(action') {
+    kitten.setMouseOverAction(action')
 }
 
 method onMouseExit(action') {
@@ -334,6 +370,12 @@ class KittyWorld.new(tag', width', height') {
             def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight
             def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight
             mouse.position := Point.x(x)y(y)
+
+            // Mouse actions
+            for (entities) do { entity->
+                entity.mouseEnter
+                entity.mouseExit
+            }
         }
         canvas.addEventListener("mousemove", mouseMoveListener)
 
