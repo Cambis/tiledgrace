@@ -111,6 +111,7 @@ class KittyEntity.new(tag', x', y') {
     var mouseOver := false
     var mouseDownEntity := false
 
+    var mouseDragStart := Point.x(0)y(0)
     var image
 
     awake
@@ -127,7 +128,7 @@ class KittyEntity.new(tag', x', y') {
         if (mouseOver) then {
             mouseOverAction.apply
         }
-        if (mouseOver && mouseDownEntity) then {
+        if ((mouseOver && mouseDownEntity) && (mouse.position != mouseDragStart)) then {
             mouseDragAction.apply
         }
     }
@@ -139,21 +140,25 @@ class KittyEntity.new(tag', x', y') {
     // ===== MOUSE ACTIONS ===== //
     method mouseDown {
         if (mouseOver) then {
+            mouseDragStart := mouse.position
             mouseDownAction.apply
             mouseDownEntity := true
+            return true
         }
     }
 
     method mouseUp {
         if (mouseDownEntity) then {
+            mouseDragStart := mouse.position
             mouseUpAction.apply
             mouseDownEntity := false
+            return true
         }
     }
 
     method mouseEnter {
         if (mouseOver) then {
-            return
+            return false
         }
         def w = image.width / 2
         def h = image.height / 2
@@ -164,12 +169,13 @@ class KittyEntity.new(tag', x', y') {
         if (pointInPolygon(mouse.location, poly)) then {
             mouseEnterAction.apply
             mouseOver := true
+            return true
         }
     }
     
     method mouseExit {
         if (!mouseOver) then {
-            return
+            return false
         }
         def w = image.width / 2
         def h = image.height / 2
@@ -180,6 +186,7 @@ class KittyEntity.new(tag', x', y') {
         if (!pointInPolygon(mouse.location, poly) && mouseOver) then {
             mouseExitAction.apply
             mouseOver := false
+            return true
         }
     }
 
@@ -356,6 +363,12 @@ class KittyWorld.new(tag', width', height') {
     // World actions
     var updateAction := {}
     var destroyAction := {}
+    var mouseEnterAction := {}
+    var mouseOverAction := {}
+    var mouseExitAction := {}
+    var mouseDownAction := {}
+    var mouseUpAction := {}
+    var mouseOver := false
 
     init
 
@@ -397,9 +410,13 @@ class KittyWorld.new(tag', width', height') {
 
             // Mouse actions
             for (entities) do { entity ->
-                entity.mouseEnter
+                if (entity.mouseEnter) then {
+                    return
+                }
                 entity.mouseExit
             }
+            // Can not enter world if entity is entered
+            m_world.mouseEnter
         }
         canvas.addEventListener("mousemove", mouseMoveListener)
 
@@ -483,6 +500,46 @@ class KittyWorld.new(tag', width', height') {
         document.removeEventListener("keyup", keyUpListener)
     }
 
+    method mouseDown {
+        if (mouseOver) then {
+            mouseDownAction.apply
+        }
+    }
+
+    method mouseUp {
+        if (!mouseOver) then {
+            mouseUpAction.apply
+        }
+    }
+
+    method mouseEnter {
+        if (mouseOver) then {
+            return false
+        }
+        var poly := collections.list.new(
+            Point.x(0)y(0), Point.x(0)y(width),
+            Point.x(width)y(0), Point.x(width)y(height)
+        )
+        if (pointInPolygon(mouse.location, poly)) then {
+            mouseEnterAction.apply
+            mouseOver := true
+        }
+    }
+
+    method mouseExit {
+        if (!mouseOver) then {
+            return false
+        }
+        var poly := collections.list.new(
+            Point.x(0)y(0), Point.x(0)y(width),
+            Point.x(width)y(0), Point.x(width)y(height)
+        )
+        if (!pointInPolygon(mouse.location, poly) && mouseOver) then {
+            mouseExitAction.apply
+            mouseOver := false
+        }
+    }
+
     method setBackground(url) {
         background := Image(url)width(canvasWidth)height(canvasHeight)
     }
@@ -503,12 +560,37 @@ class KittyWorld.new(tag', width', height') {
         return canvasHeight / height
     }
 
+    // ===== SETTERS ===== //
     method setUpdateAction(action') {
         updateAction := action'
     }
 
     method setDestroyAction(action') {
         destroyAction := action'
+    }
+
+    method setMouseDownAction(action') {
+        mouseDownAction := action'
+    }
+
+    method setMouseUpAction(action') {
+        mouseUpAction := action'
+    }
+
+    method setMouseEnterAction(action') {
+        mouseEnterAction := action'
+    }
+
+    method setMouseDragAction(action') {
+        print "*Drag Not Available For World*"
+    }
+
+    method setMouseOverAction(action') {
+        mouseOverAction := action'
+    }
+
+    method setMouseExitAction(action') {
+        mouseExitAction := action'
     }
 
     // print "WORLD CREATED"
