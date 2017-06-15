@@ -12,8 +12,10 @@ var worldSet := false
 var keyDownListener
 var keyUpListener
 var mouseDownListener
+var mouseUpListener
 var mouseMoveListener
 var currentKeyDown := -1
+var mouseDown := false
 
 // Grace math returns NaNs
 def math = dom.window.Math
@@ -101,11 +103,13 @@ class KittyEntity.new(tag', x', y') {
     var updateAction := {}
     var destroyAction := {}
     var mouseDownAction := {}
+    var mouseUpAction := {}
     var mouseDragAction := {}
     var mouseEnterAction := {}
     var mouseOverAction := {}
     var mouseExitAction := {}
     var mouseOver := false
+    var mouseDownEntity := false
 
     var image
 
@@ -123,6 +127,9 @@ class KittyEntity.new(tag', x', y') {
         if (mouseOver) then {
             mouseOverAction.apply
         }
+        // if (mouseOver && mouseDown) then {
+        //     mouseDragAction.apply
+        // }
     }
 
     method kill {
@@ -131,14 +138,16 @@ class KittyEntity.new(tag', x', y') {
 
     // ===== MOUSE ACTIONS ===== //
     method mouseDown {
-        def w = image.width / 2
-        def h = image.height / 2
-        var poly := collections.list.new(
-            Point.x(posX - w)y(posY - h), Point.x(posX - w)y(posY + h),
-            Point.x(posX + w)y(posY + h), Point.x(posX + w)y(posY - h)
-        )
-        if (pointInPolygon(mouse.location, poly)) then {
+        if (mouseOver) then {
             mouseDownAction.apply
+            mouseDownEntity := true
+        }
+    }
+
+    method mouseUp {
+        if (mouseDownEntity) then {
+            mouseUpAction.apply
+            mouseDownEntity := false
         }
     }
 
@@ -218,6 +227,10 @@ class KittyEntity.new(tag', x', y') {
         mouseDownAction := action'
     }
 
+    method setMouseUpAction(action') {
+        mouseUpAction := action'
+    }
+
     method setMouseEnterAction(action') {
         mouseEnterAction := action'
     }
@@ -284,6 +297,10 @@ method isKeyDown(key) {
 // MOUSE
 method onMouseDown(action') {
     kitten.setMouseDownAction(action')
+}
+
+method onMouseUp(action') {
+    kitten.setMouseUpAction(action')
 }
 
 method onMouseDrag(action') {
@@ -354,17 +371,20 @@ class KittyWorld.new(tag', width', height') {
 
         // Mouse Listener
         mouseDownListener := { ev ->
-            
-            def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight
-            def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight
-            mouse.position := Point.x(x)y(y)
-
-            // Mouse actions
+            mouseDown := true
             for (entities) do { entity->
                 entity.mouseDown
             }
         }
         canvas.addEventListener("mousedown", mouseDownListener)
+
+        mouseUpListener := { ev ->
+            mouseDown := false
+            for (entities) do { entity->
+                entity.mouseUp
+            }
+        }
+        canvas.addEventListener("mouseup", mouseUpListener)
 
         mouseMoveListener := { ev ->
             def x = (ev.clientX - canvas.offsetLeft) / canvas.offsetWidth * canvasHeight
@@ -372,7 +392,7 @@ class KittyWorld.new(tag', width', height') {
             mouse.position := Point.x(x)y(y)
 
             // Mouse actions
-            for (entities) do { entity->
+            for (entities) do { entity ->
                 entity.mouseEnter
                 entity.mouseExit
             }
@@ -453,6 +473,7 @@ class KittyWorld.new(tag', width', height') {
             entity.kill
         }
         canvas.removeEventListener("mousedown", mouseDownListener)
+        canvas.removeEventListener("mouseup", mouseUpListener)
         canvas.removeEventListener("mousemove", mouseMoveListener)
         document.removeEventListener("keydown", keyDownListener)
         document.removeEventListener("keyup", keyUpListener)

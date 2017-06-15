@@ -1007,6 +1007,21 @@ dialects.kitty = {
             description: 'Called on mouse down.',
             // toplevel: true
         },
+        'onMouseUp': {
+            name: 'onMouseUp',
+            parts: [{
+                name: 'onMouseUp',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on mouse up.',
+        },
         'onMouseEnter': {
             name: 'onMouseEnter',
             parts: [{
@@ -1036,8 +1051,37 @@ dialects.kitty = {
             returns: 'Done',
             multiline: true,
             selfcall: true,
-            description: 'Called when mouse exits entity.',
-            // toplevel: true
+            description: 'Called when mouse exits entity.'
+        },
+        'onMouseOver': {
+            name: 'onMouseOver',
+            parts: [{
+                name: 'onMouseOver',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse is over entity.'
+        },
+        'onMouseDrag': {
+            name: 'onMouseDrag',
+            parts: [{
+                name: 'onMouseDrag',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse dragged from entity'
         },
         'move': {
             name: 'move',
