@@ -15,7 +15,7 @@ var mouseDownListener
 var mouseUpListener
 var mouseMoveListener
 var currentKeyDown := -1
-var mouseDown := false
+// var mouseDown := false
 
 // Grace math returns NaNs
 def math = dom.window.Math
@@ -124,11 +124,16 @@ class KittyEntity.new(tag', x', y') {
     }
 
     method tick {
+        // updoot
         updateAction.apply
+
+        // onMouseOver
         if (mouseOver) then {
             mouseOverAction.apply
         }
-        if ((mouseOver && mouseDownEntity) && (mouse.position != mouseDragStart)) then {
+
+        // onMouseDrag
+        if ((mouseDownEntity) && (mouse.position != mouseDragStart)) then {
             mouseDragAction.apply
         }
     }
@@ -145,6 +150,7 @@ class KittyEntity.new(tag', x', y') {
             mouseDownEntity := true
             return true
         }
+        return false
     }
 
     method mouseUp {
@@ -154,6 +160,7 @@ class KittyEntity.new(tag', x', y') {
             mouseDownEntity := false
             return true
         }
+        return false
     }
 
     method mouseEnter {
@@ -388,18 +395,30 @@ class KittyWorld.new(tag', width', height') {
 
         // Mouse Listener
         mouseDownListener := { ev ->
-            mouseDown := true
+            
+            // Only one Entity should have a mousedown per frame
             for (entities) do { entity->
-                entity.mouseDown
+                if (entity.mouseDown) then {
+                    return
+                }
             }
+            
+            // If no Entities are clicked on mousedown on the World
+            mouseDown
         }
-        canvas.addEventListener("mousedown", mouseDownListener)
+        canvas.addEventListener("mousedown", mouseDownListener, false)
 
         mouseUpListener := { ev ->
-            mouseDown := false
+
+            // Only one Entity should have a mouseup per frame
             for (entities) do { entity->
-                entity.mouseUp
+                if (entity.mouseUp) then {
+                    return
+                }
             }
+
+            // If no Entities do mouseup on the World
+            mouseUp
         }
         canvas.addEventListener("mouseup", mouseUpListener)
 
