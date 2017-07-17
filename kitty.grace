@@ -430,12 +430,16 @@ class KittyWorld.new(tag', width', height') {
             // Mouse actions
             for (entities) do { entity ->
                 if (entity.mouseEnter) then {
+                    mouseExit
                     return
                 }
-                entity.mouseExit
+                if (entity.mouseExit) then {
+                    mouseEnter
+                    return
+                }
             }
             // Can not enter world if entity is entered
-            m_world.mouseEnter
+            // mouseEnter
         }
         canvas.addEventListener("mousemove", mouseMoveListener)
 
@@ -520,43 +524,45 @@ class KittyWorld.new(tag', width', height') {
     }
 
     method mouseDown {
-        if (mouseOver) then {
-            mouseDownAction.apply
-        }
+        // if (mouseOver) then {
+        mouseDownAction.apply
+        // }
     }
 
     method mouseUp {
-        if (!mouseOver) then {
-            mouseUpAction.apply
-        }
+        mouseUpAction.apply
     }
 
+    // If it isn't in the Entity we shouldn't have to check
+    // if it is in the World
     method mouseEnter {
-        if (mouseOver) then {
-            return false
-        }
-        var poly := collections.list.new(
-            Point.x(0)y(0), Point.x(0)y(width),
-            Point.x(width)y(0), Point.x(width)y(height)
-        )
-        if (pointInPolygon(mouse.location, poly)) then {
-            mouseEnterAction.apply
-            mouseOver := true
-        }
+        mouseEnterAction.apply
+        // if (mouseOver) then {
+        //     return false
+        // }
+        // var poly := collections.list.new(
+        //     Point.x(0)y(0), Point.x(0)y(width),
+        //     Point.x(width)y(0), Point.x(width)y(height)
+        // )
+        // if (pointInPolygon(mouse.location, poly)) then {
+        //     mouseEnterAction.apply
+        //     mouseOver := true
+        // }
     }
 
     method mouseExit {
-        if (!mouseOver) then {
-            return false
-        }
-        var poly := collections.list.new(
-            Point.x(0)y(0), Point.x(0)y(width),
-            Point.x(width)y(0), Point.x(width)y(height)
-        )
-        if (!pointInPolygon(mouse.location, poly) && mouseOver) then {
-            mouseExitAction.apply
-            mouseOver := false
-        }
+        mouseExitAction.apply
+        // if (!mouseOver) then {
+        //     return false
+        // }
+        // var poly := collections.list.new(
+        //     Point.x(0)y(0), Point.x(0)y(width),
+        //     Point.x(width)y(0), Point.x(width)y(height)
+        // )
+        // if (!pointInPolygon(mouse.location, poly)) then {
+        //     mouseExitAction.apply
+        //     mouseOver := false
+        // }
     }
 
     method setBackground(url) {
