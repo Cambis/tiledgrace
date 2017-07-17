@@ -524,9 +524,7 @@ class KittyWorld.new(tag', width', height') {
     }
 
     method mouseDown {
-        // if (mouseOver) then {
         mouseDownAction.apply
-        // }
     }
 
     method mouseUp {
@@ -537,32 +535,10 @@ class KittyWorld.new(tag', width', height') {
     // if it is in the World
     method mouseEnter {
         mouseEnterAction.apply
-        // if (mouseOver) then {
-        //     return false
-        // }
-        // var poly := collections.list.new(
-        //     Point.x(0)y(0), Point.x(0)y(width),
-        //     Point.x(width)y(0), Point.x(width)y(height)
-        // )
-        // if (pointInPolygon(mouse.location, poly)) then {
-        //     mouseEnterAction.apply
-        //     mouseOver := true
-        // }
     }
 
     method mouseExit {
         mouseExitAction.apply
-        // if (!mouseOver) then {
-        //     return false
-        // }
-        // var poly := collections.list.new(
-        //     Point.x(0)y(0), Point.x(0)y(width),
-        //     Point.x(width)y(0), Point.x(width)y(height)
-        // )
-        // if (!pointInPolygon(mouse.location, poly)) then {
-        //     mouseExitAction.apply
-        //     mouseOver := false
-        // }
     }
 
     method setBackground(url) {
