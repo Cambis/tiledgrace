@@ -495,7 +495,7 @@ function gracecode_kitty () {
   this.methods["onMouseExit"] = func34;
   func34.definitionLine = 336;
   func34.definitionModule = "kitty";
-  lineNumber = 624
+  lineNumber = 600
   var func36 = function(argcv) {
     var curarg = 1;
     var var_tag__39__ = arguments[curarg];
@@ -514,10 +514,10 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 625
+      lineNumber = 601
       var obj37 = Grace_allocObject();
       obj37.definitionModule = "kitty";
-      obj37.definitionLine = 625;
+      obj37.definitionLine = 601;
       obj37.outer = this;
       var reader_kitty_outer_38 = function() {
         return this.outer;
@@ -528,7 +528,7 @@ function gracecode_kitty () {
         superDepth = obj37;
         obj37.annotations = [];
         sourceObject = obj37;
-        lineNumber = 626
+        lineNumber = 602
         var call39 = callmethod(var_KittyWorld,"new()object", [3, 1], var_tag__39__, var_width__39__, var_height__39__, this);
         obj37.superobj = call39;
         obj37._value = call39._value;
@@ -555,7 +555,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["World()width()height"] = func36;
-  func36.definitionLine = 624;
+  func36.definitionLine = 600;
   func36.definitionModule = "kitty";
   var func40 = function(argcv) {
     var curarg = 1;
@@ -571,7 +571,7 @@ function gracecode_kitty () {
     try {
       var obj41 = Grace_allocObject();
       obj41.definitionModule = "kitty";
-      obj41.definitionLine = 625;
+      obj41.definitionLine = 601;
       var inho41 = inheritingObject;
       while (inho41.superobj) inho41 = inho41.superobj;
       inho41.superobj = obj41;
@@ -602,7 +602,7 @@ function gracecode_kitty () {
     }
   }
   this.methods["World()width()height()object"] = func40;
-  lineNumber = 633
+  lineNumber = 609
   var func44 = function(argcv) {
     var curarg = 1;
     var var_point = arguments[curarg];
@@ -615,58 +615,58 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 638
-      lineNumber = 637
+      lineNumber = 614
+      lineNumber = 613
       var call45 = callmethod(var_point,"x", [0]);
       var var_x = call45;
-      lineNumber = 638;
+      lineNumber = 614;
       moduleName = "kitty";
-      lineNumber = 637
+      lineNumber = 613
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_x)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'x' to be of type Unknown"))
-      lineNumber = 641
-      lineNumber = 638
+      lineNumber = 617
+      lineNumber = 614
       var call46 = callmethod(var_point,"y", [0]);
       var var_y = call46;
-      lineNumber = 641;
+      lineNumber = 617;
       moduleName = "kitty";
-      lineNumber = 638
+      lineNumber = 614
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_y)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'y' to be of type Unknown"))
-      lineNumber = 643
-      lineNumber = 641
+      lineNumber = 619
+      lineNumber = 617
       var call47 = callmethod(var_vs,"size", [0]);
       var var_j = call47;
-      lineNumber = 643;
+      lineNumber = 619;
       moduleName = "kitty";
-      lineNumber = 641
+      lineNumber = 617
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_j)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'j' to be of type Unknown"))
-      lineNumber = 645
-      lineNumber = 643
+      lineNumber = 621
+      lineNumber = 619
       var bool48 = new GraceBoolean(false)
       var var_inside = bool48;
-      lineNumber = 645;
+      lineNumber = 621;
       moduleName = "kitty";
-      lineNumber = 643
+      lineNumber = 619
       if (!Grace_isTrue(callmethod(var_Unknown, "match",
         [1], var_inside)))
           throw new GraceExceptionPacket(TypeErrorObject,
                 new GraceString("expected "
                 + "initial value of var 'inside' to be of type Unknown"))
-      lineNumber = 645
+      lineNumber = 621
       var call49 = callmethod(var_vs,"size", [0]);
       var opresult52 = callmethod(new GraceNum(1), "..", [1], call49);
-      lineNumber = 661
+      lineNumber = 637
       var block53 = Grace_allocObject();
       block53.methods["apply"] = function() {
         var args = Array.prototype.slice.call(arguments, 1);
@@ -681,65 +681,65 @@ function gracecode_kitty () {
       block53.methods["match"] = GraceBlock_match;
       block53.methods["prefix?"] = GraceBlock_lift;
       block53.receiver = this;
-      block53.className = 'block<kitty:661>';
+      block53.className = 'block<kitty:637>';
       block53.real = function(
         var_i
       ) {
         sourceObject = this;
-        lineNumber = 648
-        lineNumber = 647
+        lineNumber = 624
+        lineNumber = 623
         var call54 = callmethod(var_vs,"at", [1], var_i);
         var call55 = callmethod(call54,"x", [0]);
         var var_xi = call55;
-        lineNumber = 648;
+        lineNumber = 624;
         moduleName = "kitty";
-        lineNumber = 647
+        lineNumber = 623
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_xi)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of var 'xi' to be of type Unknown"))
-        lineNumber = 649
-        lineNumber = 648
+        lineNumber = 625
+        lineNumber = 624
         var call56 = callmethod(var_vs,"at", [1], var_i);
         var call57 = callmethod(call56,"y", [0]);
         var var_yi = call57;
-        lineNumber = 649;
+        lineNumber = 625;
         moduleName = "kitty";
-        lineNumber = 648
+        lineNumber = 624
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_yi)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of var 'yi' to be of type Unknown"))
-        lineNumber = 650
-        lineNumber = 649
+        lineNumber = 626
+        lineNumber = 625
         var call58 = callmethod(var_vs,"at", [1], var_j);
         var call59 = callmethod(call58,"x", [0]);
         var var_xj = call59;
-        lineNumber = 650;
+        lineNumber = 626;
         moduleName = "kitty";
-        lineNumber = 649
+        lineNumber = 625
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_xj)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of var 'xj' to be of type Unknown"))
-        lineNumber = 654
-        lineNumber = 650
+        lineNumber = 630
+        lineNumber = 626
         var call60 = callmethod(var_vs,"at", [1], var_j);
         var call61 = callmethod(call60,"y", [0]);
         var var_yj = call61;
-        lineNumber = 654;
+        lineNumber = 630;
         moduleName = "kitty";
-        lineNumber = 650
+        lineNumber = 626
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_yj)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of var 'yj' to be of type Unknown"))
-        lineNumber = 655
-        lineNumber = 654
+        lineNumber = 631
+        lineNumber = 630
         var diff65 = callmethod(var_yj, "-", [1], var_yi);
         var diff69 = callmethod(var_y, "-", [1], var_yi);
         var diff73 = callmethod(var_xj, "-", [1], var_xi);
@@ -752,32 +752,32 @@ function gracecode_kitty () {
         var opresult92 = callmethod(opresult90, "!=", [1], opresult86);
         var opresult94 = callmethod(opresult92, "&&", [1], opresult82);
         var var_intersect = opresult94;
-        lineNumber = 655;
+        lineNumber = 631;
         moduleName = "kitty";
-        lineNumber = 654
+        lineNumber = 630
         if (!Grace_isTrue(callmethod(var_Unknown, "match",
           [1], var_intersect)))
             throw new GraceExceptionPacket(TypeErrorObject,
                   new GraceString("expected "
                   + "initial value of var 'intersect' to be of type Unknown"))
-        lineNumber = 658
+        lineNumber = 634
         var if95 = var_done;
-        lineNumber = 655
+        lineNumber = 631
         if (Grace_isTrue(var_intersect)) {
-          lineNumber = 657
-          lineNumber = 656
+          lineNumber = 633
+          lineNumber = 632
           var call96 = callmethod(var_inside,"prefix!", [0]);
           var_inside = call96;
           if95 = call96;
         }
-        lineNumber = 660
-        lineNumber = 658
+        lineNumber = 636
+        lineNumber = 634
         var_j = var_i;
         return var_i;
       };
       var call97 = callmethod(Grace_prelude,"for()do", [1, 1], opresult52, block53);
-      lineNumber = 662
-      lineNumber = 661
+      lineNumber = 638
+      lineNumber = 637
       return var_inside
     } catch(e) {
       if ((e.exctype == 'return') && (e.target == returnTarget)) {
@@ -794,9 +794,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["pointInPolygon"] = func44;
-  func44.definitionLine = 633;
+  func44.definitionLine = 609;
   func44.definitionModule = "kitty";
-  lineNumber = 667
+  lineNumber = 643
   var func98 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func98.paramCounts[0])
@@ -805,24 +805,24 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 669
+      lineNumber = 645
       var string99 = new GraceString("CHECKING...");
       var call100 = Grace_print(string99);
-      lineNumber = 676
+      lineNumber = 652
       var if101 = var_done;
-      lineNumber = 671
+      lineNumber = 647
       var call102 = callmethod(var_worldSet,"prefix!", [0]);
       if (Grace_isTrue(call102)) {
-        lineNumber = 672
+        lineNumber = 648
         var string103 = new GraceString("NO WORLD!!");
         var call104 = Grace_print(string103);
-        lineNumber = 674
+        lineNumber = 650
         return var_done
       }
-      lineNumber = 676
+      lineNumber = 652
       var string105 = new GraceString("STARTING...");
       var call106 = Grace_print(string105);
-      lineNumber = 679
+      lineNumber = 655
       var call107 = callmethod(var_m__95__world,"start", [0]);
       return call107
     } catch(e) {
@@ -840,9 +840,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["start"] = func98;
-  func98.definitionLine = 667;
+  func98.definitionLine = 643;
   func98.definitionModule = "kitty";
-  lineNumber = 682
+  lineNumber = 658
   var func108 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func108.paramCounts[0])
@@ -851,7 +851,7 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 683
+      lineNumber = 659
       var call109 = callmethod(var_m__95__world,"stop", [0]);
       return call109
     } catch(e) {
@@ -869,9 +869,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["stop"] = func108;
-  func108.definitionLine = 682;
+  func108.definitionLine = 658;
   func108.definitionModule = "kitty";
-  lineNumber = 686
+  lineNumber = 662
   var func110 = function(argcv) {
     var curarg = 1;
     var var_world__39__ = arguments[curarg];
@@ -882,11 +882,11 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 688
-      lineNumber = 687
+      lineNumber = 664
+      lineNumber = 663
       var_m__95__world = var_world__39__;
-      lineNumber = 689
-      lineNumber = 688
+      lineNumber = 665
+      lineNumber = 664
       var bool111 = new GraceBoolean(true)
       var_worldSet = bool111;
       return bool111
@@ -907,9 +907,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["setWorld"] = func110;
-  func110.definitionLine = 686;
+  func110.definitionLine = 662;
   func110.definitionModule = "kitty";
-  lineNumber = 691
+  lineNumber = 667
   var func112 = function(argcv) {
     var curarg = 1;
     var var_module = arguments[curarg];
@@ -920,7 +920,7 @@ function gracecode_kitty () {
     invocationCount++;
     moduleName = "kitty";
     try {
-      lineNumber = 692
+      lineNumber = 668
       onSelf = true;
       var call113 = callmethod(this, "start", [0]);
       return call113
@@ -939,7 +939,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["atModuleEnd"] = func112;
-  func112.definitionLine = 691;
+  func112.definitionLine = 667;
   func112.definitionModule = "kitty";
   lineNumber = 1
   // Import of mgcollections
@@ -967,7 +967,7 @@ function gracecode_kitty () {
   lineNumber = 8
   lineNumber = 9
   var var_m__95__world;
-  lineNumber = 683
+  lineNumber = 659
   var func115 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func115.paramCounts[0])
@@ -993,9 +993,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["m_world"] = func115;
-  func115.definitionLine = 683;
+  func115.definitionLine = 659;
   func115.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func116 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1023,13 +1023,13 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["m_world:="] = func116;
-  func116.definitionLine = 683;
+  func116.definitionLine = 659;
   func116.definitionModule = "kitty";
   lineNumber = 12
   lineNumber = 9
   var bool117 = new GraceBoolean(false)
   var var_worldSet = bool117;
-  lineNumber = 683
+  lineNumber = 659
   var func118 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func118.paramCounts[0])
@@ -1055,9 +1055,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["worldSet"] = func118;
-  func118.definitionLine = 683;
+  func118.definitionLine = 659;
   func118.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func119 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1085,7 +1085,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["worldSet:="] = func119;
-  func119.definitionLine = 683;
+  func119.definitionLine = 659;
   func119.definitionModule = "kitty";
   lineNumber = 12;
   moduleName = "kitty";
@@ -1098,7 +1098,7 @@ function gracecode_kitty () {
   lineNumber = 12
   lineNumber = 13
   var var_keyDownListener;
-  lineNumber = 683
+  lineNumber = 659
   var func120 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func120.paramCounts[0])
@@ -1124,9 +1124,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyDownListener"] = func120;
-  func120.definitionLine = 683;
+  func120.definitionLine = 659;
   func120.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func121 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1154,11 +1154,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyDownListener:="] = func121;
-  func121.definitionLine = 683;
+  func121.definitionLine = 659;
   func121.definitionModule = "kitty";
   lineNumber = 14
   var var_keyUpListener;
-  lineNumber = 683
+  lineNumber = 659
   var func122 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func122.paramCounts[0])
@@ -1184,9 +1184,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyUpListener"] = func122;
-  func122.definitionLine = 683;
+  func122.definitionLine = 659;
   func122.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func123 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1214,11 +1214,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["keyUpListener:="] = func123;
-  func123.definitionLine = 683;
+  func123.definitionLine = 659;
   func123.definitionModule = "kitty";
   lineNumber = 15
   var var_mouseDownListener;
-  lineNumber = 683
+  lineNumber = 659
   var func124 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func124.paramCounts[0])
@@ -1244,9 +1244,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseDownListener"] = func124;
-  func124.definitionLine = 683;
+  func124.definitionLine = 659;
   func124.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func125 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1274,11 +1274,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseDownListener:="] = func125;
-  func125.definitionLine = 683;
+  func125.definitionLine = 659;
   func125.definitionModule = "kitty";
   lineNumber = 16
   var var_mouseUpListener;
-  lineNumber = 683
+  lineNumber = 659
   var func126 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func126.paramCounts[0])
@@ -1304,9 +1304,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseUpListener"] = func126;
-  func126.definitionLine = 683;
+  func126.definitionLine = 659;
   func126.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func127 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1334,11 +1334,11 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseUpListener:="] = func127;
-  func127.definitionLine = 683;
+  func127.definitionLine = 659;
   func127.definitionModule = "kitty";
   lineNumber = 17
   var var_mouseMoveListener;
-  lineNumber = 683
+  lineNumber = 659
   var func128 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func128.paramCounts[0])
@@ -1364,9 +1364,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseMoveListener"] = func128;
-  func128.definitionLine = 683;
+  func128.definitionLine = 659;
   func128.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func129 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1394,13 +1394,13 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["mouseMoveListener:="] = func129;
-  func129.definitionLine = 683;
+  func129.definitionLine = 659;
   func129.definitionModule = "kitty";
   lineNumber = 21
   lineNumber = 17
   var call130 = callmethod(new GraceNum(1),"prefix-", [0]);
   var var_currentKeyDown = call130;
-  lineNumber = 683
+  lineNumber = 659
   var func131 = function(argcv) {
     var curarg = 1;
     if (argcv[0] !=  func131.paramCounts[0])
@@ -1426,9 +1426,9 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["currentKeyDown"] = func131;
-  func131.definitionLine = 683;
+  func131.definitionLine = 659;
   func131.definitionModule = "kitty";
-  lineNumber = 683
+  lineNumber = 659
   var func132 = function(argcv) {
     var curarg = 1;
     var var___95__var__95__assign__95__tmp = arguments[curarg];
@@ -1456,7 +1456,7 @@ function gracecode_kitty () {
     false,
   ];
   this.methods["currentKeyDown:="] = func132;
-  func132.definitionLine = 683;
+  func132.definitionLine = 659;
   func132.definitionModule = "kitty";
   lineNumber = 21;
   moduleName = "kitty";
@@ -7494,7 +7494,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 528
+              lineNumber = 527
               onSelf = true;
               var call1226 = callmethod(this, "mouseDownAction", [0]);
               var call1227 = callmethod(call1226,"apply", [0]);
@@ -7524,7 +7524,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 533
+              lineNumber = 531
               onSelf = true;
               var call1229 = callmethod(this, "mouseUpAction", [0]);
               var call1230 = callmethod(call1229,"apply", [0]);
@@ -7544,7 +7544,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["mouseUp"] = func1228;
-          func1228.definitionLine = 532;
+          func1228.definitionLine = 530;
           func1228.definitionModule = "kitty";
           var func1231 = function(argcv) {
             var curarg = 1;
@@ -7554,7 +7554,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 539
+              lineNumber = 537
               onSelf = true;
               var call1232 = callmethod(this, "mouseEnterAction", [0]);
               var call1233 = callmethod(call1232,"apply", [0]);
@@ -7574,7 +7574,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["mouseEnter"] = func1231;
-          func1231.definitionLine = 538;
+          func1231.definitionLine = 536;
           func1231.definitionModule = "kitty";
           var func1234 = function(argcv) {
             var curarg = 1;
@@ -7584,7 +7584,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 554
+              lineNumber = 541
               onSelf = true;
               var call1235 = callmethod(this, "mouseExitAction", [0]);
               var call1236 = callmethod(call1235,"apply", [0]);
@@ -7604,7 +7604,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["mouseExit"] = func1234;
-          func1234.definitionLine = 553;
+          func1234.definitionLine = 540;
           func1234.definitionModule = "kitty";
           var func1237 = function(argcv) {
             var curarg = 1;
@@ -7616,9 +7616,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 569
-              lineNumber = 554
-              lineNumber = 569
+              lineNumber = 545
+              lineNumber = 541
+              lineNumber = 545
               onSelf = true;
               var call1238 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
@@ -7648,7 +7648,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setBackground"] = func1237;
-          func1237.definitionLine = 568;
+          func1237.definitionLine = 544;
           func1237.definitionModule = "kitty";
           var func1244 = function(argcv) {
             var curarg = 1;
@@ -7660,7 +7660,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 573
+              lineNumber = 549
               onSelf = true;
               var call1245 = callmethod(this, "entities", [0]);
               var call1246 = callmethod(call1245,"push", [1], var_e);
@@ -7680,7 +7680,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["addEntity"] = func1244;
-          func1244.definitionLine = 572;
+          func1244.definitionLine = 548;
           func1244.definitionModule = "kitty";
           var func1247 = function(argcv) {
             var curarg = 1;
@@ -7690,8 +7690,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 578
-              lineNumber = 577
+              lineNumber = 554
+              lineNumber = 553
               onSelf = true;
               var call1248 = callmethod(this, "mctx", [0]);
               return call1248
@@ -7710,7 +7710,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["getContext"] = func1247;
-          func1247.definitionLine = 576;
+          func1247.definitionLine = 552;
           func1247.definitionModule = "kitty";
           var func1249 = function(argcv) {
             var curarg = 1;
@@ -7720,8 +7720,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 582
-              lineNumber = 581
+              lineNumber = 558
+              lineNumber = 557
               onSelf = true;
               var call1250 = callmethod(this, "width", [0]);
               onSelf = true;
@@ -7743,7 +7743,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["moveWidthMultipler"] = func1249;
-          func1249.definitionLine = 580;
+          func1249.definitionLine = 556;
           func1249.definitionModule = "kitty";
           var func1255 = function(argcv) {
             var curarg = 1;
@@ -7753,8 +7753,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 586
-              lineNumber = 585
+              lineNumber = 562
+              lineNumber = 561
               onSelf = true;
               var call1256 = callmethod(this, "height", [0]);
               onSelf = true;
@@ -7776,7 +7776,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["moveHeightMultipler"] = func1255;
-          func1255.definitionLine = 584;
+          func1255.definitionLine = 560;
           func1255.definitionModule = "kitty";
           var func1261 = function(argcv) {
             var curarg = 1;
@@ -7788,9 +7788,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 591
-              lineNumber = 569
-              lineNumber = 590
+              lineNumber = 567
+              lineNumber = 545
+              lineNumber = 566
               onSelf = true;
               var call1262 = callmethod(this, "updateAction:=", [1], var_action__39__);
               return call1262
@@ -7809,7 +7809,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setUpdateAction"] = func1261;
-          func1261.definitionLine = 589;
+          func1261.definitionLine = 565;
           func1261.definitionModule = "kitty";
           var func1263 = function(argcv) {
             var curarg = 1;
@@ -7821,9 +7821,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 595
-              lineNumber = 569
-              lineNumber = 594
+              lineNumber = 571
+              lineNumber = 545
+              lineNumber = 570
               onSelf = true;
               var call1264 = callmethod(this, "destroyAction:=", [1], var_action__39__);
               return call1264
@@ -7842,7 +7842,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setDestroyAction"] = func1263;
-          func1263.definitionLine = 593;
+          func1263.definitionLine = 569;
           func1263.definitionModule = "kitty";
           var func1265 = function(argcv) {
             var curarg = 1;
@@ -7854,9 +7854,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 599
-              lineNumber = 569
-              lineNumber = 598
+              lineNumber = 575
+              lineNumber = 545
+              lineNumber = 574
               onSelf = true;
               var call1266 = callmethod(this, "mouseDownAction:=", [1], var_action__39__);
               return call1266
@@ -7875,7 +7875,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseDownAction"] = func1265;
-          func1265.definitionLine = 597;
+          func1265.definitionLine = 573;
           func1265.definitionModule = "kitty";
           var func1267 = function(argcv) {
             var curarg = 1;
@@ -7887,9 +7887,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 603
-              lineNumber = 569
-              lineNumber = 602
+              lineNumber = 579
+              lineNumber = 545
+              lineNumber = 578
               onSelf = true;
               var call1268 = callmethod(this, "mouseUpAction:=", [1], var_action__39__);
               return call1268
@@ -7908,7 +7908,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseUpAction"] = func1267;
-          func1267.definitionLine = 601;
+          func1267.definitionLine = 577;
           func1267.definitionModule = "kitty";
           var func1269 = function(argcv) {
             var curarg = 1;
@@ -7920,9 +7920,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 607
-              lineNumber = 569
-              lineNumber = 606
+              lineNumber = 583
+              lineNumber = 545
+              lineNumber = 582
               onSelf = true;
               var call1270 = callmethod(this, "mouseEnterAction:=", [1], var_action__39__);
               return call1270
@@ -7941,7 +7941,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseEnterAction"] = func1269;
-          func1269.definitionLine = 605;
+          func1269.definitionLine = 581;
           func1269.definitionModule = "kitty";
           var func1271 = function(argcv) {
             var curarg = 1;
@@ -7953,7 +7953,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 610
+              lineNumber = 586
               var string1272 = new GraceString("*Drag Not Available For World*");
               var call1273 = Grace_print(string1272);
               return call1273
@@ -7972,7 +7972,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseDragAction"] = func1271;
-          func1271.definitionLine = 609;
+          func1271.definitionLine = 585;
           func1271.definitionModule = "kitty";
           var func1274 = function(argcv) {
             var curarg = 1;
@@ -7984,9 +7984,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 615
-              lineNumber = 569
-              lineNumber = 614
+              lineNumber = 591
+              lineNumber = 545
+              lineNumber = 590
               onSelf = true;
               var call1275 = callmethod(this, "mouseOverAction:=", [1], var_action__39__);
               return call1275
@@ -8005,7 +8005,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseOverAction"] = func1274;
-          func1274.definitionLine = 613;
+          func1274.definitionLine = 589;
           func1274.definitionModule = "kitty";
           var func1276 = function(argcv) {
             var curarg = 1;
@@ -8017,9 +8017,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 619
-              lineNumber = 569
-              lineNumber = 618
+              lineNumber = 595
+              lineNumber = 545
+              lineNumber = 594
               onSelf = true;
               var call1277 = callmethod(this, "mouseExitAction:=", [1], var_action__39__);
               return call1277
@@ -8038,7 +8038,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1036.methods["setMouseExitAction"] = func1276;
-          func1276.definitionLine = 617;
+          func1276.definitionLine = 593;
           func1276.definitionModule = "kitty";
           sourceObject = obj1036;
           lineNumber = 346
@@ -9462,7 +9462,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 528
+              lineNumber = 527
               onSelf = true;
               var call1507 = callmethod(this, "mouseDownAction", [0]);
               var call1508 = callmethod(call1507,"apply", [0]);
@@ -9492,7 +9492,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 533
+              lineNumber = 531
               onSelf = true;
               var call1510 = callmethod(this, "mouseUpAction", [0]);
               var call1511 = callmethod(call1510,"apply", [0]);
@@ -9512,7 +9512,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["mouseUp"] = func1509;
-          func1509.definitionLine = 532;
+          func1509.definitionLine = 530;
           func1509.definitionModule = "kitty";
           var func1512 = function(argcv) {
             var curarg = 1;
@@ -9522,7 +9522,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 539
+              lineNumber = 537
               onSelf = true;
               var call1513 = callmethod(this, "mouseEnterAction", [0]);
               var call1514 = callmethod(call1513,"apply", [0]);
@@ -9542,7 +9542,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["mouseEnter"] = func1512;
-          func1512.definitionLine = 538;
+          func1512.definitionLine = 536;
           func1512.definitionModule = "kitty";
           var func1515 = function(argcv) {
             var curarg = 1;
@@ -9552,7 +9552,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 554
+              lineNumber = 541
               onSelf = true;
               var call1516 = callmethod(this, "mouseExitAction", [0]);
               var call1517 = callmethod(call1516,"apply", [0]);
@@ -9572,7 +9572,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["mouseExit"] = func1515;
-          func1515.definitionLine = 553;
+          func1515.definitionLine = 540;
           func1515.definitionModule = "kitty";
           var func1518 = function(argcv) {
             var curarg = 1;
@@ -9584,9 +9584,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 569
-              lineNumber = 554
-              lineNumber = 569
+              lineNumber = 545
+              lineNumber = 541
+              lineNumber = 545
               onSelf = true;
               var call1519 = callmethod(this, "canvasWidth", [0]);
               onSelf = true;
@@ -9616,7 +9616,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setBackground"] = func1518;
-          func1518.definitionLine = 568;
+          func1518.definitionLine = 544;
           func1518.definitionModule = "kitty";
           var func1525 = function(argcv) {
             var curarg = 1;
@@ -9628,7 +9628,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 573
+              lineNumber = 549
               onSelf = true;
               var call1526 = callmethod(this, "entities", [0]);
               var call1527 = callmethod(call1526,"push", [1], var_e);
@@ -9648,7 +9648,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["addEntity"] = func1525;
-          func1525.definitionLine = 572;
+          func1525.definitionLine = 548;
           func1525.definitionModule = "kitty";
           var func1528 = function(argcv) {
             var curarg = 1;
@@ -9658,8 +9658,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 578
-              lineNumber = 577
+              lineNumber = 554
+              lineNumber = 553
               onSelf = true;
               var call1529 = callmethod(this, "mctx", [0]);
               return call1529
@@ -9678,7 +9678,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["getContext"] = func1528;
-          func1528.definitionLine = 576;
+          func1528.definitionLine = 552;
           func1528.definitionModule = "kitty";
           var func1530 = function(argcv) {
             var curarg = 1;
@@ -9688,8 +9688,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 582
-              lineNumber = 581
+              lineNumber = 558
+              lineNumber = 557
               onSelf = true;
               var call1531 = callmethod(this, "width", [0]);
               onSelf = true;
@@ -9711,7 +9711,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["moveWidthMultipler"] = func1530;
-          func1530.definitionLine = 580;
+          func1530.definitionLine = 556;
           func1530.definitionModule = "kitty";
           var func1536 = function(argcv) {
             var curarg = 1;
@@ -9721,8 +9721,8 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 586
-              lineNumber = 585
+              lineNumber = 562
+              lineNumber = 561
               onSelf = true;
               var call1537 = callmethod(this, "height", [0]);
               onSelf = true;
@@ -9744,7 +9744,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["moveHeightMultipler"] = func1536;
-          func1536.definitionLine = 584;
+          func1536.definitionLine = 560;
           func1536.definitionModule = "kitty";
           var func1542 = function(argcv) {
             var curarg = 1;
@@ -9756,9 +9756,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 591
-              lineNumber = 569
-              lineNumber = 590
+              lineNumber = 567
+              lineNumber = 545
+              lineNumber = 566
               onSelf = true;
               var call1543 = callmethod(this, "updateAction:=", [1], var_action__39__);
               return call1543
@@ -9777,7 +9777,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setUpdateAction"] = func1542;
-          func1542.definitionLine = 589;
+          func1542.definitionLine = 565;
           func1542.definitionModule = "kitty";
           var func1544 = function(argcv) {
             var curarg = 1;
@@ -9789,9 +9789,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 595
-              lineNumber = 569
-              lineNumber = 594
+              lineNumber = 571
+              lineNumber = 545
+              lineNumber = 570
               onSelf = true;
               var call1545 = callmethod(this, "destroyAction:=", [1], var_action__39__);
               return call1545
@@ -9810,7 +9810,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setDestroyAction"] = func1544;
-          func1544.definitionLine = 593;
+          func1544.definitionLine = 569;
           func1544.definitionModule = "kitty";
           var func1546 = function(argcv) {
             var curarg = 1;
@@ -9822,9 +9822,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 599
-              lineNumber = 569
-              lineNumber = 598
+              lineNumber = 575
+              lineNumber = 545
+              lineNumber = 574
               onSelf = true;
               var call1547 = callmethod(this, "mouseDownAction:=", [1], var_action__39__);
               return call1547
@@ -9843,7 +9843,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseDownAction"] = func1546;
-          func1546.definitionLine = 597;
+          func1546.definitionLine = 573;
           func1546.definitionModule = "kitty";
           var func1548 = function(argcv) {
             var curarg = 1;
@@ -9855,9 +9855,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 603
-              lineNumber = 569
-              lineNumber = 602
+              lineNumber = 579
+              lineNumber = 545
+              lineNumber = 578
               onSelf = true;
               var call1549 = callmethod(this, "mouseUpAction:=", [1], var_action__39__);
               return call1549
@@ -9876,7 +9876,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseUpAction"] = func1548;
-          func1548.definitionLine = 601;
+          func1548.definitionLine = 577;
           func1548.definitionModule = "kitty";
           var func1550 = function(argcv) {
             var curarg = 1;
@@ -9888,9 +9888,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 607
-              lineNumber = 569
-              lineNumber = 606
+              lineNumber = 583
+              lineNumber = 545
+              lineNumber = 582
               onSelf = true;
               var call1551 = callmethod(this, "mouseEnterAction:=", [1], var_action__39__);
               return call1551
@@ -9909,7 +9909,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseEnterAction"] = func1550;
-          func1550.definitionLine = 605;
+          func1550.definitionLine = 581;
           func1550.definitionModule = "kitty";
           var func1552 = function(argcv) {
             var curarg = 1;
@@ -9921,7 +9921,7 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 610
+              lineNumber = 586
               var string1553 = new GraceString("*Drag Not Available For World*");
               var call1554 = Grace_print(string1553);
               return call1554
@@ -9940,7 +9940,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseDragAction"] = func1552;
-          func1552.definitionLine = 609;
+          func1552.definitionLine = 585;
           func1552.definitionModule = "kitty";
           var func1555 = function(argcv) {
             var curarg = 1;
@@ -9952,9 +9952,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 615
-              lineNumber = 569
-              lineNumber = 614
+              lineNumber = 591
+              lineNumber = 545
+              lineNumber = 590
               onSelf = true;
               var call1556 = callmethod(this, "mouseOverAction:=", [1], var_action__39__);
               return call1556
@@ -9973,7 +9973,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseOverAction"] = func1555;
-          func1555.definitionLine = 613;
+          func1555.definitionLine = 589;
           func1555.definitionModule = "kitty";
           var func1557 = function(argcv) {
             var curarg = 1;
@@ -9985,9 +9985,9 @@ function gracecode_kitty () {
             invocationCount++;
             moduleName = "kitty";
             try {
-              lineNumber = 619
-              lineNumber = 569
-              lineNumber = 618
+              lineNumber = 595
+              lineNumber = 545
+              lineNumber = 594
               onSelf = true;
               var call1558 = callmethod(this, "mouseExitAction:=", [1], var_action__39__);
               return call1558
@@ -10006,7 +10006,7 @@ function gracecode_kitty () {
             false,
           ];
           obj1317.methods["setMouseExitAction"] = func1557;
-          func1557.definitionLine = 617;
+          func1557.definitionLine = 593;
           func1557.definitionModule = "kitty";
           sourceObject = obj1317;
           lineNumber = 346
@@ -10683,11 +10683,11 @@ function gracecode_kitty () {
   }
   obj_init_1033.apply(obj1033, []);
   var var_KittyWorld = obj1033;
-  lineNumber = 624
-  lineNumber = 633
-  lineNumber = 667
-  lineNumber = 682
-  lineNumber = 686
+  lineNumber = 600
+  lineNumber = 609
+  lineNumber = 643
+  lineNumber = 658
+  lineNumber = 662
   return this;
 }
 gracecode_kitty.imports = [
@@ -10696,7 +10696,7 @@ gracecode_kitty.imports = [
 'StandardPrelude',
 ];
 if (gctCache)
-  gctCache['kitty'] = "fresh:Image()width()height:\n height:=\n drawImage\n elements:=\n width:=\n imgTag\n getTag\n elements\n width\n height\n draw\nconstructors-of:KittyWorld:\n new\nmodules:\n StandardPrelude\n mgcollections\nmethods-of:KittyEntity.new:\n setLocation\n setMouseEnterAction\n createImage\n mouseExitAction:=\n tag\n destroyAction:=\n mouseExitAction\n mouseUpAction:=\n mouseDragAction\n mouseEnter\n mouseExit\n mouseDragStart:=\n setMouseExitAction\n setMouseDragAction\n mouseDragAction:=\n mouseDownAction:=\n getX\n getY\n image:=\n mouseDownAction\n posX:=\n image\n setX\n setY\n setMouseUpAction\n setMouseDownAction\n kill\n mouseUp\n setImage\n rotation\n getRotation\n tag:=\n mouseEnterAction:=\n move\n mouseOverAction:=\n turn\n mouseDragStart\n mouseOverAction\n strafe\n tick\n destroyAction\n mouseUpAction\n setMouseOverAction\n mouseEnterAction\n setDestroyAction\n updateAction:=\n mouseOver:=\n mouseDownEntity\n mouseDownEntity:=\n updateAction\n posY:=\n mouseDown\n mouseOver\n rotation:=\n awake\n posX\n posY\n setUpdateAction\n draw\nconstructors-of:Point:\n x()y\nmethods-of:Point.x()y:\n up\n x\n y\n left\n down\n right\nfresh-methods:\n Image()width()height\n Entity()x()y\n World()width()height\npath:\n kitty\nclasses:\n Point\n KittyImage\n KittyEntity\n KittyWorld\nconfidential:\nfresh:World()width()height:\n setMouseEnterAction\n document:=\n mctx\n destroyAction:=\n backingCanvas:=\n mouseUpAction:=\n getContext\n mouseEnter\n backgroundColour\n background:=\n setDestroyAction\n mouseDownAction\n mouseExit\n updateAction:=\n setMouseDownAction\n moveHeightMultipler\n height:=\n tag:=\n isRunning\n height\n mouseOverAction:=\n mouseDown\n destroyAction\n mouseUpAction\n isRunning:=\n entities:=\n ent\n width:=\n setMouseUpAction\n mouseEnterAction:=\n backingContext\n background\n updateAction\n mouseEnterAction\n isInit:=\n canvasWidth:=\n mouseExitAction:=\n tag\n document\n mouseExitAction\n backingContext:=\n backingCanvas\n setMouseExitAction\n setMouseDragAction\n canvas:=\n moveWidthMultipler\n mouseDownAction:=\n width\n addEntity\n mouseUp\n isInit\n mctx:=\n mouseOver:=\n canvasWidth\n mouseOverAction\n entities\n backgroundColour:=\n canvasHeight:=\n start\n setMouseOverAction\n init\n canvasHeight\n canvas\n ent:=\n mouseOver\n stop\n tick\n setBackground\n setUpdateAction\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n mouseUpListener\n mouseUpListener:=\n mouseMoveListener\n mouseMoveListener:=\n currentKeyDown\n currentKeyDown:=\n math\n kitten\n kitten:=\n Point\n mouse\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n onDestroy\n isKeyDown\n onMouseDown\n onMouseUp\n onMouseDrag\n onMouseEnter\n onMouseOver\n onMouseExit\n KittyWorld\n World()width()height\n pointInPolygon\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n height:=\n drawImage\n elements:=\n width:=\n height\n getTag\n elements\n width\n imgTag\n draw\nfresh:Entity()x()y:\n strafe\n setMouseEnterAction\n createImage\n mouseExitAction:=\n mouseDragAction:=\n destroyAction:=\n mouseExitAction\n mouseUpAction:=\n mouseDragAction\n mouseEnter\n mouseExit\n mouseDragStart:=\n setMouseExitAction\n setMouseDragAction\n tag\n mouseDownAction:=\n getX\n getY\n image:=\n mouseDownAction\n posX:=\n image\n setX\n setY\n updateAction:=\n setMouseDownAction\n kill\n mouseUp\n setImage\n rotation\n getRotation\n tag:=\n mouseOver:=\n move\n mouseOverAction:=\n awake\n mouseDownEntity:=\n mouseOverAction\n setLocation\n posY\n destroyAction\n mouseUpAction\n setMouseOverAction\n mouseOver\n setDestroyAction\n setMouseUpAction\n mouseEnterAction:=\n mouseDownEntity\n mouseDragStart\n updateAction\n posY:=\n mouseDown\n mouseEnterAction\n rotation:=\n turn\n posX\n tick\n setUpdateAction\n draw\nmethods-of:KittyWorld.new:\n setMouseEnterAction\n document:=\n mctx\n destroyAction:=\n backingCanvas:=\n mouseUpAction:=\n getContext\n mouseEnter\n backgroundColour\n background:=\n isRunning:=\n mouseDownAction\n mouseExit\n updateAction:=\n setMouseDownAction\n moveHeightMultipler\n height:=\n tag:=\n isRunning\n height\n mouseOverAction:=\n mouseDown\n destroyAction\n mouseUpAction\n setDestroyAction\n canvasWidth\n ent\n width:=\n setMouseUpAction\n mouseEnterAction:=\n backingContext\n background\n updateAction\n mouseEnterAction\n isInit:=\n canvasWidth:=\n mouseExitAction:=\n tag\n document\n mouseExitAction\n backingContext:=\n backingCanvas\n setMouseExitAction\n setMouseDragAction\n canvas:=\n moveWidthMultipler\n mouseDownAction:=\n width\n addEntity\n mouseUp\n isInit\n mctx:=\n canvas\n entities:=\n mouseOverAction\n entities\n backgroundColour:=\n canvasHeight:=\n start\n setMouseOverAction\n init\n canvasHeight\n mouseOver:=\n ent:=\n mouseOver\n stop\n tick\n setBackground\n setUpdateAction\nconstructors-of:KittyEntity:\n new\nconstructors-of:KittyImage:\n new\n";
+  gctCache['kitty'] = "modules:\n StandardPrelude\n mgcollections\nfresh-methods:\n Image()width()height\n Entity()x()y\n World()width()height\nconstructors-of:Point:\n x()y\nfresh:Entity()x()y:\n mouseDragAction:=\n posX:=\n mouseOverAction\n mouseEnterAction\n turn\n posX\n posY\n draw\n updateAction\n mouseDownEntity:=\n mouseDownAction:=\n mouseOver:=\n mouseDownEntity\n setMouseDownAction\n image\n strafe\n mouseDragStart:=\n setUpdateAction\n setMouseOverAction\n tick\n setMouseEnterAction\n tag:=\n getX\n createImage\n updateAction:=\n getY\n mouseOverAction:=\n tag\n destroyAction:=\n mouseExitAction\n posY:=\n mouseUpAction:=\n setX\n mouseDragAction\n rotation:=\n destroyAction\n awake\n mouseUpAction\n setImage\n rotation\n mouseDown\n move\n mouseEnterAction:=\n image:=\n setY\n mouseDownAction\n mouseOver\n mouseEnter\n setLocation\n mouseExitAction:=\n setMouseExitAction\n mouseUp\n getRotation\n setMouseDragAction\n kill\n setDestroyAction\n mouseDragStart\n mouseExit\n setMouseUpAction\nmethods-of:Point.x()y:\n y\n left\n right\n up\n down\n x\nconstructors-of:KittyImage:\n new\nclasses:\n Point\n KittyImage\n KittyEntity\n KittyWorld\nfresh:Image()width()height:\n imgTag\n height\n getTag\n elements\n width\n draw\n height:=\n drawImage\n elements:=\n width:=\nconstructors-of:KittyWorld:\n new\nmethods-of:KittyEntity.new:\n mouseDragAction:=\n posX:=\n mouseOverAction\n mouseEnterAction\n turn\n posX\n posY\n draw\n updateAction\n mouseDownEntity:=\n mouseDownAction:=\n mouseOver:=\n mouseDownEntity\n setMouseDownAction\n image\n strafe\n mouseDragStart:=\n setUpdateAction\n setMouseOverAction\n tick\n setMouseEnterAction\n tag:=\n getX\n createImage\n updateAction:=\n getY\n mouseOverAction:=\n tag\n destroyAction:=\n mouseExitAction\n posY:=\n mouseUpAction:=\n setX\n mouseDragAction\n rotation:=\n destroyAction\n setLocation\n mouseUpAction\n setImage\n rotation\n mouseDown\n move\n mouseEnterAction:=\n image:=\n setY\n mouseDownAction\n mouseOver\n mouseEnter\n awake\n setMouseUpAction\n setMouseExitAction\n mouseUp\n getRotation\n setMouseDragAction\n kill\n setDestroyAction\n mouseDragStart\n mouseExit\n mouseExitAction:=\npublic:\n m_world\n m_world:=\n worldSet\n worldSet:=\n keyDownListener\n keyDownListener:=\n keyUpListener\n keyUpListener:=\n mouseDownListener\n mouseDownListener:=\n mouseUpListener\n mouseUpListener:=\n mouseMoveListener\n mouseMoveListener:=\n currentKeyDown\n currentKeyDown:=\n math\n kitten\n kitten:=\n Point\n mouse\n KittyImage\n Image()width()height\n KittyEntity\n Entity()x()y\n update\n onDestroy\n isKeyDown\n onMouseDown\n onMouseUp\n onMouseDrag\n onMouseEnter\n onMouseOver\n onMouseExit\n KittyWorld\n World()width()height\n pointInPolygon\n start\n stop\n setWorld\n atModuleEnd\nmethods-of:KittyImage.new:\n imgTag\n height\n getTag\n elements\n width\n draw\n height:=\n drawImage\n elements:=\n width:=\nmethods-of:KittyWorld.new:\n canvasWidth\n mouseEnterAction\n stop\n isInit:=\n tick\n mouseDownAction:=\n width:=\n height\n entities:=\n document\n addEntity\n backgroundColour:=\n setMouseOverAction\n setMouseEnterAction\n tag:=\n background:=\n updateAction:=\n getContext\n mouseExitAction\n canvas\n destroyAction\n mouseUpAction\n document:=\n mouseUp\n mouseOver:=\n mouseOver\n mouseEnter\n backingContext:=\n moveHeightMultipler\n canvasWidth:=\n backingContext\n updateAction\n mouseOverAction\n backingCanvas\n isInit\n mctx:=\n isRunning:=\n width\n mouseExit\n ent\n canvas:=\n canvasHeight:=\n setUpdateAction\n setMouseDownAction\n backgroundColour\n mctx\n mouseOverAction:=\n tag\n destroyAction:=\n background\n mouseDown\n backingCanvas:=\n mouseUpAction:=\n entities\n start\n height:=\n mouseEnterAction:=\n isRunning\n ent:=\n mouseDownAction\n setDestroyAction\n setBackground\n setMouseExitAction\n canvasHeight\n setMouseDragAction\n init\n moveWidthMultipler\n mouseExitAction:=\n setMouseUpAction\nconstructors-of:KittyEntity:\n new\npath:\n kitty\nconfidential:\nfresh:World()width()height:\n canvasWidth\n mouseEnterAction\n stop\n isInit:=\n tick\n mouseDownAction:=\n width:=\n height\n entities:=\n document\n addEntity\n backgroundColour:=\n setMouseOverAction\n setMouseEnterAction\n canvas:=\n background:=\n updateAction:=\n entities\n mouseExitAction\n tag\n destroyAction\n mouseUpAction\n document:=\n moveHeightMultipler\n mctx\n getContext\n mouseEnter\n backingContext:=\n mouseUp\n canvasWidth:=\n init\n updateAction\n mouseOverAction\n backingCanvas\n isInit\n mctx:=\n isRunning:=\n width\n mouseExit\n ent\n tag:=\n canvasHeight:=\n setUpdateAction\n setMouseDownAction\n backgroundColour\n mouseOver:=\n mouseOverAction:=\n canvas\n destroyAction:=\n background\n mouseDown\n backingCanvas:=\n mouseUpAction:=\n mouseOver\n start\n height:=\n mouseEnterAction:=\n isRunning\n ent:=\n mouseDownAction\n backingContext\n setBackground\n setMouseExitAction\n moveWidthMultipler\n setMouseDragAction\n setDestroyAction\n canvasHeight\n setMouseUpAction\n mouseExitAction:=\n";
 if (originalSourceLines) {
   originalSourceLines["kitty"] = [
     "import \"mgcollections\" as collections",
@@ -11225,9 +11225,7 @@ if (originalSourceLines) {
     "    }",
     "",
     "    method mouseDown {",
-    "        // if (mouseOver) then {",
     "        mouseDownAction.apply",
-    "        // }",
     "    }",
     "",
     "    method mouseUp {",
@@ -11238,32 +11236,10 @@ if (originalSourceLines) {
     "    // if it is in the World",
     "    method mouseEnter {",
     "        mouseEnterAction.apply",
-    "        // if (mouseOver) then {",
-    "        //     return false",
-    "        // }",
-    "        // var poly := collections.list.new(",
-    "        //     Point.x(0)y(0), Point.x(0)y(width),",
-    "        //     Point.x(width)y(0), Point.x(width)y(height)",
-    "        // )",
-    "        // if (pointInPolygon(mouse.location, poly)) then {",
-    "        //     mouseEnterAction.apply",
-    "        //     mouseOver := true",
-    "        // }",
     "    }",
     "",
     "    method mouseExit {",
     "        mouseExitAction.apply",
-    "        // if (!mouseOver) then {",
-    "        //     return false",
-    "        // }",
-    "        // var poly := collections.list.new(",
-    "        //     Point.x(0)y(0), Point.x(0)y(width),",
-    "        //     Point.x(width)y(0), Point.x(width)y(height)",
-    "        // )",
-    "        // if (!pointInPolygon(mouse.location, poly)) then {",
-    "        //     mouseExitAction.apply",
-    "        //     mouseOver := false",
-    "        // }",
     "    }",
     "",
     "    method setBackground(url) {",
