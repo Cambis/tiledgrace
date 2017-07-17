@@ -975,6 +975,114 @@ dialects.kitty = {
             description: 'Update',
             // toplevel: true
         },
+        'onDestroy': {
+            name: 'onDestroy',
+            parts: [{
+                name: 'onDestroy',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on game stop.',
+            // toplevel: true
+        },
+        'onMouseDown': {
+            name: 'onMouseDown',
+            parts: [{
+                name: 'onMouseDown',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on mouse down.',
+            // toplevel: true
+        },
+        'onMouseUp': {
+            name: 'onMouseUp',
+            parts: [{
+                name: 'onMouseUp',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called on mouse up.',
+        },
+        'onMouseEnter': {
+            name: 'onMouseEnter',
+            parts: [{
+                name: 'onMouseEnter',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse enters entity.',
+            // toplevel: true
+        },
+        'onMouseExit': {
+            name: 'onMouseExit',
+            parts: [{
+                name: 'onMouseExit',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse exits entity.'
+        },
+        'onMouseOver': {
+            name: 'onMouseOver',
+            parts: [{
+                name: 'onMouseOver',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse is over entity.'
+        },
+        'onMouseDrag': {
+            name: 'onMouseDrag',
+            parts: [{
+                name: 'onMouseDrag',
+                args: [{
+                    type: 'Block',
+                    returns: 'Any',
+                    multiline: true
+                }]
+            }],
+            returns: 'Done',
+            multiline: true,
+            selfcall: true,
+            description: 'Called when mouse dragged from entity'
+        },
         'move': {
             name: 'move',
             parts: [{

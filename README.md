@@ -155,6 +155,32 @@ object = {
 }
 ````
 
+## Mouse Actions
+- Users can listen for mouse actions using the following functions: `onMouseDown`, `onMouseUp`, `onMouseEnter`, `onMouseDrag` and `onMouseExit`.
+- `onMouseDrag` *is only available for Entities*. It is defaulted to drag the Entity through the world.
+- These functions work in a similar way to the `update` function, they are called once per frame if their conditions are satisfied.
+- *Do not* place them inside the `update` function.
+````grace
+object = {
+    inherits Entity ("foo") x (0) y (0)
+    onMouseDown {
+        print "Entity mousedown"
+    }
+    onMouseUp {
+        print "Entity mouseup"
+    }
+    onMouseEnter {
+        print "Entering entity"
+    }
+    onMouseDrag {
+        print "Dragging entity"
+    }
+    onMouseExit {
+        print "Exiting entity"
+    }
+}
+````
+
 ## Examples
 - [Moon Lander (with objects)](https://cambis.github.io/tiledgrace/#sample=moonLander)
 ````grace
@@ -201,6 +227,45 @@ object {
             }
             stop
         }
+    }
+}
+````
+- [Mouse Actions](https://cambis.github.io/tiledgrace/#sample=kittyTest)
+````grace
+dialect "kitty"
+
+object {
+    inherits World ("test") width (500) height (500)
+    onMouseDown {
+        print "World mousedown"
+    }
+    onMouseUp {
+        print "World mouseup"
+    }
+    onMouseEnter {
+        print "Entering world"
+    }
+    onMouseExit {
+        print "Exiting world"
+    }
+}
+
+object {
+    inherits Entity ("foo") x (250) y (250)
+    onMouseDown {
+        print "Entity mousedown"
+    }
+    onMouseUp {
+        print "Entity mouseup"
+    }
+    onMouseEnter {
+        print "Entering entity"
+    }
+    onMouseDrag {
+        print "Dragging entity"
+    }
+    onMouseExit {
+        print "Exiting entity"
     }
 }
 ````
