@@ -46,6 +46,8 @@ def mouse = object {
     }
 }
 
+var mouseOverEntity := false
+
 // Represents an image in the game world
 class KittyImage.new(url', width', height') {
     
@@ -427,19 +429,26 @@ class KittyWorld.new(tag', width', height') {
             def y = (ev.clientY - canvas.offsetTop) / canvas.offsetHeight * canvasHeight
             mouse.position := Point.x(x)y(y)
 
+            var actionDone := false
+
             // Mouse actions
             for (entities) do { entity ->
                 if (entity.mouseEnter) then {
-                    mouseExit
+                    self.mouseExit
+                    mouseOverEntity := true
                     return
                 }
                 if (entity.mouseExit) then {
-                    mouseEnter
+                    self.mouseEnter
+                    mouseOverEntity := false
                     return
                 }
             }
-            // Can not enter world if entity is entered
-            // mouseEnter
+
+            // For first enter into world
+            if (!mouseOverEntity) then {
+                self.mouseEnter
+            }
         }
         canvas.addEventListener("mousemove", mouseMoveListener)
 
@@ -499,6 +508,10 @@ class KittyWorld.new(tag', width', height') {
         // Update world
         updateAction.apply
 
+        if (mouseOver) then {
+            mouseOverAction.apply
+        }
+
         // Draw the entities
         for (entities) do { entity->
             entity.tick
@@ -534,11 +547,19 @@ class KittyWorld.new(tag', width', height') {
     // If it isn't in the Entity we shouldn't have to check
     // if it is in the World
     method mouseEnter {
+        if (mouseOver) then {
+            return false
+        }
         mouseEnterAction.apply
+        mouseOver := true
     }
 
     method mouseExit {
+        if (!mouseOver) then {
+            return false
+        }
         mouseExitAction.apply
+        mouseOver := false
     }
 
     method setBackground(url) {
