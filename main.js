@@ -26,6 +26,9 @@ function loadSave() {
 }
 
 function changeDialect() {
+    
+    checkKitty();
+
     var tb = document.getElementById('toolbox');
     var dialectMethods = tb.getElementsByClassName("dialect-method");
     while (dialectMethods.length) {
@@ -415,6 +418,29 @@ function go() {
     minigrace.modname = "main";
     minigrace.compilerun(getCode());
 }
+
+// Cheap way of stopping the Kitty game by invoking the 'K' key
+function kittyStop() {
+    console.log("I've been called")
+    var e = new Event("keydown");
+    e.key='K';    // just enter the char you want to send 
+    e.keyCode=e.key.charCodeAt(0);
+    e.which=e.keyCode;
+    e.altKey=false;
+    e.ctrlKey=true;
+    e.shiftKey=false;
+    e.metaKey=false;
+    // e.bubbles=true;
+    document.dispatchEvent(e);
+    var dialectMethods = toolbox.getElementsByClassName("dialect-method");
+    console.log(dialectMethods);
+}
+
+function checkKitty() {
+    document.getElementById("stopbutton").hidden = (document.getElementById("dialect").value == "kitty") 
+        ? false : true
+}
+
 var theBrowser = 'unknown';
 if (navigator.userAgent.search('Chrome') != -1) {
     theBrowser = 'blink';
