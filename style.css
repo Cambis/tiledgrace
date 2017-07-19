@@ -271,6 +271,14 @@ input {
     background: hsl(35, 80.6%, 46.5%);
     border: 2px outset hsl(35, 100%, 36.5%);
 }
+.tile.dialect-method[data-category="Mouse"] {
+    background: rgb(205, 64, 35);
+    border: 2px outset rgb(205, 64, 35);
+}
+.tile.dialect-method[data-category="Motion"] {
+    background: rgb(184, 35, 40);
+    border: 2px outset rgb(184, 35, 40);
+}
 .tile.dialect-method.constant {
     background: hsl(300, 25%, 75%);
     border: 2px outset hsl(300, 100%, 25%);

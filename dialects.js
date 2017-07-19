@@ -1254,6 +1254,12 @@ dialects.kitty = {
 };
 for (var k in dialects.kitty.methods)
     dialects.kitty.methods[k].category = "Kitty";
+dialects.kitty.methods['onMouseDown'].category = "Mouse";
+dialects.kitty.methods['onMouseUp'].category = "Mouse";
+dialects.kitty.methods['onMouseEnter'].category = "Mouse";
+dialects.kitty.methods['onMouseExit'].category = "Mouse";
+dialects.kitty.methods['onMouseDrag'].category = "Mouse";
+dialects.kitty.methods['onMouseOver'].category = "Mouse";
 // dialects.kitty.methods['Entity()x()y'].category = "Entity";
 // dialects.kitty.methods['createImage'].category = "Entity";
 // dialects.kitty.methods['setImage'].category = "Entity";
