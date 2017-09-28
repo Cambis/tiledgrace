@@ -144,11 +144,12 @@ object {
 ## Key Listener
 - Users can listen for key presses using the `isKeyDown(key)` method. *This method takes keycodes not characters*
 - *Do not use the `spacebar` or `K` keys, as they are already used.*
+- Keycodes for each key can be found [here](http://keycode.info/).
 ````grace
 object = {
     inherits Entity ("foo") x (0) y (0)
     update {
-        if (foo.isKeyDown(87)) then {
+        if (isKeyDown(87)) then {
             move(1)
         }
     }
@@ -182,54 +183,6 @@ object = {
 ````
 
 ## Examples
-- [Moon Lander (with objects)](https://cambis.github.io/tiledgrace/#sample=moonLander)
-````grace
-dialect "kitty"
-
-// Press 'Run' button to start the game.
-// Press the 'K' key to stop the game.
-// Press the 'W' key for thrust.
-// Press the 'Spacebar' key to restart the game.
-
-def THRUST = 2
-def MAX_LANDING_SPEED = 15
-def LZ_HEIGHT = 180
-def rocket = Image ("rocket.png") width (64) height (64)
-def rocketWithThrust = Image ("thrust.png") width (64) height (64)
-def explosion = Image ("explosion.png") width (64) height (64)
-def flag = Image ("flag.png") width (64) height (64)
-rocketWithThrust.drawImage(rocket.getTag)
-flag.drawImage(rocket.getTag)
-
-object {
-    inherits World ("moon") width (500) height (500)
-    setBackground ("moon.jpg")
-}
-
-object {
-    inherits Entity ("player") x (20) y (0 - 200)
-    setImage (rocket)
-    var speed := 0
-    update {
-        if (isKeyDown (87)) then {
-            speed := speed - THRUST
-            setImage (rocketWithThrust)
-        } else {
-            setImage (rocket)
-        }
-        speed := speed + 1
-        strafe (speed / 10)
-        if (posY >= LZ_HEIGHT) then {
-            if (speed >= MAX_LANDING_SPEED) then {
-                setImage (explosion)
-            } else {
-                setImage (flag)
-            }
-            stop
-        }
-    }
-}
-````
 - [Mouse Actions](https://cambis.github.io/tiledgrace/#sample=kittyTest)
 ````grace
 dialect "kitty"
