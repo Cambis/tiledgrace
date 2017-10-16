@@ -146,7 +146,7 @@ object {
 - *Do not use the `spacebar` or `K` keys, as they are already used.*
 - Keycodes for each key can be found [here](http://keycode.info/).
 ````grace
-object = {
+object {
     inherits Entity ("foo") x (0) y (0)
     update {
         if (isKeyDown(87)) then {
@@ -162,7 +162,7 @@ object = {
 - These functions work in a similar way to the `update` function, they are called once per frame if their conditions are satisfied.
 - *Do not* place them inside the `update` function.
 ````grace
-object = {
+object {
     inherits Entity ("foo") x (0) y (0)
     onMouseDown {
         print "Entity mousedown"
